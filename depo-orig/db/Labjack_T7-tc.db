@@ -1,0 +1,320 @@
+# ai record template for FLOAT inputs
+record(ai,"$(Sys)$(Dev)TC:01-I") {
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(LJPORT)_TC 0)FLOAT32_BE")
+    field(SCAN, "I/O Intr")
+    field(PREC, "4")
+}
+
+# ai record template for FLOAT inputs
+record(ai,"$(Sys)$(Dev)TC:02-I") {
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(LJPORT)_TC 2)FLOAT32_BE")
+    field(SCAN, "I/O Intr")
+    field(PREC, "4")
+}
+
+# ai record template for FLOAT inputs
+record(ai,"$(Sys)$(Dev)TC:03-I") {
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(LJPORT)_TC 4)FLOAT32_BE")
+    field(SCAN, "I/O Intr")
+    field(PREC, "4")
+}
+
+# ai record template for FLOAT inputs
+record(ai,"$(Sys)$(Dev)TC:04-I") {
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(LJPORT)_TC 6)FLOAT32_BE")
+    field(SCAN, "I/O Intr")
+    field(PREC, "4")
+}
+
+# ai record template for FLOAT inputs
+record(ai,"$(Sys)$(Dev)TC:05-I") {
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(LJPORT)_TC 8)FLOAT32_BE")
+    field(SCAN, "I/O Intr")
+    field(PREC, "4")
+}
+
+# ai record template for FLOAT inputs
+record(ai,"$(Sys)$(Dev)TC:06-I") {
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(LJPORT)_TC 10)FLOAT32_BE")
+    field(SCAN, "I/O Intr")
+    field(PREC, "4")
+}
+
+# ai record template for FLOAT inputs
+record(ai,"$(Sys)$(Dev)TC:07-I") {
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(LJPORT)_TC 12)FLOAT32_BE")
+    field(SCAN, "I/O Intr")
+    field(PREC, "4")
+}
+
+# ai record template for FLOAT inputs
+record(ai,"$(Sys)$(Dev)TC:08-I") {
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(LJPORT)_TC 14)FLOAT32_BE")
+    field(SCAN, "I/O Intr")
+    field(PREC, "4")
+}
+
+# mbbo record template for UINT32 outputs (TC)
+record(mbbo,"$(Sys)$(Dev)TC:01_Type-Sel") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_TC_TYPE 0 0xFFFF)")
+    field(ZRVL, "20")
+    field(ONVL, "21")
+    field(TWVL, "22")
+    field(THVL, "23")
+    field(FRVL, "24")
+    field(FVVL, "25")
+    field(SXVL, "30")
+    field(ZRST, "TC Type E")
+    field(ONST, "TC Type J")
+    field(TWST, "TC Type K")
+    field(THST, "TC Type R")
+    field(FRST, "TC Type T")
+    field(FVST, "TC Type S")
+    field(SXST, "TC Type C")
+}
+
+# mbbo record template for UINT32 outputs (TC)
+record(mbbo,"$(Sys)$(Dev)TC:02_Type-Sel") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_TC_TYPE 1 0xFFFF)")
+    field(ZRVL, "20")
+    field(ONVL, "21")
+    field(TWVL, "22")
+    field(THVL, "23")
+    field(FRVL, "24")
+    field(FVVL, "25")
+    field(SXVL, "30")
+    field(ZRST, "TC Type E")
+    field(ONST, "TC Type J")
+    field(TWST, "TC Type K")
+    field(THST, "TC Type R")
+    field(FRST, "TC Type T")
+    field(FVST, "TC Type S")
+    field(SXST, "TC Type C")
+}
+
+# mbbo record template for UINT32 outputs (TC)
+record(mbbo,"$(Sys)$(Dev)TC:03_Type-Sel") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_TC_TYPE 2 0xFFFF)")
+    field(ZRVL, "20")
+    field(ONVL, "21")
+    field(TWVL, "22")
+    field(THVL, "23")
+    field(FRVL, "24")
+    field(FVVL, "25")
+    field(SXVL, "30")
+    field(ZRST, "TC Type E")
+    field(ONST, "TC Type J")
+    field(TWST, "TC Type K")
+    field(THST, "TC Type R")
+    field(FRST, "TC Type T")
+    field(FVST, "TC Type S")
+    field(SXST, "TC Type C")
+}
+
+# mbbo record template for UINT32 outputs (TC)
+record(mbbo,"$(Sys)$(Dev)TC:04_Type-Sel") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_TC_TYPE 3 0xFFFF)")
+    field(ZRVL, "20")
+    field(ONVL, "21")
+    field(TWVL, "22")
+    field(THVL, "23")
+    field(FRVL, "24")
+    field(FVVL, "25")
+    field(SXVL, "30")
+    field(ZRST, "TC Type E")
+    field(ONST, "TC Type J")
+    field(TWST, "TC Type K")
+    field(THST, "TC Type R")
+    field(FRST, "TC Type T")
+    field(FVST, "TC Type S")
+    field(SXST, "TC Type C")
+}
+
+# mbbo record template for UINT32 outputs (TC)
+record(mbbo,"$(Sys)$(Dev)TC:05_Type-Sel") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_TC_TYPE 4 0xFFFF)")
+    field(ZRVL, "20")
+    field(ONVL, "21")
+    field(TWVL, "22")
+    field(THVL, "23")
+    field(FRVL, "24")
+    field(FVVL, "25")
+    field(SXVL, "30")
+    field(ZRST, "TC Type E")
+    field(ONST, "TC Type J")
+    field(TWST, "TC Type K")
+    field(THST, "TC Type R")
+    field(FRST, "TC Type T")
+    field(FVST, "TC Type S")
+    field(SXST, "TC Type C")
+}
+
+# mbbo record template for UINT32 outputs (TC)
+record(mbbo,"$(Sys)$(Dev)TC:06_Type-Sel") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_TC_TYPE 5 0xFFFF)")
+    field(ZRVL, "20")
+    field(ONVL, "21")
+    field(TWVL, "22")
+    field(THVL, "23")
+    field(FRVL, "24")
+    field(FVVL, "25")
+    field(SXVL, "30")
+    field(ZRST, "TC Type E")
+    field(ONST, "TC Type J")
+    field(TWST, "TC Type K")
+    field(THST, "TC Type R")
+    field(FRST, "TC Type T")
+    field(FVST, "TC Type S")
+    field(SXST, "TC Type C")
+}
+
+# mbbo record template for UINT32 outputs (TC)
+record(mbbo,"$(Sys)$(Dev)TC:07_Type-Sel") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_TC_TYPE 6 0xFFFF)")
+    field(ZRVL, "20")
+    field(ONVL, "21")
+    field(TWVL, "22")
+    field(THVL, "23")
+    field(FRVL, "24")
+    field(FVVL, "25")
+    field(SXVL, "30")
+    field(ZRST, "TC Type E")
+    field(ONST, "TC Type J")
+    field(TWST, "TC Type K")
+    field(THST, "TC Type R")
+    field(FRST, "TC Type T")
+    field(FVST, "TC Type S")
+    field(SXST, "TC Type C")
+}
+
+# mbbo record template for UINT32 outputs (TC)
+record(mbbo,"$(Sys)$(Dev)TC:08_Type-Sel") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_TC_TYPE 7 0xFFFF)")
+    field(ZRVL, "20")
+    field(ONVL, "21")
+    field(TWVL, "22")
+    field(THVL, "23")
+    field(FRVL, "24")
+    field(FVVL, "25")
+    field(SXVL, "30")
+    field(ZRST, "TC Type E")
+    field(ONST, "TC Type J")
+    field(TWST, "TC Type K")
+    field(THST, "TC Type R")
+    field(FRST, "TC Type T")
+    field(FVST, "TC Type S")
+    field(SXST, "TC Type C")
+}
+
+# mbbo record template for UINT32 outputs (CONFIG_A)
+record(mbbo,"$(Sys)$(Dev)TC:01_Unit-Sel") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_TC_UNIT 0 0xFFFF)")
+    field(ZRVL, "0")
+    field(ONVL, "1")
+    field(TWVL, "2")
+    field(ZRST, "K")
+    field(ONST, "C")
+    field(TWST, "F")
+}
+
+# mbbo record template for UINT32 outputs (CONFIG_A)
+record(mbbo,"$(Sys)$(Dev)TC:02_Unit-Sel") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_TC_UNIT 1 0xFFFF)")
+    field(ZRVL, "0")
+    field(ONVL, "1")
+    field(TWVL, "2")
+    field(ZRST, "K")
+    field(ONST, "C")
+    field(TWST, "F")
+}
+
+# mbbo record template for UINT32 outputs (CONFIG_A)
+record(mbbo,"$(Sys)$(Dev)TC:03_Unit-Sel") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_TC_UNIT 2 0xFFFF)")
+    field(ZRVL, "0")
+    field(ONVL, "1")
+    field(TWVL, "2")
+    field(ZRST, "K")
+    field(ONST, "C")
+    field(TWST, "F")
+}
+
+# mbbo record template for UINT32 outputs (CONFIG_A)
+record(mbbo,"$(Sys)$(Dev)TC:04_Unit-Sel") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_TC_UNIT 3 0xFFFF)")
+    field(ZRVL, "0")
+    field(ONVL, "1")
+    field(TWVL, "2")
+    field(ZRST, "K")
+    field(ONST, "C")
+    field(TWST, "F")
+}
+
+# mbbo record template for UINT32 outputs (CONFIG_A)
+record(mbbo,"$(Sys)$(Dev)TC:05_Unit-Sel") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_TC_UNIT 4 0xFFFF)")
+    field(ZRVL, "0")
+    field(ONVL, "1")
+    field(TWVL, "2")
+    field(ZRST, "K")
+    field(ONST, "C")
+    field(TWST, "F")
+}
+
+# mbbo record template for UINT32 outputs (CONFIG_A)
+record(mbbo,"$(Sys)$(Dev)TC:06_Unit-Sel") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_TC_UNIT 5 0xFFFF)")
+    field(ZRVL, "0")
+    field(ONVL, "1")
+    field(TWVL, "2")
+    field(ZRST, "K")
+    field(ONST, "C")
+    field(TWST, "F")
+}
+
+# mbbo record template for UINT32 outputs (CONFIG_A)
+record(mbbo,"$(Sys)$(Dev)TC:07_Unit-Sel") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_TC_UNIT 6 0xFFFF)")
+    field(ZRVL, "0")
+    field(ONVL, "1")
+    field(TWVL, "2")
+    field(ZRST, "K")
+    field(ONST, "C")
+    field(TWST, "F")
+}
+
+# mbbo record template for UINT32 outputs (CONFIG_A)
+record(mbbo,"$(Sys)$(Dev)TC:08_Unit-Sel") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_TC_UNIT 7 0xFFFF)")
+    field(ZRVL, "0")
+    field(ONVL, "1")
+    field(TWVL, "2")
+    field(ZRST, "K")
+    field(ONST, "C")
+    field(TWST, "F")
+}
+

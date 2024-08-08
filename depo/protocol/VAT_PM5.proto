@@ -1,0 +1,186 @@
+# VAT Adaptive Pressure Controller PM-5
+# 
+# Huijuan 14-MAR-2019 
+
+Terminator = CR LF;
+extraInput=ignore;
+
+## Control commands
+# Set operation mode
+set_opr_mode {
+	out "U:%{01|02}";
+	in  "U:";
+}
+
+# Close valve
+close_vlv {
+	out "C:";
+	in  "C:";
+}
+
+# Open valve
+open_vlv {
+	out "O:";
+	in  "O:";
+}
+
+# Set valve position
+set_vlv_pos {
+	out "R:%06d";
+	in  "R:";
+}
+
+# Zero adjust
+zero_adjust {
+	out "Z:";
+	in  "Z:";
+}
+
+# Learn
+learn {
+	out "L:00%04d";
+	in  "L:";
+}
+
+# Pressure command
+set_P {
+	out "S:00%04d";
+	in  "S:";
+}
+
+# Select sensor
+sel_sensor {
+	out "U:%{12|13}";
+	in  "U:";
+}
+
+# Hold mode
+set_hold_mode {
+	out "H:";
+	in  "H:";
+}
+
+# pressure mode
+set_p_mode {
+        out "K:";
+        in  "K:";
+}
+
+# Reduce position speed
+set_speed {
+	out "V:%06d";
+	in  "V:";
+}
+
+# Auto size adjust
+auto_size {
+	out "J:";
+	in  "J:";
+}
+
+# Enable/Disable power failure option
+set_PFO {
+	out "U:%{14|15}";
+	in  "U:";
+}
+
+# Interlock front panel keys
+set_intlk {
+        out "U:%{03|04}";
+	in  "U:";
+}
+
+# Enable/Disable logic input 
+enbl_logic_in {
+	out "U:%{16|17}";
+	in  "U:";
+}
+
+
+## Inquiry commands
+# Actual valve position
+get_vlv_pos {
+	out "A:";
+	in  "A:%d";
+}
+
+# Actual pressure
+get_P {
+	out "P:";
+	in  "P:%d";
+}
+
+# Pressure setpoint value
+get_P_SP {
+	out "W:";
+	in  "W:%d";
+}
+
+# Operating mode
+get_opr_mode {
+	out "I:";
+	in  "I:%{LOCAL|REMOTE|LOCKED}";
+}
+
+# Control mode
+get_ctrl_mode {
+	out "M:";
+	in  "M:%{POS|PRESS}";
+}
+
+# Self test
+get_self_test {
+	out "T:";
+	in  "T:%{ OK|PAR-ER|ROM-ER}";
+}
+
+# Sensor zero offset
+get_zero_offset {
+	out "z:";
+	in  "z:%d";
+}
+
+# Valve cycle counter
+get_vlv_cnt {
+	out "c:";
+	in  "c:%d";
+}
+
+# Set counter to zero
+set_cnt_zero {
+	out "n:";
+	in  "n:";
+}
+
+# Software version
+get_soft_version {
+	out "i:01";
+	in  "i:01%s";
+}
+
+# Read sensor setupt
+get_sensor_setup {
+	out "i:\$1";
+	in  "i:\$1s%d%(\$2Rng:Disp-RB.VAL)d%(\$2Unit:Disp-Sts.VAL)d%(\$2Gain:Factor-RB.VAL)d%(\$2Type:Sensor-Sts.VAL)d%(\$2Enbl:ZeroAdjust-Sts.VAL)d";
+}
+
+# Position error status
+get_pos_err_sts {
+	out "p:";
+	in  "p:%{ OK|POS-ER}";
+}
+
+# Valve position
+get_vlv_pos_sts
+{
+	out "i:05";
+	in  "i:05V1:%{O|C|N}V2:-";
+}
+
+# Sensor setup command 
+set_sensor {
+        out "s:\$1%d%(\$2Rng:Disp-SP.VAL)d%(\$2Unit:Disp-Sel.VAL)d%(\$2Gain:Factor-SP.VAL)d%(\$2Type:Sensor-Sel.VAL)d%(\$2Enbl:ZeroAdjust-Cmd.VAL)d";
+	in  "s:";
+}
+
+

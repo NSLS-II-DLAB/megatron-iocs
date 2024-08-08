@@ -1,0 +1,12 @@
+# DIO
+file "Labjack_T7-do.template" { pattern
+{ P		, R			, PORT		, OFFSET	, ZNAM	, ONAM	}
+{ $(Sys)	, "$(Dev)DO:01-Cmd"	, $(LJPORT)_DO	, 0		, Low	, High	}
+{ $(Sys)	, "$(Dev)DO:02-Cmd"	, $(LJPORT)_DO	, 1		, Low	, High	}
+{ $(Sys)	, "$(Dev)DO:03-Cmd"	, $(LJPORT)_DO	, 2		, Low	, High	}
+{ $(Sys)	, "$(Dev)DO:04-Cmd"	, $(LJPORT)_DO	, 3		, Low	, High	}
+{ $(Sys)	, "$(Dev)DO:05-Cmd"	, $(LJPORT)_DO	, 4		, Low	, High	}
+{ $(Sys)	, "$(Dev)DO:06-Cmd"	, $(LJPORT)_DO	, 5		, Low	, High	}
+{ $(Sys)	, "$(Dev)DO:07-Cmd"	, $(LJPORT)_DO	, 6		, Low	, High	}
+{ $(Sys)	, "$(Dev)DO:08-Cmd"	, $(LJPORT)_DO	, 7		, Low	, High	}
+}

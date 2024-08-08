@@ -1,0 +1,71 @@
+# Oxford E500 Dual Channel Cryogenic Temperature Monitor
+# Huijuan 13-MAR-2019 
+
+
+# Get revision
+record(stringin, "Depo{TM:1}Rev-I") {
+  field(DESC, "Revision")
+  field(DTYP, "stream")
+  field(INP, "@Oxford_E500.proto get_revision Depo_TM1")
+  field(PINI, "1")
+}
+
+# Read temperature
+record(ai, "Depo{TC:1}T:Ch1-I") {
+  field(DESC, "Ch1 T")
+  field(DTYP, "stream")
+  field(INP,  "@Oxford_E500.proto get_T(1) Depo_TM1")
+  field(EGU,  "K")
+  field(PREC, "1")
+}
+
+# Get/Set temperature setpoint
+record(longin, "Depo{TC:1}T:Ch1Lo-RB") {
+  field(DESC, "Get Ch1 T Low SP")
+  field(DTYP, "stream")
+  field(INP,  "@Oxford_E500.proto get_T_SP(1,0) Depo_TM1")
+  field(EGU,  "K")
+}
+
+record(longin, "Depo{TC:1}T:Ch1Hi-RB") {
+  field(DESC, "Get Ch1 T High SP")
+  field(DTYP, "stream")
+  field(INP,  "@Oxford_E500.proto get_T_SP(1,1) Depo_TM1")
+  field(EGU,  "K")
+}
+
+record(longin, "Depo{TC:1}T:Ch1Spare-RB") {
+  field(DESC, "Get Ch1 T Spare SP")
+  field(DTYP, "stream")
+  field(INP,  "@Oxford_E500.proto get_T_SP(1,2) Depo_TM1")
+  field(EGU,  "K")
+}
+
+record(longout, "Depo{TC:1}T:Ch1Lo-SP") {
+  field(DESC, "Set Ch1 T Low SP")
+  field(DTYP, "stream")
+  field(OUT,  "@Oxford_E500.proto set_T_SP(1,0) Depo_TM1")
+  field(EGU,  "K")
+}
+
+record(longout, "Depo{TC:1}T:Ch1Hi-SP") {
+  field(DESC, "Set Ch1 T High SP")
+  field(DTYP, "stream")
+  field(OUT,  "@Oxford_E500.proto set_T_SP(1,1) Depo_TM1")
+  field(EGU,  "K")
+}
+
+record(longout, "Depo{TC:1}T:Ch1Spare-SP") {
+  field(DESC, "Set Ch1 T Spare SP")
+  field(DTYP, "stream")
+  field(OUT,  "@Oxford_E500.proto set_T_SP(1,2) Depo_TM1")
+  field(EGU,  "K")
+}
+
+# Get Voltage
+record(ai, "Depo{TC:1}E:Ch1-I") {
+  field(DESC, "Get Ch1 Volt")
+  field(DTYP, "stream")
+  field(INP,  "@Oxford_E500.proto get_E(1) Depo_TM1")
+  field(EGU,  "V")
+}

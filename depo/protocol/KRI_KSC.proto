@@ -1,0 +1,133 @@
+# KRI Kaufman Source Controller
+# 
+# Huijuan 21-June-2019
+
+extraInput=ignore;
+
+### 
+##  Read all process values
+# Note: Need to test if there's filament amps and filament volts before low frequency Discharge Amps
+read_all {
+   out "R:ALL";
+   in "%f,%(\$1E:Beam-I)f,%(\$1I:Acc-I.VAL)f,%(\$1E:Acc-I.VAL)f,%(\$1I:Emis-I.VAL)f,%(\$1I:CHI-I.VAL)f,%(\$1I:CHSI-I.VAL)f,%(\$1I:DSI-I.VAL)f,%(\$1E:DSV-I.VAL)f,%(\$1I:FHI-I.VAL)f,%(\$1I:FHSI-I.VAL)f";
+}
+
+### 
+##  Read all Program set points
+#
+read_P_all_set {
+   out "P:ALL?";
+   in "%f,%(\$1E:P_Beam-RB.VAL)f,%(\$1I:P_Acc-RB.VAL)f,%(\$1E:P_Acc-RB.VAL)f,%(\$1I:P_Emis-RB.VAL)f,%(\$1I:P_CHI.VAL)f,%(\$1I:P_CHSI)f,(\$1I:P_DSI-RB.VAL)f,%(\$1E:P_DSV-RB.VAL)f,%(\$1I:P_FHI-RB.VAL)f,%(\$1I:P_FHSI-RB.VAL)f";
+}
+
+
+### 
+##  Set Program parameters
+#
+set_P_BMI {
+   out "P:BMI %.3f";
+}
+
+set_P_BMV {
+   out "P:BMV %.1f";
+}
+
+set_P_ACI {
+   out "P:ACI %.3f";
+}
+
+set_P_ACV {
+   out "P:ACV %.1f";
+}
+
+set_P_EEI {
+   out "P:EEI %.2f";
+}
+
+set_P_CHI {
+   out "P:CHI %.3f";
+}
+
+set_P_CHSI {
+   out "P:CHSI %.3f";
+}
+
+set_P_DSI {
+   out "P:DSI %.3f";
+}
+
+set_P_DSV {
+   out "P:ACV %.1f";
+}
+
+set_P_FHI {
+   out "P:FHI %.3f";
+}
+
+set_P_FHSI {
+   out "P:FHSI %.3f";
+}
+
+### 
+##  Read/Set Misc parameters
+#
+set_COM {
+   out "COM:%{0|1}";
+   in "OK";
+}
+
+read_COM {
+   out "COM?";
+   in "%{0|1}";
+}
+
+read_IDN {
+   out "*IDN?";
+   in "%39c";
+}
+
+set_RST {
+   out "*RST";
+#   in ?;
+}
+
+read_TST {
+   out "*TST?";
+   in "%d";
+}
+
+set_OUT {
+   out "OUT:%{00|01|11}";
+   in "OK";
+}
+
+read_OUT {
+   out "OUT?";
+   in "%{00|01|11|?}";
+}
+
+set_MDE {
+   out "MDE:%{0|1|2}";
+#   in "OK";
+}
+
+read_MDE {
+   out "MDE?";
+   in "%{0|1|2|?}";
+}
+
+read_BEAM {
+   out "BEAM?";
+   in "%{0|1}";
+}
+
+read_DIS {
+   out "DIS?";
+   in "%{0|1}";
+}
+
+read_EMISSION {
+   out "EMISSION?";
+   in "%{0|1}";
+}
+

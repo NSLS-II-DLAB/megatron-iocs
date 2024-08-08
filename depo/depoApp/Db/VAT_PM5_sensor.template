@@ -1,0 +1,100 @@
+# VAT Adaptive Pressure Controller PM-5
+# Huijuan 14-MAR-2019 
+
+## Sensor setup commands
+# Set sensor
+record(mbbo, "$(Sys)$(Dev)Rng:E-Sel") {
+  field(DESC, "Sel Voltage Range")
+  field(DTYP, "stream")
+  field(OUT, "@VAT_PM5.proto set_sensor($(Chan),$(Sys)$(Dev)) $(PORT)")
+  field(ZRST, "0-1 V")
+  field(ONST, "0-2 V")
+  field(TWST, "0-5 V")
+  field(THST, "0-10 V")
+}
+
+record(longout, "$(Sys)$(Dev)Rng:Disp-SP") {
+  field(DESC, "Set Display Range")
+  field(DRVL, "0")
+  field(DRVH, "16")
+}
+
+record(mbbo, "$(Sys)$(Dev)Unit:Disp-Sel") {
+  field(DESC, "Sel Display Unit")
+  field(ZRST, "mbar")
+  field(ONST, "ubar")
+  field(TWST, "Torr")
+  field(THST, "mTorr")
+  field(FRST, "Pa")
+  field(FVST, "kPa")
+  field(SXST, "V")
+  field(SVST, "%")
+  field(EIST, "0001-1000")
+  field(NIST, "None")
+  field(TEST, "Pos Mode Only")
+}
+
+record(longout, "$(Sys)$(Dev)Gain:Factor-SP") {
+  field(DESC, "Set Gain Factor")
+  field(DRVL, "0")
+  field(DRVH, "16")
+}
+
+record(bo, "$(Sys)$(Dev)Type:Sensor-Sel") {
+  field(DESC, "Sel Sensor Type")
+  field(ZNAM, "mbar/Pa")
+  field(ONAM, "Torr")
+}
+
+record(bo, "$(Sys)$(Dev)Enbl:ZeroAdjust-Cmd") {
+  field(DESC, "Set Zero Adjust")
+  field(ZNAM, "Enable")
+  field(ONAM, "Disable")
+}
+
+# Read sensor setup
+record(mbbi, "$(Sys)$(Dev)Rng:E-Sts") {
+  field(DESC, "Get Voltage Range")
+  field(DTYP, "stream")
+  field(INP, "@VAT_PM5.proto get_sensor_setup($(Chan),$(Sys)$(Dev)) $(PORT)")
+  field(ZRST, "0-1 V")
+  field(ONST, "0-2 V")
+  field(TWST, "0-5 V")
+  field(THST, "0-10 V")
+}
+
+record(longin, "$(Sys)$(Dev)Rng:Disp-RB") {
+  field(DESC, "Get Display Range")
+}
+
+record(mbbi, "$(Sys)$(Dev)Unit:Disp-Sts") {
+  field(DESC, "Get Display Unit")
+  field(ZRST, "mbar")
+  field(ONST, "ubar")
+  field(TWST, "Torr")
+  field(THST, "mTorr")
+  field(FRST, "Pa")
+  field(FVST, "kPa")
+  field(SXST, "V")
+  field(SVST, "%")
+  field(EIST, "0001-1000")
+  field(NIST, "None")
+  field(TEST, "Pos Mode Only")
+}
+
+record(longin, "$(Sys)$(Dev)Gain:Factor-RB") {
+  field(DESC, "Get Gain Factor")
+}
+
+record(bi, "$(Sys)$(Dev)Type:Sensor-Sts") {
+  field(DESC, "Get Sensor Type")
+  field(ZNAM, "mbar/Pa")
+  field(ONAM, "Torr")
+}
+
+record(bi, "$(Sys)$(Dev)Enbl:ZeroAdjust-Sts") {
+  field(DESC, "Get Zero Adjust")
+  field(ZNAM, "Enable")
+  field(ONAM, "Disable")
+}
+

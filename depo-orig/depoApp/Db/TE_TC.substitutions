@@ -1,0 +1,5 @@
+file TE_TC.template { pattern
+{ Sys	, Dev		,PORT		, Chan	}
+{ Depo	, "{TTC:1}"	, Depo_TTC1	, 1	}
+}
+

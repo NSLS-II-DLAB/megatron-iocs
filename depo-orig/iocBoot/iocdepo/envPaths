@@ -1,0 +1,6 @@
+epicsEnvSet("IOC","iocdepo")
+epicsEnvSet("TOP","/epics/iocs/depo")
+epicsEnvSet("ASYN","/usr/lib/epics")
+epicsEnvSet("STREAMDEVICE","/usr/lib/epics")
+epicsEnvSet("MODBUS","/usr/lib/epics")
+epicsEnvSet("EPICS_BASE","/usr/lib/epics")

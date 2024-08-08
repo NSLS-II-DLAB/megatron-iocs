@@ -1,0 +1,11 @@
+file asynRecord.template
+{
+	pattern	{ P	, R		, PORT		, ADDR	, OMAX	, IMAX	}
+		{ Depo	, "{Chill:1}"	, Depo_Chill1	, 0	, 0	, 0	}
+		{ Depo	, "{TM:1}"	, Depo_TM1	, 0	, 0	, 0	}
+		{ Depo	, "{GVC:1}"	, Depo_GVC1	, 0	, 0	, 0	}
+		{ Depo	, "{TTC:1}"	, Depo_TTC1	, 0	, 0	, 0	}
+		{ Depo	, "{PS:1}"	, Depo_PS1	, 0	, 0	, 0	}
+
+}
+

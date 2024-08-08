@@ -1,0 +1,366 @@
+# KRI Gridded RF Auto Controller
+# 
+# kag 31-AUG-2017  Initial version
+# Huijuan 12-MAR-2019 Modified version
+
+
+###
+### READ Current Process Values
+###
+  
+record(ai, "$(Sys)$(Dev)F:Gas1-I") {
+  field(DESC, "Gas Channel 1")
+  field(SCAN, "Passive")
+  field(DTYP, "stream")
+  field(INP, "@KRI_RF.proto read_all($(Sys)$(Dev)) $(PORT)")
+  field(EGU, "sccm")
+  field(PREC, "1")
+}
+
+record(ai, "$(Sys)$(Dev)F:Gas2-I") {
+  field(DESC, "Gas Channel 2")
+  field(EGU,  "sccm")
+  field(PREC, "1")
+}
+
+record(ai, "$(Sys)$(Dev)F:Gas3-I") {
+  field(DESC, "Gas Channel 3")
+  field(EGU,  "sccm")
+  field(PREC, "1")
+}
+
+record(ai, "$(Sys)$(Dev)F:Gas4-I") {
+  field(DESC, "Gas Channel 4")
+  field(EGU,  "sccm")
+  field(PREC, "1")
+}
+
+record(ai, "$(Sys)$(Dev)I:Beam-I") {
+  field(DESC, "Beam Current")
+  field(EGU,  "Amps")
+  field(PREC, "3")
+}
+
+record(ai, "$(Sys)$(Dev)E:Beam-I") {
+  field(DESC, "Beam Voltage")
+  field(EGU,  "Volts")
+  field(PREC, "1")
+}
+
+record(ai, "$(Sys)$(Dev)I:Acc-I") {
+  field(DESC, "Accelerator Current")
+  field(EGU,  "Amps")
+  field(PREC, "3")
+}
+
+record(ai, "$(Sys)$(Dev)E:Acc-I") {
+  field(DESC, "Accelerator Voltage")
+  field(EGU,  "Volts")
+  field(PREC, "1")
+}
+
+record(ai, "$(Sys)$(Dev)Pwr:RF-I") {
+  field(DESC, "RF Power")
+  field(EGU,  "Watts")
+  field(PREC, "0")
+}
+
+record(ai, "$(Sys)$(Dev)I:Emis-I") {
+  field(DESC, "Emission Current")
+  field(EGU,  "Amps")
+  field(PREC, "2")
+}
+
+record(ai, "$(Sys)$(Dev)E:Emis-I") {
+  field(DESC, "Emission Voltage")
+  field(EGU,  "Volts")
+  field(PREC, "1")
+}
+
+record(ai, "$(Sys)$(Dev)I:Fila-I") {
+  field(DESC, "Filament Current")
+  field(EGU,  "Amps")
+  field(PREC, "2")
+}
+
+record(ai, "$(Sys)$(Dev)E:Fila-I") {
+  field(DESC, "Filament Voltage")
+  field(EGU,  "Volts")
+  field(PREC, "1")
+}
+
+record(ai, "$(Sys)$(Dev)I:LFN-I") {
+  field(DESC, "LFN Discharge Current")
+  field(EGU,  "Amps")
+  field(PREC, "2")
+}
+
+
+###
+### READ Current Parameter -P1 Settings
+###
+  
+record(ai, "$(Sys)$(Dev)F:P1_Gas1-RB") {
+  field(DESC, "P1 Gas Channel 1")
+  field(DTYP, "stream")
+  field(INP, "@KRI_RF.proto read_all_set($(Sys)$(Dev)) $(PORT)")
+}
+
+record(ai, "$(Sys)$(Dev)F:P1_Gas2-RB") {
+  field(DESC, "P1 Gas Channel 2")
+  field(EGU,  "sccm")
+  field(PREC, "1")
+}
+
+record(ai, "$(Sys)$(Dev)F:P1_Gas3-RB") {
+  field(DESC, "P1 Gas Channel 3")
+  field(EGU,  "sccm")
+  field(PREC, "1")
+}
+
+record(ai, "$(Sys)$(Dev)F:P1_Gas4-RB") {
+  field(DESC, "P1 Gas Channel 4")
+  field(EGU,  "sccm")
+  field(PREC, "1")
+}
+
+record(ai, "$(Sys)$(Dev)I:P1_Beam-RB") {
+  field(DESC, "P1 Beam Current")
+  field(EGU,  "Amps")
+  field(PREC, "3")
+}
+
+record(ai, "$(Sys)$(Dev)E:P1_Beam-RB") {
+  field(DESC, "P1 Beam Voltage")
+  field(EGU,  "Volts")
+  field(PREC, "1")
+}
+
+record(ai, "$(Sys)$(Dev)I:P1_Acc-RB") {
+  field(DESC, "P1 Accelerator Current")
+  field(EGU,  "Amps")
+  field(PREC, "3")
+}
+
+record(ai, "$(Sys)$(Dev)E:P1_Acc-RB") {
+  field(DESC, "P1 Accelerator Voltage")
+  field(EGU,  "Volts")
+  field(PREC, "1")
+}
+
+record(ai, "$(Sys)$(Dev)Pwr:P1_RF-RB") {
+  field(DESC, "P1 RF Power")
+  field(EGU,  "Watts")
+  field(PREC, "0")
+}
+
+record(ai, "$(Sys)$(Dev)I:P1_Emis-RB") {
+  field(DESC, "P1 Electron Emission Current")
+  field(EGU,  "Amps")
+  field(PREC, "2")
+}
+
+record(ai, "$(Sys)$(Dev)E:P1_Emis-RB") {
+  field(DESC, "P1 Electron Emission Voltage")
+  field(EGU,  "Volts")
+  field(PREC, "1")
+}
+
+record(ai, "$(Sys)$(Dev)I:P1_LFN-RB") {
+  field(DESC, "P1 LFN Discharge Current")
+  field(EGU,  "Amps")
+  field(PREC, "2")
+}
+
+
+###
+### Set P1 Parameters
+###
+
+record(ao, "$(Sys)$(Dev)F:P1_Gas1-SP") {
+  field(DESC, "Gas Channel 1 setting")
+  field(EGU,  "sccm")
+  field(PREC, "1")
+  field(DTYP, "stream")
+  field(OUT, "@KRI_RF.proto set_P1_GS1 $(PORT)")
+}
+
+record(ao, "$(Sys)$(Dev)F:P1_Gas2-SP") {
+  field(DESC, "Gas Channel 2 setting")
+  field(EGU,  "sccm")
+  field(PREC, "1")
+  field(DTYP, "stream")
+  field(OUT, "@KRI_RF.proto set_P1_GS2 $(PORT)")
+}
+
+record(ao, "$(Sys)$(Dev)F:P1_Gas3-SP") {
+  field(DESC, "Gas Channel 3 setting")
+  field(EGU,  "sccm")
+  field(PREC, "1")
+  field(DTYP, "stream")
+  field(OUT, "@KRI_RF.proto set_P1_GS3 $(PORT)")
+}
+
+record(ao, "$(Sys)$(Dev)F:P1_Gas4-SP") {
+  field(DESC, "Gas Channel 4 setting")
+  field(EGU,  "sccm")
+  field(PREC, "1")
+  field(DTYP, "stream")
+  field(OUT, "@KRI_RF.proto set_P1_GS4 $(PORT)")
+}
+
+record(ao, "$(Sys)$(Dev)I:P1_Beam-SP") {
+  field(DESC, "Beam Current Target")
+  field(EGU,  "Amps")
+  field(PREC, "3")
+  field(DTYP, "stream")
+  field(OUT, "@KRI_RF.proto set_P1_BMI $(PORT)")
+}
+
+record(ao, "$(Sys)$(Dev)E:P1_Beam-SP") {
+  field(DESC, "Beam Voltage Target")
+  field(EGU,  "Volts")
+  field(PREC, "1")
+  field(DTYP, "stream")
+  field(OUT, "@KRI_RF.proto set_P1_BMV $(PORT)")
+}
+
+record(ao, "$(Sys)$(Dev)I:P1_Acc-SP") {
+  field(DESC, "Accelerator Current Target")
+  field(EGU,  "Amps")
+  field(PREC, "3")
+  field(DTYP, "stream")
+  field(OUT, "@KRI_RF.proto set_P1_ACI $(PORT)")
+}
+
+record(ao, "$(Sys)$(Dev)E:P1_Acc-SP") {
+  field(DESC, "Accelerator Voltage Target")
+  field(EGU,  "Volts")
+  field(PREC, "1")
+  field(DTYP, "stream")
+  field(OUT, "@KRI_RF.proto set_P1_ACV $(PORT)")
+}
+
+record(ao, "$(Sys)$(Dev)Pwr:P1_RF-SP") {
+  field(DESC, "RF Power Target")
+  field(EGU,  "Watts")
+  field(PREC, "0")
+  field(DTYP, "stream")
+  field(OUT, "@KRI_RF.proto set_P1_RFP $(PORT)")
+}
+
+record(ao, "$(Sys)$(Dev)I:P1_Emis-SP") {
+  field(DESC, "Electron Emission Current Target")
+  field(EGU,  "Volts")
+  field(PREC, "2")
+  field(DTYP, "stream")
+  field(OUT, "@KRI_RF.proto set_P1_EEI $(PORT)")
+}
+
+record(ao, "$(Sys)$(Dev)E:P1_Emis-SP") {
+  field(DESC, "Electron Emission Voltage Target")
+  field(EGU,  "Volts")
+  field(PREC, "1")
+  field(DTYP, "stream")
+  field(OUT, "@KRI_RF.proto set_P1_EEV $(PORT)")
+}
+
+record(ao, "$(Sys)$(Dev)I:P1_LFN-SP") {
+  field(DESC, "LFN Discharge Current Target")
+  field(EGU,  "Amps")
+  field(PREC, "2")
+  field(DTYP, "stream")
+  field(OUT, "@KRI_RF.proto set_P1_LFI $(PORT)")
+}
+
+
+###
+### Read/Set Misc parameters
+###
+
+record(bo, "$(Sys)$(Dev)Cmd:Com-Sel") {
+  field(DESC, "Set COMs On/Off")
+  field(DTYP, "stream")
+  field(ZNAM, "RS232 Off")
+  field(ONAM, "RS232 ON")
+  field(OUT, "@KRI_RF.proto set_COM $(PORT)")
+}
+
+record(bi, "$(Sys)$(Dev)Sts:Com-Sts") {
+  field(DESC, "Read COM Status")
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@KRI_RF.proto read_COM $(PORT)")
+  field(ZNAM, "Disabled")
+  field(ONAM, "Enabled")
+}
+
+record(stringin, "$(Sys)$(Dev)ID-I") {
+  field(DESC, "Read ID string")
+  field(DTYP, "stream")
+  field(INP, "@KRI_RF.proto read_IDN $(PORT)")
+}
+
+record(bo, "$(Sys)$(Dev)Rst-Cmd") {
+  field(DESC, "Reset")
+  field(DTYP, "stream")
+  field(OUT, "@KRI_RF.proto set_RST $(PORT)")
+}
+
+record(longin, "$(Sys)$(Dev)Tst-Cmd") {
+  field(DESC, "Self Test Query")
+  field(SCAN, "Passive")
+  field(DTYP, "stream")
+  field(INP, "@KRI_RF.proto read_TST $(PORT)")
+}
+
+# Note: for the out setting, the gui will set this record's value to 00, 01 or 11
+record(mbbo, "$(Sys)$(Dev)Out-Sel") {
+  field(DESC, "Set Output State")
+  field(DTYP, "stream")
+  field(OUT, "@KRI_RF.proto set_OUT $(PORT)")
+  field(ZRST, "00-BS,DS")
+  field(ONST, "01-BS,DE")
+  field(TWST, "11-BE,DE")
+}
+
+record(mbbi, "$(Sys)$(Dev)Out-Sts") {
+  field(DESC, "Read Output Status")
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@KRI_RF.proto read_COM $(PORT)")
+  field(ZRST, "00-BS,DS")
+  field(ONST, "01-BS,DE")
+  field(TWST, "11-BE,DE")
+  field(THST, "Unknown State")
+}
+
+# Note: for the mode setting, the gui will set this record's value to 0, 1 or 2
+record(mbbo, "$(Sys)$(Dev)Mode:Opr-Sel") {
+  field(DESC, "Set Operating Mode")
+  field(DTYP, "stream")
+  field(OUT, "@KRI_RF.proto set_MDE $(PORT)")
+  field(ZRST, "Auto Beam")
+  field(ONST, "Manual Beam")
+  field(TWST, "Gas Only")
+}
+
+record(mbbi, "$(Sys)$(Dev)Mode:Opr-Sts") {
+  field(DESC, "Read Mode Status")
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@KRI_RF.proto read_MDE $(PORT)")
+  field(ZRST, "Auto Beam")
+  field(ONST, "Manual Beam")
+  field(TWST, "Gas Only")
+  field(THST, "Unknown State")
+}
+
+record(bi, "$(Sys)$(Dev)Sts:Beam-Sts") {
+  field(DESC, "Read Beam Status")
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@KRI_RF.proto read_BEAM $(PORT)")
+  field(ZNAM, "Not Good")
+  field(ONAM, "Good")
+}

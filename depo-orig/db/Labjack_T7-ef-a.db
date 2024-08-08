@@ -1,0 +1,16 @@
+# ai record template for FLOAT inputs
+record(ai,"$(Sys)$(Dev)T:1-I") {
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(LJPORT)_EF_A 0)FLOAT32_BE")
+    field(SCAN, "I/O Intr")
+    field(PREC, "4")
+}
+
+# ai record template for FLOAT inputs
+record(ai,"$(Sys)$(Dev)T:2-I") {
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(LJPORT)_EF_A 20)FLOAT32_BE")
+    field(SCAN, "I/O Intr")
+    field(PREC, "4")
+}
+

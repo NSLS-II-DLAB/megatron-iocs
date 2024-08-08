@@ -1,0 +1,309 @@
+# mbbiDirect record template for register inputs
+record(mbbiDirect,"$(Sys)$(Dev)DI:1_Raw-I") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(PORT)_DI_DI 00 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# mbbiDirect record template for register inputs
+record(mbbiDirect,"$(Sys)$(Dev)DI:2_Raw-I") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(PORT)_DI_DI 01 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# mbbiDirect record template for register inputs
+record(mbbiDirect,"$(Sys)$(Dev)DI:3_Raw-I") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(PORT)_DI_DI 02 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# mbbiDirect record template for register inputs
+record(mbbiDirect,"$(Sys)$(Dev)DI:4_Raw-I") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(PORT)_DI_DI 03 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){MFC:1}F:RaW-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 00)UINT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){MFC:2}F:Raw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 01)UINT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){MFC:3}F:Raw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 02)UINT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){MFC:4}F:Raw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 03)UNIT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){MFC:5}F:RaW-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 04)UINT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){MFC:6}F:Raw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 05)UINT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){MFC:7}F:Raw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 06)UINT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){MFC:8}F:Raw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 07)UNIT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){MFC:9}F:RaW-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 010)UINT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){PT:3}P:Raw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 011)UINT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){PT:4}P:Raw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 012)UINT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){PT:5}P:Raw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 013)UNIT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){PT:6}P:RaW-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 014)UINT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){PT:7}P:Raw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 015)UINT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){PT:8}P:Raw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 016)UINT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){GV:2}Pos:Raw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 020)UNIT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){PS:1_Sputt}I:OutRaW-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 021)UINT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){PS:1_Sputt}P:OutRaw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 022)UINT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){PS:1_Sputt}E:OutRaw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 023)UINT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){PS:1_Sputt}Ramp:OutRaw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 024)UNIT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){PS:1_Sputt}L:OutRaw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 025)UNIT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){GV:3}Pos:Raw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 030)UNIT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){PS:2_Sputt}I:OutRaW-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 031)UINT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){PS:2_Sputt}P:OutRaw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 032)UINT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){PS:2_Sputt}E:OutRaw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 033)UINT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){PS:2_Sputt}Ramp:OutRaw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 034)UNIT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){PS:2_Sputt}L:OutRaw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 035)UNIT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){CP:1}T:Raw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 040)UNIT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){CP:2}T:Raw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 041)UNIT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){CP:3}T:Raw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 042)UNIT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){CP:4}T:Raw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 043)UNIT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){PT:1}P:Raw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 044)UNIT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){PT:2}P:Raw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 045)UNIT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){CCG:1}P:Raw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 046)UNIT16")
+    field(SCAN, "I/O Intr")
+}
+# longin record template for register inputs
+record(longin,"$(Sys){CCG:2}P:Raw-I") {
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT)_AI_AI 047)UNIT16")
+    field(SCAN, "I/O Intr")
+}
+# mbboDirect record template for register outputs
+record(mbboDirect,"$(Sys)$(Dev)DO:1_Raw-SP") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(PORT)_DO_DO 00 0xFFFF)")
+}
+# mbboDirect record template for register outputs
+record(mbboDirect,"$(Sys)$(Dev)DO:2_Raw-SP") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(PORT)_DO_DO 01 0xFFFF)")
+}
+# mbboDirect record template for register outputs
+record(mbboDirect,"$(Sys)$(Dev)DO:3_Raw-SP") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(PORT)_DO_DO 02 0xFFFF)")
+}
+# mbboDirect record template for register outputs
+record(mbboDirect,"$(Sys)$(Dev)DO:4_Raw-SP") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(PORT)_DO_DO 03 0xFFFF)")
+}
+# mbboDirect record template for register outputs
+record(mbboDirect,"$(Sys)$(Dev)DO:5_Raw-SP") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(PORT)_DO_DO 04 0xFFFF)")
+}
+# mbboDirect record template for register outputs
+record(mbboDirect,"$(Sys)$(Dev)DO:6_Raw-SP") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(PORT)_DO_DO 05 0xFFFF)")
+}
+# longout record template for register inputs
+record(longout,"$(Sys){MFC:1}F:SP-SP") {
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT)_AO_AO 00)UINT16")
+}
+# longout record template for register inputs
+record(longout,"$(Sys){MFC:2}F:SP-SP") {
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT)_AO_AO 01)UINT16")
+}
+# longout record template for register inputs
+record(longout,"$(Sys){MFC:3}F:SP-SP") {
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT)_AO_AO 02)UINT16")
+}
+# longout record template for register inputs
+record(longout,"$(Sys){MFC:4}F:SP-SP") {
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT)_AO_AO 03)UINT16")
+}
+# longout record template for register inputs
+record(longout,"$(Sys){MFC:5}F:SP-SP") {
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT)_AO_AO 04)UINT16")
+}
+# longout record template for register inputs
+record(longout,"$(Sys){MFC:6}F:SP-SP") {
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT)_AO_AO 05)UINT16")
+}
+# longout record template for register inputs
+record(longout,"$(Sys){MFC:7}F:SP-SP") {
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT)_AO_AO 06)UINT16")
+}
+# longout record template for register inputs
+record(longout,"$(Sys){MFC:8}F:SP-SP") {
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT)_AO_AO 07)UINT16")
+}
+# longout record template for register inputs
+record(longout,"$(Sys){MFC:9}F:SP-SP") {
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT)_AO_AO 08)UINT16")
+}

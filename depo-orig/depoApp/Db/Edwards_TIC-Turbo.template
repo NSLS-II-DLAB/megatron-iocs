@@ -1,0 +1,188 @@
+# Template database for for the Edwards TIC Turbo Instrument Controller
+# Turbo Pump
+# Pete Owens 30/1/2017
+# Huijuan Xu 24/06/2019 Modified
+
+# substitutions:
+# Sys - System name
+# Dev - Device name
+# PORT- asyn port
+#
+################################################################################
+# STA - Turbo Pump status
+#
+record(mbbi, "$(Sys)$(Dev)Sts")
+{
+	field(DESC, "Turbo Pump Sts")
+	field(DTYP, "stream")
+	field(INP,  "@Edwards_TIC.proto get_turbo_sta($(Sys)$(Dev)) $(PORT)")
+	field(SCAN, "1 second")
+	field(ZRST, "Stopped")
+	field(ONST, "Starting Delay")
+	field(TWST, "Stopping Short Delay")
+	field(THST, "Stopping Normal Delay")
+	field(FRST, "Running")
+	field(FVST, "Accelerating")
+	field(SXST, "Fault Breaking")
+	field(SXSV, "MAJOR")
+	field(SVST, "Braking")
+}
+
+record(longin, "$(Sys)$(Dev)Sts:Alert-I")
+{
+	field(DESC, "Turbo Alert ID")
+	field(HIGH, "1")
+	field(LOW,  "-1")
+	field(HIHI, "48")
+	field(LOLO, "-1")
+	field(HSV,  "MINOR")
+	field(LSV,  "MINOR")
+	field(HHSV, "MAJOR")
+	field(LLSV, "MAJOR")
+}
+
+record(mbbi, "$(Sys)$(Dev)Sts:Pri-Sts")
+{
+	field(DESC, "Turbo Priority")
+	field(ZRST, "OK")
+	field(ONST, "Warning")
+	field(ONSV, "MINOR")
+	field(TWST, "Alarm")
+	field(TWSV, "MINOR")
+	field(THST, "Alarm")
+	field(THSV, "MAJOR")
+}
+
+################################################################################
+# START - Start Turbo Pump
+#
+record(bo, "$(Sys)$(Dev)Cmd:Start-Cmd")
+{
+	field(DESC, "Start Pump")
+	field(DTYP, "stream")
+	field(OUT,  "@Edwards_TIC.proto start_turbo $(PORT)")
+	field(ZNAM, "Off")
+	field(ONAM, "On")
+}
+
+################################################################################
+# SPEED - Turbo Pump Speed
+#
+record(ai, "$(Sys)$(Dev)S-I")
+{
+	field(DESC, "Turbo Speed")
+	field(DTYP, "stream")
+	field(INP,  "@Edwards_TIC.proto get_turbo_speed() $(PORT)")
+	field(SCAN, "1 second")
+	field(EGU,  "%")
+	field(PREC, "1")
+	field(LOPR, "0.0")
+	field(HOPR, "110.0")
+	field(HIGH, "110.0")
+	field(LOW,  "0.0")
+	field(HIHI, "110.1")
+	field(LOLO, "-0.1")
+	field(HSV,  "MINOR")
+	field(LSV,  "MINOR")
+	field(HHSV, "MAJOR")
+	field(LLSV, "MAJOR")
+}
+
+################################################################################
+# SRF - Turbo Pump Start/Droop Fail Time
+#
+record(longin, "$(Sys)$(Dev)Time:StartFail-RB")
+{
+	field(DESC, "Start Fail Time")
+	field(DTYP, "stream")
+	field(INP,  "@Edwards_TIC.proto get_turbo_sft($(Sys)$(Dev)) $(PORT)")
+	field(SCAN, "10 second")
+	field(EGU,  "s")
+	field(LOPR, "0")
+	field(HOPR, "30")
+}
+
+record(longin, "$(Sys)$(Dev)Time:DroopFail-RB")
+{
+	field(DESC, "Droop Fail Time")
+	field(EGU,  "s")
+	field(LOPR, "0")
+	field(HOPR, "30")
+}
+
+################################################################################
+# POWER - Turbo Pump Power
+#
+record(ai, "$(Sys)$(Dev)Pwr-I")
+{
+	field(DESC, "Turbo Power")
+	field(DTYP, "stream")
+	field(INP,  "@Edwards_TIC.proto get_turbo_power() $(PORT)")
+	field(SCAN, "1 second")
+	field(EGU,  "W")
+	field(PREC, "1")
+	field(LOPR, "0.0")
+	field(HOPR, "300.0")
+	field(HIGH, "300.0")
+	field(LOW,  "0.0")
+	field(HIHI, "300.1")
+	field(LOLO, "-0.1")
+	field(HSV,  "MINOR")
+	field(LSV,  "MINOR")
+	field(HHSV, "MAJOR")
+	field(LLSV, "MAJOR")
+}
+
+################################################################################
+# NORM - Turbo Pump at normal speed
+#
+record(bi, "$(Sys)$(Dev)Sts:Norm-Sts")
+{
+	field(DESC, "Normal Speed")
+	field(DTYP, "stream")
+	field(INP,  "@Edwards_TIC.proto get_turbo_norm() $(PORT)")
+	field(SCAN, "1 second")
+	field(ZNAM, "No")
+	field(ONAM, "Yes")
+	field(OVAL, "4")
+}
+
+################################################################################
+# STBY - Standby Mode
+#
+record(bi, "$(Sys)$(Dev)Mode:Stby-Sts")
+{
+	field(DESC, "Get Standby Mode")
+	field(DTYP, "stream")
+	field(INP,  "@Edwards_TIC.proto get_turbo_stby() $(PORT)")
+	field(SCAN, "1 second")
+	field(ZNAM, "No")
+	field(ONAM, "Yes")
+	field(OVAL, "4")
+}
+
+################################################################################
+# START - Set Standby Mode
+#
+record(bo, "$(Sys)$(Dev)Mode:Stby-Cmd")
+{
+	field(DESC, "Set Standby Mode")
+	field(DTYP, "stream")
+	field(OUT,  "@Edwards_TIC.proto set_turbo_stby $(PORT)")
+	field(ZNAM, "No")
+	field(ONAM, "Yes")
+}
+
+################################################################################
+# CYCLE - Turbo Pump Cycle Time
+#
+record(longin, "$(Sys)$(Dev)Time:Cycle-I")
+{
+	field(DESC, "Cycle Time")
+	field(DTYP, "stream")
+	field(INP,  "@Edwards_TIC.proto get_turbo_cycle() $(PORT)")
+	field(SCAN, "10 second")
+	field(EGU,  "h")
+	field(LOPR, "0")
+	field(HOPR, "65535")
+}

@@ -1,0 +1,38 @@
+# temperature values
+file "Labjack_T7-ai.template" { pattern
+{ P		, R			, PORT		, OFFSET	, DATA_TYPE	,  SCAN		, PREC	}
+{ $(Sys)	, "$(Dev)TC:01-I"	, $(LJPORT)_TC	, 0		, FLOAT32_BE	, "I/O Intr"	, 4	}
+{ $(Sys)	, "$(Dev)TC:02-I"	, $(LJPORT)_TC	, 2		, FLOAT32_BE	, "I/O Intr"	, 4	}
+{ $(Sys)	, "$(Dev)TC:03-I"	, $(LJPORT)_TC	, 4		, FLOAT32_BE	, "I/O Intr"	, 4	}
+{ $(Sys)	, "$(Dev)TC:04-I"	, $(LJPORT)_TC	, 6		, FLOAT32_BE	, "I/O Intr"	, 4	}
+{ $(Sys)	, "$(Dev)TC:05-I"	, $(LJPORT)_TC	, 8		, FLOAT32_BE	, "I/O Intr"	, 4	}
+{ $(Sys)	, "$(Dev)TC:06-I"	, $(LJPORT)_TC	, 10		, FLOAT32_BE	, "I/O Intr"	, 4	}
+{ $(Sys)	, "$(Dev)TC:07-I"	, $(LJPORT)_TC	, 12		, FLOAT32_BE	, "I/O Intr"	, 4	}
+{ $(Sys)	, "$(Dev)TC:08-I"	, $(LJPORT)_TC	, 14		, FLOAT32_BE	, "I/O Intr"	, 4	}
+}
+
+# Index configure: TC type
+file "Labjack_T7-mbbo-tc-type.template" { pattern
+{ P		, R				, PORT			, OFFSET	, MASK	}
+{ $(Sys)	, "$(Dev)TC:01_Type-Sel"	, $(LJPORT)_TC_TYPE	, 0		, 0xFFFF		}
+{ $(Sys)	, "$(Dev)TC:02_Type-Sel"	, $(LJPORT)_TC_TYPE	, 1		, 0xFFFF	}
+{ $(Sys)	, "$(Dev)TC:03_Type-Sel"	, $(LJPORT)_TC_TYPE	, 2		, 0xFFFF	}
+{ $(Sys)	, "$(Dev)TC:04_Type-Sel"	, $(LJPORT)_TC_TYPE	, 3		, 0xFFFF	}
+{ $(Sys)	, "$(Dev)TC:05_Type-Sel"	, $(LJPORT)_TC_TYPE	, 4		, 0xFFFF	}
+{ $(Sys)	, "$(Dev)TC:06_Type-Sel"	, $(LJPORT)_TC_TYPE	, 5		, 0xFFFF	}
+{ $(Sys)	, "$(Dev)TC:07_Type-Sel"	, $(LJPORT)_TC_TYPE	, 6		, 0xFFFF	}
+{ $(Sys)	, "$(Dev)TC:08_Type-Sel"	, $(LJPORT)_TC_TYPE	, 7		, 0xFFFF	}
+}
+
+# Configure A: unit
+file "Labjack_T7-mbbo-t-unit.template" { pattern
+{ P		, R			, PORT			, OFFSET	, MASK	}
+{ $(Sys)	, "$(Dev)TC:01_Unit-Sel"	, $(LJPORT)_TC_UNIT	, 0		, 0xFFFF		}
+{ $(Sys)	, "$(Dev)TC:02_Unit-Sel"	, $(LJPORT)_TC_UNIT	, 1		, 0xFFFF	}
+{ $(Sys)	, "$(Dev)TC:03_Unit-Sel"	, $(LJPORT)_TC_UNIT	, 2		, 0xFFFF	}
+{ $(Sys)	, "$(Dev)TC:04_Unit-Sel"	, $(LJPORT)_TC_UNIT	, 3		, 0xFFFF	}
+{ $(Sys)	, "$(Dev)TC:05_Unit-Sel"	, $(LJPORT)_TC_UNIT	, 4		, 0xFFFF	}
+{ $(Sys)	, "$(Dev)TC:06_Unit-Sel"	, $(LJPORT)_TC_UNIT	, 5		, 0xFFFF	}
+{ $(Sys)	, "$(Dev)TC:07_Unit-Sel"	, $(LJPORT)_TC_UNIT	, 6		, 0xFFFF	}
+{ $(Sys)	, "$(Dev)TC:08_Unit-Sel"	, $(LJPORT)_TC_UNIT	, 7		, 0xFFFF	}
+}

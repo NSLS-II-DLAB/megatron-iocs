@@ -1,0 +1,4 @@
+epicsEnvSet("IOC","iocdepo")
+epicsEnvSet("TOP","/epics/iocs/depo")
+epicsEnvSet("MODBUS","/usr/lib/epics")
+epicsEnvSet("EPICS_BASE","/usr/lib/epics")

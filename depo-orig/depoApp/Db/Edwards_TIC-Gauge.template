@@ -1,0 +1,75 @@
+# Edwards_TICTurbo.template
+# Template database for for the Edwards TIC Turbo Instrument Controller
+# Turbo Pump
+# Pete Owens 30/1/2017
+# Huijuan Xu 27/06/2019 Modified
+
+# substitutions:
+# Sys - System name
+# Dev - Device name
+# PORT- asyn port
+# Num - Gauge number, 1-3
+#
+################################################################################
+# P - Pressure
+#
+record(ai, "$(Sys)$(Dev)P-I")
+{
+	field(DESC, "Pressure")
+	field(DTYP, "stream")
+	field(INP,  "@Edwards_TIC.proto get_gauge$(Num)_p($(Sys)$(Dev)) $(port)")
+	field(SCAN, "1 second")
+}
+
+record(mbbi, "$(Sys)$(Dev)EU-Sts")
+{
+	field(DESC, "P Units")
+	field(ZRVL, "59")
+	field(ZRST, "Pa")
+	field(ONVL, "66")
+	field(ONST, "V")
+	field(TWVL, "81")
+	field(TWST, "%")
+}
+
+record(mbbi, "$(Sys)$(Dev)Sts")
+{
+	field(DESC, "Gauge$(Num) Status")
+	field(ZRST, "Not Connected")
+	field(ONST, "Connected")
+	field(TWST, "New ID")
+	field(THST, "Change")
+	field(FRST, "Alert")
+	field(FVST, "Off")
+	field(SXST, "Striking")
+	field(SVST, "Calibrating")
+	field(SVST, "Zeroing")
+	field(EIST, "Degassing")
+	field(NIST, "On")
+	field(TEST, "Inhibited")
+}
+
+record(longin, "$(Sys)$(Dev)Sts:Alert-I")
+{
+	field(DESC,"Gauge$(Num) Alert ID")
+	field(HIGH, "1")
+	field(LOW,  "-1")
+	field(HIHI, "48")
+	field(LOLO, "-1")
+	field(HSV,  "MINOR")
+	field(LSV,  "MINOR")
+	field(HHSV, "MAJOR")
+	field(LLSV, "MAJOR")
+}
+
+record(mbbi, "$(Sys)$(Dev)Sts:Pri-Sts")
+{
+	field(DESC, "Gauge$(Num) Priority")
+	field(ZRST, "OK")
+	field(ONST, "Warning")
+	field(ONSV, "MINOR")
+	field(TWST, "Alarm")
+	field(TWSV, "MINOR")
+	field(THST, "Alarm")
+	field(THSV, "MAJOR")
+}

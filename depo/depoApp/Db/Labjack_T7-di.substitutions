@@ -1,0 +1,12 @@
+# DIO
+file "Labjack_T7-di.template" { pattern
+{ P		, R			, PORT		, OFFSET	, SCAN		, ZNAM	, ONAM	, ZSV		, OSV		}
+{ $(Sys)	, "$(Dev)DI:01-Sts"	, $(LJPORT)_DI	, 0		, "I/O Intr"	, Low	, High	, NO_ALARM	, NO_ALARM	}
+{ $(Sys)	, "$(Dev)DI:02-Sts"	, $(LJPORT)_DI	, 1		, "I/O Intr"	, Low	, High	, NO_ALARM	, NO_ALARM	}
+{ $(Sys)	, "$(Dev)DI:03-Sts"	, $(LJPORT)_DI	, 2		, "I/O Intr"	, Low	, High	, NO_ALARM	, NO_ALARM	}
+{ $(Sys)	, "$(Dev)DI:04-Sts"	, $(LJPORT)_DI	, 3		, "I/O Intr"	, Low	, High	, NO_ALARM	, NO_ALARM	}
+{ $(Sys)	, "$(Dev)DI:05-Sts"	, $(LJPORT)_DI	, 4		, "I/O Intr"	, Low	, High	, NO_ALARM	, NO_ALARM	}
+{ $(Sys)	, "$(Dev)DI:06-Sts"	, $(LJPORT)_DI	, 5		, "I/O Intr"	, Low	, High	, NO_ALARM	, NO_ALARM	}
+{ $(Sys)	, "$(Dev)DI:07-Sts"	, $(LJPORT)_DI	, 6		, "I/O Intr"	, Low	, High	, NO_ALARM	, NO_ALARM	}
+{ $(Sys)	, "$(Dev)DI:08-Sts"	, $(LJPORT)_DI	, 7		, "I/O Intr"	, Low	, High	, NO_ALARM	, NO_ALARM	}
+}

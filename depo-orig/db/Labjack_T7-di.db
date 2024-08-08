@@ -1,0 +1,88 @@
+# bi record template for UNIT16 inputs
+record(bi,"$(Sys)$(Dev)DI:01-Sts") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(LJPORT)_DI 0 0x1)")
+    field(SCAN, "I/O Intr")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(ZSV,"NO_ALARM")
+    field(OSV,"NO_ALARM")
+}
+
+# bi record template for UNIT16 inputs
+record(bi,"$(Sys)$(Dev)DI:02-Sts") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(LJPORT)_DI 1 0x1)")
+    field(SCAN, "I/O Intr")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(ZSV,"NO_ALARM")
+    field(OSV,"NO_ALARM")
+}
+
+# bi record template for UNIT16 inputs
+record(bi,"$(Sys)$(Dev)DI:03-Sts") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(LJPORT)_DI 2 0x1)")
+    field(SCAN, "I/O Intr")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(ZSV,"NO_ALARM")
+    field(OSV,"NO_ALARM")
+}
+
+# bi record template for UNIT16 inputs
+record(bi,"$(Sys)$(Dev)DI:04-Sts") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(LJPORT)_DI 3 0x1)")
+    field(SCAN, "I/O Intr")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(ZSV,"NO_ALARM")
+    field(OSV,"NO_ALARM")
+}
+
+# bi record template for UNIT16 inputs
+record(bi,"$(Sys)$(Dev)DI:05-Sts") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(LJPORT)_DI 4 0x1)")
+    field(SCAN, "I/O Intr")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(ZSV,"NO_ALARM")
+    field(OSV,"NO_ALARM")
+}
+
+# bi record template for UNIT16 inputs
+record(bi,"$(Sys)$(Dev)DI:06-Sts") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(LJPORT)_DI 5 0x1)")
+    field(SCAN, "I/O Intr")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(ZSV,"NO_ALARM")
+    field(OSV,"NO_ALARM")
+}
+
+# bi record template for UNIT16 inputs
+record(bi,"$(Sys)$(Dev)DI:07-Sts") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(LJPORT)_DI 6 0x1)")
+    field(SCAN, "I/O Intr")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(ZSV,"NO_ALARM")
+    field(OSV,"NO_ALARM")
+}
+
+# bi record template for UNIT16 inputs
+record(bi,"$(Sys)$(Dev)DI:08-Sts") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask($(LJPORT)_DI 7 0x1)")
+    field(SCAN, "I/O Intr")
+    field(ZNAM,"Low")
+    field(ONAM,"High")
+    field(ZSV,"NO_ALARM")
+    field(OSV,"NO_ALARM")
+}
+

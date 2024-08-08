@@ -1,0 +1,326 @@
+# VAT Adaptive Pressure Controller PM-5
+# Huijuan 14-MAR-2019 
+
+## Control commands
+# Set operation mode
+record(bo, "Depo{GVC:1}Mode:Opr-Cmd") {
+  field(DESC, "Set Opr Mode")
+  field(DTYP, "stream")
+  field(OUT, "@VAT_PM5.proto set_opr_mode Depo_GVC1")
+  field(ZNAM, "Remote")
+  field(ONAM, "Local")
+}
+
+# Close valve
+record(bo, "Depo{GV:1}Cmd:Cls-Cmd") {
+  field(DESC, "Close Vlv")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto close_vlv Depo_GVC1")
+}
+
+# Open valve
+record(bo, "Depo{GV:1}Cmd:Opn-Cmd") {
+  field(DESC, "Open Vlv")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto open_vlv Depo_GVC1")
+}
+
+# Set valve position
+record(longout, "Depo{GV:1}Pos-SP") {
+  field(DESC, "Set Vlv Pos")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto set_vlv_pos Depo_GVC1")
+  field(DRVL, "0")
+  field(DRVH, "1000")
+}
+
+# Zero adjust
+record(bo, "Depo{GV:1}Cmd:Zro-Cmd") {
+  field(DESC, "Zero Adjust")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto zero_adjust Depo_GVC1")
+}
+
+# Learn
+record(longout, "Depo{GV:1}Val:Learn-SP") {
+  field(DESC, "Set Learn")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto learn Depo_GVC1")
+  field(DRVL, "0")
+  field(DRVH, "1000")
+}
+
+# Set pressure
+record(longout, "Depo{GV:1}P:SP-SP") {
+  field(DESC, "Set P")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto set_P Depo_GVC1")
+  field(DRVL, "0")
+  field(DRVH, "1000")
+}
+
+# Select sensor
+record(bo, "Depo{GVC:1}Cmd:Sensor-Sel") {
+  field(DESC, "Select Sensor")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto sel_sensor Depo_GVC1")
+  field(ZNAM, "Sensor 1")
+  field(ONAM, "Sensor 2")
+}
+
+# Set hold mode
+record(bo, "Depo{GV:1}Mode:Cntl-Cmd") {
+  field(DESC, "Set Hold Mode")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto set_hold_mode Depo_GVC1")
+}
+
+# Set pressure mode
+record(bo, "Depo{GV:1}Mode:P-Cmd") {
+  field(DESC, "Set P Mode")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto set_p_mode Depo_GVC1")
+}
+
+# Set reduced positioning speed 
+record(longout, "Depo{GV:1}S:Pos-SP") {
+  field(DESC, "Set Position Speed")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto set_speed Depo_GVC1")
+  field(DRVL, "0")
+  field(DRVH, "1000")
+}
+
+# Auto size adjust
+record(bo, "Depo{GV:1}Cmd:AutoSize-Cmd") {
+  field(DESC, "Auto Size Adjust")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto auto_size Depo_GVC1")
+}
+
+# Enable/Disable power failure option
+record(bo, "Depo{GV:1}Enbl:PFO-Cmd") {
+  field(DESC, "Enable/Disable PFO")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto set_PFO Depo_GVC1")
+  field(ZNAM, "Disable")
+  field(ONAM, "Enable")
+}
+
+# Interlock front panel keys
+record(bo, "Depo{GV:1}Cmd:Intlk-Cmd") {
+  field(DESC, "Intlk L/R")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto set_intlk Depo_GVC1")
+  field(ZNAM, "Interlock")
+  field(ONAM, "Release")
+}
+
+# Enable/Disable logic input
+record(bo, "Depo{GV:1}Enbl:LogicIn-Cmd") {
+  field(DESC, "Enable/Disable Logic Input")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto enbl_logic_in Depo_GVC1")
+  field(ZNAM, "Disable")
+  field(ONAM, "Enable")
+}
+
+## Inquiry commands
+# Actual valve position
+record(longin, "Depo{GV:1}Pos-I") {
+  field(DESC, "Get Actual Vlv Pos")
+  field(DTYP, "stream")
+  field(INP,  "@VAT_PM5.proto get_vlv_pos Depo_GVC1")
+}
+
+# Actual pressure
+record(longin, "Depo{GV:1}P-I") {
+  field(DESC, "Get Actual P")
+  field(DTYP, "stream")
+  field(INP,  "@VAT_PM5.proto get_P Depo_GVC1")
+}
+
+# Pressure setpoint value
+record(longin, "Depo{GV:1}P:SP-RB") {
+  field(DESC, "Get P SP")
+  field(DTYP, "stream")
+  field(INP,  "@VAT_PM5.proto get_P_SP Depo_GVC1")
+}
+
+# Operating mode
+record(mbbi, "Depo{GV:1}Mode:Opr-Sts") {
+  field(DESC, "Get Operate Moe")
+  field(DTYP, "stream")
+  field(INP,  "@VAT_PM5.proto get_opr_mode Depo_GVC1")
+  field(ZRST, "LOCAL")
+  field(ONST, "REMOTE")
+  field(TWST, "LOCKED")
+}
+
+# Control mode 
+record(bi, "Depo{GV:1}Mode:Cntl-Sts") {
+  field(DESC, "Get Control Moe")
+  field(DTYP, "stream")
+  field(INP,  "@VAT_PM5.proto get_ctrl_mode Depo_GVC1")
+  field(ZNAM, "POSITION")
+  field(ONAM, "PRESSURE")
+}
+
+# Self test 
+record(mbbi, "Depo{GV:1}Sts:SelfTst-Sts") {
+  field(DESC, "Self Test")
+  field(DTYP, "stream")
+  field(INP,  "@VAT_PM5.proto get_self_test Depo_GVC1")
+  field(ZRST, "Memory OK")
+  field(ONST, "Parameter Err")
+  field(TWST, "EPROM Err") 
+}
+
+# Sensor zero offset
+record(longin, "Depo{GV:1}Val:ZeroOff-I") {
+  field(DESC, "Get Sensor Zero Offset")
+  field(DTYP, "stream")
+  field(INP,  "@VAT_PM5.proto get_zero_offset Depo_GVC1")
+}
+
+# Valve cycle counter
+record(longin, "Depo{GV:1}Cnt:Cycle-I") {
+  field(DESC, "Get Vlv Cycle Cnt")
+  field(DTYP, "stream")
+  field(INP,  "@VAT_PM5.proto get_vlv_cnt Depo_GVC1")
+}
+
+# Set counter to zero
+record(bo, "Depo{GV:1}Cnt:Zero-Cmd") {
+  field(DESC, "Zero Counter")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto set_cnt_zero Depo_GVC1")
+}
+
+# Software version
+record(stringin, "Depo{GV:1}Ver:Soft-I") {
+  field(DESC, "Get Software Version")
+  field(DTYP, "stream")
+  field(INP,  "@VAT_PM5.proto get_soft_version Depo_GVC1")
+}
+
+# Position status
+record(bi, "Depo{GV:1}Err:Pos-Sts") {
+  field(DESC, "Get Pos Err Sts")
+  field(DTYP, "stream")
+  field(INP,  "@VAT_PM5.proto get_pos_err_sts Depo_GVC1")
+  field(ZNAM, "OK")
+  field(ONAM, "Error")
+}
+
+# Valve position status
+record(mbbi, "Depo{GV:1}Pos-Sts") {
+  field(DESC, "Get Vlv Sts")
+  field(DTYP, "stream")
+  field(INP,  "@VAT_PM5.proto get_vlv_pos Depo_GVC1")
+  field(ZRST, "Open")
+  field(ONST, "Closed")
+  field(TWST, "Intermediate")
+}
+
+
+# VAT Adaptive Pressure Controller PM-5
+# Huijuan 14-MAR-2019 
+
+## Sensor setup commands
+# Set sensor
+record(mbbo, "Depo{GVS:1}Rng:E-Sel") {
+  field(DESC, "Sel Voltage Range")
+  field(DTYP, "stream")
+  field(OUT, "@VAT_PM5.proto set_sensor(1,Depo{GVS:1}) Depo_GVC1")
+  field(ZRST, "0-1 V")
+  field(ONST, "0-2 V")
+  field(TWST, "0-5 V")
+  field(THST, "0-10 V")
+}
+
+record(longout, "Depo{GVS:1}Rng:Disp-SP") {
+  field(DESC, "Set Display Range")
+  field(DRVL, "0")
+  field(DRVH, "16")
+}
+
+record(mbbo, "Depo{GVS:1}Unit:Disp-Sel") {
+  field(DESC, "Sel Display Unit")
+  field(ZRST, "mbar")
+  field(ONST, "ubar")
+  field(TWST, "Torr")
+  field(THST, "mTorr")
+  field(FRST, "Pa")
+  field(FVST, "kPa")
+  field(SXST, "V")
+  field(SVST, "%")
+  field(EIST, "0001-1000")
+  field(NIST, "None")
+  field(TEST, "Pos Mode Only")
+}
+
+record(longout, "Depo{GVS:1}Gain:Factor-SP") {
+  field(DESC, "Set Gain Factor")
+  field(DRVL, "0")
+  field(DRVH, "16")
+}
+
+record(bo, "Depo{GVS:1}Type:Sensor-Sel") {
+  field(DESC, "Sel Sensor Type")
+  field(ZNAM, "mbar/Pa")
+  field(ONAM, "Torr")
+}
+
+record(bo, "Depo{GVS:1}Enbl:ZeroAdjust-Cmd") {
+  field(DESC, "Set Zero Adjust")
+  field(ZNAM, "Enable")
+  field(ONAM, "Disable")
+}
+
+# Read sensor setup
+record(mbbi, "Depo{GVS:1}Rng:E-Sts") {
+  field(DESC, "Get Voltage Range")
+  field(DTYP, "stream")
+  field(INP, "@VAT_PM5.proto get_sensor_setup(1,Depo{GVS:1}) Depo_GVC1")
+  field(ZRST, "0-1 V")
+  field(ONST, "0-2 V")
+  field(TWST, "0-5 V")
+  field(THST, "0-10 V")
+}
+
+record(longin, "Depo{GVS:1}Rng:Disp-RB") {
+  field(DESC, "Get Display Range")
+}
+
+record(mbbi, "Depo{GVS:1}Unit:Disp-Sts") {
+  field(DESC, "Get Display Unit")
+  field(ZRST, "mbar")
+  field(ONST, "ubar")
+  field(TWST, "Torr")
+  field(THST, "mTorr")
+  field(FRST, "Pa")
+  field(FVST, "kPa")
+  field(SXST, "V")
+  field(SVST, "%")
+  field(EIST, "0001-1000")
+  field(NIST, "None")
+  field(TEST, "Pos Mode Only")
+}
+
+record(longin, "Depo{GVS:1}Gain:Factor-RB") {
+  field(DESC, "Get Gain Factor")
+}
+
+record(bi, "Depo{GVS:1}Type:Sensor-Sts") {
+  field(DESC, "Get Sensor Type")
+  field(ZNAM, "mbar/Pa")
+  field(ONAM, "Torr")
+}
+
+record(bi, "Depo{GVS:1}Enbl:ZeroAdjust-Sts") {
+  field(DESC, "Get Zero Adjust")
+  field(ZNAM, "Enable")
+  field(ONAM, "Disable")
+}
+

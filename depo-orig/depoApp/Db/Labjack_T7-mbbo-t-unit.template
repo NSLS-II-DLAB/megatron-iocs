@@ -1,0 +1,12 @@
+# mbbo record template for UINT32 outputs (CONFIG_A)
+record(mbbo,"$(P)$(R)") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(PORT) $(OFFSET) $(MASK))")
+    field(ZRVL, "0")
+    field(ONVL, "1")
+    field(TWVL, "2")
+    field(ZRST, "K")
+    field(ONST, "C")
+    field(TWST, "F")
+}
+

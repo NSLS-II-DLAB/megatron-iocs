@@ -1,0 +1,5 @@
+file Neslab_rte.template { pattern
+{ Sys	, Dev		, PORT		}
+{ Depo	, "{Chill:1}"	, Depo_Chill1	}
+}
+

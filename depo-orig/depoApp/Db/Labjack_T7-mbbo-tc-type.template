@@ -1,0 +1,20 @@
+# mbbo record template for UINT32 outputs (TC)
+record(mbbo,"$(P)$(R)") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(PORT) $(OFFSET) $(MASK))")
+    field(ZRVL, "20")
+    field(ONVL, "21")
+    field(TWVL, "22")
+    field(THVL, "23")
+    field(FRVL, "24")
+    field(FVVL, "25")
+    field(SXVL, "30")
+    field(ZRST, "TC Type E")
+    field(ONST, "TC Type J")
+    field(TWST, "TC Type K")
+    field(THST, "TC Type R")
+    field(FRST, "TC Type T")
+    field(FVST, "TC Type S")
+    field(SXST, "TC Type C")
+}
+

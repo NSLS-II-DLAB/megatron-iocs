@@ -1,0 +1,18 @@
+# raw values
+file "Labjack_T7-ai.template" { pattern
+{ P		, R			, PORT		, OFFSET	, DATA_TYPE	,  SCAN		, PREC	}
+{ $(Sys)	, "$(Dev)AI:01-I"	, $(LJPORT)_AI	, 0		, FLOAT32_BE	, "I/O Intr"	, 4	}
+{ $(Sys)	, "$(Dev)AI:02-I"	, $(LJPORT)_AI	, 2		, FLOAT32_BE	, "I/O Intr"	, 4	}
+{ $(Sys)	, "$(Dev)AI:03-I"	, $(LJPORT)_AI	, 4		, FLOAT32_BE	, "I/O Intr"	, 4	}
+{ $(Sys)	, "$(Dev)AI:04-I"	, $(LJPORT)_AI	, 6		, FLOAT32_BE	, "I/O Intr"	, 4	}
+{ $(Sys)	, "$(Dev)AI:05-I"	, $(LJPORT)_AI	, 8		, FLOAT32_BE	, "I/O Intr"	, 4	}
+{ $(Sys)	, "$(Dev)AI:06-I"	, $(LJPORT)_AI	, 10		, FLOAT32_BE	, "I/O Intr"	, 4	}
+{ $(Sys)	, "$(Dev)AI:07-I"	, $(LJPORT)_AI	, 12		, FLOAT32_BE	, "I/O Intr"	, 4	}
+{ $(Sys)	, "$(Dev)AI:08-I"	, $(LJPORT)_AI	, 14		, FLOAT32_BE	, "I/O Intr"	, 4	}
+{ $(Sys)	, "$(Dev)AI:09-I"	, $(LJPORT)_AI	, 16		, FLOAT32_BE	, "I/O Intr"	, 4	}
+{ $(Sys)	, "$(Dev)AI:10-I"	, $(LJPORT)_AI	, 18		, FLOAT32_BE	, "I/O Intr"	, 4	}
+{ $(Sys)	, "$(Dev)AI:11-I"	, $(LJPORT)_AI	, 20		, FLOAT32_BE	, "I/O Intr"	, 4	}
+{ $(Sys)	, "$(Dev)AI:12-I"	, $(LJPORT)_AI	, 22		, FLOAT32_BE	, "I/O Intr"	, 4	}
+{ $(Sys)	, "$(Dev)AI:13-I"	, $(LJPORT)_AI	, 24		, FLOAT32_BE	, "I/O Intr"	, 4	}
+{ $(Sys)	, "$(Dev)AI:14-I"	, $(LJPORT)_AI	, 26		, FLOAT32_BE	, "I/O Intr"	, 4	}
+}

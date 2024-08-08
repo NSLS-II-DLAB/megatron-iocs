@@ -1,0 +1,50 @@
+record(asyn,"Depo{Chill:1}")
+{
+    field(DTYP,"asynRecordDevice")
+    field(PORT,"Depo_Chill1")
+    field(ADDR,"0")
+    field(OMAX,"0")
+    field(IMAX,"0")
+}
+
+
+record(asyn,"Depo{TM:1}")
+{
+    field(DTYP,"asynRecordDevice")
+    field(PORT,"Depo_TM1")
+    field(ADDR,"0")
+    field(OMAX,"0")
+    field(IMAX,"0")
+}
+
+
+record(asyn,"Depo{GVC:1}")
+{
+    field(DTYP,"asynRecordDevice")
+    field(PORT,"Depo_GVC1")
+    field(ADDR,"0")
+    field(OMAX,"0")
+    field(IMAX,"0")
+}
+
+
+record(asyn,"Depo{TTC:1}")
+{
+    field(DTYP,"asynRecordDevice")
+    field(PORT,"Depo_TTC1")
+    field(ADDR,"0")
+    field(OMAX,"0")
+    field(IMAX,"0")
+}
+
+
+record(asyn,"Depo{PS:1}")
+{
+    field(DTYP,"asynRecordDevice")
+    field(PORT,"Depo_PS1")
+    field(ADDR,"0")
+    field(OMAX,"0")
+    field(IMAX,"0")
+}
+
+

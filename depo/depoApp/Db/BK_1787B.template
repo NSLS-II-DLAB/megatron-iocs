@@ -1,0 +1,178 @@
+# BK Precision 1787B Single Output Programmable DC Power Supply 
+#
+# Huijuan 25-MAR-2019
+
+# Set communication mode
+record(bo, "$(Sys)$(Dev)Mode:Opr-Sel") {
+  field(DESC, "Set Opr Mode")
+  field(DTYP, "stream")
+  field(OUT,  "@BK_1787B.proto set_opr_mode() $(PORT)")
+  field(ZNAM, "Local")
+  field(ONAM, "Remote")
+}
+
+record(bo, "$(Sys)$(Dev)Test") {
+  field(DESC, "Set Comm Mode")
+  field(DTYP, "stream")
+  field(OUT,  "@BK_1787B.proto test $(PORT)")
+}
+
+# Set the output state
+record(bo, "$(Sys)$(Dev)Cmd:Out-Cmd") {
+  field(DESC, "Set Output")
+  field(DTYP, "stream")
+  field(OUT,  "@BK_1787B.proto set_output $(PORT)")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+}
+
+# Set the max output voltage
+record(ao, "$(Sys)$(Dev)E:MaxOut-SP") {
+  field(DESC, "Set Max Output E")
+  field(DTYP, "stream")
+  field(OUT,  "@BK_1787B.proto set_max_out_E $(PORT)")
+  field(EGU,  "V")
+  field(ASLO, "0.001")
+  field(DRVL, "0")
+  field(DRVH, "72")
+}
+
+# Set the output voltage
+record(ao, "$(Sys)$(Dev)E:Out-SP") {
+  field(DESC, "Set Output E")
+  field(DTYP, "stream")
+  field(OUT,  "@BK_1787B.proto set_out_E $(PORT)")
+  field(EGU,  "V")
+  field(ASLO, "0.001")
+  field(DRVL, "0")
+  field(DRVH, "72")
+}
+
+# Set the output current
+record(ao, "$(Sys)$(Dev)I:Out-SP") {
+  field(DESC, "Set Output I")
+  field(DTYP, "stream")
+  field(OUT,  "@BK_1787B.proto set_out_I $(PORT)")
+  field(EGU,  "A")
+  field(ASLO, "0.001")
+  field(DRVL, "0")
+  field(DRVH, "1.5")
+}
+
+# Read all information
+record(ai, "$(Sys)$(Dev)I-I") {
+  field(DESC, "Get Current I")
+  field(DTYP, "stream")
+  field(INP,  "@BK_1787B.proto get_all_info($(Sys)$(Dev)) $(PORT)")
+  field(EGU,  "A")
+  field(ASLO, "0.001")
+}
+
+record(ai, "$(Sys)$(Dev)E-I") {
+  field(DESC, "Get Current E")
+  field(EGU,  "V")
+  field(ASLO, "0.001")
+}
+
+record(mbbiDirect, "$(Sys)$(Dev)Sts") {
+  field(DESC, "PS All Sts")
+}
+
+record(ai, "$(Sys)$(Dev)I:Out-RB") {
+  field(DESC, "Get Out I")
+  field(EGU,  "I")
+  field(ASLO, "0.001")
+}
+
+record(ai, "$(Sys)$(Dev)E:Max-RB") {
+  field(DESC, "Get Max E")
+  field(EGU,  "V")
+  field(ASLO, "0.001")
+}
+
+record(ai, "$(Sys)$(Dev)E:Out-RB") {
+  field(DESC, "Get E Out")
+  field(EGU,  "V")
+  field(ASLO, "0.001")
+}
+
+# Set the calibration mode
+record(bo, "$(Sys)$(Dev)Enbl:CalProt-Sel") {
+  field(DESC, "Set Cal Prot Mode")
+  field(DTYP, "stream")
+  field(OUT,  "@BK_1787B.proto set_cal_mode $(PORT)")
+  field(ZNAM, "Disable Prot")
+  field(ONAM, "Enbl Prot")
+}
+
+# Get the calibration state
+record(bi, "$(Sys)$(Dev)Enbl:CalProt-Sts") {
+  field(DESC, "Get Cal Stat")
+  field(DTYP, "stream")
+  field(INP,  "@BK_1787B.proto get_cal_stat $(PORT)")
+  field(ZNAM, "Disable Prot")
+  field(ONAM, "Enbl Prot")
+}
+
+# Power supply status
+record(bi, "$(Sys)$(Dev)Sts:Out-Sts")
+{
+  field(DESC, "Get Output Sts")
+  field(INP,  "$(Sys)$(Dev)Sts.B0")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+}
+
+# Overheat protection
+record(bi, "$(Sys)$(Dev)Sts:OverT-Sts")
+{
+  field(DESC, "Get OverT Sts")
+  field(INP,  "$(Sys)$(Dev)Sts.B1")
+  field(ZNAM, "Normal")
+  field(ONAM, "Abnormal")
+}
+
+# Output mode
+record(calcout, "$(Sys)$(Dev)Mode:Out-Calc")
+{
+  field(DESC, "Get Out Mode")
+  field(INPA, "$(Sys)$(Dev)Sts.B2")
+  field(INPB, "$(Sys)$(Dev)Sts.B3")
+  field(CALC, "A+B")
+  field(OUT,  "$(Sys)$(Dev)Mode:Out-Sts PP")
+}
+
+record(mbbi, "$(Sys)$(Dev)Mode:Out-Sts")
+{
+  field(DESC, "Output Mode Sts")
+  field(ZRST, "None")
+  field(ONST, "CV")
+  field(TWST, "CC")
+  field(THST, "Unreg")
+}
+
+# Fan speed
+record(calcout, "$(Sys)$(Dev)S:Fan-Calc")
+{
+  field(DESC, "Fen Speed")
+  field(INPA, "$(Sys)$(Dev)Sts.B4")
+  field(INPB, "$(Sys)$(Dev)Sts.B5")
+  field(INPC, "$(Sys)$(Dev)Sts.B6")
+  field(CALC, "A+B+C")
+  field(OUT,  "$(Sys)$(Dev)S:Fan-I PP")
+}
+
+record(longin, "$(Sys)$(Dev)S:Fan-I")
+{
+  field(DESC, "Fan Speed")
+}
+
+# Operation State
+record(bi, "$(Sys)$(Dev)Mode:Opr-Sts")
+{
+  field(DESC, "Get Opr Sts")
+  field(INP,  "$(Sys)$(Dev)Sts.B7")
+  field(ZNAM, "Local")
+  field(ONAM, "Remote")
+}
+

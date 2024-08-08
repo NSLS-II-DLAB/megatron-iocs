@@ -1,0 +1,226 @@
+# VAT Adaptive Pressure Controller PM-5
+# Huijuan 14-MAR-2019 
+
+## Control commands
+# Set operation mode
+record(bo, "$(Sys)$(Cntl)Mode:Opr-Cmd") {
+  field(DESC, "Set Opr Mode")
+  field(DTYP, "stream")
+  field(OUT, "@VAT_PM5.proto set_opr_mode $(PORT)")
+  field(ZNAM, "Remote")
+  field(ONAM, "Local")
+}
+
+# Close valve
+record(bo, "$(Sys)$(Dev)Cmd:Cls-Cmd") {
+  field(DESC, "Close Vlv")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto close_vlv $(PORT)")
+}
+
+# Open valve
+record(bo, "$(Sys)$(Dev)Cmd:Opn-Cmd") {
+  field(DESC, "Open Vlv")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto open_vlv $(PORT)")
+}
+
+# Set valve position
+record(longout, "$(Sys)$(Dev)Pos-SP") {
+  field(DESC, "Set Vlv Pos")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto set_vlv_pos $(PORT)")
+  field(DRVL, "0")
+  field(DRVH, "1000")
+}
+
+# Zero adjust
+record(bo, "$(Sys)$(Dev)Cmd:Zro-Cmd") {
+  field(DESC, "Zero Adjust")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto zero_adjust $(PORT)")
+}
+
+# Learn
+record(longout, "$(Sys)$(Dev)Val:Learn-SP") {
+  field(DESC, "Set Learn")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto learn $(PORT)")
+  field(DRVL, "0")
+  field(DRVH, "1000")
+}
+
+# Set pressure
+record(longout, "$(Sys)$(Dev)P:SP-SP") {
+  field(DESC, "Set P")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto set_P $(PORT)")
+  field(DRVL, "0")
+  field(DRVH, "1000")
+}
+
+# Select sensor
+record(bo, "$(Sys)$(Cntl)Cmd:Sensor-Sel") {
+  field(DESC, "Select Sensor")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto sel_sensor $(PORT)")
+  field(ZNAM, "Sensor 1")
+  field(ONAM, "Sensor 2")
+}
+
+# Set hold mode
+record(bo, "$(Sys)$(Dev)Mode:Cntl-Cmd") {
+  field(DESC, "Set Hold Mode")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto set_hold_mode $(PORT)")
+}
+
+# Set pressure mode
+record(bo, "$(Sys)$(Dev)Mode:P-Cmd") {
+  field(DESC, "Set P Mode")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto set_p_mode $(PORT)")
+}
+
+# Set reduced positioning speed 
+record(longout, "$(Sys)$(Dev)S:Pos-SP") {
+  field(DESC, "Set Position Speed")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto set_speed $(PORT)")
+  field(DRVL, "0")
+  field(DRVH, "1000")
+}
+
+# Auto size adjust
+record(bo, "$(Sys)$(Dev)Cmd:AutoSize-Cmd") {
+  field(DESC, "Auto Size Adjust")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto auto_size $(PORT)")
+}
+
+# Enable/Disable power failure option
+record(bo, "$(Sys)$(Dev)Enbl:PFO-Cmd") {
+  field(DESC, "Enable/Disable PFO")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto set_PFO $(PORT)")
+  field(ZNAM, "Disable")
+  field(ONAM, "Enable")
+}
+
+# Interlock front panel keys
+record(bo, "$(Sys)$(Dev)Cmd:Intlk-Cmd") {
+  field(DESC, "Intlk L/R")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto set_intlk $(PORT)")
+  field(ZNAM, "Interlock")
+  field(ONAM, "Release")
+}
+
+# Enable/Disable logic input
+record(bo, "$(Sys)$(Dev)Enbl:LogicIn-Cmd") {
+  field(DESC, "Enable/Disable Logic Input")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto enbl_logic_in $(PORT)")
+  field(ZNAM, "Disable")
+  field(ONAM, "Enable")
+}
+
+## Inquiry commands
+# Actual valve position
+record(longin, "$(Sys)$(Dev)Pos-I") {
+  field(DESC, "Get Actual Vlv Pos")
+  field(DTYP, "stream")
+  field(INP,  "@VAT_PM5.proto get_vlv_pos $(PORT)")
+}
+
+# Actual pressure
+record(longin, "$(Sys)$(Dev)P-I") {
+  field(DESC, "Get Actual P")
+  field(DTYP, "stream")
+  field(INP,  "@VAT_PM5.proto get_P $(PORT)")
+}
+
+# Pressure setpoint value
+record(longin, "$(Sys)$(Dev)P:SP-RB") {
+  field(DESC, "Get P SP")
+  field(DTYP, "stream")
+  field(INP,  "@VAT_PM5.proto get_P_SP $(PORT)")
+}
+
+# Operating mode
+record(mbbi, "$(Sys)$(Dev)Mode:Opr-Sts") {
+  field(DESC, "Get Operate Moe")
+  field(DTYP, "stream")
+  field(INP,  "@VAT_PM5.proto get_opr_mode $(PORT)")
+  field(ZRST, "LOCAL")
+  field(ONST, "REMOTE")
+  field(TWST, "LOCKED")
+}
+
+# Control mode 
+record(bi, "$(Sys)$(Dev)Mode:Cntl-Sts") {
+  field(DESC, "Get Control Moe")
+  field(DTYP, "stream")
+  field(INP,  "@VAT_PM5.proto get_ctrl_mode $(PORT)")
+  field(ZNAM, "POSITION")
+  field(ONAM, "PRESSURE")
+}
+
+# Self test 
+record(mbbi, "$(Sys)$(Dev)Sts:SelfTst-Sts") {
+  field(DESC, "Self Test")
+  field(DTYP, "stream")
+  field(INP,  "@VAT_PM5.proto get_self_test $(PORT)")
+  field(ZRST, "Memory OK")
+  field(ONST, "Parameter Err")
+  field(TWST, "EPROM Err") 
+}
+
+# Sensor zero offset
+record(longin, "$(Sys)$(Dev)Val:ZeroOff-I") {
+  field(DESC, "Get Sensor Zero Offset")
+  field(DTYP, "stream")
+  field(INP,  "@VAT_PM5.proto get_zero_offset $(PORT)")
+}
+
+# Valve cycle counter
+record(longin, "$(Sys)$(Dev)Cnt:Cycle-I") {
+  field(DESC, "Get Vlv Cycle Cnt")
+  field(DTYP, "stream")
+  field(INP,  "@VAT_PM5.proto get_vlv_cnt $(PORT)")
+}
+
+# Set counter to zero
+record(bo, "$(Sys)$(Dev)Cnt:Zero-Cmd") {
+  field(DESC, "Zero Counter")
+  field(DTYP, "stream")
+  field(OUT,  "@VAT_PM5.proto set_cnt_zero $(PORT)")
+}
+
+# Software version
+record(stringin, "$(Sys)$(Dev)Ver:Soft-I") {
+  field(DESC, "Get Software Version")
+  field(DTYP, "stream")
+  field(INP,  "@VAT_PM5.proto get_soft_version $(PORT)")
+}
+
+# Position status
+record(bi, "$(Sys)$(Dev)Err:Pos-Sts") {
+  field(DESC, "Get Pos Err Sts")
+  field(DTYP, "stream")
+  field(INP,  "@VAT_PM5.proto get_pos_err_sts $(PORT)")
+  field(ZNAM, "OK")
+  field(ONAM, "Error")
+}
+
+# Valve position status
+record(mbbi, "$(Sys)$(Dev)Pos-Sts") {
+  field(DESC, "Get Vlv Sts")
+  field(DTYP, "stream")
+  field(INP,  "@VAT_PM5.proto get_vlv_pos $(PORT)")
+  field(ZRST, "Open")
+  field(ONST, "Closed")
+  field(TWST, "Intermediate")
+}
+
+

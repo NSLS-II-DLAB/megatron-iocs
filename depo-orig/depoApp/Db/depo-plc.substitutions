@@ -1,0 +1,74 @@
+
+# Digital inputs
+file "$(MODBUS)/db/mbbiDirect.template" { pattern
+{ P			, R		, PORT		, OFFSET	, MASK		, SCAN		}
+{ "$(Sys)$(Dev)"	, DI:1_Raw-I	, $(PORT)_DI	, 00		, 0xFFFF	, "I/O Intr"	}
+{ "$(Sys)$(Dev)"	, DI:2_Raw-I	, $(PORT)_DI	, 01		, 0xFFFF	, "I/O Intr"	}
+{ "$(Sys)$(Dev)"	, DI:3_Raw-I	, $(PORT)_DI	, 02		, 0xFFFF	, "I/O Intr"	}
+{ "$(Sys)$(Dev)"	, DI:4_Raw-I	, $(PORT)_DI	, 03		, 0xFFFF	, "I/O Intr"	}
+}
+
+# Analog input
+file "$(MODBUS)/db/longinInt32.template" { pattern
+{ P			, R		, PORT		, OFFSET	, DATA_TYPE	, SCAN		}
+{ "$(Sys){MFC:1}"	, F:RaW-I	, $(PORT)_AI	, 00		, UINT16	, "I/O Intr"	}
+{ "$(Sys){MFC:2}"	, F:Raw-I	, $(PORT)_AI	, 01		, UINT16	, "I/O Intr"	}
+{ "$(Sys){MFC:3}"	, F:Raw-I	, $(PORT)_AI	, 02		, UINT16	, "I/O Intr"	}
+{ "$(Sys){MFC:4}"	, F:Raw-I	, $(PORT)_AI	, 03		, UNIT16	, "I/O Intr"	}
+{ "$(Sys){MFC:5}"	, F:RaW-I	, $(PORT)_AI	, 04		, UINT16	, "I/O Intr"	}
+{ "$(Sys){MFC:6}"	, F:Raw-I	, $(PORT)_AI	, 05		, UINT16	, "I/O Intr"	}
+{ "$(Sys){MFC:7}"	, F:Raw-I	, $(PORT)_AI	, 06		, UINT16	, "I/O Intr"	}
+{ "$(Sys){MFC:8}"	, F:Raw-I	, $(PORT)_AI	, 07		, UNIT16	, "I/O Intr"	}
+{ "$(Sys){MFC:9}"	, F:RaW-I	, $(PORT)_AI	, 010		, UINT16	, "I/O Intr"	}
+{ "$(Sys){PT:3}"	, P:Raw-I	, $(PORT)_AI	, 011		, UINT16	, "I/O Intr"	}
+{ "$(Sys){PT:4}"	, P:Raw-I	, $(PORT)_AI	, 012		, UINT16	, "I/O Intr"	}
+{ "$(Sys){PT:5}"	, P:Raw-I	, $(PORT)_AI	, 013		, UNIT16	, "I/O Intr"	}
+{ "$(Sys){PT:6}"	, P:RaW-I	, $(PORT)_AI	, 014		, UINT16	, "I/O Intr"	}
+{ "$(Sys){PT:7}"	, P:Raw-I	, $(PORT)_AI	, 015		, UINT16	, "I/O Intr"	}
+{ "$(Sys){PT:8}"	, P:Raw-I	, $(PORT)_AI	, 016		, UINT16	, "I/O Intr"	}
+{ "$(Sys){GV:2}"	, Pos:Raw-I	, $(PORT)_AI	, 020		, UNIT16	, "I/O Intr"	}
+{ "$(Sys){PS:1_Sputt}"	, I:OutRaW-I	, $(PORT)_AI	, 021		, UINT16	, "I/O Intr"	}
+{ "$(Sys){PS:1_Sputt}"	, P:OutRaw-I	, $(PORT)_AI	, 022		, UINT16	, "I/O Intr"	}
+{ "$(Sys){PS:1_Sputt}"	, E:OutRaw-I	, $(PORT)_AI	, 023		, UINT16	, "I/O Intr"	}
+{ "$(Sys){PS:1_Sputt}"	, Ramp:OutRaw-I	, $(PORT)_AI	, 024		, UNIT16	, "I/O Intr"	}
+{ "$(Sys){PS:1_Sputt}"	, L:OutRaw-I	, $(PORT)_AI	, 025		, UNIT16	, "I/O Intr"	}
+{ "$(Sys){GV:3}"	, Pos:Raw-I	, $(PORT)_AI	, 030		, UNIT16	, "I/O Intr"	}
+{ "$(Sys){PS:2_Sputt}"	, I:OutRaW-I	, $(PORT)_AI	, 031		, UINT16	, "I/O Intr"	}
+{ "$(Sys){PS:2_Sputt}"	, P:OutRaw-I	, $(PORT)_AI	, 032		, UINT16	, "I/O Intr"	}
+{ "$(Sys){PS:2_Sputt}"	, E:OutRaw-I	, $(PORT)_AI	, 033		, UINT16	, "I/O Intr"	}
+{ "$(Sys){PS:2_Sputt}"	, Ramp:OutRaw-I	, $(PORT)_AI	, 034		, UNIT16	, "I/O Intr"	}
+{ "$(Sys){PS:2_Sputt}"	, L:OutRaw-I	, $(PORT)_AI	, 035		, UNIT16	, "I/O Intr"	}
+{ "$(Sys){CP:1}"	, T:Raw-I	, $(PORT)_AI	, 040		, UNIT16	, "I/O Intr"	}
+{ "$(Sys){CP:2}"	, T:Raw-I	, $(PORT)_AI	, 041		, UNIT16	, "I/O Intr"	}
+{ "$(Sys){CP:3}"	, T:Raw-I	, $(PORT)_AI	, 042		, UNIT16	, "I/O Intr"	}
+{ "$(Sys){CP:4}"	, T:Raw-I	, $(PORT)_AI	, 043		, UNIT16	, "I/O Intr"	}
+{ "$(Sys){PT:1}"	, P:Raw-I	, $(PORT)_AI	, 044		, UNIT16	, "I/O Intr"	}
+{ "$(Sys){PT:2}"	, P:Raw-I	, $(PORT)_AI	, 045		, UNIT16	, "I/O Intr"	}
+{ "$(Sys){CCG:1}"	, P:Raw-I	, $(PORT)_AI	, 046		, UNIT16	, "I/O Intr"	}
+{ "$(Sys){CCG:2}"	, P:Raw-I	, $(PORT)_AI	, 047		, UNIT16	, "I/O Intr"	}
+}
+
+# Digital outputs
+file "$(MODBUS)/db/mbboDirect.template" { pattern
+{ P			, R		, PORT		, OFFSET	, MASK		}
+{ "$(Sys)$(Dev)"	, DO:1_Raw-SP	, $(PORT)_DO	, 00		, 0xFFFF	}
+{ "$(Sys)$(Dev)"	, DO:2_Raw-SP	, $(PORT)_DO	, 01		, 0xFFFF	}
+{ "$(Sys)$(Dev)"	, DO:3_Raw-SP	, $(PORT)_DO	, 02		, 0xFFFF	}
+{ "$(Sys)$(Dev)"	, DO:4_Raw-SP	, $(PORT)_DO	, 03		, 0xFFFF	}
+{ "$(Sys)$(Dev)"	, DO:5_Raw-SP	, $(PORT)_DO	, 04		, 0xFFFF	}
+{ "$(Sys)$(Dev)"	, DO:6_Raw-SP	, $(PORT)_DO	, 05		, 0xFFFF	}
+}
+
+# Analog outputs
+file "$(MODBUS)/db/longoutInt32.template" { pattern
+{ P			, R		, PORT		, OFFSET	, DATA_TYPE	}
+{ "$(Sys){MFC:1}"	, F:SP-SP	, $(PORT)_AO	, 00		, UINT16	}
+{ "$(Sys){MFC:2}"	, F:SP-SP	, $(PORT)_AO	, 01		, UINT16	}
+{ "$(Sys){MFC:3}"	, F:SP-SP	, $(PORT)_AO	, 02		, UINT16	}
+{ "$(Sys){MFC:4}"	, F:SP-SP	, $(PORT)_AO	, 03		, UINT16	}
+{ "$(Sys){MFC:5}"	, F:SP-SP	, $(PORT)_AO	, 04		, UINT16	}
+{ "$(Sys){MFC:6}"	, F:SP-SP	, $(PORT)_AO	, 05		, UINT16	}
+{ "$(Sys){MFC:7}"	, F:SP-SP	, $(PORT)_AO	, 06		, UINT16	}
+{ "$(Sys){MFC:8}"	, F:SP-SP	, $(PORT)_AO	, 07		, UINT16	}
+{ "$(Sys){MFC:9}"	, F:SP-SP	, $(PORT)_AO	, 08		, UINT16	}
+}

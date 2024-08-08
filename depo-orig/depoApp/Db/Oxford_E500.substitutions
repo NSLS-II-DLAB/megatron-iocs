@@ -1,0 +1,5 @@
+file Oxford_E500.template { pattern
+{ Sys	, Dev		, Cntl		,PORT		, Chan	}
+{ Depo	, "{TC:1}"	, "{TM:1}"	, Depo_TM1	, 1	}
+}
+

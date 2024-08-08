@@ -1,0 +1,29 @@
+file depo-plc-di.template { pattern
+{ Sys		, Dev		, Sig			, DESC			, INP			, ZNAM		, ONAM		, ZSV		, OSV		}
+{ Depo		, "{}"		, Sw:AlrmRst-Sts	, "Alarm Reset Sw"	, "Depo{}DI:1_Raw-I.B0"	, "Reset Off"	, "Reset On"	, "NO_ALARM"	, "NO_ALARM"	}
+{ Depo		, "{}"		, Sw:AlrmSilc-Sts	, "Alram Silence Sw"	, "Depo{}DI:1_Raw-I.B1"	, "Slience Off"	, "Silence On"	, "NO_ALARM"	, "NO_ALARM"	}
+{ Depo		, "{GV:2}"	, Sw:Opn-Sts		, "GV2 Open Sw"		, "Depo{}DI:1_Raw-I.B2"	, "Open"	, "Not Open"	, "NO_ALARM"	, "NO_ALARM"	}
+{ Depo		, "{Door:LL}"	, Sw:Cls-Sts		, "LL Door Sw"		, "Depo{}DI:1_Raw-I.B3"	, "Door Closed"	, "Door Not Closed"	, "NO_ALARM"	, "NO_ALARM"	}
+{ Depo		, "{}"		, Sts:ConnEngage-Sts	, "Connector Engaged Sts"	, "Depo{}DI:1_Raw-I.B4"	, "Not Engaged"	, "Engaged"	, "NO_ALARM"	, "NO_ALARM"	}
+{ Depo		, "{}"		, Sts:ConnDiseng-Sts	, "Connector Disengaged Sts"	, "Depo{}DI:1_Raw-I.B5"	, "Not Disenaged"	, "Disengaged"	, "NO_ALARM"	, "NO_ALARM"	}
+{ Depo		, "{}"		, Sts:AC_Phase-Sts	, "AC Phase Fail Detect"	, "Depo{}DI:1_Raw-I.B6"	, "Fail"	, "OK"		, "NO_ALARM"	, "NO_ALARM"	}
+{ Depo		, "{}"		, P:Penu-Sts		, "Pneumatic Pressure Sw"	, "Depo{}DI:1_Raw-I.B7"	, "Pneu P Low"	,	 "Penu P OK"	, "MINOR"	, "NO_ALARM"	}
+{ Depo		, "{}"		, Sw:VacSeal-Sts	, "Seasl Vacuum Sw"	, "Depo{}DI:1_Raw-I.B8"	, "Alarm"	, "OK"		, "MAJOR"	, "NO_ALARM"	}
+{ Depo		, "{}"		, P:Ar-Sts		, "Argon Pressure Sw"	, "Depo{}DI:1_Raw-I.B9"	, "Ar P Low"	, "Ar P OK"	, "MINOR"	, "NO_ALARM"	}
+{ Depo		, "{}"		, P:N2-Sts		, "N2 Pressure Sw"	, "Depo{}DI:1_Raw-I.BA"	, "N2 P Low"	, "N2 P OK"	, "MINOR"	, "NO_ALARM"	}
+{ Depo		, "{}"		, F:LR-Sts		, "Linear Rail F Sts"	, "Depo{}DI:1_Raw-I.BB"	, "F Not OK"	, "F OK"	, "MINOR"	, "NO_ALARM"	}
+{ Depo		, "{}"		, F:Guns-Sts		, "Mag Guns F Sts"	, "Depo{}DI:1_Raw-I.BC"	, "F Not OK"	, "F OK"	, "MINOR"	, "NO_ALARM"	}
+{ Depo		, "{GV:2}"	, Sw:Cls-Sts		, "GV2 Close Sw"	, "Depo{}DI:1_Raw-I.BD"	, "GV2 Closed"	, "GV2 Not Closed"	, "NO_ALARM"	, "NO_ALARM"	}
+{ Depo		, "{}"		, Sts:CustmAbort-Sts	, "Customer Facility Abort"	, "Depo{}DI:1_Raw-I.BE"	, "Abort"	, "Abort OK"	, "MINOR"	, "NO_ALARM"	}
+{ Depo		, "{}"		, Sts:Enbl-Sts	, "Alarm Reset Sw"	, "Depo{}DI:1_Raw-I.B0"	, "Reset Off"	, "Reset On"	, "NO_ALARM"	, "NO_ALARM"	}
+{ Depo		, "{}"		, Sw:AlrmRst-Sts	, "Alarm Reset Sw"	, "Depo{}DI:1_Raw-I.B0"	, "Reset Off"	, "Reset On"	, "NO_ALARM"	, "NO_ALARM"	}
+{ Depo		, "{}"		, Sw:AlrmRst-Sts	, "Alarm Reset Sw"	, "Depo{}DI:1_Raw-I.B0"	, "Reset Off"	, "Reset On"	, "NO_ALARM"	, "NO_ALARM"	}
+{ Depo		, "{}"		, Sw:AlrmRst-Sts	, "Alarm Reset Sw"	, "Depo{}DI:1_Raw-I.B0"	, "Reset Off"	, "Reset On"	, "NO_ALARM"	, "NO_ALARM"	}
+{ Depo		, "{}"		, Sw:AlrmRst-Sts	, "Alarm Reset Sw"	, "Depo{}DI:1_Raw-I.B0"	, "Reset Off"	, "Reset On"	, "NO_ALARM"	, "NO_ALARM"	}
+{ Depo		, "{}"		, Sw:AlrmRst-Sts	, "Alarm Reset Sw"	, "Depo{}DI:1_Raw-I.B0"	, "Reset Off"	, "Reset On"	, "NO_ALARM"	, "NO_ALARM"	}
+{ Depo		, "{}"		, Sw:AlrmRst-Sts	, "Alarm Reset Sw"	, "Depo{}DI:1_Raw-I.B0"	, "Reset Off"	, "Reset On"	, "NO_ALARM"	, "NO_ALARM"	}
+{ Depo		, "{}"		, Sw:AlrmRst-Sts	, "Alarm Reset Sw"	, "Depo{}DI:1_Raw-I.B0"	, "Reset Off"	, "Reset On"	, "NO_ALARM"	, "NO_ALARM"	}
+{ Depo		, "{}"		, Sw:AlrmRst-Sts	, "Alarm Reset Sw"	, "Depo{}DI:1_Raw-I.B0"	, "Reset Off"	, "Reset On"	, "NO_ALARM"	, "NO_ALARM"	}
+{ Depo		, "{}"		, Sw:AlrmRst-Sts	, "Alarm Reset Sw"	, "Depo{}DI:1_Raw-I.B0"	, "Reset Off"	, "Reset On"	, "NO_ALARM"	, "NO_ALARM"	}
+
+}

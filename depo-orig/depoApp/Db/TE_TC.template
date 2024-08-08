@@ -1,0 +1,462 @@
+# TE TC-48-20 Thermoelectric Cooler Temperature Controller
+#
+# Huijuan 22-MAR-2019
+
+# Get model
+record(stringin, "$(Sys)$(Dev)Model-I") {
+  field(DESC, "Model")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_str(00) $(PORT)")
+#  field(PINI, "1")
+}
+
+# Control sensor temperature
+record(ai, "$(Sys)$(Dev)T:Cntl-I") {
+  field(DESC, "Control Sensor T")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(01) $(PORT)")
+  field(EGU,  "C")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+# Power output
+record(longin, "$(Sys)$(Dev)Val:PwrOut-I") {
+  field(DESC, "Power Output")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(02) $(PORT)")
+}
+
+# Secondary sensor temperature
+record(ai, "$(Sys)$(Dev)T:Sec-I") {
+  field(DESC, "Second Sensor T")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(04) $(PORT)")
+  field(EGU,  "C")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+# Alarm status
+record(mbbiDirect, "$(Sys)$(Dev)Alrm-Sts") {
+  field(DESC, "Alarm Status")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(03) $(PORT)")
+}
+
+# Desired control temperature
+record(ao, "$(Sys)$(Dev)T:SP-SP") {
+  field(DESC, "Set T SP")
+  field(DTYP, "stream")
+  field(OUT,  "@TE_TC.proto write_val(1c) $(PORT)")
+  field(EGU,  "C")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+record(ai, "$(Sys)$(Dev)T:SP-RB") {
+  field(DESC, "Read T SP")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(50) $(PORT)")
+  field(EGU,  "C")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+# Proportional bandwidth
+record(ao, "$(Sys)$(Dev)Val:PID_P-SP") {
+  field(DESC, "Set PID P")
+  field(DTYP, "stream")
+  field(OUT,  "@TE_TC.proto write_val(1d) $(PORT)")
+  field(ASLO, "0.1")
+  field(EGU,  "Degree")
+}
+
+record(ai, "$(Sys)$(Dev)Val:PID_P-RB") {
+  field(DESC, "Read PID P")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(51) $(PORT)")
+  field(ASLO, "0.1")
+  field(EGU,  "Degree")
+}
+
+# Integral Gain
+record(ao, "$(Sys)$(Dev)Gain:PID_I-SP") {
+  field(DESC, "Set PID I")
+  field(DTYP, "stream")
+  field(OUT,  "@TE_TC.proto write_val(1e) $(PORT)")
+  field(EGU,  "repeats/minute")
+  field(ASLO, "0.01")
+}
+
+record(ai, "$(Sys)$(Dev)Gain:PID_I-RB") {
+  field(DESC, "Read PID I")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(52) $(PORT)")
+  field(EGU,  "repeats/minute")
+  field(ASLO, "0.01")
+}
+
+# Derivative gain
+record(ao, "$(Sys)$(Dev)Gain:PID_D-SP") {
+  field(DESC, "Set PID D")
+  field(DTYP, "stream")
+  field(OUT,  "@TE_TC.proto write_val(1f) $(PORT)")
+  field(EGU,  "Minute")
+  field(PREC, "1")
+  field(ASLO, "0.01")
+}
+
+record(ai, "$(Sys)$(Dev)Gain:PID_D-RB") {
+  field(DESC, "Read PID D")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(53) $(PORT)")
+  field(EGU,  "Minute")
+  field(PREC, "1")
+  field(ASLO, "0.01")
+}
+
+# Alarm1 type
+record(bo, "$(Sys)$(Dev)Type:Alrm1-Sel") {
+  field(DESC, "Set Alarm1 Type")
+  field(DTYP, "stream")
+  field(OUT,  "@TE_TC.proto write_val(27) $(PORT)")
+  field(ZNAM, "No load effect")
+  field(ONAM, "Loadoff on Alrm")
+}
+
+record(bi, "$(Sys)$(Dev)Type:Alrm1-Sts") {
+  field(DESC, "Read Alarm1 Type")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(5b) $(PORT)")
+  field(ZNAM, "No load effect")
+  field(ONAM, "Loadoff on Alrm")
+}
+
+# Alarm2 Type
+record(bo, "$(Sys)$(Dev)Type:Alrm2-Sel") {
+  field(DESC, "Set Alarm2 Type")
+  field(DTYP, "stream")
+  field(OUT,  "@TE_TC.proto write_val(2a) $(PORT)")
+  field(ZNAM, "No load effect")
+  field(ONAM, "Loadoff on Alrm")
+}
+
+record(bi, "$(Sys)$(Dev)Type:Alrm2-Sts") {
+  field(DESC, "Read Alarm2 Type")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(5e) $(PORT)")
+  field(ZNAM, "No load effect")
+  field(ONAM, "Loadoff on Alrm")
+}
+
+# Sensor choice
+record(bo, "$(Sys)$(Dev)Type:Sens-Sel") {
+  field(DESC, "Set Sensor Type")
+  field(DTYP, "stream")
+  field(OUT,  "@TE_TC.proto write_val(20) $(PORT)")
+  field(ZNAM, "15K Sensor")
+  field(ONAM, "10K Sensor")
+}
+
+record(bi, "$(Sys)$(Dev)Type:Sens-Sts") {
+  field(DESC, "Read Sensor Type")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(54) $(PORT)")
+  field(ZNAM, "15K Sensor")
+  field(ONAM, "10K Sensor")
+}
+
+# Control mode
+record(bo, "$(Sys)$(Dev)Mode:Cntl-Sel") {
+  field(DESC, "Set Control Mode")
+  field(DTYP, "stream")
+  field(OUT,  "@TE_TC.proto write_val(21) $(PORT)")
+  field(ZNAM, "Cooling")
+  field(ONAM, "Heating")
+}
+
+record(bi, "$(Sys)$(Dev)Mode:Cntl-Sts") {
+  field(DESC, "Read Control Mode")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(55) $(PORT)")
+  field(ZNAM, "Cooling")
+  field(ONAM, "Heating")
+}
+
+# Low set range
+record(ao, "$(Sys)$(Dev)T:Lo-SP") {
+  field(DESC, "Set T Low Lim")
+  field(DTYP, "stream")
+  field(OUT,  "@TE_TC.proto write_val(22) $(PORT)")
+  field(EGU,  "C")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+record(ai, "$(Sys)$(Dev)T:Lo-RB") {
+  field(DESC, "Read T Low Lim")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(56) $(PORT)")
+  field(EGU,  "C")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+# High set range
+record(ao, "$(Sys)$(Dev)T:Hi-SP") {
+  field(DESC, "Set T High Lim")
+  field(DTYP, "stream")
+  field(OUT,  "@TE_TC.proto write_val(23) $(PORT)")
+  field(EGU,  "C")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+record(ai, "$(Sys)$(Dev)T:Hi-RB") {
+  field(DESC, "Read T High Lim")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(57) $(PORT)")
+  field(EGU,  "C")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+# Control sensor offset
+record(ao, "$(Sys)$(Dev)T:Offset-SP") {
+  field(DESC, "Set Offset")
+  field(DTYP, "stream")
+  field(OUT,  "@TE_TC.proto write_val(24) $(PORT)")
+  field(EGU,  "C")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+record(ai, "$(Sys)$(Dev)T:Offset-RB") {
+  field(DESC, "Read Offset")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(58) $(PORT)")
+  field(EGU,  "C")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+# Alarm1 low setting
+record(ao, "$(Sys)$(Dev)T:Alrm1Lo-SP") {
+  field(DESC, "Set Alrm1 Low")
+  field(DTYP, "stream")
+  field(OUT,  "@TE_TC.proto write_val(25) $(PORT)")
+  field(EGU,  "C")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+record(ai, "$(Sys)$(Dev)T:Alrm1Lo-RB") {
+  field(DESC, "Read Alarm1 Low")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(59) $(PORT)")
+  field(EGU,  "C")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+# Alarm1 high setting
+record(ao, "$(Sys)$(Dev)T:Alrm1Hi-SP") {
+  field(DESC, "Set Alrm1 High")
+  field(DTYP, "stream")
+  field(OUT,  "@TE_TC.proto write_val(26) $(PORT)")
+  field(EGU,  "C")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+record(ai, "$(Sys)$(Dev)T:Alrm1Hi-RB") {
+  field(DESC, "Read Alrm1 High")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(5a) $(PORT)")
+  field(EGU,  "C")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+# Alarm2 low setting
+record(ao, "$(Sys)$(Dev)T:Alrm2Lo-SP") {
+  field(DESC, "Set Alrm2 Low")
+  field(DTYP, "stream")
+  field(OUT,  "@TE_TC.proto write_val(28) $(PORT)")
+  field(EGU,  "C")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+record(ai, "$(Sys)$(Dev)T:Alrm2Lo-RB") {
+  field(DESC, "Read Alarm2 Low")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(5c) $(PORT)")
+  field(EGU,  "C")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+# Alarm2 high setting
+record(ao, "$(Sys)$(Dev)T:Alrm2Hi-SP") {
+  field(DESC, "Set Alrm2 High")
+  field(DTYP, "stream")
+  field(OUT,  "@TE_TC.proto write_val(29) $(PORT)")
+  field(EGU,  "C")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+record(ai, "$(Sys)$(Dev)T:Alrm2Hi-RB") {
+  field(DESC, "Read Alrm2 High")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(5d) $(PORT)")
+  field(EGU,  "C")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+# Alarm latch function
+record(mbbo, "$(Sys)$(Dev)Latch-Sel") {
+  field(DESC, "Set Latch")
+  field(DTYP, "stream")
+  field(OUT,  "@TE_TC.proto write_val(2b) $(PORT)")
+  field(ZRST, "No Latches")
+  field(ONST, "Alrm1 Latch")
+  field(TWST, "Alrm2 Latch")
+  field(THST, "Alrm1&2 Latch")
+}
+
+record(mbbi, "$(Sys)$(Dev)Latch-Sts") {
+  field(DESC, "Get Latch Sts")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(5f) $(PORT)")
+  field(ZRST, "No Latches")
+  field(ONST, "Alrm1 Latch")
+  field(TWST, "Alrm2 Latch")
+  field(THST, "Alrm1&2 Latch")
+}
+
+# Temperature 2 display
+#record(mbbo, "$(Sys)$(Dev)Mode:T2Disp-Sel") {
+#  field(DESC, "Set T2 Display")
+#  field(DTYP, "stream")
+#  field(OUT,  "@TE_TC.proto write_val(2c) $(PORT)")
+#  field(ZRST, "Off")
+#  field(ONST, "Automatic")
+#  field(TWST, "On")
+#}
+
+#record(mbbi, "$(Sys)$(Dev)Mode:T2Disp-Sts") {
+#  field(DESC, "Get T2 Display")
+#  field(DTYP, "stream")
+#  field(INP,  "@TE_TC.proto read_val(60) $(PORT)")
+#  field(ZRST, "Off")
+#  field(ONST, "Automatic")
+#  field(TWST, "On")
+#}
+
+# Alarm1 deadband
+record(ao, "$(Sys)$(Dev)T:Alrm1Ddband-SP") {
+  field(DESC, "Set Alrm1 Deadband")
+  field(DTYP, "stream")
+  field(OUT,  "@TE_TC.proto write_val(2d) $(PORT)")
+  field(EGU,  "C")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+record(ai, "$(Sys)$(Dev)T:Alrm1Ddband-RB") {
+  field(DESC, "Read Alrm1 Deadband")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(61) $(PORT)")
+  field(EGU,  "C")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+# Alarm2 deadband
+record(ao, "$(Sys)$(Dev)T:AlrmdDdband-SP") {
+  field(DESC, "Set Alrmd Deadband")
+  field(DTYP, "stream")
+  field(OUT,  "@TE_TC.proto write_val(2e) $(PORT)")
+  field(EGU,  "C")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+record(ai, "$(Sys)$(Dev)T:Alrm2Ddband-RB") {
+  field(DESC, "Read Alrm2 Deadband")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(62) $(PORT)")
+  field(EGU,  "C")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+# Analog output multiplier
+#record(ao, "$(Sys)$(Dev)Val:AO_Mult-SP") {
+#  field(DESC, "Set AO Multiplier")
+#  field(DTYP, "stream")
+#  field(OUT,  "@TE_TC.proto write_val(2f) $(PORT)")
+#  field(PREC, "2")
+#  field(ASLO, "0.01")
+#}
+
+#record(ai, "$(Sys)$(Dev)Val:AO_Mult-RB") {
+#  field(DESC, "Read AO Multiplier")
+#  field(DTYP, "stream")
+#  field(INP,  "@TE_TC.proto read_val(63) $(PORT)")
+#  field(PREC, "2")
+#  field(ASLO, "0.01")
+#}
+
+# Latch clear
+record(bo, "$(Sys)$(Dev)Clr:Latch-Cmd") {
+  field(DESC, "Latch Clear")
+  field(DTYP, "stream")
+  field(OUT,  "@TE_TC.proto write_val(33) $(PORT)")
+}
+
+# Output Enable
+record(bo, "$(Sys)$(Dev)Enbl:Out-Sel") {
+  field(DESC, "Enable Output")
+  field(DTYP, "stream")
+  field(OUT,  "@TE_TC.proto write_val(30) $(PORT)")
+  field(ZNAM, "Disable")
+  field(ONAM, "Enable")
+}
+
+record(bi, "$(Sys)$(Dev)Enbl:Out-Sts") {
+  field(DESC, "Output Enable Sts")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(64) $(PORT)")
+  field(ZNAM, "Disabled")
+  field(ONAM, "Enabled")
+}
+
+# EEPROM Write Enable
+record(bo, "$(Sys)$(Dev)Enbl:EEPROM_W-Sel") {
+  field(DESC, "Enable EEPROM Write")
+  field(DTYP, "stream")
+  field(OUT,  "@TE_TC.proto write_val(31) $(PORT)")
+  field(ZNAM, "Disable")
+  field(ONAM, "Enable")
+}
+
+record(bi, "$(Sys)$(Dev)Enbl:EEPROM_W-Sts") {
+  field(DESC, "EEPROM Write Enable Sts")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_val(65) $(PORT)")
+  field(ZNAM, "Disabled")
+  field(ONAM, "Enabled")
+}
+
+# Revision level
+record(stringin, "$(Sys)$(Dev)Rev-I") {
+  field(DESC, "Revision")
+  field(DTYP, "stream")
+  field(INP,  "@TE_TC.proto read_str(05) $(PORT)")
+  field(PINI, "1")
+}

@@ -1,0 +1,14 @@
+# Output
+file "Labjack_T7-ao.template" { pattern
+{ P		, R			, PORT		, OFFSET	, DATA_TYPE	, PREC	, DRVL	, DRVH	}
+{ $(Sys)	, "$(Dev)AO:1-SP"	, $(LJPORT)_AO	, 0		, FLOAT32_BE	, 4	, 0	, 5.0	}
+{ $(Sys)	, "$(Dev)AO:2-SP"	, $(LJPORT)_AO	, 2		, FLOAT32_BE	, 4	, 0	, 5.0	}
+}
+
+# Readback
+file "Labjack_T7-ai.template" { pattern
+{ P		, R			, PORT			, OFFSET	, DATA_TYPE	,  SCAN		, PREC	}
+{ $(Sys)	, "$(Dev)AO:1-RB"	, $(LJPORT)_AO_RBV	, 0		, FLOAT32_BE	, "I/O Intr"	, 4	}
+{ $(Sys)	, "$(Dev)AO:2-RB"	, $(LJPORT)_AO_RBV	, 2		, FLOAT32_BE	, "I/O Intr"	, 4	}
+}
+

@@ -1,0 +1,7 @@
+# temperature values
+file "Labjack_T7-ai.template" { pattern
+{ P		, R		, PORT			, OFFSET	, DATA_TYPE	,  SCAN		, PREC	}
+{ $(Sys)	, "$(Dev)T:1-I"	, $(LJPORT)_EF_A	, 0		, FLOAT32_BE	, "I/O Intr"	, 4	}
+{ $(Sys)	, "$(Dev)T:2-I"	, $(LJPORT)_EF_A	, 20		, FLOAT32_BE	, "I/O Intr"	, 4	}
+}
+

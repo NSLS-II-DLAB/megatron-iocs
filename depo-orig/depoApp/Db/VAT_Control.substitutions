@@ -1,0 +1,11 @@
+file VAT_PM5.template { pattern
+{ Sys	, Dev		, Cntl		, PORT		}
+{ Depo	, "{GV:1}"	, "{GVC:1}"	, Depo_GVC1	}
+}
+
+file VAT_PM5_sensor.template { pattern
+{ Sys	, Dev		, Chan	, PORT		}
+{ Depo	, "{GVS:1}"	, 1	, Depo_GVC1	}
+}
+
+

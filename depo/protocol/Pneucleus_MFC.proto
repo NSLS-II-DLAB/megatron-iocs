@@ -1,0 +1,63 @@
+# Pneucleus MFC
+# 
+# kag 09-OCT-2017  Initial version
+#
+
+extraInput=ignore;
+
+### 
+##  Read
+#
+read_flow {
+   out "R";
+   in "%39c";
+}
+
+read_valve {
+   out "V";
+   in "%39c";
+}
+
+read_purge {
+   out "P";
+   in "%39c";
+}
+
+
+### 
+##  Set
+#
+set_id0 {
+   out "ID0";
+   in "%39c";
+}
+
+set_pswd {
+   out "7346";
+   in "%39c";
+}
+
+set_flow {
+   out "S%f";
+   in "%39c";
+}
+
+set_valve_off {
+   out "V0";
+   in "%39c";
+}
+
+set_valve_on {
+   out "V1";
+   in "%39c";
+}
+
+set_purge_off {
+   out "P0";
+   in "%39c";
+}
+
+set_purge_on {
+   out "P1";
+   in "%39c";
+}

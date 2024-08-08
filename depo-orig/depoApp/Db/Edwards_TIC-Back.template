@@ -1,0 +1,109 @@
+# Template database for for the Edwards TIC Turbo Instrument Controller
+# Backing Pump
+# Pete Owens 30/1/2017
+# Huijuan Xu 27/06/2019 Modified
+
+# substitutions:
+# Sys - System name
+# Dev - Device name
+# PORT- asyn port
+#
+
+################################################################################
+# STA - Backing Pump status
+#
+record(mbbi, "$(Sys)$(Dev)Sts")
+{
+	field(DESC, "Back Pump status")
+	field(DTYP, "stream")
+	field(INP,  "@Edwards_TIC.proto get_back_sts($(Sys)$(Dev)) $(port)")
+	field(SCAN, "1 second")
+	field(ZRST, "Off")
+	field(ONST, "Going On")
+	field(TWST, "Going Off (Normal)")
+	field(THST, "Going Off (Shutdown)")
+	field(FRST, "On")
+}
+
+record(longin, "$(Sys)$(Dev)Sts:Alert-I")
+{
+	field(DESC, "Back Pump Alert ID")
+	field(HIGH, "1")
+	field(LOW,  "-1")
+	field(HIHI, "48")
+	field(LOLO, "-1")
+	field(HSV,  "MINOR")
+	field(LSV,  "MINOR")
+	field(HHSV, "MAJOR")
+	field(LLSV, "MAJOR")
+}
+
+record(mbbi, "$(Sys)$(Dev)Sts:Pri-Sts")
+{
+	field(DESC, "Back Pump Priority")
+	field(ZRST, "OK")
+	field(ONST, "Warning")
+	field(ONSV, "MINOR")
+	field(TWST, "Alarm")
+	field(TWSV, "MINOR")
+	field(THST, "Alarm")
+	field(THSV, "MAJOR")
+}
+
+################################################################################
+# START - Start Backing Pump
+#
+record(bo, "$(Sys)$(Dev)Cmd:Start-Cmd")
+{
+	field(DESC, "Start Pump")
+	field(DTYP, "stream")
+	field(OUT,  "@Edwards_TIC.proto start_back $(port)")
+	field(ZNAM, "Off")
+	field(ONAM, "On")
+}
+
+################################################################################
+# SPEED - Backing Pump Speed
+#
+record(ai, "$(Sys)$(Dev)S-I")
+{
+	field(DESC, "Back Pump Speed")
+	field(DTYP, "stream")
+	field(INP,  "@Edwards_TIC.proto get_back_speed $(port)")
+	field(SCAN, "1 second")
+	field(EGU,  "%")
+	field(PREC, "1")
+	field(LOPR, "0.0")
+	field(HOPR, "100.0")
+	field(HIGH, "100.1")
+	field(LOW,  "0.0")
+	field(HIHI, "100.1")
+	field(LOLO, "-0.1")
+	field(HSV,  "MINOR")
+	field(LSV,  "MINOR")
+	field(HHSV, "MAJOR")
+	field(LLSV, "MAJOR")
+}
+
+################################################################################
+# SPEED - Backing Pump Power
+#
+record(ai, "$(Sys)$(Dev)Pwr-I")
+{
+	field(DESC, "Back Pump Power")
+	field(DTYP, "stream")
+	field(INP,  "@Edwards_TIC.proto get_back_power $(port)")
+	field(SCAN, "1 second")
+	field(EGU,  "W")
+	field(PREC, "1")
+	field(LOPR, "0.0")
+	field(HOPR, "50.0")
+	field(HIGH, "50.0")
+	field(LOW,  "0.0")
+	field(HIHI, "50.1")
+	field(LOLO, "-0.1")
+	field(HSV,  "MINOR")
+	field(LSV,  "MINOR")
+	field(HHSV, "MAJOR")
+	field(LLSV, "MAJOR")
+}

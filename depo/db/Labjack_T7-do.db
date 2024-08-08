@@ -1,0 +1,64 @@
+# bo record template for UNIT16 outputs
+record(bo,"$(Sys)$(Dev)DO:01-Cmd") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_DO 0 0x1)")
+    field(ZNAM, "Low")
+    field(ONAM, "High")
+}
+
+# bo record template for UNIT16 outputs
+record(bo,"$(Sys)$(Dev)DO:02-Cmd") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_DO 1 0x1)")
+    field(ZNAM, "Low")
+    field(ONAM, "High")
+}
+
+# bo record template for UNIT16 outputs
+record(bo,"$(Sys)$(Dev)DO:03-Cmd") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_DO 2 0x1)")
+    field(ZNAM, "Low")
+    field(ONAM, "High")
+}
+
+# bo record template for UNIT16 outputs
+record(bo,"$(Sys)$(Dev)DO:04-Cmd") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_DO 3 0x1)")
+    field(ZNAM, "Low")
+    field(ONAM, "High")
+}
+
+# bo record template for UNIT16 outputs
+record(bo,"$(Sys)$(Dev)DO:05-Cmd") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_DO 4 0x1)")
+    field(ZNAM, "Low")
+    field(ONAM, "High")
+}
+
+# bo record template for UNIT16 outputs
+record(bo,"$(Sys)$(Dev)DO:06-Cmd") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_DO 5 0x1)")
+    field(ZNAM, "Low")
+    field(ONAM, "High")
+}
+
+# bo record template for UNIT16 outputs
+record(bo,"$(Sys)$(Dev)DO:07-Cmd") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_DO 6 0x1)")
+    field(ZNAM, "Low")
+    field(ONAM, "High")
+}
+
+# bo record template for UNIT16 outputs
+record(bo,"$(Sys)$(Dev)DO:08-Cmd") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(LJPORT)_DO 7 0x1)")
+    field(ZNAM, "Low")
+    field(ONAM, "High")
+}
+

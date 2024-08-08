@@ -1,0 +1,34 @@
+# ao record template for FLOAT outputs
+record(ao,"$(Sys)$(Dev)AO:1-SP") {
+    field(DTYP,"asynFloat64")
+    field(OUT,"@asyn($(LJPORT)_AO 0)FLOAT32_BE")
+    field(PREC, "4")
+    field(DRVL, "0")
+    field(DRVH, "5.0")
+}
+
+# ao record template for FLOAT outputs
+record(ao,"$(Sys)$(Dev)AO:2-SP") {
+    field(DTYP,"asynFloat64")
+    field(OUT,"@asyn($(LJPORT)_AO 2)FLOAT32_BE")
+    field(PREC, "4")
+    field(DRVL, "0")
+    field(DRVH, "5.0")
+}
+
+# ai record template for FLOAT inputs
+record(ai,"$(Sys)$(Dev)AO:1-RB") {
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(LJPORT)_AO_RBV 0)FLOAT32_BE")
+    field(SCAN, "I/O Intr")
+    field(PREC, "4")
+}
+
+# ai record template for FLOAT inputs
+record(ai,"$(Sys)$(Dev)AO:2-RB") {
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(LJPORT)_AO_RBV 2)FLOAT32_BE")
+    field(SCAN, "I/O Intr")
+    field(PREC, "4")
+}
+

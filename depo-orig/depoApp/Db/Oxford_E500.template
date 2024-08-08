@@ -1,0 +1,71 @@
+# Oxford E500 Dual Channel Cryogenic Temperature Monitor
+# Huijuan 13-MAR-2019 
+
+
+# Get revision
+record(stringin, "$(Sys)$(Cntl)Rev-I") {
+  field(DESC, "Revision")
+  field(DTYP, "stream")
+  field(INP, "@Oxford_E500.proto get_revision $(PORT)")
+  field(PINI, "1")
+}
+
+# Read temperature
+record(ai, "$(Sys)$(Dev)T:Ch$(Chan)-I") {
+  field(DESC, "Ch$(Chan) T")
+  field(DTYP, "stream")
+  field(INP,  "@Oxford_E500.proto get_T($(Chan)) $(PORT)")
+  field(EGU,  "K")
+  field(PREC, "1")
+}
+
+# Get/Set temperature setpoint
+record(longin, "$(Sys)$(Dev)T:Ch$(Chan)Lo-RB") {
+  field(DESC, "Get Ch$(Chan) T Low SP")
+  field(DTYP, "stream")
+  field(INP,  "@Oxford_E500.proto get_T_SP($(Chan),0) $(PORT)")
+  field(EGU,  "K")
+}
+
+record(longin, "$(Sys)$(Dev)T:Ch$(Chan)Hi-RB") {
+  field(DESC, "Get Ch$(Chan) T High SP")
+  field(DTYP, "stream")
+  field(INP,  "@Oxford_E500.proto get_T_SP($(Chan),1) $(PORT)")
+  field(EGU,  "K")
+}
+
+record(longin, "$(Sys)$(Dev)T:Ch$(Chan)Spare-RB") {
+  field(DESC, "Get Ch$(Chan) T Spare SP")
+  field(DTYP, "stream")
+  field(INP,  "@Oxford_E500.proto get_T_SP($(Chan),2) $(PORT)")
+  field(EGU,  "K")
+}
+
+record(longout, "$(Sys)$(Dev)T:Ch$(Chan)Lo-SP") {
+  field(DESC, "Set Ch$(Chan) T Low SP")
+  field(DTYP, "stream")
+  field(OUT,  "@Oxford_E500.proto set_T_SP($(Chan),0) $(PORT)")
+  field(EGU,  "K")
+}
+
+record(longout, "$(Sys)$(Dev)T:Ch$(Chan)Hi-SP") {
+  field(DESC, "Set Ch$(Chan) T High SP")
+  field(DTYP, "stream")
+  field(OUT,  "@Oxford_E500.proto set_T_SP($(Chan),1) $(PORT)")
+  field(EGU,  "K")
+}
+
+record(longout, "$(Sys)$(Dev)T:Ch$(Chan)Spare-SP") {
+  field(DESC, "Set Ch$(Chan) T Spare SP")
+  field(DTYP, "stream")
+  field(OUT,  "@Oxford_E500.proto set_T_SP($(Chan),2) $(PORT)")
+  field(EGU,  "K")
+}
+
+# Get Voltage
+record(ai, "$(Sys)$(Dev)E:Ch$(Chan)-I") {
+  field(DESC, "Get Ch$(Chan) Volt")
+  field(DTYP, "stream")
+  field(INP,  "@Oxford_E500.proto get_E($(Chan)) $(PORT)")
+  field(EGU,  "V")
+}

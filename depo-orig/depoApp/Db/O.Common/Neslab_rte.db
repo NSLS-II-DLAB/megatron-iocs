@@ -1,0 +1,146 @@
+# NESLAB RTE-111 Refrigerated Bath/Circulators Digital Controller
+# Huijuan 21-MAR-2019 
+
+
+# Read internal temperature
+record(ai, "Depo{Chill:1}T:I-I") {
+  field(DESC, "Internal T")
+  field(DTYP, "stream")
+  field(INP,  "@Neslab_rte.proto read_internal_T Depo_Chill1")
+  field(PREC, "1")
+  field(EGU,  "C")
+  field(ASLO, "0.1")
+}
+
+# Read external sensor
+record(ai, "Depo{Chill:1}T:O-I") {
+  field(DESC, "External Sensor T")
+  field(DTYP, "stream")
+  field(INP,  "@Neslab_rte.proto read_external_T Depo_Chill1")
+  field(PREC, "1")
+  field(EGU,  "1")
+  field(ASLO, "0.1")
+}
+
+# Read control setpoint
+record(ai, "Depo{Chill:1}T:SP-RB") {
+  field(DESC, "Read Setpoint")
+  field(DTYP, "stream")
+  field(INP,  "@Neslab_rte.proto read_ctrl_SP Depo_Chill1")
+  field(PREC, "1")
+  field(EGU,  "C")
+  field(ASLO, "0.1")
+}
+
+# Read low temperature limit
+record(ai, "Depo{Chill:1}T:Lo-RB") {
+  field(DESC, "Read Low T Limit")
+  field(DTYP, "stream")
+  field(INP,  "@Neslab_rte.proto read_T_low Depo_Chill1")
+  field(PREC, "1")
+  field(EGU,  "C")
+  field(ASLO, "0.1")
+}
+
+# Read high temperature limit
+record(ai, "Depo{Chill:1}T:Hi-RB") {
+  field(DESC, "Read High T Limit")
+  field(DTYP, "stream")
+  field(INP,  "@Neslab_rte.proto read_T_high Depo_Chill1")
+  field(PREC, "1")
+  field(EGU,  "C")
+  field(ASLO, "0.1")
+}
+
+# Read proportional band
+record(ai, "Depo{Chill:1}Gain:P-RB") {
+  field(DESC, "Read PID P")
+  field(DTYP, "stream")
+  field(INP,  "@Neslab_rte.proto read_PID_P Depo_Chill1")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+# Read integral
+record(ai, "Depo{Chill:1}Gain:I-RB") {
+  field(DESC, "Read PID I")
+  field(DTYP, "stream")
+  field(INP,  "@Neslab_rte.proto read_PID_I Depo_Chill1")
+  field(PREC, "2")
+  field(ASLO, "0.01")
+}
+
+# Read derivative
+record(ai, "Depo{Chill:1}Gain:D-RB") {
+  field(DESC, "Read PID D")
+  field(DTYP, "stream")
+  field(INP,  "@Neslab_rte.proto read_PID_D Depo_Chill1")
+  field(PREC, "1")
+  field(ASLO, "0.1")
+}
+
+## Set
+# Set control setpoint
+record(ao, "Depo{Chill:1}T:SP-SP") {
+  field(DESC, "Set Setpoint")
+  field(DTYP, "stream")
+  field(OUT,  "@Neslab_rte.proto set_ctrl_SP Depo_Chill1")
+  field(PREC, "1")
+  field(EGU,  "C")
+  field(ASLO, "0.1")
+}
+
+# Set low temperature limit
+record(ao, "Depo{Chill:1}T:Lo-SP") {
+  field(DESC, "Set Low T Limit")
+  field(DTYP, "stream")
+  field(OUT,  "@Neslab_rte.proto set_T_low Depo_Chill1")
+  field(PREC, "1")
+  field(EGU,  "C")
+  field(ASLO, "0.1")
+}
+
+# Set high temperature limit
+record(ao, "Depo{Chill:1}T:Hi-SP") {
+  field(DESC, "Set High T Limit")
+  field(DTYP, "stream")
+  field(OUT,  "@Neslab_rte.proto set_T_high Depo_Chill1")
+  field(PREC, "1")
+  field(EGU,  "C")
+  field(ASLO, "0.1")
+}
+
+# Set proportional band
+record(ao, "Depo{Chill:1}Gain:P-SP") {
+  field(DESC, "Set PID P")
+  field(DTYP, "stream")
+  field(OUT,  "@Neslab_rte.proto set_PID_P Depo_Chill1")
+  field(PREC, "1")
+  field(DRVL, "1")
+  field(DRVH, "99.9")
+  field(ASLO, "0.1")
+}
+
+# Set integral
+record(ao, "Depo{Chill:1}Gain:I-SP") {
+  field(DESC, "Set PID I")
+  field(DTYP, "stream")
+  field(OUT,  "@Neslab_rte.proto set_PID_I Depo_Chill1")
+  field(PREC, "2")
+  field(DRVL, "0")
+  field(DRVH, "9.99")
+  field(ASLO, "0.01")
+}
+
+# Set derivative
+record(ao, "Depo{Chill:1}Gain:D-SP") {
+  field(DESC, "Set PID D")
+  field(DTYP, "stream")
+  field(OUT,  "@Neslab_rte.proto set_PID_D Depo_Chill1")
+  field(PREC, "1")
+  field(DRVL, "0")
+  field(DRVH, "5.0")
+  field(ASLO, "0.1")
+}
+
+

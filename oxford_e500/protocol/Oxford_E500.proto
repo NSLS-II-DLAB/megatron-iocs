@@ -1,0 +1,36 @@
+# Oxford E500 Dual Channel Cryogenic Temperature Monitor
+# 
+# Huijuan 13-MAR-2019 
+
+Terminator = CR LF;
+extraInput=ignore;
+
+# Get revision
+get_revision {
+	out "$GetRev";
+	in  "$Revision %s";
+}
+
+#  Read temperature
+get_T {
+	out "$GetTemp \$1";
+	in  "$%f";
+	@mismatch {in "$OOR";}
+}
+
+# Get/Set temperature setpoints, low and high 
+get_T_SP {
+	out "$GetSetp \$1,\$2";
+	in  "$%d";
+}
+
+set_T_SP {
+	out "$SetSetp \$1,\$2,%d";
+	in  "$%d";
+}
+
+# Get voltage
+get_E {
+	out "$GetVolt \$1";
+	in  "$%f";
+}

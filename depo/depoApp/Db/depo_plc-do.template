@@ -1,0 +1,9 @@
+record(bo, "$(Sys)$(Dev)$(Sig)")
+{
+	field(DESC, "$(DESC)")
+	field(OUT,  "$(OUT)")
+	field(ZNAM, "$(ZNAM)")
+	field(ONAM, "$(ONAM)")
+	field(ZSV,  "$(ZSV)")
+	field(OSV,  "$(OSV)")
+}

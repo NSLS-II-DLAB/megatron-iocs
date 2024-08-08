@@ -1,0 +1,9 @@
+# ao record template for FLOAT outputs
+record(ao,"$(P)$(R)") {
+    field(DTYP,"asynFloat64")
+    field(OUT,"@asyn($(PORT) $(OFFSET))$(DATA_TYPE)")
+    field(PREC, "$(PREC)")
+    field(DRVL, "$(DRVL)")
+    field(DRVH, "$(DRVH)")
+}
+
