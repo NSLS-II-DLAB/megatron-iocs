@@ -1,0 +1,201 @@
+# BK Precision 1787B Single Output Programmable DC Power Supply 
+#
+# Huijuan 25-MAR-2019
+
+# Set communication mode
+record(bo, "Depo{BK:PS}Mode:Opr-Sel") {
+  field(DESC, "Set Opr Mode")
+  field(DTYP, "stream")
+  field(OUT,  "@bk_1787b.proto set_opr_mode() Depo_PS2")
+  field(ZNAM, "Local")
+  field(ONAM, "Remote")
+}
+
+record(bo, "Depo{BK:PS}Test") {
+  field(DESC, "Set Comm Mode")
+  field(DTYP, "stream")
+  field(OUT,  "@bk_1787b.proto test Depo_PS2")
+}
+
+# Set the output state
+record(bo, "Depo{BK:PS}Cmd:Out-Cmd") {
+  field(DESC, "Set Output")
+  field(DTYP, "stream")
+  field(OUT,  "@bk_1787b.proto set_output Depo_PS2")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+}
+
+# Set the max output voltage
+record(ao, "Depo{BK:PS}E:MaxOut-SP") {
+  field(DESC, "Set Max Output E")
+  field(DTYP, "stream")
+  field(OUT,  "@bk_1787b.proto set_max_out_E Depo_PS2")
+  field(EGU,  "V")
+  field(ASLO, "0.001")
+  field(DRVL, "0")
+  field(DRVH, "72")
+}
+
+# Set the output voltage
+record(ao, "Depo{BK:PS}E:Out-SP") {
+  field(DESC, "Set Output E")
+  field(DTYP, "stream")
+  field(OUT,  "@bk_1787b.proto set_out_E Depo_PS2")
+  field(EGU,  "V")
+  field(ASLO, "0.001")
+  field(DRVL, "0")
+  field(DRVH, "72")
+}
+
+# Set the output current
+record(ao, "Depo{BK:PS}I:Out-SP") {
+  field(DESC, "Set Output I")
+  field(DTYP, "stream")
+  field(OUT,  "@bk_1787b.proto set_out_I Depo_PS2")
+  field(EGU,  "A")
+  field(ASLO, "0.001")
+  field(DRVL, "0")
+  field(DRVH, "1.5")
+}
+
+# Read all information
+record(ai, "Depo{BK:PS}I-I") {
+  field(DESC, "Get Current I")
+  field(DTYP, "stream")
+  field(INP,  "@bk_1787b.proto get_all_info(Depo{BK:PS}) Depo_PS2")
+  field(EGU,  "A")
+  field(ASLO, "0.001")
+  field(LINR, "LINEAR")
+  field(SCAN, "1 second")
+  field(PREC, "3")
+}
+
+record(ai, "Depo{BK:PS}E-I") {
+  field(DESC, "Get Current E")
+  field(DTYP, "Raw Soft Channel")
+  field(EGU,  "V")
+  field(PREC, "3")
+  field(ASLO, "0.001")
+#  field(LINR, "LINEAR")
+}
+
+record(mbbiDirect, "Depo{BK:PS}Sts") {
+  field(DESC, "PS All Sts")
+  field(FLNK, "Depo{BK:PS}Sts-FOut_")
+}
+
+record(fanout, "Depo{BK:PS}Sts-FOut_") {
+  field(DESC, "PS Stat FOut")
+  field(LNK1, "Depo{BK:PS}Sts:Out-Sts")
+  field(LNK2, "Depo{BK:PS}Sts:OverT-Sts")
+  field(LNK3, "Depo{BK:PS}Mode:Out-Calc")
+  field(LNK4, "Depo{BK:PS}S:Fan-Calc")
+  field(LNK5, "Depo{BK:PS}Mode:Opr-Sts")
+}
+
+record(ai, "Depo{BK:PS}I:Out-RB") {
+  field(DESC, "Get Out I")
+  field(DTYP, "Raw Soft Channel")
+  field(EGU,  "A")
+  field(ASLO, "0.001")
+  field(PREC, "3")
+}
+
+record(ai, "Depo{BK:PS}E:MaxOut-RB") {
+  field(DESC, "Get Max E")
+  field(DTYP, "Raw Soft Channel")
+  field(EGU,  "V")
+  field(ASLO, "0.001")
+  field(PREC, "3")
+}
+
+record(ai, "Depo{BK:PS}E:Out-RB") {
+  field(DESC, "Get E Out")
+  field(DTYP, "Raw Soft Channel")
+  field(EGU,  "V")
+  field(ASLO, "0.001")
+  field(PREC, "3")
+}
+
+# Set the calibration mode
+#record(bo, "Depo{BK:PS}Enbl:Cal-Sel") {
+#  field(DESC, "Set Cal Prot Mode")
+#  field(DTYP, "stream")
+#  field(OUT,  "@bk_1787b.proto set_cal_mode Depo_PS2")
+#  field(ZNAM, "Disable Prot")
+#  field(ONAM, "Enbl Prot")
+#}
+
+# Get the calibration state
+#record(bi, "Depo{BK:PS}Enbl:Cal-Sts") {
+#  field(DESC, "Get Cal Stat")
+#  field(DTYP, "stream")
+#  field(INP,  "@bk_1787b.proto get_cal_stat Depo_PS2")
+#  field(ZNAM, "Disable Prot")
+#  field(ONAM, "Enbl Prot")
+#  field(PINI, "1")
+#}
+
+# Power supply status
+record(bi, "Depo{BK:PS}Sts:Out-Sts")
+{
+  field(DESC, "Get Output Sts")
+  field(INP,  "Depo{BK:PS}Sts.B0")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+}
+
+# Overheat protection
+record(bi, "Depo{BK:PS}Sts:OverT-Sts")
+{
+  field(DESC, "Get OverT Sts")
+  field(INP,  "Depo{BK:PS}Sts.B1")
+  field(ZNAM, "Normal")
+  field(ONAM, "Abnormal")
+}
+
+# Output mode
+record(calcout, "Depo{BK:PS}Mode:Out-Calc")
+{
+  field(DESC, "Get Out Mode")
+  field(INPA, "Depo{BK:PS}Sts.B2")
+  field(INPB, "Depo{BK:PS}Sts.B3")
+  field(CALC, "A+B")
+  field(OUT,  "Depo{BK:PS}Mode:Out-Sts PP")
+}
+
+record(mbbi, "Depo{BK:PS}Mode:Out-Sts")
+{
+  field(DESC, "Output Mode Sts")
+  field(ZRST, "None")
+  field(ONST, "CV")
+  field(TWST, "CC")
+  field(THST, "Unreg")
+}
+
+# Fan speed
+record(calcout, "Depo{BK:PS}S:Fan-Calc")
+{
+  field(DESC, "Fen Speed")
+  field(INPA, "Depo{BK:PS}Sts.B4")
+  field(INPB, "Depo{BK:PS}Sts.B5")
+  field(INPC, "Depo{BK:PS}Sts.B6")
+  field(CALC, "A+B+C")
+  field(OUT,  "Depo{BK:PS}S:Fan-I PP")
+}
+
+record(longin, "Depo{BK:PS}S:Fan-I")
+{
+  field(DESC, "Fan Speed")
+}
+
+# Operation State
+record(bi, "Depo{BK:PS}Mode:Opr-Sts")
+{
+  field(DESC, "Get Opr Sts")
+  field(INP,  "Depo{BK:PS}Sts.B7")
+  field(ZNAM, "Local")
+  field(ONAM, "Remote")
+}
+

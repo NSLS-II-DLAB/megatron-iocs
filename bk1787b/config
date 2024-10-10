@@ -1,0 +1,5 @@
+NAME=bk1787b
+USER=softioc
+PORT=4001
+HOST=depo-ioc1
+

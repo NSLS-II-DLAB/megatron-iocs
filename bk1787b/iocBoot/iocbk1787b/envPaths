@@ -1,0 +1,3 @@
+epicsEnvSet("IOC","iocbk1787b")
+epicsEnvSet("TOP","/epics/iocs/bk1787b")
+epicsEnvSet("EPICS_BASE","/usr/lib/epics")

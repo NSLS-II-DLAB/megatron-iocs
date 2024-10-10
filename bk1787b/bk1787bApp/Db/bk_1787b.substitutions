@@ -1,0 +1,5 @@
+file bk_1787b.template { pattern
+{ Sys	, Dev		,PORT		}
+{ Depo	, "{BK:PS}"	, Depo_PS2	}
+}
+
