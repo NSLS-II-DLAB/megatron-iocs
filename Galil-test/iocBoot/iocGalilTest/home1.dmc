@@ -1,0 +1,6 @@
+IF(homeA=1)
+IF((((_LRA=0)&(hjsA>0))|(_LFA=0)&(hjsA<0)))&(hjogA=0))
+IF((((_LRA=1)|(_LDA>1))&(hjsA<0))|(((_LFA=1)|(_LDA=1)|(_LDA=3))&(hjsA>0)))
+IF((_MOA=0)&(_BGA=0));JGA=hjsA;WT10;BGA;hjogA=1;ENDIF;ENDIF;ENDIF
+ENDIF
+

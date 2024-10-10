@@ -1,0 +1,12 @@
+IF(home$(AXIS)=1)
+IF((hjog$(AXIS)=0)&(_BG$(AXIS)=1));ST$(AXIS);ENDIF
+IF((hjog$(AXIS)=0)&(_BG$(AXIS)=0))
+IF(_HM$(AXIS)=1)
+hjog$(AXIS)=2;ENDIF
+IF(_HM$(AXIS)=0)
+JG$(AXIS)=@ABS[hjs$(AXIS)]
+HM$(AXIS);WT10;BG$(AXIS);hjog$(AXIS)=1;ENDIF;ENDIF
+IF((hjog$(AXIS)=1)&(_BG$(AXIS)=0)&(_HM$(AXIS)=1))
+hjog$(AXIS)=2;ENDIF
+IF((hjog$(AXIS)=2)&(_BG$(AXIS)=0))
+hjog$(AXIS)=0;home$(AXIS)=0;homed$(AXIS)=1;MG "homed$(AXIS)",homed$(AXIS);ENDIF;ENDIF

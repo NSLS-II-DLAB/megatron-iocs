@@ -1,0 +1,19 @@
+IF(homeA=1)
+IF((((_LRA=0)&(hjsA>0))|(_LFA=0)&(hjsA<0)))&(hjogA=0))
+IF((((_LRA=1)|(_LDA>1))&(hjsA<0))|(((_LFA=1)|(_LDA=1)|(_LDA=3))&(hjsA>0)))
+IF((_MOA=0)&(_BGA=0));JGA=hjsA;WT10;BGA;hjogA=1;ENDIF;ENDIF;ENDIF
+IF((((_LRA=1)&(hjsA>0))|((_LFA=1)&(hjsA<0))&(hjogA=1)&(_BGA=1));STA;ENDIF
+
+
+IF(((_LRA=0)|(_LFA=0))&(_BGA=1)&(hjogA=0));STA;JGA=@ABS[hjsA]*-1;WT10;BGA;hjogA=1;ENDIF
+IF((hjogA=1)&(_BGA=0))
+IF((((_LRA=1)|(_LDA>1))&(hjsA<0))|(((_LFA=1)|(_LDA=1)|(_LDA=3))&(hjsA>0)))
+IF((_MOA=0)&(ueipA=1)&(uiA=1));JGA=hjsA;FIA;WT10;BGA;hjogA=2
+ELSE
+IF(_MOA=0);hjogA=3;ENDIF;ENDIF;ENDIF;ENDIF
+IF((_CN1=-1)&(_HMA<>hswactA)&(hjogA=0)&(_BGA=1));STA;DCA=limdcA;hjogA=3
+ELSE
+IF((_CN1=1)&(_HMA=hswactA)&(hjogA=0)&(_BGA=1));STA;DCA=limdcA;hjogA=3;ENDIF;ENDIF
+IF((hjogA=2)&(_BGA=0));hjogA=3;ENDIF
+IF((((_LRA=1)|(_LDA>1))|((_LFA=1)|(_LDA=1)|(_LDA=3)))&(hjogA=3)&(_BGA=0))
+WT10;hjogA=0;homeA=0;homedA=1;MG "homedA",homedA;ENDIF;ENDIF
