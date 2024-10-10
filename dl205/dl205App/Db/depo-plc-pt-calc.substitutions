@@ -1,0 +1,9 @@
+file "depo-plc-pt-calc.template" { pattern
+ {P, R	, In,	, Sig	, DESC	, PREC	, EGU	}
+ {Depo, "{PT:5}", E-I	, P-I	, "PT5-Landing Chm Cryo Conv"	, 4	, "Torr"	}
+ {Depo, "{PT:6}", E-I	, P-I	, "PT6-Gun Chm1 Cryo Conv"	, 4	, "Torr"	}
+ {Depo, "{PT:7}", E-I	, P-I	, "PT7-Gun Chm2 Cryo Conv"	, 4	, "Torr"	}
+ {Depo, "{PT:8}", E-I	, P-I	, "PT8-L/L Chm Cryo Conv"	, 4	, "Torr"	}
+}
+
+ 

@@ -1,0 +1,43 @@
+
+# Set S.E. / Diff for each even number channel individually
+# Single-Ended (199, default) or Differential (1)
+file "$(LABJACK)/db/LabJack_aiDiff.template" { pattern
+{P	, R			, PORT		, ONVL	, OFFSET}
+{Depo	, "{LJ:2}seDiff_Ch0"	, LJT7_2_AIDiff	, 1	, 0	}
+{Depo	, "{LJ:2}seDiff_Ch2"	, LJT7_2_AIDiff	, 3	, 2	}
+{Depo	, "{LJ:2}seDiff_Ch4"	, LJT7_2_AIDiff	, 5	, 4	}
+{Depo	, "{LJ:2}seDiff_Ch6"	, LJT7_2_AIDiff	, 7	, 6	}
+{Depo	, "{LJ:2}seDiff_Ch8"	, LJT7_2_AIDiff	, 9	, 8	}
+{Depo	, "{LJ:2}seDiff_Ch10"	, LJT7_2_AIDiff	, 11	, 10	}
+{Depo	, "{LJ:2}seDiff_Ch12"	, LJT7_2_AIDiff	, 13	, 12	}
+}
+
+# Analog inputs
+file "$(LABJACK)/db/LabJack_ai.template" { pattern
+{P, R, PORT,OFFSET,  DESC, PREC, SCAN}
+# Thermocouple, differential
+#{Depo, "{LJ:2-TC:SCR1}T:Raw-I"	, LJT7_2_AI_In, 0	, "LJ SCR1 TC"	, 5, "I/O Intr"}
+{Depo, "{LJ:2-TC:SCR2}T:Raw-I"	, LJT7_2_AI_In, 0	, "LJ SCR2 TC"	, 5, "I/O Intr"}
+{Depo, "{LJ:2-TC:SCR3}T:Raw-I"	, LJT7_2_AI_In, 4	, "LJ SCR3 TC"	, 5, "I/O Intr"}
+#{Depo, "{LJ:2-TC:SCR4}T:Raw-I"	, LJT7_2_AI_In, 12	, "LJ SCR4 TC"	, 5, "I/O Intr"}
+#{Depo, "{LJ:2-TC:SCR5}T:Raw-I"	, LJT7_2_AI_In, 16	, "LJ SCR5 TC"	, 5, "I/O Intr"}
+#{Depo, "{LJ:2-TC:50mT}T:Raw-I"	, LJT7_2_AI_In, 20	, "LJ 50mTorr TC"	, 5, "I/O Intr"}
+#{Depo, "{LJ:2-TC:StepMtr}T:Raw-I"	, LJT7_2_AI_In, 24	, "LJ Step Mtr TC"	, 5, "I/O Intr"}
+}
+
+#file "depo-lj-ai-calc.template" { pattern
+#{P, R	, In,	CALC	, Sig	, DESC	, PREC	, EGU	}
+#{Depo, "{LJ:2-TC:SCR1}"	, T:Raw-I		, "3*A"		, T-I	, "LJ SCR1 TC"	, 4	, "C"	}
+#}
+
+#file "$(LABJACK)/db/LabJack_ao.template" { pattern
+#{P	, R	, PORT	,	OFFSET	, DESC	, HOPR	, LOPR	, DRVH	, DRVL	, PREC	}
+# TDAC8 - 18 (EIO 0 - EIO 3, CIO 0 - CIO2)
+#{Depo, "{LJ:2-MFC:mixAr}E-SP"	, LJT7_2_AO_TICK, 16	, "Ion Mill MFC mixer Ar Flow SP"	, -10	, 10	, -10	, 10	, 5	}
+#}
+
+#file "depo-lj-ao-calc.template" { pattern
+#{P, R	, Sig	, PREC	, EGU	, DESC		, CALC	, OUT	}
+#{Depo, "{LJ:2-MFC:mixAr}"	, F-SP	, 5	, "SCCM"	, "Ion Mill MFC mixer Ar Flow Setpoint"	, "A/3"	, "{LJ:2-MFC:mixAr}E-SP"	}
+#{Depo, "{LJ:2-MFC:mixN2}"	, F-SP	, 5	, "SCCM"	, "Ion Mill MFC mixer N2 Flow Setpoint"	, "A/3"	, "{LJ:2-MFC:mixN2}E-SP"	}
+#}

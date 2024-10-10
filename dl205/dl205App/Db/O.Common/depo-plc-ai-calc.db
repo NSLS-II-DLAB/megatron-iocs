@@ -1,0 +1,26 @@
+record(calcout, "Depo{CCG:1}DB:InCalc_") {
+	field(SCAN, "2 second")
+	field(INPA, "Depo{CCG:1}E-I")
+	field(CALC, "10**(A-11)")
+	field(OUT, "Depo{CCG:1}P-I PP")
+	field(PINI, "YES")
+}
+
+record(ai, "Depo{CCG:1}P-I") {
+	field(DESC, "Landing Chamber CCG1")
+	field(PREC, "4")
+	field(EGU,  "Torr")
+}
+record(calcout, "Depo{CCG:2}DB:InCalc_") {
+	field(SCAN, "2 second")
+	field(INPA, "Depo{CCG:2}E-I")
+	field(CALC, "10**(A-11)")
+	field(OUT, "Depo{CCG:2}P-I PP")
+	field(PINI, "YES")
+}
+
+record(ai, "Depo{CCG:2}P-I") {
+	field(DESC, "Load Lock CCG2")
+	field(PREC, "4")
+	field(EGU,  "Torr")
+}

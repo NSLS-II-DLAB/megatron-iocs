@@ -1,0 +1,129 @@
+# KRI Gridded RF Auto Controller
+# 
+# kag 31-AUG-2017  Initial version
+# Huijuan 12-MAR-2019 Modified version
+
+extraInput=ignore;
+Terminator = CR;
+
+### 
+##  Read all process values
+# Note: Need to test if there's filament amps and filament volts before low frequency Discharge Amps
+read_all {
+   out "R:ALL";
+   in "%f,%(\$1F:Gas2-I.VAL)f,%(\$1F:Gas3-I.VAL)f,%(\$1F:Gas4-I.VAL)f,%(\$1I:Beam-I.VAL)f,%(\$1E:Beam-I)f,%(\$1I:Acc-I.VAL)f,%(\$1E:Acc-I.VAL)f,%(\$1Pwr:RF-I.VAL)f,%(\$1I:Emis-I.VAL)f,%(\$1E:Emis-I.VAL)f,%(\$1I:Fila-I.VAL)f,%(\$1E:Fila-I.VAL)f,%(\$1I:LFI-I.VAL)f";
+}
+
+### 
+##  Read all P1 Program set points
+#
+read_P1_all_set {
+   out "P1:ALL?";
+   in "%f,%(\$1F:P1_Gas2-RB.VAL)f,%(\$1F:P1_Gas3-RB.VAL)f,%(\$1F:P1_Gas4-RB.VAL)f,%(\$1I:P1_Beam-RB.VAL)f,%(\$1E:P1_Beam-RB.VAL)f,%(\$1I:P1_Acc-RB.VAL)f,%(\$1E:P1_Acc-RB.VAL)f,%(\$1Pwr:P1_RF-RB.VAL)f,%(\$1I:P1_Emis-RB.VAL)f,%(\$1E:P1_Emis-RB.VAL)f,%(\$1I:P1_LFI-RB)f";
+}
+
+
+### 
+##  Set P1 Program parameters
+#
+set_P1_GS1 {
+   out "P1:GS1 %.1f";
+}
+
+set_P1_GS2 {
+   out "P1:GS2 %.1f";
+}
+
+set_P1_GS3 {
+   out "P1:GS3 %.1f";
+}
+
+set_P1_GS4 {
+   out "P1:GS4 %.1f";
+}
+
+set_P1_BMI {
+   out "P1:BMI %.3f";
+}
+
+set_P1_BMV {
+   out "P1:BMV %.1f";
+}
+
+set_P1_ACI {
+   out "P1:ACI %.3f";
+}
+
+set_P1_ACV {
+   out "P1:ACV %.1f";
+}
+
+set_P1_RFP {
+   out "P1:RFP %d";
+}
+
+set_P1_EEI {
+   out "P1:EEI %.2f";
+}
+
+set_P1_EEV {
+   out "P1:EEV %.1f";
+}
+
+set_P1_LFI {
+   out "P1:LFI %.2f";
+}
+
+### 
+##  Read/Set Misc parameters
+#
+set_COM {
+   out "COM:%{0|1}";
+   in "OK";
+}
+
+read_COM {
+   out "COM?";
+   in "%{0|1}";
+}
+
+read_IDN {
+   out "*IDN?";
+   in "%39c";
+}
+
+set_RST {
+   out "*RST";
+#   in ?;
+}
+
+read_TST {
+   out "*TST?";
+   in "%d";
+}
+
+set_OUT {
+   out "OUT:%{00|01|11}";
+   in "OK";
+}
+
+read_OUT {
+   out "OUT?";
+   in "%{00|01|11|?}";
+}
+
+set_MDE {
+   out "MDE:%{0|1|2}";
+#   in "OK";
+}
+
+read_MDE {
+   out "MDE?";
+   in "%{0|1|2|?}";
+}
+
+read_BEAM {
+   out "BEAM?";
+   in "%{0|1}";
+}
+

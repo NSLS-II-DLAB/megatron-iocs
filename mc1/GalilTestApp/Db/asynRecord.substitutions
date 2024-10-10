@@ -1,0 +1,6 @@
+file "$(GALIL)/GalilSup/Db/asynRecord.template"
+{
+ pattern 
+ { P		, R		, PORT		, ADDR	, OMAX	, IMAX	}
+ { Depo		, "{MC:1}Asyn"	, Galil		, 0	, 80	, 80	}
+}

@@ -1,0 +1,8 @@
+file "depo-plc-ai-calc.template" { pattern
+{P, R	, In,	CALC	, Sig	, DESC	, PREC	, EGU	}
+## AI/O 5
+ {Depo, "{CCG:1}"	, E-I		, "10**(A-11)"	, P-I	, "Landing Chamber CCG1"	, 4	, "Torr"	}
+ {Depo, "{CCG:2}"	, E-I		, "10**(A-11)"	, P-I	, "Load Lock CCG2"		, 4	, "Torr"	}
+}
+
+ 

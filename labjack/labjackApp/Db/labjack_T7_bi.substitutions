@@ -1,0 +1,6 @@
+file "labjack_t7_bi.template"
+{
+ pattern
+{ P	, R			, In			, Bit	, DESC			, ZNAM		, ONAM		, ZSV		, OSV		, SCAN		}
+{ Depo	, "{}"
+}

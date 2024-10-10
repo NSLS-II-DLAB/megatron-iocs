@@ -1,0 +1,37 @@
+# For test only
+file "$(MODBUS)/db/mbbiDirect.template" { pattern
+{P, R, PORT,OFFSET, MASK, SCAN}
+## Y0 - Y177
+ {Depo, "{PLC:1}Out:DO60_Raw-RBRB", depo_plc_15200_Out_Word_RBV, 060, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}Out:DO61_Raw-RBRB", depo_plc_15200_Out_Word_RBV, 061, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}Out:DO62_Raw-RBRB", depo_plc_15200_Out_Word_RBV, 062, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}Out:DO63_Raw-RBRB", depo_plc_15200_Out_Word_RBV, 063, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}Out:DO64_Raw-RBRB", depo_plc_15200_Out_Word_RBV, 064, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}Out:DO65_Raw-RBRB", depo_plc_15200_Out_Word_RBV, 065, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}Out:DO72_Raw-RBRB", depo_plc_15200_Out_Word_RBV, 072, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}Out:DO73_Raw-RBRB", depo_plc_15200_Out_Word_RBV, 073, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}Out:DO75_Raw-RBRB", depo_plc_15200_Out_Word_RBV, 075, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}Out:DO76_Raw-RBRB", depo_plc_15200_Out_Word_RBV, 076, 0xFFFF, "I/O Intr"}
+}
+
+file "modbus-ai.template" { pattern
+{P, R, PORT,OFFSET, BITS, EGU, DESC, EGUL, EGUF, PREC, SCAN}
+## V4000 - V4060
+ {Depo, "{MFC:1}F-RBRB"	, depo_plc_15200_Out_Word_RBV, 000, 16, SCCM	, "Argon MFC1 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{MFC:2}F-RBRB"	, depo_plc_15200_Out_Word_RBV, 002, 16, SCCM	, "Argon MFC2 Flow"	, 0, 20, 5, "I/O Intr" }
+ {Depo, "{MFC:3}F-RBRB"	, depo_plc_15200_Out_Word_RBV, 004, 16, SCCM	, "Argon MFC3 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{MFC:4}F-RBRB"	, depo_plc_15200_Out_Word_RBV, 006, 16, SCCM	, "Argon MFC4 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{MFC:5}F-RBRB"	, depo_plc_15200_Out_Word_RBV, 010, 16, SCCM	, "Argon MFC5 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{MFC:6}F-RBRB"	, depo_plc_15200_Out_Word_RBV, 012, 16, SCCM	, "Argon MFC6 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{MFC:7}F-RBRB"	, depo_plc_15200_Out_Word_RBV, 014, 16, SCCM	, "Argon MFC7 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{MFC:8}F-RBRB"	, depo_plc_15200_Out_Word_RBV, 016, 16, SCCM	, "Argon MFC8 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{MFC:9}F-RBRB"	, depo_plc_15200_Out_Word_RBV, 020, 16, SCCM	, "Argon MFC9 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{VP:1}S-RBRB"	, depo_plc_15200_Out_Word_RBV, 022, 16, "%", "VP1 Speed", 0, 100, 0, "I/O Intr"}
+ {Depo, "{PS_DC:1}Ramp-RBRB", depo_plc_15200_Out_Word_RBV, 030, 16, sec, "PS_DC1 Remote Ramp Adjust", 0, 20, 5, "I/O Intr"}
+ {Depo, "{PS_DC:1}L:Out-RBRB", depo_plc_15200_Out_Word_RBV, 032,16, V, "PS_DC1 Remote Level Ajust", 0, 2000, 5, "I/O Intr"}
+ {Depo, "{PS_DC:2}Ramp-RBRB", depo_plc_15200_Out_Word_RBV, 034, 16, sec, "PS_DC2 Remote Ramp Adjust", 0, 20, 5, "I/O Intr"}
+ {Depo, "{PS_DC:2}L:Out-RBRB", depo_plc_15200_Out_Word_RBV, 036,16, V, "PS_DC2 Remote Level Ajust", 0, 2000, 5, "I/O Intr"}
+ {Depo, "{GV:2}P-RBRB"	, depo_plc_15200_Out_Word_RBV, 040, 16, Torr, "GV2 P Setpoint", 0, 10, 5, "I/O Intr"}
+ {Depo, "{GV:3}P-RBRB"	, depo_plc_15200_Out_Word_RBV, 042, 16, Torr, "GV3 P Setpoint", 0, 10, 5, "I/O Intr"}
+}
+

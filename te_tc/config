@@ -1,0 +1,5 @@
+NAME=te_tc
+USER=softioc
+PORT=4004
+HOST=depo-ioc1
+

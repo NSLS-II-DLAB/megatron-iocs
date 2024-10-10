@@ -1,0 +1,188 @@
+file "db/depo-plc-di.template" { pattern
+{ P	, R				, In				, Bit	, DESC				, ZNAM			, ONAM		, ZSV		, OSV		}
+## X0 - X17
+ {Depo	, "{PLC:1}Sw:AlrmRst-Sts"	, "{PLC:1}In:DI60_Raw-I"	, 0	, "Alarm Reset Sw"		, "Off"		, "On"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Sw:AlrmSilc-Sts"	, "{PLC:1}In:DI60_Raw-I"	, 1	, "Alarm Silence Sw"		, "Off"			, "On"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{GV:2}Sw:Opn-Sts"		, "{PLC:1}In:DI60_Raw-I"	, 2	, "GV2 Not Open"		, "Open"		, "Not Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Sw:LL_Door-Sts"	, "{PLC:1}In:DI60_Raw-I"	, 3	, "LoadLock Door Closed"	, "Closed"		, "Open"	, "NO_ALARM"	, "MAJOR"	}
+ {Depo	, "{PLC:1}Sw:ConnEnga-Sts"	, "{PLC:1}In:DI60_Raw-I"	, 4	, "Connector Engaged"		, "Not Engaged"		, "Engaged"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Sw:ConnDiseng-Sts"	, "{PLC:1}In:DI60_Raw-I"	, 5	, "Connector Disengaged"	, "Not Disengaged"	, "Disengaged"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Sts:AC_Phase-Sts"	, "{PLC:1}In:DI60_Raw-I"	, 6	, "AC Phase Fail Detect"	, "Fail"		, "Ok"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Sw:PneuP-Sts"		, "{PLC:1}In:DI60_Raw-I"	, 7	, "Pneumatic Pressure Sw"	, "Not Ok"		, "Ok"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Sw:VacSeal-Sts"	, "{PLC:1}In:DI60_Raw-I"	, 8	, "Seals Vacuum Sw"		, "Alarm"		, "Ok"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Sw:ArP-Sts"		, "{PLC:1}In:DI60_Raw-I"	, 9	, "Argon Pressure Sw"		, "Low"			, "Ok"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Sw:N2P-Sts"		, "{PLC:1}In:DI60_Raw-I"	, A	, "N2 Pressure Sw"		, "Low"			, "Ok"			, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{Chl:1}F-Sts"		, "{PLC:1}In:DI60_Raw-I"	, B	, "Linear Rail (Chl1)"		, "Not Ok"		, "Ok"			, "MAJOR"	, "NO_ALARM"	}
+ {Depo	, "{Chl:2}F-Sts"		, "{PLC:1}In:DI60_Raw-I"	, C	, "Magnetron Guns(Chl2)"	, "Not Ok"		, "Ok"			, "MAJOR"	, "NO_ALARM"	}
+ {Depo	, "{GV:2}Sw:Cls-Sts"		, "{PLC:1}In:DI60_Raw-I"	, D	, "GV2 Not Closed"		, "Closed"		, "Not Closed"	, "NO_ALARM"	, "NO_ALARM"		}
+ {Depo	, "{PLC:1}Sts:CustmAbort-Sts"	, "{PLC:1}In:DI60_Raw-I"	, E	, "Custermon Facility Abort"	, "Not Ok"		, "Ok"			, "NO_ALARM"	, "NO_ALARM"	}
+# {Depo, "{PLC:1}Enbl:Mtr-Sts"		, "{PLC:1}In:DI60_Raw-I"	, F	, "Motion Enable"		, "Disabled"		, "Enabled"		, "NO_ALARM"	, "NO_ALARM"	} 
+
+## X20 - X37
+ {Depo	, "{PLC:1}Sts:Wdog-Sts"		, "{PLC:1}In:DI61_Raw-I"	, 0	, "Watchdog Timer Status"	, "Not Ok"	, "Ok"			, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{Sens:5}Sw-Sts"		, "{PLC:1}In:DI61_Raw-I"	, 3	, "L/L Pos Sw"			, "Not At Pos"		, "At Pos"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{Sens:6}Sw-Sts"		, "{PLC:1}In:DI61_Raw-I"	, 4	, "Mated to Main Rail"		, "Mated"	, "Not Mated"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{Sens:7}Sw-Sts"		, "{PLC:1}In:DI61_Raw-I"	, 5	, "L/L Home Sw"		, "Homed"	, "Not Homed"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{GV:1}Sw:Opn-Sts"		, "{PLC:1}In:DI61_Raw-I"	, 6	, "Landing Chamber GV1 Open"	, "Not Open"	, "Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{GV:1}Sw:Cls-Sts"		, "{PLC:1}In:DI61_Raw-I"	, 7	, "Landing Chamber GV1 Closed"	, "Not Closed"	, "Closed"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{GV:4}Sw:Opn-Sts"		, "{PLC:1}In:DI61_Raw-I"	, 8	, "Loadlock GV4 Open"		, "Not Open"	, "Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{GV:4}Sw:Cls-Sts"		, "{PLC:1}In:DI61_Raw-I"	, 9	, "Loadlock GV4 Closed"		, "Not Closed"	, "Closed"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{GV:5}Sw:Opn-Sts"		, "{PLC:1}In:DI61_Raw-I"	, A	, "Loadlock GV5 Open"		, "Not Open"	, "Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{GV:5}Sw:Cls-Sts"		, "{PLC:1}In:DI61_Raw-I"	, B	, "Loadlock GV5 Closed"		, "Not Closed"	, "Closed"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{VP:1}Sts:Ovld-Sts"		, "{PLC:1}In:DI61_Raw-I"	, C	, "Vacuum Pump Overload Status"		, "Overload"	, "Ok"			, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{GD-Mtr}Sts:Ovld-Sts"	, "{PLC:1}In:DI61_Raw-I"	, D	, "Gun Door Motor Overload Status"	, "Overload"	, "Ok"			, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{GV:3}Sw:Opn-Sts"		, "{PLC:1}In:DI61_Raw-I"	, E	, "Gun Chamber1 GV3 Open"	, "Open"	, "Not Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{GV:3}Sw:Cls-Sts"		, "{PLC:1}In:DI61_Raw-I"	, F	, "Gun Chamber1 GV3 Closed"	, "Closed"	, "Not Closed"	, "NO_ALARM"	, "NO_ALARM"	}
+ 
+## X40 - X57
+ {Depo	, "{Sparc:1}T-Sts"		, "{PLC:1}In:DI62_Raw-I"	, 0	, "Sparcle1 Temp"		, "OverTemp"	, "Ok"			, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{Sparc:1}Flt-Sts"		, "{PLC:1}In:DI62_Raw-I"	, 1	, "Sparcle1 Fault"		, "Ok"		, "Fault"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{Sparc:2}T-Sts"		, "{PLC:1}In:DI62_Raw-I"	, 2	, "Sparcle2 Temp"		, "OverTem"	, "Ok"			, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{Sparc:2}Flt-Sts"		, "{PLC:1}In:DI62_Raw-I"	, 3	, "Sparcle2 Fault"		, "Ok"		, "Fault"		, "NO_ALARM"	, "NO_ALARM"	}
+
+ {Depo	, "{Conn-Ax:X}Lim:Diseng-Sts"	, "{PLC:1}In:DI62_Raw-I"	, 6	, "Stepper Disengage Limit"	, "At Disen Lim", "Not At Dis Lim"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{Conn-Ax:X}Lim:Enga-Sts"	, "{PLC:1}In:DI62_Raw-I"	, 7	, "Stepper Engage Limit"	, "At Eng Lim", "Not At Engage Lim"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{SPS:1}Sts:OutSP-Sts"	, "{PLC:1}In:DI62_Raw-I"	, 8	, "SPS1 Output @ SP"		, "Not At SP"	, "At SP"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{SPS:1}Sts:Out-Sts"		, "{PLC:1}In:DI62_Raw-I"	, 9	, "SPS1 Output Present"		, "Not Present"	, "Present"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{SPS:2}Sts:OutSP-Sts"	, "{PLC:1}In:DI62_Raw-I"	, A	, "SPS2 Output @ SP"		, "Not At SP"	, "At SP"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{SPS:2}Sts:Out-Sts"		, "{PLC:1}In:DI62_Raw-I"	, B	, "SPS2 Output Present"		, "Not Present"	, "Present"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Pos:CartEnga-Sts"	, "{PLC:1}In:DI62_Raw-I"	, C	, "Cart Conn in Engaged Pos"	, "Not in Eng Pos", "In Engage Pos"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Pos:CartDiseng-Sts"	, "{PLC:1}In:DI62_Raw-I"	, D	, "Cart Conn in Disengaged Pos"	, "Not in Dis Pos", "In Diseng Pos"	, "NO_ALARM"	, "NO_ALARM"	}
+
+## X60 - X77
+# {Depo	, "{Sens:4}Pos-Sts"	, "{PLC:1}In:DI63_Raw-I"	, 0	, "Grabber Limit"		, ""		, ""	, "NO_ALARM"	, "NO_ALARM"	}
+# {Depo	, "{Sens:2}Pos-Sts"	, "{PLC:1}In:DI63_Raw-I"	, 1	, "Cart at Home"		, "Not at Home"		, "At Home"		, "NO_ALARM"	, "NO_ALARM"	}
+
+## From Galil
+# {Depo	, "{Lin-Ax:Z}Pos:In-Sts"	, "{PLC:1}In:DI63_Raw-I"	, 8	, "Linear Motor In"		, "In Low"	, "In High"		, "NO_ALARM"	, "NO_ALARM"	}
+# {Depo	, "{Lin-Ax:Z}Pos:Out-Sts"	, "{PLC:1}In:DI63_Raw-I"	, 9	, "Linear Motor Out"		, "Out Low"	, "Out High"	, "NO_ALARM"	, "NO_ALARM"	}
+
+## Control relay, latch signals 
+## C460 - C477
+ {Depo	, "{PLC:1}Alrm:AC_Phase-Latch"	, "{PLC:1}In:CR64_Raw-I"	, 0	, "AC Phase Fail Alarm"		, "Not in Alarm"	, "Alarm"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Alrm:PenuP-Latch"	, "{PLC:1}In:CR64_Raw-I"	, 1	, "Pneumatic Pressure Alarm"	, "Not in  Alarm"	, "Alarm"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Alrm:N2P-Latch"	, "{PLC:1}In:CR64_Raw-I"	, 2	, "N2 Pressure Alarm"		, "Not in Alarm"	, "Alarm"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Alrm:ArP-Latch"	, "{PLC:1}In:CR64_Raw-I"	, 3	, "Argon Pressure Alarm"	, "Not in Alarm"	, "Alarm"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Alrm:VacSeal-Latch"	, "{PLC:1}In:CR64_Raw-I"	, 4	, "Seals Vacuum Alarm"		, "Not in Alarm"	, "Alarm"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Alrm:CustmAbort-Latch", "{PLC:1}In:CR64_Raw-I"	, 5	, "Customer Facility Abort Latch", "No Abort"		, "Abort"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Alrm:Wdog-Latch"	, "{PLC:1}In:CR64_Raw-I"	, 6	, "Watchdog Status Alarm"	, "Not in Alarm"	, "Alarm"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{VP:1}Alrm:Ovld-Latch"	, "{PLC:1}In:CR64_Raw-I"	, 7	, "Vacuum Pump Overload Alrm"		, "Not in Alarm"	, "Alarm"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{GD-Mtr}Alrm:Ovld-Latch"	, "{PLC:1}In:CR64_Raw-I"	, 8	, "Gun Door Motor Overload Alrm"	, "Not in Alarm"	, "Alarm"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{Sparc:1}T-Latch"		, "{PLC:1}In:CR64_Raw-I"	, 9	, "Sparcle1 OverTemp"		, "Ok"			, "OverTemp"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{Sparc:1}Flt-Latch"		, "{PLC:1}In:CR64_Raw-I"	, A	, "Sparcle1 Fault"		, "Ok"			, "Fault"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{Sparc:2}T-Latch"		, "{PLC:1}In:CR64_Raw-I"	, B	, "Sparcle2 OverTemp"		, "Ok"			, "OverTemp"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{Sparc:2}Flt-Latch"		, "{PLC:1}In:CR64_Raw-I"	, C	, "Sparcle2 Fault"		, "Ok"			, "Fault"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{Chl:1}F:Alrm-Sts"		, "{PLC:1}In:CR64_Raw-I"	, E	, "Chiller1 Water Flow Alarm"	, "Not Ok"	, "Ok"	, "NO_ALARM"	, "NO_ALARM"	}
+
+## C500 - C517
+ {Depo	, "{PLC:1}Sts:ProcTube-Sts"	, "{PLC:1}In:CR65_Raw-I"	, 0	, "Process Tube at Atmosphere"	, "Under Vac"	, "Not under Vac"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Sts:ProcAlert-Sts"	, "{PLC:1}In:CR65_Raw-I"	, 1	, "Software Process Alert"		, "No Alert"	, "Alert"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Sts:LL_OvrP-Sts"	, "{PLC:1}In:CR65_Raw-I"	, 2	, "Loadlock OverPressure"	, "Ok"		, "OverP"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Sts:SysWarn-Sts"	, "{PLC:1}In:CR65_Raw-I"	, 3	, "System Warning"		, "No Warn"	, "Sys Warn"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Sts:RdyTrf-Sts"	, "{PLC:1}In:CR65_Raw-I"	, 4	, "Ready to Transfer"		, "Not Ready"	, "Ready"	, "MAJOR"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Sts:PurgeCmplt-Sts"	, "{PLC:1}In:CR65_Raw-I"	, 5	, "Totalizing Purge Flow"		, "Incomplete"	, "Complete"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Sts:PurgeTime-Sts"	, "{PLC:1}In:CR65_Raw-I"	, 6	, "Timing Purge"				, "Not sure"	, "xxx"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Sts:PurgeHazard-Sts"	, "{PLC:1}In:CR65_Raw-I"	, 7	, "Purge Hazards"			, "Hazard"		, "Cond Met"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{Chl:2}F:Alrm-Sts"		, "{PLC:1}In:CR65_Raw-I"	, 8	, "Chiller2 Water Flow Alarm"	, "Not Ok"	, "Ok"	, "NO_ALARM"	, "NO_ALARM"	}
+
+## Y0 - Y17
+ {Depo	, "{AV:01}Pos-Sts"		, "{PLC:1}In:DO70_Raw-I"	, 0	, "MFC1 > Landing Chamber(AV1)"	, "Closed"	, "Open"	, "NO_ALARM",	"NO_ALARM"	}
+ {Depo	, "{AV:02}Pos-Sts"		, "{PLC:1}In:DO70_Raw-I"	, 1	, "MFC2 > Gun Chamber1(AV2)"		, "Closed"	, "Open"	, "NO_ALARM",	"NO_ALARM"	}
+ {Depo	, "{AV:03}Pos-Sts"		, "{PLC:1}In:DO70_Raw-I"	, 2	, "MFC3 > Gun Chamber1(AV3)"		, "Closed"	, "Open"	, "NO_ALARM",	"NO_ALARM"	}
+ {Depo	, "{AV:04}Pos-Sts"		, "{PLC:1}In:DO70_Raw-I"	, 3	, "MFC4 > Gun Chamber1(AV4)"		, "Closed"	, "Open"	, "NO_ALARM",	"NO_ALARM"	}
+ {Depo	, "{AV:05}Pos-Sts"		, "{PLC:1}In:DO70_Raw-I"	, 4	, "MFC5 > Gun Chamber1(AV5)"		, "Closed"	, "Open"	, "NO_ALARM",	"NO_ALARM"	}
+ {Depo	, "{AV:06}Pos-Sts"		, "{PLC:1}In:DO70_Raw-I"	, 5	, "MFC6 > Gun Chamber2(AV6)"		, "Closed"	, "Open"	, "NO_ALARM",	"NO_ALARM"	}
+ {Depo	, "{AV:07}Pos-Sts"		, "{PLC:1}In:DO70_Raw-I"	, 6	, "MFC7 > Gun Chamber2(AV7)"		, "Closed"	, "Open"	, "NO_ALARM",	"NO_ALARM"	}
+ {Depo	, "{PLC:1}Rst:Wdog-Sts"		, "{PLC:1}In:DO70_Raw-I"	, 7	, "Watchdog Reset Pulses"		, "Rst Pulse Off", "Rst Pulse On"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Sts:Aud-Sts"		, "{PLC:1}In:DO70_Raw-I"	, 8	, "Audible Alert"			, "Aud Off"	, "Aud On"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Ind:Abort-Sts"	, "{PLC:1}In:DO70_Raw-I"	, 9	, "Abort Indicator"			, "Abort Off"	, "Abort On"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Alrm:Silc-Sts"	, "{PLC:1}In:DO70_Raw-I"	, A	, "Alarm Silence"			, "Silence Off"	, "Silence On"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{AV:08}Pos-Sts"		, "{PLC:1}In:DO70_Raw-I"	, B	, "MFC8 > Gun Chamber2(AV8)"		, "Closed"	, "Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{AV:09}Pos-Sts"		, "{PLC:1}In:DO70_Raw-I"	, C	, "MFC9 > Gun Chamber2(AV9)"		, "Closed"	, "Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{AV:10}Pos-Sts"		, "{PLC:1}In:DO70_Raw-I"	, D	, "Ar Backfill > Loadlock(AV10)"	, "Closed"	, "Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{AV:11}Pos-Sts"		, "{PLC:1}In:DO70_Raw-I"	, E	, "Ar Backfill > Cntr Chm(AV11)"	, "Closed"	, "Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{AV:12}Pos-Sts"		, "{PLC:1}In:DO70_Raw-I"	, F	, "N2 Purge > CP1(AV12)"		, "Closed"	, "Open"	, "NO_ALARM"	, "NO_ALARM"	}
+
+## Y20 - Y37
+ {Depo	, "{AV:13}Pos-Sts"		, "{PLC:1}In:DO71_Raw-I"	, 0	, "N2 Purge > CP2 (AV13)"		, "Closed"	, "Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{AV:14}Pos-Sts"		, "{PLC:1}In:DO71_Raw-I"	, 1	, "N2 Purge > CP3 (AV14)"		, "Closed"	, "Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{AV:15}Pos-Sts"		, "{PLC:1}In:DO71_Raw-I"	, 2	, "N2 Purge > CP4 (AV15)"		, "Closed"	, "Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{AV:16}Pos-Sts"		, "{PLC:1}In:DO71_Raw-I"	, 3	, "PT1 On > Cntr Chamber(AV16)"	, "Closed"	, "Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{AV:18}Pos-Sts"		, "{PLC:1}In:DO71_Raw-I"	, 5	, "CP1 Exhaust > VP1(AV18)"		, "Closed"	, "Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{AV:19}Pos-Sts"		, "{PLC:1}In:DO71_Raw-I"	, 6	, "CP2 Exhaust > VP1(AV19)"		, "Closed"	, "Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{AV:20}Pos-Sts"		, "{PLC:1}In:DO71_Raw-I"	, 7	, "CP3 Exhaust > VP1(AV20)"		, "Closed"	, "Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{AV:21}Pos-Sts"		, "{PLC:1}In:DO71_Raw-I"	, 8	, "CP4 Exhaust > VP1(AV21)"		, "Closed"	, "Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{AV:22}Pos-Sts"		, "{PLC:1}In:DO71_Raw-I"	, 9	, "Cntr Chm OverP Exhaust(AV22)"	, "Closed"	, "Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{AV:23}Pos-Sts"		, "{PLC:1}In:DO71_Raw-I"	, A	, "L/L OverP Exhaust(AV23)"		, "Closed"	, "Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{AV:24}Pos-Sts"		, "{PLC:1}In:DO71_Raw-I"	, B	, "Cntr Chm Rough Vacuum(AV24)"	, "Closed"	, "Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{AV:25}Pos-Sts"		, "{PLC:1}In:DO71_Raw-I"	, C	, "L/L Rough Vacuum(AV25)"		, "Closed"	, "Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{Sparc:1}Enbl-Sts"		, "{PLC:1}In:DO71_Raw-I"	, D	, "Sparcle1 EN"				, "Off"		, "Enabled"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{Sparc:2}Enbl-Sts"		, "{PLC:1}In:DO71_Raw-I"	, E	, "Sparcle2 EN"				, "Off"		, "Enabled"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PS_DC:1}Sts:On-Sts"		, "{PLC:1}In:DO71_Raw-I"	, F	, "MDX Supply1"			, "Off"		, "Enabled"			, "NO_ALARM"	, "NO_ALARM"	}
+
+## Y40 - Y57 
+ {Depo	, "{VP:1}Sts:On-Sts"		, "{PLC:1}In:DO72_Raw-I"	, 0	, "VP1"			, "Off"		, "On"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{EOV:4}Pos-Sts"		, "{PLC:1}In:DO72_Raw-I"	, 1	, "L/L Door Seal(EOV4)"			, "Closed"	, "Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{EOV:2}Pos-Sts"		, "{PLC:1}In:DO72_Raw-I"	, 2	, "L/L Ar Hig Flow(EOV2)"			, "Closed"	, "Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{EOV:3}Pos-Sts"		, "{PLC:1}In:DO72_Raw-I"	, 3	, "Process Ar High Flow(EOV3)"		, "Closed"	, "Open"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{GV:1}Pos-Sts"		, "{PLC:1}In:DO72_Raw-I"	, 4	, "Open/Close Cryo GV1"			, "Closed"	, "Throttle Enbl"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{GV:1}Sts:Stroke-Sts"	, "{PLC:1}In:DO72_Raw-I"	, 5	, "Full/Mid Cryo GV1 Stroke"		, "Mid"		, "Full"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PS_DC:2}Sts:On-Sts"		, "{PLC:1}In:DO72_Raw-I"	, 7	, "MDX Supply2"			, "Off"		, "Enabled"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PS_DC:1}Enbl:Rly-Sts"	, "{PLC:1}In:DO72_Raw-I"	, 8	, "MDX1 Power Relay Enable"		, "Disabled"	, "Enabled"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{MAG:Ion}Enbl:Rly1-Sts"	, "{PLC:1}In:DO72_Raw-I"	, 9	, "MAG ION 1500 Relay1"			, "Disabled"	, "Enabled"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{MAG:1}Enbl:PS-Sts"		, "{PLC:1}In:DO72_Raw-I"	, A	, "MAG1 Power Enable"			, "Disabled"	, "Enabled"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{MAG:2}Enbl:PS-Sts"		, "{PLC:1}In:DO72_Raw-I"	, B	, "MAG2 Power Enable"			, "Disabled"	, "Enabled"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{MAG:3}Enbl:PS-Sts"		, "{PLC:1}In:DO72_Raw-I"	, C	, "MAG3 Power Enable"			, "Disabled"	, "Enabled"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{MAG:4}Enbl:PS-Sts"		, "{PLC:1}In:DO72_Raw-I"	, D	, "MAG4 Power Enable"			, "Disabled"	, "Enabled"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PS_Spare}Enbl:RlyA-Sts"	, "{PLC:1}In:DO72_Raw-I"	, E	, "MAG Spare Power Relay A"		, "Disabled"	, "Enabled"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PS_Spare}Enbl:RlyB-Sts"	, "{PLC:1}In:DO72_Raw-I"	, F	, "MAG Spare Power Relay B"		, "Disabled"	, "Enabled"	, "NO_ALARM"	, "NO_ALARM"	}
+
+## Y60 - Y77
+ {Depo	, "{PS_DC:2}Enbl:Rly-Sts"	, "{PLC:1}In:DO73_Raw-I"	, 0	, "MDX2 Power Relay Enable"		, "Disabled"	, "Enabled"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{MAG:RF}Enbl:Rly2-Sts"	, "{PLC:1}In:DO73_Raw-I"	, 1	, "MAG RF Relay2"			, "Disabled"	, "Enabled"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{MAG:5}Enbl:PS-Sts"		, "{PLC:1}In:DO73_Raw-I"	, 2	, "MAG5 Power Enable"			, "Disabled"	, "Enabled"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{MAG:6}Enbl:PS-Sts"		, "{PLC:1}In:DO73_Raw-I"	, 3	, "MAG6 Power Enable"			, "Disabled"	, "Enabled"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{MAG:7}Enbl:PS-Sts"		, "{PLC:1}In:DO73_Raw-I"	, 4	, "MAG7 Power Enable"			, "Disabled"	, "Enabled"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{MAG:8}Enbl:PS-Sts"		, "{PLC:1}In:DO73_Raw-I"	, 5	, "MAG8 Power Enable"			, "Disabled"	, "Enabled"	, "NO_ALARM"	, "NO_ALARM"	} 
+ {Depo	, "{MAG:9}Enbl:PS-Sts"		, "{PLC:1}In:DO73_Raw-I"	, 6	, "MAG9 Power Enable"			, "Disabled"	, "Enabled"	, "NO_ALARM"	, "NO_ALARM"	} 
+ {Depo	, "{PS_Spare}Enbl:RlyC-Sts"	, "{PLC:1}In:DO73_Raw-I"	, 7	, "MAG Spare Power Relay C"		, "Disabled"	, "Enabled"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{GD-Mtr}Enbl-Sts"		, "{PLC:1}In:DO73_Raw-I"	, 8	, "Mag Door Motor Enable"		, "Disabled"	, "Enabled"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{GD:1-Mtr}Enbl-Sts"		, "{PLC:1}In:DO73_Raw-I"	, A	, "Gun Door1 Mtr Enable"		, "Off"	, "On"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{GD:2-Mtr}Enbl-Sts"		, "{PLC:1}In:DO73_Raw-I"	, B	, "Gun Door2 Mtr Enable"	, "Off"	, "On"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{LL-Mtr:1}Dir-Sts"		, "{PLC:1}In:DO73_Raw-I"	, D	, "L/L Mtr1 Direction"		, "Mv Into Chm"	, "Mv Out Of Chm"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{LP-Mtr:2}Dir-Sts"		, "{PLC:1}In:DO73_Raw-I"	, F	, "Loadplate Mtr2 Direction"	, "Mv Into Chm"	, "Mv Out Of Chm"	, "NO_ALARM"	, "NO_ALARM"	} 
+
+## Y100 - Y117 
+ {Depo	, "{CP:1}Sts:Off-Sts"		, "{PLC:1}In:DO74_Raw-I"	, 0	, "CP1 Off"				, "On"		, "Off"			, "NO_ALARM"	, "MAJOR"	}
+ {Depo	, "{CP:2}Sts:Off-Sts"		, "{PLC:1}In:DO74_Raw-I"	, 1	, "CP2 Off"				, "On"		, "Off"			, "NO_ALARM"	, "MAJOR"	}
+ {Depo	, "{CP:3}Sts:Off-Sts"		, "{PLC:1}In:DO74_Raw-I"	, 2	, "CP3 Off"				, "On"		, "Off"			, "NO_ALARM"	, "MAJOR"	}
+ {Depo	, "{CP:4}Sts:Off-Sts"		, "{PLC:1}In:DO74_Raw-I"	, 3	, "CP4 Off"			, "On"		, "Off"			, "NO_ALARM"	, "MAJOR"	}
+ {Depo	, "{GV:2}Pos-Sts"		, "{PLC:1}In:DO74_Raw-I"	, 4	, "Open Cryo GV2"			, "Throttle Enbl"	, "Open"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{GV:2}Sts:Ctrl-Sts"		, "{PLC:1}In:DO74_Raw-I"	, 5	, "Ctrl Cryo GV2"			, "Fully Close"	, "Throttle"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{GV:3}Pos-Sts"		, "{PLC:1}In:DO74_Raw-I"	, 6	, "Open Cryo GV3"			, "Throttle Enbl"	, "Open"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{GV:3}Sts:Ctrl-Sts"		, "{PLC:1}In:DO74_Raw-I"	, 7	, "Ctrl Cryo GV3"			, "Fully Close"	, "Throttle"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{Pmp:Seal}Sts:On-Sts"	, "{PLC:1}In:DO74_Raw-I"	, 8	, "Seals Pump"			, "Off"		, "On"			, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{GV:5}Pos:Opn-Sts"		, "{PLC:1}In:DO74_Raw-I"	, 9	, "AV28 Open L/L GV5"			, "Not Open"	, "Open"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{GV:5}Pos:Cls-Sts"		, "{PLC:1}In:DO74_Raw-I"	, A	, "AV29 Close L/L GV5"			, "Not Closed"	, "Closed"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{GV:4}Pos-Sts"		, "{PLC:1}In:DO74_Raw-I"	, B	, "Cryo GV4 Open/Close"			, "Closed"	, "Throttle Enbl"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{GV:4}Sts:Stroke-Sts"	, "{PLC:1}In:DO74_Raw-I"	, C	, "Cryo GV4 Stroke"			, "Mid"		, "Full"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{CCG:1}Enbl-Sts"		, "{PLC:1}In:DO74_Raw-I"	, D	, "CCG1 Enable"				, "Disabled"	, "Enabled"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{CCG:2}Enbl-Sts"		, "{PLC:1}In:DO74_Raw-I"	, E	, "CCG2 Enable"				, "Disabled"	, "Enabled"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{AV:26}Pos-Sts"		, "{PLC:1}In:DO74_Raw-I"	, F	, "Crystal Monitor1 Shutter(AV26)"	, "Closed"	, "Open"		, "NO_ALARM"	, "NO_ALARM"	}
+ 
+## Y120 - Y137
+ {Depo	, "{AV:27}Pos-Sts"		, "{PLC:1}In:DO75_Raw-I"	, 0	, "Crystal Monitor2 Shutter(AV27)"	, "Closed"	, "Open"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{LL-Clutch}Sts"		, "{PLC:1}In:DO75_Raw-I"	, 1	, "L/L Clutch"			, "Disengaged"	, "Engaged"		, "NO_ALARM"	, "NO_ALARM"	}	,
+ {Depo	, "{GV:5}Sts:ClsRear-Sts"	, "{PLC:1}In:DO75_Raw-I"	, 3	, "GV5 Close Rear Limit"	, "Closed"	, "xxx"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{LP-Ind}Home-Sts"		, "{PLC:1}In:DO75_Raw-I"	, 4	, "Loadplate in Home Position"		, "Not in Home"	, "Home"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{Conn-Ax:X}Sts:Conn-Sts"	, "{PLC:1}In:DO75_Raw-I"	, 5	, "Stepper Connect"			, "Disabled"	, "Fwd Enabled"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{Conn-Ax:X}Sts:AftConn-Sts"	, "{PLC:1}In:DO75_Raw-I"	, 6	, "Stepper After Connect"		, "Disabled"	, "Fine Fwd Enbl"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{Conn-Ax:X}Sts:Disconn-Sts"	, "{PLC:1}In:DO75_Raw-I"	, 7	, "Stepper Disconect"			, "Disabled"	, "Bkwd Enabled"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{Lin-Ax:Z}Home-Sts"		, "{PLC:1}In:DO75_Raw-I"	, 8	, "Home Cart"			, "Not home"	, "Home"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{Lin-Ax:Z}Sts:Disconn-Sts"	, "{PLC:1}In:DO75_Raw-I"	, 9	, "Linear Disconnect"				, "N/A"			, "Disconnect"	, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{Lin-Ax:Z}Sts:Run-Sts"	, "{PLC:1}In:DO75_Raw-I"	, A	, "Run Linear Motor"				, "N/A"			, "Run"			, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{PLC:1}Enbl:CVD_Ver-Sts"	, "{PLC:1}In:DO75_Raw-I"	, C	, "CVD Version Enable"			, "Disabled"		, "Enabled"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{LP-Clutch}Sts"		, "{PLC:1}In:DO75_Raw-I"	, D	, "Loadplate Clutch"			, "Disengaged"	, "Engaged"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{LL-Mtr:1}Enbl-Sts"		, "{PLC:1}In:DO75_Raw-I"	, E	, "L/L Mtr1 On/Off"		, "Off"		, "On"		, "NO_ALARM"	, "NO_ALARM"	}
+ {Depo	, "{LP-Mtr:2}Enbl-Sts"		, "{PLC:1}In:DO75_Raw-I"	, F	, "Loadplate Mtr2 On/Off"		, "Off"		, "On"		, "NO_ALARM"	, "NO_ALARM"	}
+}

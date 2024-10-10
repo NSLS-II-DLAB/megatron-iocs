@@ -1,0 +1,30 @@
+# TE TC-48-20 Thermoelectric Cooler Temperature Controller
+# 
+# Huijuan 22-MAR-2019 
+
+locktimeout = 10000;
+replytimeout = 5000;
+readtimeout  = 3000;
+writetimeout = 100;
+OutTerminator = CR;
+InTerminator = 0x5e;
+extraInput=ignore;
+
+## Read commands
+# Model code
+read_str {
+	out "*\$10000%1<sum8ff>";
+	in  "*%4c%1<sum8ff>";
+}
+
+# Read value
+read_val {
+	out "*\$10000%1<sum8ff>";
+	in  "*%4x%1<sum8ff>";
+}
+
+# Write value
+write_val {
+	out "*\$1%04x%1<sum8ff>";
+	in  "*%4x%1<sum8ff>";
+}

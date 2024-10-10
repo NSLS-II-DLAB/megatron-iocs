@@ -1,0 +1,11 @@
+# bo record template for register outputs
+record(bi,"$(P)$(R)") {
+     field(DESC, "$(DESC)")
+     field(DTYP, "asynUInt32Digital")
+     field(INP,  "@asynMask($(PORT) $(OFFSET) $(MASK))")
+     field(ZNAM, "$(ZNAM)")
+     field(ONAM, "$(ONAM)")
+     field(ZSV,  "$(ZSV)")
+     field(OSV,  "$(OSV)")
+     field(SCAN, "I/O Intr")
+}

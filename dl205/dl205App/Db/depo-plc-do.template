@@ -1,0 +1,7 @@
+record(bo, "$(P)$(R)") {
+	field(DESC, "$(DESC)")
+	field(OUT, "$(P)$(Out).B$(Bit) PP")
+	field(ZNAM, "$(ZNAM)")
+	field(ONAM, "$(ONAM)")
+	field(FLNK, "$(P){PLC:1}Enbl:Write-DFOut_")
+}

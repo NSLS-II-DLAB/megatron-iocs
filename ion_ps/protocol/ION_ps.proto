@@ -1,0 +1,225 @@
+# Materials Science, Inc. ION Power Supply RS232 support
+# 
+# kag 25-NOV-2013  Initial version
+# Huijuan 2-JUL-2019 Modified version
+
+#LockTimeout = 500;
+#ReplyTimeout = 50;
+#ReadTimeout =  50;
+#WriteTimeout = 50;
+OutTerminator = CR;
+InTerminater = CR LF;
+extraInput=ignore;
+
+@init { out "S99"; }
+#in "S99";}
+
+# Read fault bits
+read_faults {
+	out "Q00";
+#	in  "Q00";
+	in "%{0|1},%(\$1Flt:Bus-Sts.VAL){0|1},%(\$1Flt:Line-Sts.VAL){0|1},%(\$1Flt:Therm-Sts.VAL){0|1},%(\$1Flt:OverT-Sts.VAL){0|1},%(\$1Flt:Hb-Sts.VAL){0|1}";
+}
+
+# Read status bits
+read_status {
+	out "Q01";
+#	in  "Q01";
+	in "%{0|1},%(\$1Mode:Cntl-Sts.VAL){0|1}";
+}
+
+# Read active target number
+read_target_no {
+	out "Q04";
+#	in  "Q04";
+	in  "%d ";
+}
+
+# Read actual power
+read_power {
+	out "Q05";
+#	in  "Q05";
+	in "%f %(EGU)s";
+}
+
+# Read actual current
+read_current {
+	out "Q06";
+#	in  "Q06";
+	in "%f %(EGU)s";
+}
+
+# Read actual votage
+read_voltage {
+	out "Q07";
+#	in  "Q07";
+	in "%f %(EGU)s";
+}
+
+# Read arc rate
+read_arc_rate {
+	out "Q08";
+#	in  "Q08";
+	in "%f ";
+}
+
+# Read heartbeat timeout time
+read_hb_timeout {
+	out "Q09";
+#	in  "Q09";
+	in "%f ";
+}
+
+# Read active target power setpoint
+read_target_power_sp {
+	out "Q10";
+#	in  "Q10";
+	in "%f";
+}
+
+# Read active target current setpoint
+read_target_current_sp {
+	out "Q11";
+#	in  "Q11";
+	in "%f";
+}
+
+# Read active target voltage setpoint
+read_target_voltage_sp {
+	out "Q12";
+#	in  "Q12";
+	in "%f";
+}
+
+# Read active target arc detect delay time
+read_arc_dly_time {
+	out "Q13";
+#	in  "Q13";
+	in "%f";
+}
+
+# Read active target arc off time
+read_arc_off_time {
+	out "Q14";
+#	in  "Q14";
+	in "%d";
+}
+
+# Read active target kilowatt hour limit
+read_target_kwh_limit {
+	out "Q15";
+#	in  "Q15";
+	in "%f";
+}
+
+# Read active target kilowatt hour count
+read_target_kwh_cnt {
+	out "Q16";
+#	in  "Q16";
+	in "%f";
+}
+
+# Read active target ramp time
+read_target_ramp_time {
+	out "Q17";
+#	in  "Q17";
+	in "%f";
+}
+
+# Read active target run time
+read_target_run_time {
+	out "Q18";
+#	in  "Q18";
+	in "%f";
+}
+
+# Set control mode
+set_ctrl_mode {
+	out "S%{00|01}";
+#	in "S%*d";
+	in  "OK";
+}
+
+# Enable/disable output
+set_enable {
+	out "S%{02|03}";
+#	in  "S*d";
+	in  "OK";
+}
+
+# Set active target number
+set_target_number {
+	out "S04 %d";
+#	in  "S04 %*d";
+	in  "OK";
+}
+
+# Set heartbeat timeout time
+set_heartbeat_timeout {
+	out "S09 %5.3f";
+#	in  "S09 %*f";
+	in  "OK";
+}
+
+# Set active target power setpoint
+set_power {
+	out "S10 %06.1f";
+#	in  "S10 %*f";
+	in  "OK";
+}
+
+# Set active target current setpoint
+set_current {
+	out "S11 %04.2f";
+#	in  "S11 %*f";
+	in  "OK";
+}
+
+# Set active target voltage setpoint
+set_voltage {
+	out "S12 %06.1f";
+#	in  "S12 %*f";
+	in  "OK";
+}
+
+# Set active target arc detect delay time
+set_target_arc_dly {
+	out "S13 %d";
+#	in  "S13 %*d";
+	in  "OK";
+}
+
+# Set active target arc off time
+set_arc_off_time {
+	out "S14 %d";
+#	in  "S14 %*d";
+	in  "OK";
+}
+
+# Set active target kilowatt hour limit
+set_target_kwh_limit {
+	out "S15 %06.2f";
+#	in  "S15 %*f";
+	in  "OK";
+}
+
+# Clear active target kilowatt hour count
+reset_target_kwh_count {
+	out "S16";
+#	in  "S16";
+	in  "OK";
+}
+
+# Set active target ramp time
+set_target_ramp_time {
+	out "S17 %06.3f";
+#	in  "S17 %*f";
+	in  "OK";
+}
+
+# Set active target run time
+set_target_run_time {
+	out "S18 %06.1f";
+#	in  "S18 %*f";
+	in  "OK";
+}

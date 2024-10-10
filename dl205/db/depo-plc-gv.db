@@ -1,0 +1,72 @@
+record(calcout, "Depo{GV:1}Pos-Calc")
+{
+	field(DESC, "{GV:1} Pos Calc")
+	field(INPA, "Depo{GV:1}Sts:Stroke-Sts")
+	field(INPB, "Depo{GV:1}Pos-Sts")
+	field(CALC, "(A<<1)+B")
+	field(OUT,  "Depo{GV:1}Pos:Calc-Sts PP")
+	field(SCAN, "1 second")
+}
+
+record(mbbi, "Depo{GV:1}Pos:Calc-Sts")
+{
+	field(DESC, "{GV:1} Calc Pos")
+	field(ZRST, "Fully Closed")
+	field(ONST, "Error")
+	field(TWST, "Closed Pos")
+	field(THST, "Fully Open")
+}
+record(calcout, "Depo{GV:4}Pos-Calc")
+{
+	field(DESC, "{GV:4} Pos Calc")
+	field(INPA, "Depo{GV:4}Sts:Stroke-Sts")
+	field(INPB, "Depo{GV:4}Pos-Sts")
+	field(CALC, "(A<<1)+B")
+	field(OUT,  "Depo{GV:4}Pos:Calc-Sts PP")
+	field(SCAN, "1 second")
+}
+
+record(mbbi, "Depo{GV:4}Pos:Calc-Sts")
+{
+	field(DESC, "{GV:4} Calc Pos")
+	field(ZRST, "Fully Closed")
+	field(ONST, "Error")
+	field(TWST, "Closed Pos")
+	field(THST, "Fully Open")
+}
+record(calcout, "Depo{GV:2}Pos-Calc")
+{
+	field(DESC, "{GV:2} Pos Calc")
+	field(INPA, "Depo{GV:2}Sts:Ctrl-Sts")
+	field(INPB, "Depo{GV:2}Pos-Sts")
+	field(CALC, "(A<<1)+B")
+	field(OUT,  "Depo{GV:2}Pos:Calc-Sts PP")
+	field(SCAN, "1 second")
+}
+
+record(mbbi, "Depo{GV:2}Pos:Calc-Sts")
+{
+	field(DESC, "{GV:2} Calc Pos")
+	field(ZRST, "Fully Closed")
+	field(ONST, "Force Closed")
+	field(TWST, "Pass Ctrl to Throttle")
+	field(THST, "Fully Open")
+}
+record(calcout, "Depo{GV:3}Pos-Calc")
+{
+	field(DESC, "{GV:3} Pos Calc")
+	field(INPA, "Depo{GV:3}Sts:Ctrl-Sts")
+	field(INPB, "Depo{GV:3}Pos-Sts")
+	field(CALC, "(A<<1)+B")
+	field(OUT,  "Depo{GV:3}Pos:Calc-Sts PP")
+	field(SCAN, "1 second")
+}
+
+record(mbbi, "Depo{GV:3}Pos:Calc-Sts")
+{
+	field(DESC, "{GV:3} Calc Pos")
+	field(ZRST, "Fully Closed")
+	field(ONST, "Force Closed")
+	field(TWST, "Pass Ctrl to Throttle")
+	field(THST, "Fully Open")
+}

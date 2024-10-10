@@ -1,0 +1,4 @@
+IF(homeA=1)
+IF((hjogA=0)&(_BGA=1));STA;hjogA=1;ENDIF
+IF((_BGA=0)&(hjogA=1))
+WT10;hjogA=0;homeA=0;homedA=1;MG "homedA",homedA;ENDIF;ENDIF

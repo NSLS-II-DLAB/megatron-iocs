@@ -1,0 +1,18 @@
+record(calcout, "$(Sys)$(Dev)Pos-Calc")
+{
+	field(DESC, "$(Dev) Pos Calc")
+	field(INPA, "$(Sys)$(Dev)Sts:Ctrl-Sts")
+	field(INPB, "$(Sys)$(Dev)Pos-Sts")
+	field(CALC, "(A<<1)+B")
+	field(OUT,  "$(Sys)$(Dev)Pos:Calc-Sts PP")
+	field(SCAN, "1 second")
+}
+
+record(mbbi, "$(Sys)$(Dev)Pos:Calc-Sts")
+{
+	field(DESC, "$(Dev) Calc Pos")
+	field(ZRST, "Fully Closed")
+	field(ONST, "Force Closed")
+	field(TWST, "Pass Ctrl to Throttle")
+	field(THST, "Fully Open")
+}

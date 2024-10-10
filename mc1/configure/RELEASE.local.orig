@@ -1,0 +1,3 @@
+SUPPORT=/epics/support
+EPICS_BASE=/usr/lib/epics
+GALIL=/epics/iocs/Galil-3-6

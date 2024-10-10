@@ -1,0 +1,13 @@
+# ao record template for float outputs
+record(ao, "$(P)$(R)") {
+    field(DESC,"$(DESC)")
+    field(DTYP,"asynFloat64")
+    field(INP,"@asyn($(PORT) $(OFFSET))$(DATA_TYPE)")
+    field(PREC,"$(PREC)")
+    field(LOPR,"$(LOPR)")
+    field(HOPR,"$(HOPR)")
+    field(DRVL,"$(DRVL)")
+    field(DRVH,"$(DRVH"))
+    field(EGU, "$(EGU)")
+}
+

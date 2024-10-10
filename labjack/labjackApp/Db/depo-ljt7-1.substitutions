@@ -1,0 +1,61 @@
+file "LabJack_bi.template" { pattern
+{P	, R	,  DESC		, PORT	, OFFSET	, MASK	, ZNAM	, ONAM		, ZSV	, OSV	}
+{Depo, "{Heat:Cryo}Cmd:Purge-Sts"	, "LJ Relay Cryo Purge Gas Heater Sts"		, LJT7_1_DIO_In	, 0	, 0x10	, "Off"		, "On", "NO_ALARM"	, "NO_ALARM"	}
+{Depo, "{Pwr:Enc}Cmd:Rly-Sts"		, "LJ Renishaw Power Relay Sts"		, LJT7_1_DIO_In	, 0	, 0x40	, "On"		, "Off", "NO_ALARM"	, "NO_ALARM"	}
+}
+
+file "$(LABJACK)/db/LabJack_bo.template" { pattern
+{P	, R	,  DESC		, PORT	, OFFSET	, ZNAM	, ONAM	}
+{Depo, "{Heat:Cryo}Cmd:Purge-Cmd"	, "LJ Relay Cryo Purge Gas Heater Cmd"		, LJT7_1_DIO_Out	, 4	, "Off"		, "On"	}
+{Depo, "{Pwr:Enc}Cmd:Rly-Cmd"		, "LJ Renishaw Power Relay Cmd"		, LJT7_1_DIO_Out	, 6	, "Off"		, "On"	}
+}
+
+# Analog inputs
+file "$(LABJACK)/db/LabJack_ai.template" { pattern
+{P, R, PORT,OFFSET,  DESC, PREC, SCAN}
+## The EGUF of AIN0 - AIN6 is 15, check if the calculation is correct
+{Depo, "{Guns-Sens:Ar}P-I_"	, LJT7_1_AI_In, 0	, "LJ Argon Pressure"		, 4	, "I/O Intr"}
+{Depo, "{Cryo-Sens:N2}P-I_"	, LJT7_1_AI_In, 2	, "LJ N2 Pressure"		, 4	, "I/O Intr"}
+{Depo, "{Guns-MFC:Ar}F-I_"	, LJT7_1_AI_In, 4	, "LJ Argon Flow Signal (MFC)"	, 4	, "I/O Intr"}
+{Depo, "{Guns-CM}P-I_"		, LJT7_1_AI_In, 8	, "LJ CM (1000 Torr)"		, 4	, "I/O Intr"}
+{Depo, "{Guns-MFC:N2}F-I_"	, LJT7_1_AI_In, 12	, "LJ N2 Flow Signal (MFC)"	, 4	, "I/O Intr"}
+{Depo, "{IG:1}P-I_"		, LJT7_1_AI_In, 14	, "LJ Hornet Ion Gauge Pressure"	, 4	, "I/O Intr"}
+{Depo, "{Guns-PS:Ion}E-I_"	, LJT7_1_AI_In, 16	, "LJ Ion Voltage"	, 4	, "I/O Intr"}
+{Depo, "{Chm-CM:1}P:Raw-I_"	, LJT7_1_AI_In, 18	, "LJ CM1 Raw (50 mTorr)"	, 4	, "I/O Intr"}
+{Depo, "{LL-CM:2}P:Raw-I_"	, LJT7_1_AI_In, 20	, "LJ CM2 Raw (50 mTorr)"	, 4	, "I/O Intr"}
+}
+
+file "depo-lj-ai-calc.template" { pattern
+{P, R	, CALC	, Sig	, DESC	, PREC	, EGU	}
+{Depo, "{Guns-Sens:Ar}"	, "(A-0.1)*600"	, P-I		, "LJ Argon Pressure"		, 4	, "Torr"	}
+{Depo, "{Cryo-Sens:N2}"	, "(A-0.1)*600"	, P-I		, "LJ Nitrogen Pressure"	, 4	, "Torr"	}
+{Depo, "{Guns-MFC:Ar}"	, "20*A"	, F-I		, "LJ Argon Flow (MFC)"		, 4	, "SCCM"	}
+{Depo, "{Guns-CM}"	, "200*A"	, P-I		, "LJ CM (1000 TOrr)"	, 4	, "Torr"	}
+{Depo, "{Guns-MFC:N2}"	, "2*A"		, F-I		, "LJ Nitrogen Flow (MFC)"	, 4	, "SCCM"	}
+{Depo, "{IG:1}"		, "10**(A-10)"	, P-I		, "LJ Hornet Ion Gauge Pressure"	, 4	, "Torr"	}
+{Depo, "{Guns-PS:Ion}"	, "200*A"	, E-I		, "LJ Ion Voltage"		, 4	, "Volt"	}
+{Depo, "{Chm-CM:1}"	, "10*A"	, P:Raw-I	, "LJ CM1 Raw (50 mTorr)"	, 4	, "mTorr"	}
+{Depo, "{LL-CM:2}"	, "10*A"	, P:Raw-I	, "LJ CM2 Raw (50 mTorr)"	, 4	, "mTorr"	}
+}
+
+file "$(LABJACK)/db/LabJack_ao.template" { pattern
+{P	, R	, PORT	,	OFFSET	, DESC	, HOPR	, LOPR	, DRVH	, DRVL	, PREC	}
+# DAC0 - DAC1
+{Depo, "{Guns-MFC:Ar}F-SP_"	, LJT7_1_AO, 0	, "LJ MFC Argon SP"	, 5	, 0	, 5	, 0	, 4	}
+{Depo, "{Guns-MFC:N2}F-SP_"	, LJT7_1_AO, 2	, "LJ MFC N2 SP"	, 5	, 0	, 5	, 0	, 4	}
+}
+
+file "depo-lj-ao-calc.template" { pattern
+{P, R	, Sig	, PREC	, EGU	, DESC		, CALC		, DRVH	, DRVL	}
+{Depo, "{Guns-MFC:Ar}"	, F-SP	, 4	, "SCCM"	, "LJ MFC Ar Setpoint Set"	, "A/20"	, 100	, 0	}
+{Depo, "{Guns-MFC:N2}"	, F-SP	, 4	, "SCCM"	, "LJ MFC N2 Setpoint Set"	, "A/2"		, 10	, 0	}
+}
+
+# Analog inputs, RTD readings
+file "LabJack_ai.template" { pattern
+{P, R, PORT,OFFSET,  DESC, PREC, SCAN}
+# Thermocouple, differential
+{Depo, "{RTD:FP}T-I"	, LJT7_1_AIN11_EF_READ_A	, 0	, "LJ FacePlate RTD"	, 4, "I/O Intr"}
+{Depo, "{RTD:Car}T-I"	, LJT7_1_AIN12_EF_READ_A	, 0	, "LJ Car RTD"	, 4, "I/O Intr"}
+}
+

@@ -1,0 +1,1377 @@
+record(bi, "Depo{PLC:1}Sw:AlrmRst-Sts") {
+	field(DESC, "Alarm Reset Sw")
+	field(INP,  "Depo{PLC:1}In:DI60_Raw-I.B0")
+	field(ZNAM, "Off")
+	field(ONAM, "On")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Sw:AlrmSilc-Sts") {
+	field(DESC, "Alarm Silence Sw")
+	field(INP,  "Depo{PLC:1}In:DI60_Raw-I.B1")
+	field(ZNAM, "Off")
+	field(ONAM, "On")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GV:2}Sw:Opn-Sts") {
+	field(DESC, "GV2 Not Open")
+	field(INP,  "Depo{PLC:1}In:DI60_Raw-I.B2")
+	field(ZNAM, "Open")
+	field(ONAM, "Not Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Sw:LL_Door-Sts") {
+	field(DESC, "LoadLock Door Closed")
+	field(INP,  "Depo{PLC:1}In:DI60_Raw-I.B3")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "MAJOR")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Sw:ConnEnga-Sts") {
+	field(DESC, "Connector Engaged")
+	field(INP,  "Depo{PLC:1}In:DI60_Raw-I.B4")
+	field(ZNAM, "Not Engaged")
+	field(ONAM, "Engaged")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Sw:ConnDiseng-Sts") {
+	field(DESC, "Connector Disengaged")
+	field(INP,  "Depo{PLC:1}In:DI60_Raw-I.B5")
+	field(ZNAM, "Not Disengaged")
+	field(ONAM, "Disengaged")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Sts:AC_Phase-Sts") {
+	field(DESC, "AC Phase Fail Detect")
+	field(INP,  "Depo{PLC:1}In:DI60_Raw-I.B6")
+	field(ZNAM, "Fail")
+	field(ONAM, "Ok")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Sw:PneuP-Sts") {
+	field(DESC, "Pneumatic Pressure Sw")
+	field(INP,  "Depo{PLC:1}In:DI60_Raw-I.B7")
+	field(ZNAM, "Not Ok")
+	field(ONAM, "Ok")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Sw:VacSeal-Sts") {
+	field(DESC, "Seals Vacuum Sw")
+	field(INP,  "Depo{PLC:1}In:DI60_Raw-I.B8")
+	field(ZNAM, "Alarm")
+	field(ONAM, "Ok")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Sw:ArP-Sts") {
+	field(DESC, "Argon Pressure Sw")
+	field(INP,  "Depo{PLC:1}In:DI60_Raw-I.B9")
+	field(ZNAM, "Low")
+	field(ONAM, "Ok")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Sw:N2P-Sts") {
+	field(DESC, "N2 Pressure Sw")
+	field(INP,  "Depo{PLC:1}In:DI60_Raw-I.BA")
+	field(ZNAM, "Low")
+	field(ONAM, "Ok")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Chl:1}F-Sts") {
+	field(DESC, "Linear Rail (Chl1)")
+	field(INP,  "Depo{PLC:1}In:DI60_Raw-I.BB")
+	field(ZNAM, "Not Ok")
+	field(ONAM, "Ok")
+	field(ZSV,  "MAJOR")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Chl:2}F-Sts") {
+	field(DESC, "Magnetron Guns(Chl2)")
+	field(INP,  "Depo{PLC:1}In:DI60_Raw-I.BC")
+	field(ZNAM, "Not Ok")
+	field(ONAM, "Ok")
+	field(ZSV,  "MAJOR")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GV:2}Sw:Cls-Sts") {
+	field(DESC, "GV2 Not Closed")
+	field(INP,  "Depo{PLC:1}In:DI60_Raw-I.BD")
+	field(ZNAM, "Closed")
+	field(ONAM, "Not Closed")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Sts:CustmAbort-Sts") {
+	field(DESC, "Custermon Facility Abort")
+	field(INP,  "Depo{PLC:1}In:DI60_Raw-I.BE")
+	field(ZNAM, "Not Ok")
+	field(ONAM, "Ok")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Sts:Wdog-Sts") {
+	field(DESC, "Watchdog Timer Status")
+	field(INP,  "Depo{PLC:1}In:DI61_Raw-I.B0")
+	field(ZNAM, "Not Ok")
+	field(ONAM, "Ok")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Sens:5}Sw-Sts") {
+	field(DESC, "L/L Pos Sw")
+	field(INP,  "Depo{PLC:1}In:DI61_Raw-I.B3")
+	field(ZNAM, "Not At Pos")
+	field(ONAM, "At Pos")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Sens:6}Sw-Sts") {
+	field(DESC, "Mated to Main Rail")
+	field(INP,  "Depo{PLC:1}In:DI61_Raw-I.B4")
+	field(ZNAM, "Mated")
+	field(ONAM, "Not Mated")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Sens:7}Sw-Sts") {
+	field(DESC, "L/L Home Sw")
+	field(INP,  "Depo{PLC:1}In:DI61_Raw-I.B5")
+	field(ZNAM, "Homed")
+	field(ONAM, "Not Homed")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GV:1}Sw:Opn-Sts") {
+	field(DESC, "Landing Chamber GV1 Open")
+	field(INP,  "Depo{PLC:1}In:DI61_Raw-I.B6")
+	field(ZNAM, "Not Open")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GV:1}Sw:Cls-Sts") {
+	field(DESC, "Landing Chamber GV1 Closed")
+	field(INP,  "Depo{PLC:1}In:DI61_Raw-I.B7")
+	field(ZNAM, "Not Closed")
+	field(ONAM, "Closed")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GV:4}Sw:Opn-Sts") {
+	field(DESC, "Loadlock GV4 Open")
+	field(INP,  "Depo{PLC:1}In:DI61_Raw-I.B8")
+	field(ZNAM, "Not Open")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GV:4}Sw:Cls-Sts") {
+	field(DESC, "Loadlock GV4 Closed")
+	field(INP,  "Depo{PLC:1}In:DI61_Raw-I.B9")
+	field(ZNAM, "Not Closed")
+	field(ONAM, "Closed")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GV:5}Sw:Opn-Sts") {
+	field(DESC, "Loadlock GV5 Open")
+	field(INP,  "Depo{PLC:1}In:DI61_Raw-I.BA")
+	field(ZNAM, "Not Open")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GV:5}Sw:Cls-Sts") {
+	field(DESC, "Loadlock GV5 Closed")
+	field(INP,  "Depo{PLC:1}In:DI61_Raw-I.BB")
+	field(ZNAM, "Not Closed")
+	field(ONAM, "Closed")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{VP:1}Sts:Ovld-Sts") {
+	field(DESC, "Vacuum Pump Overload Status")
+	field(INP,  "Depo{PLC:1}In:DI61_Raw-I.BC")
+	field(ZNAM, "Overload")
+	field(ONAM, "Ok")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GD-Mtr}Sts:Ovld-Sts") {
+	field(DESC, "Gun Door Motor Overload Status")
+	field(INP,  "Depo{PLC:1}In:DI61_Raw-I.BD")
+	field(ZNAM, "Overload")
+	field(ONAM, "Ok")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GV:3}Sw:Opn-Sts") {
+	field(DESC, "Gun Chamber1 GV3 Open")
+	field(INP,  "Depo{PLC:1}In:DI61_Raw-I.BE")
+	field(ZNAM, "Open")
+	field(ONAM, "Not Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GV:3}Sw:Cls-Sts") {
+	field(DESC, "Gun Chamber1 GV3 Closed")
+	field(INP,  "Depo{PLC:1}In:DI61_Raw-I.BF")
+	field(ZNAM, "Closed")
+	field(ONAM, "Not Closed")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Sparc:1}T-Sts") {
+	field(DESC, "Sparcle1 Temp")
+	field(INP,  "Depo{PLC:1}In:DI62_Raw-I.B0")
+	field(ZNAM, "OverTemp")
+	field(ONAM, "Ok")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Sparc:1}Flt-Sts") {
+	field(DESC, "Sparcle1 Fault")
+	field(INP,  "Depo{PLC:1}In:DI62_Raw-I.B1")
+	field(ZNAM, "Ok")
+	field(ONAM, "Fault")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Sparc:2}T-Sts") {
+	field(DESC, "Sparcle2 Temp")
+	field(INP,  "Depo{PLC:1}In:DI62_Raw-I.B2")
+	field(ZNAM, "OverTem")
+	field(ONAM, "Ok")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Sparc:2}Flt-Sts") {
+	field(DESC, "Sparcle2 Fault")
+	field(INP,  "Depo{PLC:1}In:DI62_Raw-I.B3")
+	field(ZNAM, "Ok")
+	field(ONAM, "Fault")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Conn-Ax:X}Lim:Diseng-Sts") {
+	field(DESC, "Stepper Disengage Limit")
+	field(INP,  "Depo{PLC:1}In:DI62_Raw-I.B6")
+	field(ZNAM, "At Disen Lim")
+	field(ONAM, "Not At Dis Lim")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Conn-Ax:X}Lim:Enga-Sts") {
+	field(DESC, "Stepper Engage Limit")
+	field(INP,  "Depo{PLC:1}In:DI62_Raw-I.B7")
+	field(ZNAM, "At Eng Lim")
+	field(ONAM, "Not At Engage Lim")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{SPS:1}Sts:OutSP-Sts") {
+	field(DESC, "SPS1 Output @ SP")
+	field(INP,  "Depo{PLC:1}In:DI62_Raw-I.B8")
+	field(ZNAM, "Not At SP")
+	field(ONAM, "At SP")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{SPS:1}Sts:Out-Sts") {
+	field(DESC, "SPS1 Output Present")
+	field(INP,  "Depo{PLC:1}In:DI62_Raw-I.B9")
+	field(ZNAM, "Not Present")
+	field(ONAM, "Present")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{SPS:2}Sts:OutSP-Sts") {
+	field(DESC, "SPS2 Output @ SP")
+	field(INP,  "Depo{PLC:1}In:DI62_Raw-I.BA")
+	field(ZNAM, "Not At SP")
+	field(ONAM, "At SP")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{SPS:2}Sts:Out-Sts") {
+	field(DESC, "SPS2 Output Present")
+	field(INP,  "Depo{PLC:1}In:DI62_Raw-I.BB")
+	field(ZNAM, "Not Present")
+	field(ONAM, "Present")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Pos:CartEnga-Sts") {
+	field(DESC, "Cart Conn in Engaged Pos")
+	field(INP,  "Depo{PLC:1}In:DI62_Raw-I.BC")
+	field(ZNAM, "Not in Eng Pos")
+	field(ONAM, "In Engage Pos")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Pos:CartDiseng-Sts") {
+	field(DESC, "Cart Conn in Disengaged Pos")
+	field(INP,  "Depo{PLC:1}In:DI62_Raw-I.BD")
+	field(ZNAM, "Not in Dis Pos")
+	field(ONAM, "In Diseng Pos")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Alrm:AC_Phase-Latch") {
+	field(DESC, "AC Phase Fail Alarm")
+	field(INP,  "Depo{PLC:1}In:CR64_Raw-I.B0")
+	field(ZNAM, "Not in Alarm")
+	field(ONAM, "Alarm")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Alrm:PenuP-Latch") {
+	field(DESC, "Pneumatic Pressure Alarm")
+	field(INP,  "Depo{PLC:1}In:CR64_Raw-I.B1")
+	field(ZNAM, "Not in  Alarm")
+	field(ONAM, "Alarm")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Alrm:N2P-Latch") {
+	field(DESC, "N2 Pressure Alarm")
+	field(INP,  "Depo{PLC:1}In:CR64_Raw-I.B2")
+	field(ZNAM, "Not in Alarm")
+	field(ONAM, "Alarm")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Alrm:ArP-Latch") {
+	field(DESC, "Argon Pressure Alarm")
+	field(INP,  "Depo{PLC:1}In:CR64_Raw-I.B3")
+	field(ZNAM, "Not in Alarm")
+	field(ONAM, "Alarm")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Alrm:VacSeal-Latch") {
+	field(DESC, "Seals Vacuum Alarm")
+	field(INP,  "Depo{PLC:1}In:CR64_Raw-I.B4")
+	field(ZNAM, "Not in Alarm")
+	field(ONAM, "Alarm")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Alrm:CustmAbort-Latch") {
+	field(DESC, "Customer Facility Abort Latch")
+	field(INP,  "Depo{PLC:1}In:CR64_Raw-I.B5")
+	field(ZNAM, "No Abort")
+	field(ONAM, "Abort")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Alrm:Wdog-Latch") {
+	field(DESC, "Watchdog Status Alarm")
+	field(INP,  "Depo{PLC:1}In:CR64_Raw-I.B6")
+	field(ZNAM, "Not in Alarm")
+	field(ONAM, "Alarm")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{VP:1}Alrm:Ovld-Latch") {
+	field(DESC, "Vacuum Pump Overload Alrm")
+	field(INP,  "Depo{PLC:1}In:CR64_Raw-I.B7")
+	field(ZNAM, "Not in Alarm")
+	field(ONAM, "Alarm")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GD-Mtr}Alrm:Ovld-Latch") {
+	field(DESC, "Gun Door Motor Overload Alrm")
+	field(INP,  "Depo{PLC:1}In:CR64_Raw-I.B8")
+	field(ZNAM, "Not in Alarm")
+	field(ONAM, "Alarm")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Sparc:1}T-Latch") {
+	field(DESC, "Sparcle1 OverTemp")
+	field(INP,  "Depo{PLC:1}In:CR64_Raw-I.B9")
+	field(ZNAM, "Ok")
+	field(ONAM, "OverTemp")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Sparc:1}Flt-Latch") {
+	field(DESC, "Sparcle1 Fault")
+	field(INP,  "Depo{PLC:1}In:CR64_Raw-I.BA")
+	field(ZNAM, "Ok")
+	field(ONAM, "Fault")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Sparc:2}T-Latch") {
+	field(DESC, "Sparcle2 OverTemp")
+	field(INP,  "Depo{PLC:1}In:CR64_Raw-I.BB")
+	field(ZNAM, "Ok")
+	field(ONAM, "OverTemp")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Sparc:2}Flt-Latch") {
+	field(DESC, "Sparcle2 Fault")
+	field(INP,  "Depo{PLC:1}In:CR64_Raw-I.BC")
+	field(ZNAM, "Ok")
+	field(ONAM, "Fault")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Chl:1}F:Alrm-Sts") {
+	field(DESC, "Chiller1 Water Flow Alarm")
+	field(INP,  "Depo{PLC:1}In:CR64_Raw-I.BE")
+	field(ZNAM, "Not Ok")
+	field(ONAM, "Ok")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Sts:ProcTube-Sts") {
+	field(DESC, "Process Tube at Atmosphere")
+	field(INP,  "Depo{PLC:1}In:CR65_Raw-I.B0")
+	field(ZNAM, "Under Vac")
+	field(ONAM, "Not under Vac")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Sts:ProcAlert-Sts") {
+	field(DESC, "Software Process Alert")
+	field(INP,  "Depo{PLC:1}In:CR65_Raw-I.B1")
+	field(ZNAM, "No Alert")
+	field(ONAM, "Alert")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Sts:LL_OvrP-Sts") {
+	field(DESC, "Loadlock OverPressure")
+	field(INP,  "Depo{PLC:1}In:CR65_Raw-I.B2")
+	field(ZNAM, "Ok")
+	field(ONAM, "OverP")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Sts:SysWarn-Sts") {
+	field(DESC, "System Warning")
+	field(INP,  "Depo{PLC:1}In:CR65_Raw-I.B3")
+	field(ZNAM, "No Warn")
+	field(ONAM, "Sys Warn")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Sts:RdyTrf-Sts") {
+	field(DESC, "Ready to Transfer")
+	field(INP,  "Depo{PLC:1}In:CR65_Raw-I.B4")
+	field(ZNAM, "Not Ready")
+	field(ONAM, "Ready")
+	field(ZSV,  "MAJOR")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Sts:PurgeCmplt-Sts") {
+	field(DESC, "Totalizing Purge Flow")
+	field(INP,  "Depo{PLC:1}In:CR65_Raw-I.B5")
+	field(ZNAM, "Incomplete")
+	field(ONAM, "Complete")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Sts:PurgeTime-Sts") {
+	field(DESC, "Timing Purge")
+	field(INP,  "Depo{PLC:1}In:CR65_Raw-I.B6")
+	field(ZNAM, "Not sure")
+	field(ONAM, "xxx")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Sts:PurgeHazard-Sts") {
+	field(DESC, "Purge Hazards")
+	field(INP,  "Depo{PLC:1}In:CR65_Raw-I.B7")
+	field(ZNAM, "Hazard")
+	field(ONAM, "Cond Met")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Chl:2}F:Alrm-Sts") {
+	field(DESC, "Chiller2 Water Flow Alarm")
+	field(INP,  "Depo{PLC:1}In:CR65_Raw-I.B8")
+	field(ZNAM, "Not Ok")
+	field(ONAM, "Ok")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:01}Pos-Sts") {
+	field(DESC, "MFC1 > Landing Chamber(AV1)")
+	field(INP,  "Depo{PLC:1}In:DO70_Raw-I.B0")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:02}Pos-Sts") {
+	field(DESC, "MFC2 > Gun Chamber1(AV2)")
+	field(INP,  "Depo{PLC:1}In:DO70_Raw-I.B1")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:03}Pos-Sts") {
+	field(DESC, "MFC3 > Gun Chamber1(AV3)")
+	field(INP,  "Depo{PLC:1}In:DO70_Raw-I.B2")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:04}Pos-Sts") {
+	field(DESC, "MFC4 > Gun Chamber1(AV4)")
+	field(INP,  "Depo{PLC:1}In:DO70_Raw-I.B3")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:05}Pos-Sts") {
+	field(DESC, "MFC5 > Gun Chamber1(AV5)")
+	field(INP,  "Depo{PLC:1}In:DO70_Raw-I.B4")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:06}Pos-Sts") {
+	field(DESC, "MFC6 > Gun Chamber2(AV6)")
+	field(INP,  "Depo{PLC:1}In:DO70_Raw-I.B5")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:07}Pos-Sts") {
+	field(DESC, "MFC7 > Gun Chamber2(AV7)")
+	field(INP,  "Depo{PLC:1}In:DO70_Raw-I.B6")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Rst:Wdog-Sts") {
+	field(DESC, "Watchdog Reset Pulses")
+	field(INP,  "Depo{PLC:1}In:DO70_Raw-I.B7")
+	field(ZNAM, "Rst Pulse Off")
+	field(ONAM, "Rst Pulse On")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Sts:Aud-Sts") {
+	field(DESC, "Audible Alert")
+	field(INP,  "Depo{PLC:1}In:DO70_Raw-I.B8")
+	field(ZNAM, "Aud Off")
+	field(ONAM, "Aud On")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Ind:Abort-Sts") {
+	field(DESC, "Abort Indicator")
+	field(INP,  "Depo{PLC:1}In:DO70_Raw-I.B9")
+	field(ZNAM, "Abort Off")
+	field(ONAM, "Abort On")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Alrm:Silc-Sts") {
+	field(DESC, "Alarm Silence")
+	field(INP,  "Depo{PLC:1}In:DO70_Raw-I.BA")
+	field(ZNAM, "Silence Off")
+	field(ONAM, "Silence On")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:08}Pos-Sts") {
+	field(DESC, "MFC8 > Gun Chamber2(AV8)")
+	field(INP,  "Depo{PLC:1}In:DO70_Raw-I.BB")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:09}Pos-Sts") {
+	field(DESC, "MFC9 > Gun Chamber2(AV9)")
+	field(INP,  "Depo{PLC:1}In:DO70_Raw-I.BC")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:10}Pos-Sts") {
+	field(DESC, "Ar Backfill > Loadlock(AV10)")
+	field(INP,  "Depo{PLC:1}In:DO70_Raw-I.BD")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:11}Pos-Sts") {
+	field(DESC, "Ar Backfill > Cntr Chm(AV11)")
+	field(INP,  "Depo{PLC:1}In:DO70_Raw-I.BE")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:12}Pos-Sts") {
+	field(DESC, "N2 Purge > CP1(AV12)")
+	field(INP,  "Depo{PLC:1}In:DO70_Raw-I.BF")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:13}Pos-Sts") {
+	field(DESC, "N2 Purge > CP2 (AV13)")
+	field(INP,  "Depo{PLC:1}In:DO71_Raw-I.B0")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:14}Pos-Sts") {
+	field(DESC, "N2 Purge > CP3 (AV14)")
+	field(INP,  "Depo{PLC:1}In:DO71_Raw-I.B1")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:15}Pos-Sts") {
+	field(DESC, "N2 Purge > CP4 (AV15)")
+	field(INP,  "Depo{PLC:1}In:DO71_Raw-I.B2")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:16}Pos-Sts") {
+	field(DESC, "PT1 On > Cntr Chamber(AV16)")
+	field(INP,  "Depo{PLC:1}In:DO71_Raw-I.B3")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:18}Pos-Sts") {
+	field(DESC, "CP1 Exhaust > VP1(AV18)")
+	field(INP,  "Depo{PLC:1}In:DO71_Raw-I.B5")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:19}Pos-Sts") {
+	field(DESC, "CP2 Exhaust > VP1(AV19)")
+	field(INP,  "Depo{PLC:1}In:DO71_Raw-I.B6")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:20}Pos-Sts") {
+	field(DESC, "CP3 Exhaust > VP1(AV20)")
+	field(INP,  "Depo{PLC:1}In:DO71_Raw-I.B7")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:21}Pos-Sts") {
+	field(DESC, "CP4 Exhaust > VP1(AV21)")
+	field(INP,  "Depo{PLC:1}In:DO71_Raw-I.B8")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:22}Pos-Sts") {
+	field(DESC, "Cntr Chm OverP Exhaust(AV22)")
+	field(INP,  "Depo{PLC:1}In:DO71_Raw-I.B9")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:23}Pos-Sts") {
+	field(DESC, "L/L OverP Exhaust(AV23)")
+	field(INP,  "Depo{PLC:1}In:DO71_Raw-I.BA")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:24}Pos-Sts") {
+	field(DESC, "Cntr Chm Rough Vacuum(AV24)")
+	field(INP,  "Depo{PLC:1}In:DO71_Raw-I.BB")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:25}Pos-Sts") {
+	field(DESC, "L/L Rough Vacuum(AV25)")
+	field(INP,  "Depo{PLC:1}In:DO71_Raw-I.BC")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Sparc:1}Enbl-Sts") {
+	field(DESC, "Sparcle1 EN")
+	field(INP,  "Depo{PLC:1}In:DO71_Raw-I.BD")
+	field(ZNAM, "Off")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Sparc:2}Enbl-Sts") {
+	field(DESC, "Sparcle2 EN")
+	field(INP,  "Depo{PLC:1}In:DO71_Raw-I.BE")
+	field(ZNAM, "Off")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PS_DC:1}Sts:On-Sts") {
+	field(DESC, "MDX Supply1")
+	field(INP,  "Depo{PLC:1}In:DO71_Raw-I.BF")
+	field(ZNAM, "Off")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{VP:1}Sts:On-Sts") {
+	field(DESC, "VP1")
+	field(INP,  "Depo{PLC:1}In:DO72_Raw-I.B0")
+	field(ZNAM, "Off")
+	field(ONAM, "On")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{EOV:4}Pos-Sts") {
+	field(DESC, "L/L Door Seal(EOV4)")
+	field(INP,  "Depo{PLC:1}In:DO72_Raw-I.B1")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{EOV:2}Pos-Sts") {
+	field(DESC, "L/L Ar Hig Flow(EOV2)")
+	field(INP,  "Depo{PLC:1}In:DO72_Raw-I.B2")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{EOV:3}Pos-Sts") {
+	field(DESC, "Process Ar High Flow(EOV3)")
+	field(INP,  "Depo{PLC:1}In:DO72_Raw-I.B3")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GV:1}Pos-Sts") {
+	field(DESC, "Open/Close Cryo GV1")
+	field(INP,  "Depo{PLC:1}In:DO72_Raw-I.B4")
+	field(ZNAM, "Closed")
+	field(ONAM, "Throttle Enbl")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GV:1}Sts:Stroke-Sts") {
+	field(DESC, "Full/Mid Cryo GV1 Stroke")
+	field(INP,  "Depo{PLC:1}In:DO72_Raw-I.B5")
+	field(ZNAM, "Mid")
+	field(ONAM, "Full")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PS_DC:2}Sts:On-Sts") {
+	field(DESC, "MDX Supply2")
+	field(INP,  "Depo{PLC:1}In:DO72_Raw-I.B7")
+	field(ZNAM, "Off")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PS_DC:1}Enbl:Rly-Sts") {
+	field(DESC, "MDX1 Power Relay Enable")
+	field(INP,  "Depo{PLC:1}In:DO72_Raw-I.B8")
+	field(ZNAM, "Disabled")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{MAG:Ion}Enbl:Rly1-Sts") {
+	field(DESC, "MAG ION 1500 Relay1")
+	field(INP,  "Depo{PLC:1}In:DO72_Raw-I.B9")
+	field(ZNAM, "Disabled")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{MAG:1}Enbl:PS-Sts") {
+	field(DESC, "MAG1 Power Enable")
+	field(INP,  "Depo{PLC:1}In:DO72_Raw-I.BA")
+	field(ZNAM, "Disabled")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{MAG:2}Enbl:PS-Sts") {
+	field(DESC, "MAG2 Power Enable")
+	field(INP,  "Depo{PLC:1}In:DO72_Raw-I.BB")
+	field(ZNAM, "Disabled")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{MAG:3}Enbl:PS-Sts") {
+	field(DESC, "MAG3 Power Enable")
+	field(INP,  "Depo{PLC:1}In:DO72_Raw-I.BC")
+	field(ZNAM, "Disabled")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{MAG:4}Enbl:PS-Sts") {
+	field(DESC, "MAG4 Power Enable")
+	field(INP,  "Depo{PLC:1}In:DO72_Raw-I.BD")
+	field(ZNAM, "Disabled")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PS_Spare}Enbl:RlyA-Sts") {
+	field(DESC, "MAG Spare Power Relay A")
+	field(INP,  "Depo{PLC:1}In:DO72_Raw-I.BE")
+	field(ZNAM, "Disabled")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PS_Spare}Enbl:RlyB-Sts") {
+	field(DESC, "MAG Spare Power Relay B")
+	field(INP,  "Depo{PLC:1}In:DO72_Raw-I.BF")
+	field(ZNAM, "Disabled")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PS_DC:2}Enbl:Rly-Sts") {
+	field(DESC, "MDX2 Power Relay Enable")
+	field(INP,  "Depo{PLC:1}In:DO73_Raw-I.B0")
+	field(ZNAM, "Disabled")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{MAG:RF}Enbl:Rly2-Sts") {
+	field(DESC, "MAG RF Relay2")
+	field(INP,  "Depo{PLC:1}In:DO73_Raw-I.B1")
+	field(ZNAM, "Disabled")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{MAG:5}Enbl:PS-Sts") {
+	field(DESC, "MAG5 Power Enable")
+	field(INP,  "Depo{PLC:1}In:DO73_Raw-I.B2")
+	field(ZNAM, "Disabled")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{MAG:6}Enbl:PS-Sts") {
+	field(DESC, "MAG6 Power Enable")
+	field(INP,  "Depo{PLC:1}In:DO73_Raw-I.B3")
+	field(ZNAM, "Disabled")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{MAG:7}Enbl:PS-Sts") {
+	field(DESC, "MAG7 Power Enable")
+	field(INP,  "Depo{PLC:1}In:DO73_Raw-I.B4")
+	field(ZNAM, "Disabled")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{MAG:8}Enbl:PS-Sts") {
+	field(DESC, "MAG8 Power Enable")
+	field(INP,  "Depo{PLC:1}In:DO73_Raw-I.B5")
+	field(ZNAM, "Disabled")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{MAG:9}Enbl:PS-Sts") {
+	field(DESC, "MAG9 Power Enable")
+	field(INP,  "Depo{PLC:1}In:DO73_Raw-I.B6")
+	field(ZNAM, "Disabled")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PS_Spare}Enbl:RlyC-Sts") {
+	field(DESC, "MAG Spare Power Relay C")
+	field(INP,  "Depo{PLC:1}In:DO73_Raw-I.B7")
+	field(ZNAM, "Disabled")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GD-Mtr}Enbl-Sts") {
+	field(DESC, "Mag Door Motor Enable")
+	field(INP,  "Depo{PLC:1}In:DO73_Raw-I.B8")
+	field(ZNAM, "Disabled")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GD:1-Mtr}Enbl-Sts") {
+	field(DESC, "Gun Door1 Mtr Enable")
+	field(INP,  "Depo{PLC:1}In:DO73_Raw-I.BA")
+	field(ZNAM, "Off")
+	field(ONAM, "On")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GD:2-Mtr}Enbl-Sts") {
+	field(DESC, "Gun Door2 Mtr Enable")
+	field(INP,  "Depo{PLC:1}In:DO73_Raw-I.BB")
+	field(ZNAM, "Off")
+	field(ONAM, "On")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{LL-Mtr:1}Dir-Sts") {
+	field(DESC, "L/L Mtr1 Direction")
+	field(INP,  "Depo{PLC:1}In:DO73_Raw-I.BD")
+	field(ZNAM, "Mv Into Chm")
+	field(ONAM, "Mv Out Of Chm")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{LP-Mtr:2}Dir-Sts") {
+	field(DESC, "Loadplate Mtr2 Direction")
+	field(INP,  "Depo{PLC:1}In:DO73_Raw-I.BF")
+	field(ZNAM, "Mv Into Chm")
+	field(ONAM, "Mv Out Of Chm")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{CP:1}Sts:Off-Sts") {
+	field(DESC, "CP1 Off")
+	field(INP,  "Depo{PLC:1}In:DO74_Raw-I.B0")
+	field(ZNAM, "On")
+	field(ONAM, "Off")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "MAJOR")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{CP:2}Sts:Off-Sts") {
+	field(DESC, "CP2 Off")
+	field(INP,  "Depo{PLC:1}In:DO74_Raw-I.B1")
+	field(ZNAM, "On")
+	field(ONAM, "Off")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "MAJOR")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{CP:3}Sts:Off-Sts") {
+	field(DESC, "CP3 Off")
+	field(INP,  "Depo{PLC:1}In:DO74_Raw-I.B2")
+	field(ZNAM, "On")
+	field(ONAM, "Off")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "MAJOR")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{CP:4}Sts:Off-Sts") {
+	field(DESC, "CP4 Off")
+	field(INP,  "Depo{PLC:1}In:DO74_Raw-I.B3")
+	field(ZNAM, "On")
+	field(ONAM, "Off")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "MAJOR")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GV:2}Pos-Sts") {
+	field(DESC, "Open Cryo GV2")
+	field(INP,  "Depo{PLC:1}In:DO74_Raw-I.B4")
+	field(ZNAM, "Throttle Enbl")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GV:2}Sts:Ctrl-Sts") {
+	field(DESC, "Ctrl Cryo GV2")
+	field(INP,  "Depo{PLC:1}In:DO74_Raw-I.B5")
+	field(ZNAM, "Fully Close")
+	field(ONAM, "Throttle")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GV:3}Pos-Sts") {
+	field(DESC, "Open Cryo GV3")
+	field(INP,  "Depo{PLC:1}In:DO74_Raw-I.B6")
+	field(ZNAM, "Throttle Enbl")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GV:3}Sts:Ctrl-Sts") {
+	field(DESC, "Ctrl Cryo GV3")
+	field(INP,  "Depo{PLC:1}In:DO74_Raw-I.B7")
+	field(ZNAM, "Fully Close")
+	field(ONAM, "Throttle")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Pmp:Seal}Sts:On-Sts") {
+	field(DESC, "Seals Pump")
+	field(INP,  "Depo{PLC:1}In:DO74_Raw-I.B8")
+	field(ZNAM, "Off")
+	field(ONAM, "On")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GV:5}Pos:Opn-Sts") {
+	field(DESC, "AV28 Open L/L GV5")
+	field(INP,  "Depo{PLC:1}In:DO74_Raw-I.B9")
+	field(ZNAM, "Not Open")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GV:5}Pos:Cls-Sts") {
+	field(DESC, "AV29 Close L/L GV5")
+	field(INP,  "Depo{PLC:1}In:DO74_Raw-I.BA")
+	field(ZNAM, "Not Closed")
+	field(ONAM, "Closed")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GV:4}Pos-Sts") {
+	field(DESC, "Cryo GV4 Open/Close")
+	field(INP,  "Depo{PLC:1}In:DO74_Raw-I.BB")
+	field(ZNAM, "Closed")
+	field(ONAM, "Throttle Enbl")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GV:4}Sts:Stroke-Sts") {
+	field(DESC, "Cryo GV4 Stroke")
+	field(INP,  "Depo{PLC:1}In:DO74_Raw-I.BC")
+	field(ZNAM, "Mid")
+	field(ONAM, "Full")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{CCG:1}Enbl-Sts") {
+	field(DESC, "CCG1 Enable")
+	field(INP,  "Depo{PLC:1}In:DO74_Raw-I.BD")
+	field(ZNAM, "Disabled")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{CCG:2}Enbl-Sts") {
+	field(DESC, "CCG2 Enable")
+	field(INP,  "Depo{PLC:1}In:DO74_Raw-I.BE")
+	field(ZNAM, "Disabled")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:26}Pos-Sts") {
+	field(DESC, "Crystal Monitor1 Shutter(AV26)")
+	field(INP,  "Depo{PLC:1}In:DO74_Raw-I.BF")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{AV:27}Pos-Sts") {
+	field(DESC, "Crystal Monitor2 Shutter(AV27)")
+	field(INP,  "Depo{PLC:1}In:DO75_Raw-I.B0")
+	field(ZNAM, "Closed")
+	field(ONAM, "Open")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{LL-Clutch}Sts") {
+	field(DESC, "L/L Clutch")
+	field(INP,  "Depo{PLC:1}In:DO75_Raw-I.B1")
+	field(ZNAM, "Disengaged")
+	field(ONAM, "Engaged")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{GV:5}Sts:ClsRear-Sts") {
+	field(DESC, "GV5 Close Rear Limit")
+	field(INP,  "Depo{PLC:1}In:DO75_Raw-I.B3")
+	field(ZNAM, "Closed")
+	field(ONAM, "xxx")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{LP-Ind}Home-Sts") {
+	field(DESC, "Loadplate in Home Position")
+	field(INP,  "Depo{PLC:1}In:DO75_Raw-I.B4")
+	field(ZNAM, "Not in Home")
+	field(ONAM, "Home")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Conn-Ax:X}Sts:Conn-Sts") {
+	field(DESC, "Stepper Connect")
+	field(INP,  "Depo{PLC:1}In:DO75_Raw-I.B5")
+	field(ZNAM, "Disabled")
+	field(ONAM, "Fwd Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Conn-Ax:X}Sts:AftConn-Sts") {
+	field(DESC, "Stepper After Connect")
+	field(INP,  "Depo{PLC:1}In:DO75_Raw-I.B6")
+	field(ZNAM, "Disabled")
+	field(ONAM, "Fine Fwd Enbl")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Conn-Ax:X}Sts:Disconn-Sts") {
+	field(DESC, "Stepper Disconect")
+	field(INP,  "Depo{PLC:1}In:DO75_Raw-I.B7")
+	field(ZNAM, "Disabled")
+	field(ONAM, "Bkwd Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Lin-Ax:Z}Home-Sts") {
+	field(DESC, "Home Cart")
+	field(INP,  "Depo{PLC:1}In:DO75_Raw-I.B8")
+	field(ZNAM, "Not home")
+	field(ONAM, "Home")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Lin-Ax:Z}Sts:Disconn-Sts") {
+	field(DESC, "Linear Disconnect")
+	field(INP,  "Depo{PLC:1}In:DO75_Raw-I.B9")
+	field(ZNAM, "N/A")
+	field(ONAM, "Disconnect")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{Lin-Ax:Z}Sts:Run-Sts") {
+	field(DESC, "Run Linear Motor")
+	field(INP,  "Depo{PLC:1}In:DO75_Raw-I.BA")
+	field(ZNAM, "N/A")
+	field(ONAM, "Run")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{PLC:1}Enbl:CVD_Ver-Sts") {
+	field(DESC, "CVD Version Enable")
+	field(INP,  "Depo{PLC:1}In:DO75_Raw-I.BC")
+	field(ZNAM, "Disabled")
+	field(ONAM, "Enabled")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{LP-Clutch}Sts") {
+	field(DESC, "Loadplate Clutch")
+	field(INP,  "Depo{PLC:1}In:DO75_Raw-I.BD")
+	field(ZNAM, "Disengaged")
+	field(ONAM, "Engaged")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{LL-Mtr:1}Enbl-Sts") {
+	field(DESC, "L/L Mtr1 On/Off")
+	field(INP,  "Depo{PLC:1}In:DO75_Raw-I.BE")
+	field(ZNAM, "Off")
+	field(ONAM, "On")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}
+record(bi, "Depo{LP-Mtr:2}Enbl-Sts") {
+	field(DESC, "Loadplate Mtr2 On/Off")
+	field(INP,  "Depo{PLC:1}In:DO75_Raw-I.BF")
+	field(ZNAM, "Off")
+	field(ONAM, "On")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "NO_ALARM")
+	field(SCAN, ".2 second")
+}

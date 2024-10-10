@@ -1,0 +1,28 @@
+file "db/depo-plc-ao.template" { pattern
+{P, R	, Sig	, PREC	, EGU	, DESC		, CALC	, OUT	}
+ # AI/O 1
+ {Depo, "{MFC:1}"	, F-SP	, 3	, "SCCM"	, "Argon MFC1 Setpoint"	, "NINT(A * 1310.7)"	, F:Raw-SP	}
+ {Depo, "{MFC:2}"	, F-SP	, 3	, "SCCM"	, "Argon MFC2 Setpoint"	, "NINT(A * 1310.7)"	, F:Raw-SP	}
+ {Depo, "{MFC:3}"	, F-SP	, 3	, "SCCM"	, "Argon MFC3 Setpoint"	, "NINT(A * 1310.7)"	, F:Raw-SP	}
+ {Depo, "{MFC:4}"	, F-SP	, 3	, "SCCM"	, "Argon MFC4 Setpoint"	, "NINT(A * 1310.7)"	, F:Raw-SP	}
+ 
+ # AI/O 2
+ {Depo, "{MFC:5}"	, F-SP	, 3	, "SCCM"	, "Argon MFC5 Setpoint"	, "NINT(A * 1310.7)"	, F:Raw-SP	}
+ {Depo, "{MFC:6}"	, F-SP	, 3	, "SCCM"	, "Argon MFC6 Setpoint"	, "NINT(A * 1310.7)"	, F:Raw-SP	}
+ {Depo, "{MFC:7}"	, F-SP	, 3	, "SCCM"	, "Argon MFC7 Setpoint"	, "NINT(A * 1310.7)"	, F:Raw-SP	}
+ {Depo, "{MFC:8}"	, F-SP	, 3	, "SCCM"	, "Argon MFC8 Setpoint"	, "NINT(A * 1310.7)"	, F:Raw-SP	}
+ 
+ # AI/O 3
+ {Depo, "{MFC:9}"	, F-SP	, 3	, "SCCM"	, "Argon MFC9 Setpoint"	, "NINT(A * 1310.7)"	, F:Raw-SP	}
+ {Depo, "{VP:1}"	, S-SP	, 3	, "%"		, "VP1 Speed"			, "NINT(A * 1310.7)"	, S:Raw-SP	}
+
+ # AI/O 4
+ {Depo, "{SPS:1}"	, Ramp-SP	, 3	, "Sec/Min"	, "SPS1 Remote Ramp Adjust"	, "NINT(A * 1310.7)"	, Ramp:Raw-SP	}
+ {Depo, "{SPS:1}"	, Lvl-SP	, 3	, "V"		, "SPS1 Remote Level Adjust", "NINT(A * 1310.7)"	, Lvl:Raw-SP	}
+ {Depo, "{SPS:2}"	, Ramp-SP	, 3	, "Sec/Min"	, "SPS2 Remote Ramp Adjust"	, "NINT(A * 1310.7)"	, Ramp:Raw-SP	}
+ {Depo, "{SPS:2}"	, Lvl-SP	, 3	, "V"		, "SPS2 Remote Level Adjust", "NINT(A * 1310.7)"	, Lvl:Raw-SP	}
+
+ # AI/O 5
+ {Depo, "{GV:2}"	, P-SP	, 3	, "Torr"	, "GV2 Pressure Setpoint"	, "NINT(A * 1310.7)"	, P:Raw-SP	}
+ {Depo, "{GV:3}"	, P-SP	, 3	, "Torr"	, "GV3 Pressure Setpoint"	, "NINT(A * 1310.7)"	, P:Raw-SP	}
+}

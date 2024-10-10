@@ -1,0 +1,8 @@
+file vat_pm5.template { pattern
+{ Sys	, Dev		, PORT		}
+{ Depo	, "{GV:2}"	, Depo_GVC1	}
+{ Depo	, "{GV:3}"	, Depo_GVC2	}
+}
+
+
+

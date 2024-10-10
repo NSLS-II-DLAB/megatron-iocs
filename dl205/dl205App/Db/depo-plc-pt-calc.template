@@ -1,0 +1,14 @@
+record(sub, "$(P)$(R)DB:Sub_") {
+	field(INPA, "$(P)$(R)$(In)")
+	field(INAM, "subSCurveInit")
+	field(SNAM, "subSCurveCalc")
+	field(SCAN, "1 second")
+	field(FLNK, "$(P)$(R)$(Sig)")
+}
+
+record(ai, "$(P)$(R)$(Sig)") {
+	field(DESC, "$(DESC)")
+	field(INP,  "$(P)$(R)DB:Sub_ MSS")
+	field(PREC, "$(PREC)")
+	field(EGU,  "$(EGU)")
+}

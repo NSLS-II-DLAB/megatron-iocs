@@ -1,0 +1,5 @@
+file "depo-plc-write.template" { pattern
+ {P	, R			}
+ {Depo	, "{PLC:1}Enbl:Write"	}
+}
+

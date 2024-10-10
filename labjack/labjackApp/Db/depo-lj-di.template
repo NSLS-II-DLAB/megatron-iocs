@@ -1,0 +1,10 @@
+# bi record template 
+record(bi,"$(P)$(R)") {
+    field(DESC,"$(DESC)")
+    field(INP, "$(P)$(In).B$(Bit)")
+    field(ZNAM,"$(ZNAM)")
+    field(ONAM,"$(ONAM)")
+    field(ZSV, "$(ZSV)")
+    field(OSV, "$(OSV)")
+    field(SCAN,".2 second")
+}

@@ -1,0 +1,15 @@
+file "LabJack_ao.template" { pattern
+{P	, R	, PORT	, OFFSET	, DESC	, HOPR	, LOPR	, DRVH	, DRVL	, PREC	}
+# DAC 0 - 1
+{Depo, "{SCR:3}Intst-SP_"	, LJT7_4_AO, 0	, "LJ SCR3 Intensity SP"	, 5	, 0	, 5	, 0	, 4	}
+{Depo, "{SCR:4}Intst-SP_"	, LJT7_4_AO, 2	, "LJ SCR4 Intensity SP"	, 5	, 0	, 5	, 0	, 4	}
+{Depo, "{SCR:5}Intst-SP_"	, LJT7_4_AO_TICK, 16	, "LJ SCR5 Intensity SP", 5	, 0	, 5	, 0	, 4	}
+
+}
+
+file "depo-lj-ao-calc.template" { pattern
+{P, R	, Sig	, PREC	, EGU	, DESC		, CALC		, DRVH	, DRVL	}
+{Depo, "{SCR:3}"	, Intst-SP	, 0	, "%"	, "LJ SCR3 Intensity SP"	, "A/20"	, 100	, 0	}
+{Depo, "{SCR:4}"	, Intst-SP	, 0	, "%"	, "LJ SCR4 Intensity SP"	, "A/20"	, 100	, 0	}
+{Depo, "{SCR:5}"	, Intst-SP	, 0	, "%"	, "LJ SCR5 Intensity SP"	, "A/20"	, 100	, 0	}
+}

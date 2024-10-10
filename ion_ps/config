@@ -1,0 +1,5 @@
+NAME=ion_ps
+USER=softioc
+PORT=4002
+HOST=depo-ioc1
+

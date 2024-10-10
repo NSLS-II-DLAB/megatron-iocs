@@ -1,0 +1,56 @@
+record(sub, "Depo{PT:5}DB:Sub_") {
+	field(INPA, "Depo{PT:5}E-I")
+	field(INAM, "subSCurveInit")
+	field(SNAM, "subSCurveCalc")
+	field(SCAN, "1 second")
+	field(FLNK, "Depo{PT:5}P-I")
+}
+
+record(ai, "Depo{PT:5}P-I") {
+	field(DESC, "PT5-Landing Chm Cryo Conv")
+	field(INP,  "Depo{PT:5}DB:Sub_ MSS")
+	field(PREC, "4")
+	field(EGU,  "Torr")
+}
+record(sub, "Depo{PT:6}DB:Sub_") {
+	field(INPA, "Depo{PT:6}E-I")
+	field(INAM, "subSCurveInit")
+	field(SNAM, "subSCurveCalc")
+	field(SCAN, "1 second")
+	field(FLNK, "Depo{PT:6}P-I")
+}
+
+record(ai, "Depo{PT:6}P-I") {
+	field(DESC, "PT6-Gun Chm1 Cryo Conv")
+	field(INP,  "Depo{PT:6}DB:Sub_ MSS")
+	field(PREC, "4")
+	field(EGU,  "Torr")
+}
+record(sub, "Depo{PT:7}DB:Sub_") {
+	field(INPA, "Depo{PT:7}E-I")
+	field(INAM, "subSCurveInit")
+	field(SNAM, "subSCurveCalc")
+	field(SCAN, "1 second")
+	field(FLNK, "Depo{PT:7}P-I")
+}
+
+record(ai, "Depo{PT:7}P-I") {
+	field(DESC, "PT7-Gun Chm2 Cryo Conv")
+	field(INP,  "Depo{PT:7}DB:Sub_ MSS")
+	field(PREC, "4")
+	field(EGU,  "Torr")
+}
+record(sub, "Depo{PT:8}DB:Sub_") {
+	field(INPA, "Depo{PT:8}E-I")
+	field(INAM, "subSCurveInit")
+	field(SNAM, "subSCurveCalc")
+	field(SCAN, "1 second")
+	field(FLNK, "Depo{PT:8}P-I")
+}
+
+record(ai, "Depo{PT:8}P-I") {
+	field(DESC, "PT8-L/L Chm Cryo Conv")
+	field(INP,  "Depo{PT:8}DB:Sub_ MSS")
+	field(PREC, "4")
+	field(EGU,  "Torr")
+}

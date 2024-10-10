@@ -1,0 +1,73 @@
+file "LabJack_bi.template" { pattern
+{P	, R	,  DESC		, PORT	, OFFSET	, MASK	, ZNAM	, ONAM		, ZSV	, OSV	}
+{Depo, "{Mill-MFC:1cmDC}Cmd:Purge-Sts"		, "Ion Mill MFC 1cm DC Purge"		, LJT7_3_DIO_In	, 0	, 0x1	, "Off"		, "On", "NO_ALARM"	, "NO_ALARM"	}
+{Depo, "{Mill-MFC:4cmRFICP}Cmd:Purge-Sts"	, "Ion Mill MFC 4cm RFICP Purge"	, LJT7_3_DIO_In	, 0	, 0x2	, "Off"		, "On", "NO_ALARM"	, "NO_ALARM"	}
+{Depo, "{Mill-MFC:LFN}Cmd:Purge-Sts"		, "Ion Mill MFC LFN Purge"		,  LJT7_3_DIO_In	, 0	, 0x4	, "Off"		, "On", "NO_ALARM"	, "NO_ALARM"	}
+{Depo, "{Mill-MFC:Misc}Cmd:Purge-Sts"		, "Ion Mill MFC mixer gas DC Purge"	, LJT7_3_DIO_In	, 0	, 0x8	,"Off"		, "On", "NO_ALARM"	, "NO_ALARM"	}
+{Depo, "{Mill-MFC:O2}Cmd:Purge-Sts"		, "Ion Mill MFC mixer O2 Purge"		, LJT7_3_DIO_In	, 0	, 0x10	, "Off"		, "On", "NO_ALARM"	, "NO_ALARM"	}
+{Depo, "{Mill-MFC:N2}Cmd:Purge-Sts"		, "Ion Mill MFC mixer N2 Purge"		, LJT7_3_DIO_In	, 0	, 0x20	, "Off"		, "On", "NO_ALARM"	, "NO_ALARM"	}
+{Depo, "{Mill-MFC:Ar}Cmd:Purge-Sts"		, "Ion Mill MFC mixer Ar Purge"		, LJT7_3_DIO_In	, 0	, 0x40	, "Off"		, "On", "NO_ALARM"	, "NO_ALARM"	}
+#{Depo, "{Mill-MFC:Spare}Cmd:Rly8-Sts"		, "Ion Mill Spare Relay 8"		, LJT7_3_DIO_In	, 0	, 0x80	, "Off"		, "On", "NO_ALARM"	, "NO_ALARM"	}
+}
+
+file "LabJack_bo.template" { pattern
+{P	, R	,  DESC		, PORT	, OFFSET	, ZNAM	, ONAM	}
+{Depo, "{Mill-MFC:1cmDC}Cmd:Purge-Cmd"		, "Ion Mill MFC 1cm DC Purge"		, LJT7_3_DIO_Out	, 0	, "Off"		, "On"	}
+{Depo, "{Mill-MFC:4cmRFICP}Cmd:Purge-Cmd"	, "Ion Mill MFC 4cm RFICP Purge"	, LJT7_3_DIO_Out	, 1	, "Off"		, "On"	}
+{Depo, "{Mill-MFC:LFN}Cmd:Purge-Cmd"		, "Ion Mill MFC LFN Purge"		, LJT7_3_DIO_Out	, 2	, "Off"		, "On"	}
+{Depo, "{Mill-MFC:Misc}Cmd:Purge-Cmd"		, "Ion Mill MFC mixer gas DC Purge"	, LJT7_3_DIO_Out	, 3	, "Off"	, "On"	}
+{Depo, "{Mill-MFC:O2}Cmd:Purge-Cmd"		, "Ion Mill MFC mixer O2 Purge"		, LJT7_3_DIO_Out	, 4	, "Off"		, "On"	}
+{Depo, "{Mill-MFC:N2}Cmd:Purge-Cmd"		, "Ion Mill MFC mixer N2 Purge"		, LJT7_3_DIO_Out	, 5	, "Off"		, "On"	}
+{Depo, "{Mill-MFC:Ar}Cmd:Purge-Cmd"		, "Ion Mill MFC mixer Ar Purge"		, LJT7_3_DIO_Out	, 6	, "Off"		, "On"	}
+#{Depo, "{Mill-MFC:Spare}Cmd:Rly8-Cmd"		, "Ion Mill Spare Relay 8"		, LJT7_3_DIO_Out	, 7	, "Off"		, "On"	}
+}
+
+# Analog inputs
+file "LabJack_ai.template" { pattern
+{P, R, PORT,OFFSET,  DESC, PREC, SCAN}
+## The EGUF of AIN0 - AIN6 is 15, check if the calculation is correct
+{Depo, "{Mill-MFC:1cmDC}F-I_"	, LJT7_3_AI_In, 0	, "Ion Mill MFC 1cm DC Flow"	, 5, "I/O Intr"}
+{Depo, "{Mill-MFC:4cmRFICP}F-I_", LJT7_3_AI_In, 2	, "Ion Mill MFC 4cm RFICP Flow"	, 5, "I/O Intr"}
+{Depo, "{Mill-MFC:LFN}F-I_"	, LJT7_3_AI_In, 4	, "Ion Mill MFC LFN Flow"	, 5, "I/O Intr"}
+{Depo, "{Mill-MFC:Misc}F-I_"	, LJT7_3_AI_In, 6	, "Ion Mill MFC Misc Flow"	, 5, "I/O Intr"}
+{Depo, "{Mill-MFC:O2}F-I_"	, LJT7_3_AI_In, 8	, "Ion Mill MFC mixer O2 Flow"	, 5, "I/O Intr"}
+{Depo, "{Mill-MFC:N2}F-I_"	, LJT7_3_AI_In, 10	, "Ion Mill MFC mixer N2 Flow"	, 5, "I/O Intr"}
+{Depo, "{Mill-MFC:Ar}F-I_"	, LJT7_3_AI_In, 12	, "Ion Mill MFC mixer Ar Flow"	, 5, "I/O Intr"}
+{Depo, "{Mill-CM}P-I_"		, LJT7_3_AI_In, 26	, "Ion Mill CM Pressure"	, 5, "I/O Intr"}
+}
+
+file "depo-lj-ai-calc.template" { pattern
+{P, R	, CALC	, Sig	, DESC	, PREC	, EGU	}
+{Depo, "{Mill-MFC:1cmDC}"	, "3*A"		, F-I	, "Ion Mill MFC 1cm DC Flow"	, 4	, "SCCM"	}
+{Depo, "{Mill-MFC:4cmRFICP}"	, "3*A"		, F-I	, "Ion Mill MFC 4cm RFICP Flow"	, 4	, "SCCM"	}
+{Depo, "{Mill-MFC:LFN}"		, "3*A"		, F-I	, "Ion Mill MFC LFN Flow"		, 4	, "SCCM"	}
+{Depo, "{Mill-MFC:Misc}"	, "3*A"		, F-I	, "Ion Mill MFC Misc Flow"	, 4	, "SCCM"	}
+{Depo, "{Mill-MFC:O2}"		, "3*A"		, F-I	, "Ion Mill MFC mixer O2 Flow"	, 4	, "SCCM"	}
+{Depo, "{Mill-MFC:N2}"		, "3*A"		, F-I	, "Ion Mill MFC mixer N2 Flow"	, 4	, "SCCM"	}
+{Depo, "{Mill-MFC:Ar}"		, "3*A"		, F-I	, "Ion Mill MFC mixer Ar Flow"	, 4	, "SCCM"	}
+{Depo, "{Mill-CM:IM}"		, "200*A"	, P-I	, "Ion Mill LJ CM Pressure"	, 4	, "Torr"	}
+}
+
+file "LabJack_ao.template" { pattern
+{P	, R	, PORT	,	OFFSET	, DESC	, HOPR	, LOPR	, DRVH	, DRVL	, PREC	}
+# TDAC8 - 18 (EIO 0 - EIO 3, CIO 0 - CIO2)
+{Depo, "{Mill-MFC:mixAr}F-SP_"	, LJT7_3_AO_TICK, 16	, "Ion Mill MFC mixer Ar Flow SP"	, 5	, 0	, 5	, 0	, 5	}
+{Depo, "{Mill-MFC:mixN2}F-SP_"	, LJT7_3_AO_TICK, 18	, "Ion Mill MFC mixer N2 Flow SP"	, 5	, 0	, 5	, 0	, 5	}
+{Depo, "{Mill-MFC:mixO2}F-SP_"	, LJT7_3_AO_TICK, 20	, "Ion Mill MFC mixer O2 Flow SP"	, 5	, 0	, 5	, 0	, 5	}
+{Depo, "{Mill-MFC:ArN2}F-SP_"	, LJT7_3_AO_TICK, 22	, "Ion Mill MFC Ar/N2 Flow SP"	, 5	, 0	, 5	, 0	, 5}
+{Depo, "{Mill-MFC:LFN}F-SP_"	, LJT7_3_AO_TICK, 32	, "Ion Mill MFC LFN Flow SP"	, 5	, 0	, 5	, 0	, 5	}
+{Depo, "{Mill-MFC:4cmRFICP}F-SP_", LJT7_3_AO_TICK, 34	, "Ion Mill MFC 4cm RFICP Flow SP"	, 5	, 0	, 5	, 0	, 5	}
+{Depo, "{Mill-MFC:1cmDC}F-SP_"	, LJT7_3_AO_TICK, 36	, "Ion Mill MFC 1cm DC Flow SP"	, 5	, 0	, 5	, 0	, 5}
+}
+
+file "depo-lj-ao-calc.template" { pattern
+{P, R	, Sig	, PREC	, EGU	, DESC		, CALC		, DRVH	, DRVL	}
+{Depo, "{Mill-MFC:Ar}"		, F-SP	, 5	, "SCCM"	, "Ion Mill MFC mixer Ar Flow SP"	, "A/3"	, 15	, 0	}
+{Depo, "{Mill-MFC:N2}"		, F-SP	, 5	, "SCCM"	, "Ion Mill MFC mixer N2 Flow SP"	, "A/3"	, 15	, 0	}
+{Depo, "{Mill-MFC:O2}"		, F-SP	, 5	, "SCCM"	, "Ion Mill MFC mixer O2 Flow SP"	, "A/3"	, 15	, 0	}
+{Depo, "{Mill-MFC:Misc}"	, F-SP	, 5	, "SCCM"	, "Ion Mill MFC Misc Flow SP"	, "A/3"	, 15	, 0	}
+{Depo, "{Mill-MFC:LFN}"		, F-SP	, 5	, "SCCM"	, "Ion Mill MFC LFN Flow SP"	, "A/3"	, 15	, 0	}
+{Depo, "{Mill-MFC:4cmRFICP}"	, F-SP	, 5	, "SCCM"	, "Ion Mill MFC 4cm RFICP Flow SP"	, "A/3"	, 15	, 0	}
+{Depo, "{Mill-MFC:1cmDC}"	, F-SP	, 5	, "SCCM"	, "Ion Mill MFC 1cm DC Flow SP"	, "A/3"	, 15	, 0	}
+}
+

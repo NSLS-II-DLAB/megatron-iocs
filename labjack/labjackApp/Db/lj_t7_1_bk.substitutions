@@ -1,0 +1,254 @@
+# Analog inputs
+file "lj_t7_ai.template" { pattern
+{ P	, R			, PORT		, OFFSET	, DATA_TYPE	, SCAN		, PREC	, EGU	, DESC			}
+{ Depo	, "{MFC:1-LJ}F-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	,  "LJ Argon 1(MFC1)"	}
+{ Depo	, "{MFC:2-LJ}F-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Argon 2(MFC2)"	}
+{ Depo	, "{MFC:3-LJ}F-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Argon 3(MFC3)"	}
+{ Depo	, "{MFC:4-LJ}F-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Argon 4(MFC4)"	}
+{ Depo	, "{MFC:5-LJ}F-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Argon 5(MFC5)"	}
+{ Depo	, "{MFC:6-LJ}F-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Argon 6(MFC6)"	}
+{ Depo	, "{MFC:7-LJ}F-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Argon 7(MFC7)"	}
+{ Depo	, "{MFC:8-LJ}F-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Argon 8(MFC8)"	}
+{ Depo	, "{MFC:9-LJ}F-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Argon 9(MFC9)"	}
+
+{ Depo	, "{PT:3-LJ}P-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, Torr	, "LJ Center Chamber(PT3)"	}
+{ Depo	, "{PT:4-LJ}P-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, Torr	, "LJ Loadlock(PT4)"	}
+{ Depo	, "{PT:5-LJ}P-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, Torr	, "LJ Landing Chamber Cryo CP1(PT5)"	}
+{ Depo	, "{PT:6-LJ}P-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, Torr	, "LJ Gun Chamber2 Cryo CP2(PT6)"	}
+{ Depo	, "{PT:7-LJ}P-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, Torr	, "LJ Gun Chamber 1 Cryo CP3(PT7)"	}
+{ Depo	, "{PT:8-LJ}P-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, Torr	, "LJ Loadlock Cryo CP4(PT8)"	}
+
+{ Depo	, "{PS_DC:1-LJ}I:Out-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, A	, "LJ MDX Supply1 Current Output"	}
+{ Depo	, "{PS_DC:1-LJ}Pwr:Out-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, kW	, "LJ MDX Supply1 Power Output"	}
+{ Depo	, "{PS_DC:1-LJ}E:Out-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, kV	, "LJ MDX Supply1 Voltage Output"	}
+{ Depo	, "{PS_DC:1-LJ}Ramp-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, sec/min	, "LJ MDX Supply1 Ramp"	}
+{ Depo	, "{PS_DC:1-LJ}L:Out-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, /1000	, "LJ MDX Supply1 Output Level"	}
+{ Depo	, "{PS_DC:2-LJ}I:Out-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, A	, "LJ MDX Supply2 Current Output"	}
+{ Depo	, "{PS_DC:2-LJ}Pwr:Out-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, kW	, "LJ MDX Supply2 Power Output"	}
+{ Depo	, "{PS_DC:2-LJ}E:Out-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, kV	, "LJ MDX Supply2 Voltage Output"	}
+{ Depo	, "{PS_DC:2-LJ}Ramp-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, sec/min	, "LJ MDX Supply2 Ramp"	}
+{ Depo	, "{PS_DC:2-LJ}L:Out-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, /1000	, "LJ MDX Supply2 Output Level"	}
+
+{ Depo	, "{CP:1-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, K	, "LJ Temp Diode 1(CP1)"	}
+{ Depo	, "{CP:2-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, K	, "LJ Temp Diode 2(CP2)"	}
+{ Depo	, "{CP:3-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, K	, "LJ Temp Diode 3(CP3)"	}
+{ Depo	, "{CP:4-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, K	, "LJ Temp Diode 4(CP4)"	}
+{ Depo	, "{PT:1-LJ}P-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, mTorr	, "LJ Center Chamber CM(PT1)"	}
+{ Depo	, "{PT:2-LJ}P-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, Torr	, "LJ Loadlock CM(PT2)"	}
+{ Depo	, "{CCG:1-LJ}P-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, Torr	, "LJ Landing Chamber CCG1"	}
+{ Depo	, "{CCG:2-LJ}P-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, Torr	, "LJ Loadlock CCG2"	}
+
+{ Depo	, "{VP:1-LJ}S-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, Hz	, "LJ Roughing Pump VP1"	}
+{ Depo	, "{GV:2-LJ}S-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 0	, /1000	, "GV2 Speed"	}
+{ Depo	, "{GV:2-LJ}Pos-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 0	, /1000	, "GV2 Position"	}
+{ Depo	, "{GV:3-LJ}S-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 0	, /1000	, "GV3 Speed"	}
+{ Depo	, "{GV:3-LJ}Pos-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 0	, /1000	, "GV3 Position"	}
+
+{ Depo	, "{Galil:1-LJ}Pos-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 0	, Counts	, "Galil Encoder Readout"	}
+{ Depo	, "{Galil:1-LJ}Pos:Ref-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 0	, Counts	, "Galil Encoder Readout"	}
+{ Depo	, "{Galil:1-LJ}Err:Pos-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 0	, Counts	, "Galil Reference Pos"	}
+{ Depo	, "{Galil:1-LJ}Vel-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 0	, Counts	, "Galil Position Error"	}
+{ Depo	, "{Galil:1-LJ}Torq-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 0	, Counts/sec	, "Galil Velocity"	}
+{ Depo	, "{Galil:1-LJ}Err:Fail-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 0	, V	, "Galil Torque"	}
+{ Depo	, "{Galil:1-LJ}Pos-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 0	, ""	, "Galil Fail Error"	}
+
+{ Depo	, "{MOS:1-LJ}Curv:X-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "MOS Curvature X"	}
+{ Depo	, "{MOS:1-LJ}Curv:Y-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "MOS Curvature Y"	}
+{ Depo	, "{MOS:1-LJ}Tilt:H-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "MOS Tilt H"	}
+{ Depo	, "{MOS:1-LJ}Tilt:V-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "MOS Tilt V"	}
+{ Depo	, "{MOS:1-LJ}Pwr:Laser-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "MOS Laser Power"	}
+{ Depo	, "{MOS:1-LJ}Pos:MirX-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "MOS Mirror X Pos"	}
+{ Depo	, "{MOS:1-LJ}Pos:MirY-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "MOS Mirror Y Pos"	}
+{ Depo	, "{MOS:1-LJ}Val:X_MDS-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "MOS Mean Diff Spacing X"	}
+{ Depo	, "{MOS:1-LJ}Val:Y_MDS-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "MOS Mean Diff Spacing Y"	}
+{ Depo	, "{MOS:1-LJ}Val:X_STP-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "MOS Stress Thickness Product X"	}
+{ Depo	, "{MOS:1-LJ}Val:Y_STP-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "MOS Stress Thickness Product Y"	}
+{ Depo	, "{MOS:1-LJ}Strain:X-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "MOS Strain X"	}
+{ Depo	, "{MOS:1-LJ}Strain:Y-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "MOS Strain Y"	}
+{ Depo	, "{MOS:1-LJ}Stress:X-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "MOS Stress X"	}
+{ Depo	, "{MOS:1-LJ}Stress:Y-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "MOS Stress Y"	}
+{ Depo	, "{MOS:1-LJ}Radius:X-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "MOS Radius of Curvature X"	}
+{ Depo	, "{MOS:1-LJ}Radius:Y-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "MOS Radius of Curvature Y"	}
+
+{ Depo	, "{MAG:1-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "MAG 1 Temperature"	}
+{ Depo	, "{MAG:2-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "MAG 2 Temperature"	}
+{ Depo	, "{MAG:3-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "MAG 3 Temperature"	}
+{ Depo	, "{MAG:4-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "MAG 4 Temperature"	}
+{ Depo	, "{MAG:5-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "MAG 5 Temperature"	}
+{ Depo	, "{MAG:6-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "MAG 6 Temperature"	}
+{ Depo	, "{MAG:7-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "MAG 7 Temperature"	}
+{ Depo	, "{MAG:8-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "MAG 8 Temperature"	}
+{ Depo	, "{MAG:9-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "MAG 9 Temperature"	}
+
+{ Depo	, "{LJ-Rail:Wtr}T:Sup-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "Rail Water Supply Temperature"	}
+{ Depo	, "{LJ-Rail:Wtr}T:Rtn-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "Rail Wate Return Temperature"	}
+{ Depo	, "{LJ-Plate}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "LJ Plate Temperature"	}
+{ Depo	, "{LJ-Tray:1}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "Cable Tray 1 Temperature"	}
+{ Depo	, "{LJ-Tray:2}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "Cable Tray 2 Temperature"	}
+{ Depo	, "{LJ-Main:Wtr}T:Rtn-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "Main Water Return Temperature"	}
+{ Depo	, "{LJ-Main:Wtr}T:Sup-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "Main Water Supply Temperature"	}
+{ Depo	, "{LJ-Sens:Repl}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "Replace this sensor Temperature"	}
+{ Depo	, "{LJ-Gas:CryoPurge}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "Cryo Purge Gas Temperature"	}
+{ Depo	, "{LJ-Body:1}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "Body 1 Temperature"	}
+{ Depo	, "{LJ-Body:2}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "Body 2 Temperature"	}
+
+{ Depo	, "{MAG:1-LJ}F-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "GPM"	, "LJ MAG 1 Flow"	}
+{ Depo	, "{MAG:2-LJ}F-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "GPM"	, "LJ MAG 2 Flow"	}
+{ Depo	, "{MAG:3-LJ}F-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "GPM"	, "LJ MAG 3 Flow"	}
+{ Depo	, "{MAG:4-LJ}F-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "GPM"	, "LJ MAG 4 Flow"	}
+{ Depo	, "{MAG:5-LJ}F-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "GPM"	, "LJ MAG 5 Flow"	}
+{ Depo	, "{MAG:6-LJ}F-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "GPM"	, "LJ MAG 6 Flow"	}
+{ Depo	, "{MAG:7-LJ}F-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "GPM"	, "LJ MAG 7 Flow"	}
+{ Depo	, "{MAG:8-LJ}F-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "GPM"	, "LJ MAG 8 Flow"	}
+{ Depo	, "{MAG:9-LJ}F-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "GPM"	, "LJ MAG 9 Flow"	}
+
+{ Depo	, "{QCM:1-LJ}F-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "GPM"	, "LJ QCM 1 Flow"	}
+{ Depo	, "{QCM:2-LJ}F-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "GPM"	, "LJ QCM 2 Flow"	}
+{ Depo	, "{Spare:1-LJ}F-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "GPM"	, "LJ Unused Flow"	}
+{ Depo	, "{QCM:1-LJ}Rate:LiveGrow-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A/s"	, "LJ QCM 1 Live Growth Rate"	}
+{ Depo	, "{QCM:1-LJ}Life:Crys-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "%"	, "LJ QCM 1 Crystal Life"	}
+{ Depo	, "{QCM:1-LJ}Rate-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "ug/cm^2/s"	, "LJ QCM 1 Rate"	}
+{ Depo	, "{QCM:1-LJ}Stat:Chan-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ QCM 1 Channel State"	}
+{ Depo	, "{QCM:2-LJ}Rate:LiveGrow-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A/s"	, "LJ QCM 2 Live Growth Rate"	}
+{ Depo	, "{QCM:2-LJ}Life:Crys-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "%"	, "LJ QCM 2 Crystal Life"	}
+{ Depo	, "{QCM:2-LJ}Rate-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "ug/cm^2/s"	, "LJ QCM 2 Rate"	}
+{ Depo	, "{QCM:2-LJ}Stat:Chan-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ QCM 2 Channel State"	}
+
+{ Depo	, "{PS:Ion-LJ}Pwr-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "W"	, "LJ Ion Power"	}
+{ Depo	, "{PS:Ion-LJ}I-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ Ion Current"	}
+{ Depo	, "{PS:Ion-LJ}E-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "V"	, "LJ Ion Voltage"	}
+{ Depo	, "{PS:Ion-LJ}Rate:Arc-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "Arcs/s"	, "LJ Ion Arc Rate"	}
+{ Depo	, "{PS:Ion-LJ}Time:ArcDectDelay-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "us"	, "LJ Ion Arc Detect Delay"	}
+{ Depo	, "{PS:Ion-LJ}Time:TargetOff-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "us"	, "LJ Ion Target Off Time"	}
+{ Depo	, "{PS:Ion-LJ}Cnt:KWH-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "KWH"	, "LJ Ion KWH Count"	}
+{ Depo	, "{PS:Ion-LJ}E:Line-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "V"	, "LJ Ion Line Voltage"	}
+{ Depo	, "{PS:Ion-LJ}E:Bus-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "V"	, "LJ Ion Bus Voltage"	}
+{ Depo	, "{PS:Ion-LJ}T:HeatSink-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, F	, "W"	, "LJ Ion Sink Temp"	}
+{ Depo	, "{PS:Ion-LJ}Time:Ramp-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "s"	, "LJ Ion Ramp Time"	}
+
+{ Depo	, "{Motion-LJ}I:MaxMove-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "%"	, "LJ AllMotion Max Move Current"	}
+{ Depo	, "{Motion-LJ}I:SlowMove-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "%"	, "LJ AllMotion Slow Move Current"	}
+{ Depo	, "{Motion-LJ}I:Hold-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "%"	, "LJ AllMotion Hold Current"	}
+{ Depo	, "{Motion-LJ}Vel-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "steps/s"	, "LJ AllMotion Velocity"	}
+{ Depo	, "{Motion-LJ}Vel:Slew-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "steps/s"	, "LJ AllMotion Slew Velocity"	}
+{ Depo	, "{Motion-LJ}Steps:Micro-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "micro-steps"	, "LJ AllMotion Micro-steps per step"	}
+{ Depo	, "{Motion-LJ}Acc-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "steps/s^2"	, "LJ AllMotion Acceleration"	}
+
+{ Depo	, "{TC:1-LJ}T:CtrlSens-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "LJ TETech Control Sensor Temp"	}
+{ Depo	, "{TC:1-LJ}Pwr:OutI"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "%"	, "LJ TETech Power Output"	}
+{ Depo	, "{TC:1-LJ}T:SecSens-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "LJ TETech Secondary Sensor Temp"	}
+{ Depo	, "{TC:1-LJ}T:Set-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "LJ TETech Set Temp"	}
+{ Depo	, "{TC:1-LJ}Gain:P-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ TETech Proportional Bandwidth"	}
+{ Depo	, "{TC:1-LJ}Gain:I-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ TETech Integral Gain"	}
+{ Depo	, "{TC:1-LJ}Gain:D-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ TETech Derivative Gain"	}
+{ Depo	, "{TC:1-LJ}Offset:CtrlSens-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ TETech Control Sensor Offset"	}
+{ Depo	, "{TC:1-LJ}T:Alrm1Lo-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "LJ TETech Alarm1 Low Setting"	}
+{ Depo	, "{TC:1-LJ}T:Alrm1Hi-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "LJ TETech Alarm1 High Setting"	}
+{ Depo	, "{TC:1-LJ}T:Alrm1Lo-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "LJ TETech Alarm2 Low Setting"	}
+{ Depo	, "{TC:1-LJ}T:Alrm1Hi-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "LJ TETech Alarm2 High Setting"	}
+
+{ Depo	, "{PS:BK-LJ}E:MaxOut-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "V"	, "LJ BK Max Output Volt"	}
+{ Depo	, "{PS:BK-LJ}E:Out-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "V"	, "LJ BK Output Volt"	}
+{ Depo	, "{PS:BK-LJ}I:Out-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ BK Output Current"	}
+{ Depo	, "{PS:BK-LJ}E:Pres-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "V"	, "LJ BK Present Volt"	}
+{ Depo	, "{PS:BK-LJ}I:Pres-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ BK Present Current"	}
+{ Depo	, "{PS:BK-LJ}S:Fan-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "/5"	, "LJ BK Fan Speed"	}
+{ Depo	, "{PS:BK-LJ}Mode:Out-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ BK Output Mode"	}
+
+{ Depo	, "{NES-LJ}T:Intl:Out-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "LJ NES Internal Temp"	}
+{ Depo	, "{NES-LJ}T:Extl:Out-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "LJ NES External Temp"	}
+{ Depo	, "{NES-LJ}T:SP-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "LJ NES Setpoint Temp"	}
+{ Depo	, "{NES-LJ}T:LoLim-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "LJ NES Low Temp Limit"	}
+{ Depo	, "{NES-LJ}T:HiLim-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "LJ NES High Temp Limit"	}
+{ Depo	, "{NES-LJ}Gain:P-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ NES Proportional Band"	}
+{ Depo	, "{NES-LJ}Gain:I-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ NES Integral"	}
+{ Depo	, "{NES-LJ}Gain:D-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ NES Derivative"	}
+
+{ Depo	, "{IG:1-LJ}P-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "Torr"	, "LJ TIC UHV Ion Gauge 1"	}
+{ Depo	, "{IG:2-LJ}P-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "Torr"	, "LJ TIC UHV Ion Gauge 2"	}
+
+{ Depo	, "{KRI-LJ}F:Gas1-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ KRI Gas Channel 1"	}
+{ Depo	, "{KRI-LJ}F:Gas2-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ KRI Gas Channel 2"	}
+{ Depo	, "{KRI-LJ}F:Gas3-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ KRI Gas Channel 3"	}
+{ Depo	, "{KRI-LJ}F:Gas4-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ KRI Gas Channel 4"	}
+{ Depo	, "{KRI-LJ}I:Beam-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ KRI Beam Amps"	}
+{ Depo	, "{KRI-LJ}E:Beam-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "V"	, "LJ KRI Beam Volts"	}
+{ Depo	, "{KRI-LJ}I:Acc-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ KRI Accelerator Amps"	}
+{ Depo	, "{KRI-LJ}E:Acc-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "V"	, "LJ KRI Accelerator Volts"	}
+{ Depo	, "{KRI-LJ}Pwr:RF-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "W"	, "LJ KRI RF Power"	}
+{ Depo	, "{KRI-LJ}I:Emis-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ KRI Emission Amps"	}
+{ Depo	, "{KRI-LJ}E:Emis-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "V"	, "LJ KRI Emission Volts"	}
+{ Depo	, "{KRI-LJ}I:LFD-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ KRILow Frequency Discharge Amps"	}
+{ Depo	, "{KRI-LJ}I:Fila-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ KRI Filament Amps"	}
+{ Depo	, "{KRI-LJ}E:Fila-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "V"	, "LJ KRI Filament Volts"	}
+{ Depo	, "{KRI-LJ}Pwr:RF_Fwd-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ KRI RF Forward Power"	}
+{ Depo	, "{KRI-LJ}Pwr:RF_Refl-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ KRI RF Reflected Power"	}
+
+{ Depo	, "{KSC-LJ}I:Beam-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ KRC Beam Current Target"	}
+{ Depo	, "{KSC-LJ}E:Beam-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "V"	, "LJ KRC Beam Voltage Target"	}
+{ Depo	, "{KSC-LJ}I:Acc-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ KRC Accelerator Current Target"	}
+{ Depo	, "{KSC-LJ}E:Acc-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "V"	, "LJ KRC Accelerator Voltage Target"	}
+{ Depo	, "{KSC-LJ}I:Cath-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ KRC Cathode Current Target"	}
+{ Depo	, "{KSC-LJ}I:CathStart-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ KRC Cathode Heater Start Current Target"	}
+{ Depo	, "{KSC-LJ}I:Disch-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ KRC Discharge Current Target"	}
+{ Depo	, "{KSC-LJ}E:Disch-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "V"	, "LJ KRC Discharge Voltage Target"	}
+{ Depo	, "{KSC-LJ}I:Emis-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ KRC Electron Emission Current Target"	}
+{ Depo	, "{KSC-LJ}I:FilaHeat-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ KRC Filament Heater Current Target"	}
+{ Depo	, "{KSC-LJ}I:FilaStart-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ KRC Filament Start Current Target"	}
+
+{ Depo	, "{KSC-LJ}I:P1_Beam-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ KRC Program Beam Current Target"	}
+{ Depo	, "{KSC-LJ}E:P1_Beam-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "V"	, "LJ KRC Program Beam Voltage Target"	}
+{ Depo	, "{KSC-LJ}I:P1_Acc-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ KRC Program Accelerator Current Target"	}
+{ Depo	, "{KSC-LJ}E:P1_Acc-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "V"	, "LJ KRC Program Accelerator Voltage Target"	}
+{ Depo	, "{KSC-LJ}I:P1_Cath-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ KRC Program Cathode Current Target"	}
+{ Depo	, "{KSC-LJ}I:P1_CathStart-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ KRC Program Cathode Heater Start Current Target"	}
+{ Depo	, "{KSC-LJ}I:P1_Disch-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ KRC Program Discharge Current Target"	}
+{ Depo	, "{KSC-LJ}E:P1_Disch-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "V"	, "LJ KRC Program Discharge Voltage Target"	}
+{ Depo	, "{KSC-LJ}I:P1_Emis-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ KRC Program Electron Emission Current Target"	}
+{ Depo	, "{KSC-LJ}I:P1_FilaHeat-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ KRC Program Filament Heater Current Target"	}
+{ Depo	, "{KSC-LJ}I:P1_FilaStart-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "A"	, "LJ KRC Program Filament Start Current Target"	}
+
+{ Depo	, "{CM:1-LJ}Offst-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ 50mT CM1 Offset"	}
+{ Depo	, "{CM:1-LJ}Fac:Scale-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ 50mT CM1 Scaling Factor"	}
+{ Depo	, "{CM:2-LJ}Offst-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ 50mT CM2 Offset"	}
+{ Depo	, "{CM:2-LJ}Fac:Scale-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ 50mT CM2 Scaling Factor"	}
+{ Depo	, "{CM:1-LJ}P-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "mTorr"	, "LJ CM1 50mTorr"	}
+{ Depo	, "{CM:2-LJ}P-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "mTorr"	, "LJ CM2 50mTorr"	}
+
+{ Depo	, "{LJ}P:Ar-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "PSIG"	, "LJ Argon Pressure"	}
+{ Depo	, "{LJ}P:N2-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "PSIG"	, "LJ N2 Pressure"	}
+{ Depo	, "{LJ}F:Ar-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "SCCM"	, "LJ Argon Flow Signal(MFC)"	}
+{ Depo	, "{LJ}P:CM-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "Torr"	, "LJ CM(1000 Torr)"	}
+{ Depo	, "{LJ}F:Ne-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "SCCM"	, "LJ Neon Flow Signal(MFC)"	}
+{ Depo	, "{LJ}F:Ar-RB"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "SCCM"	, "LJ Argon Setpoint(MFC)"	}
+{ Depo	, "{LJ}F:Ne-RB"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "SCCM"	, "LJ Neon Setpoint(MFC)"	}
+{ Depo	, "{CM:1-LJ}P:Raw-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "mTorr"	, "LJ CM1 Raw(50mTorr)"	}
+{ Depo	, "{CM:2-LJ}P:Raw-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "mTorr"	, "LJ CM2 Raw(50mTorr)"	}
+
+{ Depo	, "{TC:Car-LJ}Offst-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ Car RTD Offset"	}
+{ Depo	, "{TC:Car-LJ}Fac:Scal-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ Car RTD Scaling Factor"	}
+{ Depo	, "{TC:Car-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "LJ Car RTD"	}
+{ Depo	, "{TC:FP-LJ}Offst-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ FacePlate RTD Offset"	}
+{ Depo	, "{TC:FP-LJ}Fac:Scal-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ FacePlate RTD Scaling Factor"	}
+{ Depo	, "{Ion-LJ}E-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "V"	, "LJ Ion Voltage"	}
+{ Depo	, "{TC:FP-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "LJ FacePlate RTD"	}
+
+{ Depo	, "{SCR:1-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, C	, "LJ SCR1 Thermocouple"	}
+{ Depo	, "{SCR:2-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, C	, "LJ SCR2 Thermocouple"	}
+{ Depo	, "{SCR:3-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, C	, "LJ SCR3 Thermocouple"	}
+{ Depo	, "{SCR:4-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, C	, "LJ SCR4 Thermocouple"	}
+{ Depo	, "{SCR:5-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, C	, "LJ SCR5 Thermocouple"	}
+{ Depo	, "{CM-LJ}T-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, C	, "LJ 50mTorr Thermocouple"	}
+
+{ Depo	, "{SCR:1-LJ}Int-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, /1.0	, "SCR1 Intensity"	}
+{ Depo	, "{SCR:2-LJ}Int-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, /1.0	, "SCR2 Intensity"	}
+{ Depo	, "{SCR:3-LJ}Int-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, /1.0	, "SCR3 Intensity"	}
+{ Depo	, "{SCR:4-LJ}Int-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, /1.0	, "SCR4 Intensity"	}
+{ Depo	, "{SCR:5-LJ}Int-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, /1.0	, "SCR5 Intensity"	}
+
+{ Depo	, "{TC:Car-LJ}Fac:Scal-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "mTorr"	, "LJ Car RTD Scaling Factor"	}
+{ Depo	, "{TC:Car-LJ}Offst-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ Car RTD Offset"	}
+{ Depo	, "{TC:Car-LJ}Fac:Scal-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "mTorr"	, "LJ Car RTD Scaling Factor"	}
+
+{ Depo	, "{PS:BK-LJ}E:Out-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "V"	, "LJ BK Output Volt"	}
+

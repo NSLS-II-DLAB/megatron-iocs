@@ -1,0 +1,56 @@
+# LabJack_T7.cmd
+epicsEnvSet("N"			,2)
+epicsEnvSet("IP_ADDRESS"	,"192.168.100.62")
+
+# The following environment variables must be set before loading this file
+
+#          P : The PV prefix for this IOC
+# IP_ADDRESS : The IP address or name of this Labjack
+#          N : The unit number (1 for first, 2 for second, etc.)
+
+# Use the following commands for TCP/IP
+#drvAsynIPPortConfigure(const char *portName,
+#                       const char *hostInfo,
+#                       unsigned int priority,
+#                       int noAutoConnect,
+#                       int noProcessEos);
+#
+drvAsynIPPortConfigure("LJT7_$(N)","$(IP_ADDRESS):502",0,0,0)
+
+#modbusInterposeConfig(const char *portName,
+#                      modbusLinkType linkType,
+#                      int timeoutMsec,
+#                      int writeDelayMsec)
+# One per controller.  One controller can support up to six drivers.
+modbusInterposeConfig("LJT7_$(N)",0,2000,0)
+
+# Modbus standard functions 3 (Read Multiple), 4 (Read One), 6 (Write One), and 16 (Write Multiple).
+# For writing either function code=6 (single register) or 16 (multiple registers) can be used, but 16
+# is better because it is "atomic" when writing values longer than 16-bits.
+
+# drvModbusAsynConfigure("portName", "tcpPortName", slaveAddress, modbusFunction, modbusStartAddress, modbusLength, dataType, pollMsec, "plcType")
+
+#                           portName             TCPName      Slave Function Address Length  Datatype    Poll   PLCType
+# Read digital inputs as words (FIO, CIO, EIO, MIO)
+drvModbusAsynConfigure("LJT7_$(N)_DIO_In",       "LJT7_$(N)",   1,     3,     2500,    1,        UINT16,  100, "LJT7_module")
+
+# Set digital outputs one bit at a time (FIO, CIO, EIO, MIO)
+# DI00 - DI08 (FIO bank) 
+drvModbusAsynConfigure("LJT7_$(N)_DIO_Out",      "LJT7_$(N)",   0,     6,     2000,   3,        UINT16,    1, "LJT7_module")
+
+# Write to register to set each even no. AI channel Single-Ended or Differential
+drvModbusAsynConfigure("LJT7_$(N)_AIDiff",       "LJT7_$(N)",   0,     6,    41000,   13,        UINT16,    1, "LJT7_module")
+
+# Read 7 TC
+drvModbusAsynConfigure("LJT7_$(N)_AIN0_EF_READ_A",    "LJT7_$(N)",   1,     3,	7000,   2,    FLOAT32_BE,  100, "LJT7_module")
+drvModbusAsynConfigure("LJT7_$(N)_AIN2_EF_READ_A",    "LJT7_$(N)",   1,     3,	7004,   2,    FLOAT32_BE,  100, "LJT7_module")
+drvModbusAsynConfigure("LJT7_$(N)_AIN4_EF_READ_A",    "LJT7_$(N)",   1,     3,	7008,   2,    FLOAT32_BE,  100, "LJT7_module")
+drvModbusAsynConfigure("LJT7_$(N)_AIN6_EF_READ_A",    "LJT7_$(N)",   1,     3,	7012,   2,    FLOAT32_BE,  100, "LJT7_module")
+drvModbusAsynConfigure("LJT7_$(N)_AIN8_EF_READ_A",    "LJT7_$(N)",   1,     3,	7016,   2,    FLOAT32_BE,  100, "LJT7_module")
+drvModbusAsynConfigure("LJT7_$(N)_AIN10_EF_READ_A",    "LJT7_$(N)",   1,     3,	7020,   2,    FLOAT32_BE,  100, "LJT7_module")
+drvModbusAsynConfigure("LJT7_$(N)_AIN12_EF_READ_A",    "LJT7_$(N)",   1,     3,	7024,   2,    FLOAT32_BE,  100, "LJT7_module")
+
+# Set 2 primary analog outputs.
+drvModbusAsynConfigure("LJT7_$(N)_AO",           "LJT7_$(N)",   0,    16,     1000,    4,    FLOAT32_BE,    1, "LJT7_module")
+
+dbLoadRecords("db/depo-ljt7-$(N).db")

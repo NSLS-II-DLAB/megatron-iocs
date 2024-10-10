@@ -1,0 +1,15 @@
+record(ao, "$(P)$(R)$(Sig)") {
+	field(DESC, "$(DESC)")
+	field(PREC, "$(PREC)")
+	field(EGU,  "$(EGU)")
+	field(DRVH, "$(DRVH)")
+	field(DRVL, "$(DRVL)")
+	field(OUT,  "$(P)$(R)DB:OutCalc_.A PP")
+}
+
+record(calcout, "$(P)$(R)DB:OutCalc_") {
+	field(INPA, "$(P)$(R)$(Sig)")
+	field(CALC, "$(CALC)")
+	field(OUT,  "$(P)$(R)$(Sig)_ PP")
+}
+

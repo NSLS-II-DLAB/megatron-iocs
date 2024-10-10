@@ -1,0 +1,19 @@
+# Template database for for the Edwards TIC Turbo Instrument Controller
+# System
+# Pete Owens 30/1/2017
+# Huijuan Xu 09/17/2020 Modified
+
+# substitutions:
+# Sys - System name
+# Dev - Device name
+# PORT- asyn port
+#
+################################################################################
+record(stringin, "$(Sys)$(Dev)Sts")
+{
+	field(DESC, "System Status")
+	field(DTYP, "stream")
+	field(INP,  "@edwards_tic.proto get_tic_sta($(Sys)$(Dev)) $(PORT)")
+	field(SCAN, "1 second")
+}
+

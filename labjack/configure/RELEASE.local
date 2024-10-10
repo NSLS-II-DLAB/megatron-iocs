@@ -1,0 +1,13 @@
+SUPPORT=/epics/support
+EPICS_BASE=/epics/base/base-7.0.7
+ASYN=$(SUPPORT)/asyn
+AUTOSAVE=$(SUPPORT)/autosave
+CALC=$(SUPPORT)/calc
+BUSY=$(SUPPORT)/busy
+IPAC=$(SUPPORT)/ipac
+SNCSEQ=$(SUPPORT)/seq
+SSCAN=$(SUPPORT)/sscan
+CAPUTLOG=$(SUPPORT)/caPutLog
+DEVIOCSTATS=$(SUPPORT)/iocStats
+MODBUS=$(SUPPORT)/modbus
+LABJACK=$(SUPPORT)/LabJack

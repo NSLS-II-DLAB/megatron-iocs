@@ -1,0 +1,300 @@
+# mbbiDirect record template for register inputs
+record(mbbiDirect,"Depo{PLC:1}Out:DO60_Raw-RBRB") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 060 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# mbbiDirect record template for register inputs
+record(mbbiDirect,"Depo{PLC:1}Out:DO61_Raw-RBRB") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 061 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# mbbiDirect record template for register inputs
+record(mbbiDirect,"Depo{PLC:1}Out:DO62_Raw-RBRB") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 062 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# mbbiDirect record template for register inputs
+record(mbbiDirect,"Depo{PLC:1}Out:DO63_Raw-RBRB") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 063 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# mbbiDirect record template for register inputs
+record(mbbiDirect,"Depo{PLC:1}Out:DO64_Raw-RBRB") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 064 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# mbbiDirect record template for register inputs
+record(mbbiDirect,"Depo{PLC:1}Out:DO65_Raw-RBRB") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 065 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# mbbiDirect record template for register inputs
+record(mbbiDirect,"Depo{PLC:1}Out:DO72_Raw-RBRB") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 072 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# mbbiDirect record template for register inputs
+record(mbbiDirect,"Depo{PLC:1}Out:DO73_Raw-RBRB") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 073 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# mbbiDirect record template for register inputs
+record(mbbiDirect,"Depo{PLC:1}Out:DO75_Raw-RBRB") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 075 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# mbbiDirect record template for register inputs
+record(mbbiDirect,"Depo{PLC:1}Out:DO76_Raw-RBRB") {
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 076 0xFFFF)")
+    field(SCAN,"I/O Intr")
+}
+# ai record template for register inputs
+record(ai, "Depo{MFC:1}F-RBRB") {
+    field(DTYP,"asynInt32")
+    field(DESC,"Argon MFC1 Flow")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 000 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGU, "SCCM")
+    field(EGUL,"0")
+    field(EGUF,"20")
+    field(HOPR,"20")
+    field(LOPR,"0")
+    field(PREC,"5")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "Depo{MFC:2}F-RBRB") {
+    field(DTYP,"asynInt32")
+    field(DESC,"Argon MFC2 Flow")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 002 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGU, "SCCM")
+    field(EGUL,"0")
+    field(EGUF,"20")
+    field(HOPR,"20")
+    field(LOPR,"0")
+    field(PREC,"5")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "Depo{MFC:3}F-RBRB") {
+    field(DTYP,"asynInt32")
+    field(DESC,"Argon MFC3 Flow")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 004 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGU, "SCCM")
+    field(EGUL,"0")
+    field(EGUF,"20")
+    field(HOPR,"20")
+    field(LOPR,"0")
+    field(PREC,"5")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "Depo{MFC:4}F-RBRB") {
+    field(DTYP,"asynInt32")
+    field(DESC,"Argon MFC4 Flow")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 006 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGU, "SCCM")
+    field(EGUL,"0")
+    field(EGUF,"20")
+    field(HOPR,"20")
+    field(LOPR,"0")
+    field(PREC,"5")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "Depo{MFC:5}F-RBRB") {
+    field(DTYP,"asynInt32")
+    field(DESC,"Argon MFC5 Flow")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 010 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGU, "SCCM")
+    field(EGUL,"0")
+    field(EGUF,"20")
+    field(HOPR,"20")
+    field(LOPR,"0")
+    field(PREC,"5")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "Depo{MFC:6}F-RBRB") {
+    field(DTYP,"asynInt32")
+    field(DESC,"Argon MFC6 Flow")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 012 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGU, "SCCM")
+    field(EGUL,"0")
+    field(EGUF,"20")
+    field(HOPR,"20")
+    field(LOPR,"0")
+    field(PREC,"5")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "Depo{MFC:7}F-RBRB") {
+    field(DTYP,"asynInt32")
+    field(DESC,"Argon MFC7 Flow")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 014 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGU, "SCCM")
+    field(EGUL,"0")
+    field(EGUF,"20")
+    field(HOPR,"20")
+    field(LOPR,"0")
+    field(PREC,"5")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "Depo{MFC:8}F-RBRB") {
+    field(DTYP,"asynInt32")
+    field(DESC,"Argon MFC8 Flow")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 016 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGU, "SCCM")
+    field(EGUL,"0")
+    field(EGUF,"20")
+    field(HOPR,"20")
+    field(LOPR,"0")
+    field(PREC,"5")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "Depo{MFC:9}F-RBRB") {
+    field(DTYP,"asynInt32")
+    field(DESC,"Argon MFC9 Flow")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 020 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGU, "SCCM")
+    field(EGUL,"0")
+    field(EGUF,"20")
+    field(HOPR,"20")
+    field(LOPR,"0")
+    field(PREC,"5")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "Depo{VP:1}S-RBRB") {
+    field(DTYP,"asynInt32")
+    field(DESC,"VP1 Speed")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 022 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGU, "%")
+    field(EGUL,"0")
+    field(EGUF,"100")
+    field(HOPR,"100")
+    field(LOPR,"0")
+    field(PREC,"0")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "Depo{PS_DC:1}Ramp-RBRB") {
+    field(DTYP,"asynInt32")
+    field(DESC,"PS_DC1 Remote Ramp Adjust")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 030 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGU, "sec")
+    field(EGUL,"0")
+    field(EGUF,"20")
+    field(HOPR,"20")
+    field(LOPR,"0")
+    field(PREC,"5")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "Depo{PS_DC:1}L:Out-RBRB") {
+    field(DTYP,"asynInt32")
+    field(DESC,"PS_DC1 Remote Level Ajust")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 032 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGU, "V")
+    field(EGUL,"0")
+    field(EGUF,"2000")
+    field(HOPR,"2000")
+    field(LOPR,"0")
+    field(PREC,"5")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "Depo{PS_DC:2}Ramp-RBRB") {
+    field(DTYP,"asynInt32")
+    field(DESC,"PS_DC2 Remote Ramp Adjust")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 034 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGU, "sec")
+    field(EGUL,"0")
+    field(EGUF,"20")
+    field(HOPR,"20")
+    field(LOPR,"0")
+    field(PREC,"5")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "Depo{PS_DC:2}L:Out-RBRB") {
+    field(DTYP,"asynInt32")
+    field(DESC,"PS_DC2 Remote Level Ajust")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 036 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGU, "V")
+    field(EGUL,"0")
+    field(EGUF,"2000")
+    field(HOPR,"2000")
+    field(LOPR,"0")
+    field(PREC,"5")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "Depo{GV:2}P-RBRB") {
+    field(DTYP,"asynInt32")
+    field(DESC,"GV2 P Setpoint")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 040 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGU, "Torr")
+    field(EGUL,"0")
+    field(EGUF,"10")
+    field(HOPR,"10")
+    field(LOPR,"0")
+    field(PREC,"5")
+    field(SCAN,"I/O Intr")
+}
+
+# ai record template for register inputs
+record(ai, "Depo{GV:3}P-RBRB") {
+    field(DTYP,"asynInt32")
+    field(DESC,"GV3 P Setpoint")
+    field(INP,"@asynMask(depo_plc_15200_Out_Word_RBV 042 16)MODBUS_DATA")
+    field(LINR,"LINEAR")
+    field(EGU, "Torr")
+    field(EGUL,"0")
+    field(EGUF,"10")
+    field(HOPR,"10")
+    field(LOPR,"0")
+    field(PREC,"5")
+    field(SCAN,"I/O Intr")
+}
+

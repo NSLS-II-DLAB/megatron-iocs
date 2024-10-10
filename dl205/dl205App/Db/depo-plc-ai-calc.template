@@ -1,0 +1,13 @@
+record(calcout, "$(P)$(R)DB:InCalc_") {
+	field(SCAN, "2 second")
+	field(INPA, "$(P)$(R)$(In)")
+	field(CALC, "$(CALC)")
+	field(OUT, "$(P)$(R)$(Sig) PP")
+	field(PINI, "YES")
+}
+
+record(ai, "$(P)$(R)$(Sig)") {
+	field(DESC, "$(DESC)")
+	field(PREC, "$(PREC)")
+	field(EGU,  "$(EGU)")
+}

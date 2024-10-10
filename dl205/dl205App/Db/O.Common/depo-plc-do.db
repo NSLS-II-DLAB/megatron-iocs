@@ -1,0 +1,602 @@
+record(bo, "Depo{AV:01}Cmd:Opn-Cmd") {
+	field(DESC, "MFC1 to Landing Chamber(AV1)")
+	field(OUT, "Depo{PLC:1}Out:DO60_Raw-SP.B0 PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:02}Cmd:Opn-Cmd") {
+	field(DESC, "MFC2 to Gun Chamber1(AV2)")
+	field(OUT, "Depo{PLC:1}Out:DO60_Raw-SP.B1 PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:03}Cmd:Opn-Cmd") {
+	field(DESC, "MFC3 to Gun Chamber1(AV3)")
+	field(OUT, "Depo{PLC:1}Out:DO60_Raw-SP.B2 PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:04}Cmd:Opn-Cmd") {
+	field(DESC, "MFC4 to Gun Chamber1(AV4)")
+	field(OUT, "Depo{PLC:1}Out:DO60_Raw-SP.B3 PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:05}Cmd:Opn-Cmd") {
+	field(DESC, "MFC5 to Gun Chamber1(AV5)")
+	field(OUT, "Depo{PLC:1}Out:DO60_Raw-SP.B4 PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:06}Cmd:Opn-Cmd") {
+	field(DESC, "MFC6 to Gun Chamber2(AV6)")
+	field(OUT, "Depo{PLC:1}Out:DO60_Raw-SP.B5 PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:07}Cmd:Opn-Cmd") {
+	field(DESC, "MFC7 to Gun Chamber2(AV7)")
+	field(OUT, "Depo{PLC:1}Out:DO60_Raw-SP.B6 PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:08}Cmd:Opn-Cmd") {
+	field(DESC, "MFC8 to Gun Chamber2(AV8)")
+	field(OUT, "Depo{PLC:1}Out:DO60_Raw-SP.BB PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:09}Cmd:Opn-Cmd") {
+	field(DESC, "MFC9 to Gun Chamber2(AV9)")
+	field(OUT, "Depo{PLC:1}Out:DO60_Raw-SP.BC PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:10}Cmd:Opn-Cmd") {
+	field(DESC, "Ar Backfill to Loadlock(AV10)")
+	field(OUT, "Depo{PLC:1}Out:DO60_Raw-SP.BD PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:11}Cmd:Opn-Cmd") {
+	field(DESC, "Ar Backfill to Cntr Chm(AV11)")
+	field(OUT, "Depo{PLC:1}Out:DO60_Raw-SP.BE PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:12}Cmd:Opn-Cmd") {
+	field(DESC, "N2 Purge to CP1(AV12)")
+	field(OUT, "Depo{PLC:1}Out:DO60_Raw-SP.BF PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:13}Cmd:Opn-Cmd") {
+	field(DESC, "N2 Purge to CP2 (AV13)")
+	field(OUT, "Depo{PLC:1}Out:DO1_Raw-SP.B0 PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:14}Cmd:Opn-Cmd") {
+	field(DESC, "N2 Purge to CP3 (AV14)")
+	field(OUT, "Depo{PLC:1}Out:DO1_Raw-SP.B1 PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:15}Cmd:Opn-Cmd") {
+	field(DESC, "N2 Purge to CP4 (AV15)")
+	field(OUT, "Depo{PLC:1}Out:DO1_Raw-SP.B2 PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:16}Cmd:Opn-Cmd") {
+	field(DESC, "PT1 On to Cntr Chamber(AV16)")
+	field(OUT, "Depo{PLC:1}Out:DO61_Raw-SP.B3 PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:18}Cmd:Opn-Cmd") {
+	field(DESC, "CP1 Exhaust to VP1(AV18)")
+	field(OUT, "Depo{PLC:1}Out:DO1_Raw-SP.B5 PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:19}Cmd:Opn-Cmd") {
+	field(DESC, "CP2 Exhaust to VP1(AV19)")
+	field(OUT, "Depo{PLC:1}Out:DO1_Raw-SP.B6 PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:20}Cmd:Opn-Cmd") {
+	field(DESC, "CP3 Exhaust to VP1(AV20)")
+	field(OUT, "Depo{PLC:1}Out:DO1_Raw-SP.B7 PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:21}Cmd:Opn-Cmd") {
+	field(DESC, "CP4 Exhaust to VP1(AV21)")
+	field(OUT, "Depo{PLC:1}Out:DO1_Raw-SP.B8 PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:22}Cmd:Opn-Cmd") {
+	field(DESC, "Cntr Chm OverPr Exhaust(AV22)")
+	field(OUT, "Depo{PLC:1}Out:DO1_Raw-SP.B9 PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:23}Cmd:Opn-Cmd") {
+	field(DESC, "L/L OverPr Exhaust(AV23)")
+	field(OUT, "Depo{PLC:1}Out:DO1_Raw-SP.BA PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:24}Cmd:Opn-Cmd") {
+	field(DESC, "Cntr Chm Rough Vacuum(AV24)")
+	field(OUT, "Depo{PLC:1}Out:DO61_Raw-SP.BB PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:25}Cmd:Opn-Cmd") {
+	field(DESC, "L/L Rough Vacuum(AV25)")
+	field(OUT, "Depo{PLC:1}Out:DO61_Raw-SP.BC PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{Sparc:1}Enbl-Cmd") {
+	field(DESC, "Sparcle1 EN")
+	field(OUT, "Depo{PLC:1}Out:DO61_Raw-SP.BD PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{Sparc:2}Enbl-Cmd") {
+	field(DESC, "Sparcle2 EN")
+	field(OUT, "Depo{PLC:1}Out:DO61_Raw-SP.BE PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{PS_DC:1}Cmd:On-Cmd") {
+	field(DESC, "MDX1 Supply")
+	field(OUT, "Depo{PLC:1}Out:DO61_Raw-SP.BF PP")
+	field(ZNAM, "Off")
+	field(ONAM, "On")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{VP:1}Cmd:On-Cmd") {
+	field(DESC, "VP1")
+	field(OUT, "Depo{PLC:1}Out:DO62_Raw-SP.B0 PP")
+	field(ZNAM, "Off")
+	field(ONAM, "On")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{EOV:4}Cmd:Opn-Cmd") {
+	field(DESC, "L/L Door Seal(EOV4)")
+	field(OUT, "Depo{PLC:1}Out:DO62_Raw-SP.B1 PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{EOV:2}Cmd:Opn-Cmd") {
+	field(DESC, "L/L Ar Hig Flow(EOV2)")
+	field(OUT, "Depo{PLC:1}Out:DO62_Raw-SP.B2 PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{EOV:3}Cmd:Opn-Cmd") {
+	field(DESC, "Process Ar High Flow(EOV3)")
+	field(OUT, "Depo{PLC:1}Out:DO62_Raw-SP.B3 PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{GV:1}Cmd:Opn-Cmd") {
+	field(DESC, "Open/Close Cryo GV1")
+	field(OUT, "Depo{PLC:1}Out:DO62_Raw-SP.B4 PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{GV:1}Cmd:Stroke-Cmd") {
+	field(DESC, "Full/Mid Cryo GV1 Stroke")
+	field(OUT, "Depo{PLC:1}Out:DO62_Raw-SP.B5 PP")
+	field(ZNAM, "Mid")
+	field(ONAM, "Full")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{PS_DC:2}Cmd:On-Cmd") {
+	field(DESC, "MDX2 Supply")
+	field(OUT, "Depo{PLC:1}Out:DO62_Raw-SP.B7 PP")
+	field(ZNAM, "Off")
+	field(ONAM, "On")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{PS_DC:1}Enbl:Rly-Cmd") {
+	field(DESC, "MDX1 Power Relay Enable")
+	field(OUT, "Depo{PLC:1}Out:DO62_Raw-SP.B8 PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{MAG:Ion}Enbl:Rly1-Cmd") {
+	field(DESC, "MAG Ion 1500 Relay1")
+	field(OUT, "Depo{PLC:1}Out:DO62_Raw-SP.B9 PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{MAG:1}Enbl:PS-Cmd") {
+	field(DESC, "MAG1 Power Enable")
+	field(OUT, "Depo{PLC:1}Out:DO62_Raw-SP.BA PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{MAG:2}Enbl:PS-Cmd") {
+	field(DESC, "MAG2 Power Enable")
+	field(OUT, "Depo{PLC:1}Out:DO62_Raw-SP.BB PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{MAG:3}Enbl:PS-Cmd") {
+	field(DESC, "MAG3 Power Enable")
+	field(OUT, "Depo{PLC:1}Out:DO62_Raw-SP.BC PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{MAG:4}Enbl:PS-Cmd") {
+	field(DESC, "MAG4 Power Enable")
+	field(OUT, "Depo{PLC:1}Out:DO62_Raw-SP.BD PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{PS_Spare}Enbl:RlyA-Cmd") {
+	field(DESC, "MAG Spare Power Relay A")
+	field(OUT, "Depo{PLC:1}Out:DO62_Raw-SP.BE PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{PS_Spare}Enbl:RlyB-Cmd") {
+	field(DESC, "MAG Spare Power Relay B")
+	field(OUT, "Depo{PLC:1}Out:DO62_Raw-SP.BF PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{PS_DC:2}Enbl:Rly-Cmd") {
+	field(DESC, "MDX2 Power Relay Enable")
+	field(OUT, "Depo{PLC:1}Out:DO63_Raw-SP.B0 PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{MAG:RF}Enbl:Rly2-Cmd") {
+	field(DESC, "MAG RF Relay2")
+	field(OUT, "Depo{PLC:1}Out:DO63_Raw-SP.B1 PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{MAG:5}Enbl:PS-Cmd") {
+	field(DESC, "MAG5 Power Enable")
+	field(OUT, "Depo{PLC:1}Out:DO63_Raw-SP.B2 PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{MAG:6}Enbl:PS-Cmd") {
+	field(DESC, "MAG6 Power Enable")
+	field(OUT, "Depo{PLC:1}Out:DO63_Raw-SP.B3 PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{MAG:7}Enbl:PS-Cmd") {
+	field(DESC, "MAG7 Power Enable")
+	field(OUT, "Depo{PLC:1}Out:DO63_Raw-SP.B4 PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{MAG:8}Enbl:PS-Cmd") {
+	field(DESC, "MAG8 Power Enable")
+	field(OUT, "Depo{PLC:1}Out:DO63_Raw-SP.B5 PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{MAG:9}Enbl:PS-Cmd") {
+	field(DESC, "MAG9 Power Enable")
+	field(OUT, "Depo{PLC:1}Out:DO63_Raw-SP.B6 PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{PS_Spare}Enbl:RlyC-Cmd") {
+	field(DESC, "MAG Spare Power Relay C")
+	field(OUT, "Depo{PLC:1}Out:DO63_Raw-SP.B7 PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{GD-Mtr}Enbl-Cmd") {
+	field(DESC, "Mag Door Motor Enable")
+	field(OUT, "Depo{PLC:1}Out:DO63_Raw-SP.B8 PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{GD:1-Mtr}Enbl-Cmd") {
+	field(DESC, "Gun Door1 Mtr Enable")
+	field(OUT, "Depo{PLC:1}Out:DO63_Raw-SP.BA PP")
+	field(ZNAM, "Off")
+	field(ONAM, "On")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{GD:2-Mtr}Enbl-Cmd") {
+	field(DESC, "Gun Door2 Mtr Enable")
+	field(OUT, "Depo{PLC:1}Out:DO63_Raw-SP.BB PP")
+	field(ZNAM, "Off")
+	field(ONAM, "On")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{LL-Mtr:1}Dir-Cmd") {
+	field(DESC, "L/L Mtr1 Direction")
+	field(OUT, "Depo{PLC:1}Out:DO63_Raw-SP.BD PP")
+	field(ZNAM, "Mv Into Chm")
+	field(ONAM, "Mv Out Of Chm")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{LP-Mtr:2}Dir-Cmd") {
+	field(DESC, "Loadplate Mtr2 Direction")
+	field(OUT, "Depo{PLC:1}Out:DO63_Raw-SP.BF PP")
+	field(ZNAM, "Mv Into Chm")
+	field(ONAM, "Mv Out Of Chm")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{CP:1}Cmd:Off-Cmd") {
+	field(DESC, "CP1 Off")
+	field(OUT, "Depo{PLC:1}Out:DO4_Raw-SP.B0 PP")
+	field(ZNAM, "On")
+	field(ONAM, "Off")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{CP:2}Cmd:Off-Cmd") {
+	field(DESC, "CP2 Off")
+	field(OUT, "Depo{PLC:1}Out:DO4_Raw-SP.B1 PP")
+	field(ZNAM, "On")
+	field(ONAM, "Off")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{CP:3}Cmd:Off-Cmd") {
+	field(DESC, "CP3 Off")
+	field(OUT, "Depo{PLC:1}Out:DO4_Raw-SP.B2 PP")
+	field(ZNAM, "On")
+	field(ONAM, "Off")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{CP:4}Cmd:Off-Cmd") {
+	field(DESC, "CP4 Off")
+	field(OUT, "Depo{PLC:1}Out:DO4_Raw-SP.B3 PP")
+	field(ZNAM, "On")
+	field(ONAM, "Off")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{GV:2}Cmd:Opn-Cmd") {
+	field(DESC, "Open Cryo GV2")
+	field(OUT, "Depo{PLC:1}Out:DO64_Raw-SP.B4 PP")
+	field(ZNAM, "Throttle Enbl")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{GV:2}Cmd:Ctrl-Cmd") {
+	field(DESC, "CTRL Cryo GV2")
+	field(OUT, "Depo{PLC:1}Out:DO64_Raw-SP.B5 PP")
+	field(ZNAM, "Fully Close")
+	field(ONAM, "Throttle")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{GV:3}Cmd:Opn-Cmd") {
+	field(DESC, "Open Cryo GV3")
+	field(OUT, "Depo{PLC:1}Out:DO64_Raw-SP.B6 PP")
+	field(ZNAM, "Throttle Enbl")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{GV:3}Cmd:Ctrl-Cmd") {
+	field(DESC, "CTRL Cryo GV3")
+	field(OUT, "Depo{PLC:1}Out:DO64_Raw-SP.B7 PP")
+	field(ZNAM, "Fully Close")
+	field(ONAM, "Throttle")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{Pmp:Seal}Cmd:On-Cmd") {
+	field(DESC, "Seals Pump")
+	field(OUT, "Depo{PLC:1}Out:DO64_Raw-SP.B8 PP")
+	field(ZNAM, "Off")
+	field(ONAM, "On")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{GV:5}Cmd:Opn-Cmd") {
+	field(DESC, "Open Loadlock GV5")
+	field(OUT, "Depo{PLC:1}Out:DO64_Raw-SP.B9 PP")
+	field(ZNAM, "Not Open")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{GV:5}Cmd:Cls-Cmd") {
+	field(DESC, "Close Loadlock GV5")
+	field(OUT, "Depo{PLC:1}Out:DO64_Raw-SP.BA PP")
+	field(ZNAM, "Not Close")
+	field(ONAM, "Close")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{GV:4}Cmd:Opn-Cmd") {
+	field(DESC, "Cryo GV4 Open/Close")
+	field(OUT, "Depo{PLC:1}Out:DO64_Raw-SP.BB PP")
+	field(ZNAM, "Close")
+	field(ONAM, "Throttle Enbl")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{GV:4}Cmd:Stroke-Cmd") {
+	field(DESC, "Cryo GV4 Partial/Open")
+	field(OUT, "Depo{PLC:1}Out:DO64_Raw-SP.BC PP")
+	field(ZNAM, "Mid")
+	field(ONAM, "Full")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{CCG:1}Enbl-Cmd") {
+	field(DESC, "CCG1 Enable")
+	field(OUT, "Depo{PLC:1}Out:DO64_Raw-SP.BD PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{CCG:2}Enbl-Cmd") {
+	field(DESC, "CCG2 Enable")
+	field(OUT, "Depo{PLC:1}Out:DO64_Raw-SP.BE PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:26}Cmd:Opn-Cmd") {
+	field(DESC, "Open Crystal Monitor1 Shutter")
+	field(OUT, "Depo{PLC:1}Out:DO4_Raw-SP.BF PP")
+	field(ZNAM, "Not Open")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{AV:27}Cmd:Opn-Cmd") {
+	field(DESC, "Open Crystal Monitor2 Shutter")
+	field(OUT, "Depo{PLC:1}Out:DO5_Raw-SP.B0 PP")
+	field(ZNAM, "Not Open")
+	field(ONAM, "Open")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{LL-Clutch}Cmd") {
+	field(DESC, "L/L Clutch")
+	field(OUT, "Depo{PLC:1}Out:DO65_Raw-SP.B1 PP")
+	field(ZNAM, "Disengage")
+	field(ONAM, "Engage")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{GV:5}Cmd:ClsRear-Cmd") {
+	field(DESC, "GV5 Close Rear Limit")
+	field(OUT, "Depo{PLC:1}Out:DO5_Raw-SP.B3 PP")
+	field(ZNAM, "")
+	field(ONAM, "")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{LP-Ind}Home-Cmd") {
+	field(DESC, "Loadplate in Home Position")
+	field(OUT, "Depo{PLC:1}Out:DO5_Raw-SP.B4 PP")
+	field(ZNAM, "Not Home")
+	field(ONAM, "Home")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{Conn-Ax:X}Cmd:Conn-Cmd") {
+	field(DESC, "Stepper Connect")
+	field(OUT, "Depo{PLC:1}Out:DO65_Raw-SP.B5 PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable Fwd")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{Conn-Ax:X}Cmd:AftConn-Cmd") {
+	field(DESC, "Stepper After Connect")
+	field(OUT, "Depo{PLC:1}Out:DO65_Raw-SP.B6 PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable Fine Fwd")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{Conn-Ax:X}Cmd:Disconn-Cmd") {
+	field(DESC, "Stepper Disconnect")
+	field(OUT, "Depo{PLC:1}Out:DO65_Raw-SP.B7 PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable Bkwd")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{Ax}Cmd:Home-Cmd") {
+	field(DESC, "Move Linear Motor Home")
+	field(OUT, "Depo{PLC:1}Out:DO5_Raw-SP.B8 PP")
+	field(ZNAM, "Not home")
+	field(ONAM, "Home")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{Ax}Cmd:Disconn-Cmd") {
+	field(DESC, "Linear Disconnect")
+	field(OUT, "Depo{PLC:1}Out:DO5_Raw-SP.B9 PP")
+	field(ZNAM, "N/A")
+	field(ONAM, "Disconnect")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{Ax}Cmd:Run-Cmd") {
+	field(DESC, "Run Linear Motor")
+	field(OUT, "Depo{PLC:1}Out:DO5_Raw-SP.BA PP")
+	field(ZNAM, "N/A")
+	field(ONAM, "Run")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{PLC:1}Enbl:CVD_Ver-Cmd") {
+	field(DESC, "CVD Version Enable")
+	field(OUT, "Depo{PLC:1}Out:DO5_Raw-SP.BC PP")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{LP-Clutch}Cmd") {
+	field(DESC, "Loadplate Clutch")
+	field(OUT, "Depo{PLC:1}Out:DO65_Raw-SP.BD PP")
+	field(ZNAM, "Disengage")
+	field(ONAM, "Engage")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{LL-Mtr:1}Enbl-Cmd") {
+	field(DESC, "L/L Mtr1 On/Off")
+	field(OUT, "Depo{PLC:1}Out:DO65_Raw-SP.BE PP")
+	field(ZNAM, "Off")
+	field(ONAM, "On")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{LP-Mtr:2}Enbl-Cmd") {
+	field(DESC, "Loadplate Mtr2 On/Off")
+	field(OUT, "Depo{PLC:1}Out:DO65_Raw-SP.BF PP")
+	field(ZNAM, "Off")
+	field(ONAM, "On")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}
+record(bo, "Depo{PLC:1}Enbl:Write-Cmd") {
+	field(DESC, "Write Enable")
+	field(OUT, "Depo{PLC:1}Out:DO75_Raw-SP.B0 PP")
+	field(ZNAM, "Enable")
+	field(ONAM, "Disable")
+	field(FLNK, "Depo{PLC:1}Enbl:Write-DFOut_")
+}

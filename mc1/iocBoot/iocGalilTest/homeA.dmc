@@ -1,0 +1,11 @@
+IF(home$(AXIS)=1)
+IF((((_LR$(AXIS)=0)&(hjs$(AXIS)>0))|((_LF$(AXIS)=0)&(hjs$(AXIS)<0)))&(hjog$(AXIS)=0))
+IF((((_LR$(AXIS)=1)|(_LD$(AXIS)>1))&(hjs$(AXIS)<0))|(((_LF$(AXIS)=1)|(_LD$(AXIS)=1)|(_LD$(AXIS)=3))&(hjs$(AXIS)>0)))
+IF((_MO$(AXIS)=0)&(_BG$(AXIS)=0));JG$(AXIS)=hjs$(AXIS);WT10;BG$(AXIS);hjog$(AXIS)=1;ENDIF;ENDIF;ENDIF
+IF((((_LR$(AXIS)=1)&(hjs$(AXIS)>0))|((_LF$(AXIS)=1)&(hjs$(AXIS)<0)))&(hjog$(AXIS)=1)&(_BG$(AXIS)=1));ST$(AXIS);ENDIF
+IF((hjog$(AXIS)=1)&(_BG$(AXIS)=0))
+IF((((_LR$(AXIS)=1)|(_LD$(AXIS)>1))&(hjs$(AXIS)<0))|(((_LF$(AXIS)=1)|(_LD$(AXIS)=1)|(_LD$(AXIS)=3))&(hjs$(AXIS)>0)))
+IF(_MO$(AXIS)=0);SP$(AXIS)=hjs$(AXIS);FE$(AXIS);WT10;BG$(AXIS);hjog$(AXIS)=2;ENDIF;ENDIF;ENDIF
+IF((hjog$(AXIS)=2)&(_BG$(AXIS)=0));hjog$(AXIS)=3;ENDIF
+IF((((_LR$(AXIS)=1)|(_LD$(AXIS)>1))|((_LF$(AXIS)=1)|(_LD$(AXIS)=1)|(_LD$(AXIS)=3)))&(hjog$(AXIS)=3)&(_BG$(AXIS)=0))
+WT10;hjog$(AXIS)=0;home$(AXIS)=0;homed$(AXIS)=1;MG "homed$(AXIS)",homed$(AXIS);ENDIF;ENDIF

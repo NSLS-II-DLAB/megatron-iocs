@@ -1,0 +1,8 @@
+record(ao, "$(P)$(R)") {
+	field(DESC, "$(DESC)")
+	field(PREC, "$(PREC)")
+	field(DRVH, "$(DRVH)")
+	field(DRVL, "$(DRVL)")
+	field(EGU,  "$(EGU)")
+	info(autosaveFields_pass0, "VAL")
+}

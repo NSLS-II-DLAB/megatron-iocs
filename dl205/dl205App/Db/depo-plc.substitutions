@@ -1,0 +1,132 @@
+file "$(MODBUS)/db/mbbiDirect.template" { pattern
+{P, R, PORT,OFFSET, MASK, SCAN}
+## X0 - X77
+ {Depo, "{PLC:1}In:DI60_Raw-I", depo_plc_11401_In_Word, 060, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}In:DI61_Raw-I", depo_plc_11401_In_Word, 061, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}In:DI62_Raw-I", depo_plc_11401_In_Word, 062, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}In:DI63_Raw-I", depo_plc_11401_In_Word, 063, 0xFFFF, "I/O Intr"}
+
+## C460 - C557
+ {Depo, "{PLC:1}In:CR64_Raw-I", depo_plc_11401_In_Word, 064, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}In:CR65_Raw-I", depo_plc_11401_In_Word, 065, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}In:CR66_Raw-I", depo_plc_11401_In_Word, 066, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}In:CR67_Raw-I", depo_plc_11401_In_Word, 067, 0xFFFF, "I/O Intr"}
+
+## Y0 - Y137
+ {Depo, "{PLC:1}In:DO70_Raw-I", depo_plc_11401_In_Word, 070, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}In:DO71_Raw-I", depo_plc_11401_In_Word, 071, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}In:DO72_Raw-I", depo_plc_11401_In_Word, 072, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}In:DO73_Raw-I", depo_plc_11401_In_Word, 073, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}In:DO74_Raw-I", depo_plc_11401_In_Word, 074, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}In:DO75_Raw-I", depo_plc_11401_In_Word, 075, 0xFFFF, "I/O Intr"}
+}
+
+file "modbus-ai.template" { pattern
+{P, R, PORT,OFFSET, BITS, EGU, DESC, EGUL, EGUF, PREC, SCAN}
+## V2000 - V2017
+ {Depo, "{MFC:1}F-I"	, depo_plc_11401_In_Word, 000, 16, SCCM	, "Argon MFC1 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{MFC:2}F-I"	, depo_plc_11401_In_Word, 001, 16, SCCM	, "Argon MFC2 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{MFC:3}F-I"	, depo_plc_11401_In_Word, 002, 16, SCCM	, "Argon MFC3 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{MFC:4}F-I"	, depo_plc_11401_In_Word, 003, 16, SCCM	, "Argon MFC4 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{MFC:5}F-I"	, depo_plc_11401_In_Word, 004, 16, SCCM	, "Argon MFC5 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{MFC:6}F-I"	, depo_plc_11401_In_Word, 005, 16, SCCM	, "Argon MFC6 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{MFC:7}F-I"	, depo_plc_11401_In_Word, 006, 16, SCCM	, "Argon MFC7 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{MFC:8}F-I"	, depo_plc_11401_In_Word, 007, 16, SCCM	, "Argon MFC8 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{MFC:9}F-I"	, depo_plc_11401_In_Word, 010, 16, SCCM	, "Argon MFC9 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{PT:3}P-I"	, depo_plc_11401_In_Word, 011, 16, Torr	, "PT3 Center Chamber"	, 0, 2000, 4, "I/O Intr"}
+ {Depo, "{PT:4}P-I"	, depo_plc_11401_In_Word, 012, 16, Torr	, "PT4 Loadlock"	, 0, 2000, 4, "I/O Intr"}
+ {Depo, "{PT:5}E-I"	, depo_plc_11401_In_Word, 013, 12, V	, "PT5 Landing Chm Cryo Conv"	, 0, 10, 4, "I/O Intr"}
+ {Depo, "{PT:6}E-I"	, depo_plc_11401_In_Word, 014, 12, V	, "PT6 Gun Chm1 Cryo Conv"	, 0, 10, 4, "I/O Intr"}
+ {Depo, "{PT:7}E-I"	, depo_plc_11401_In_Word, 015, 12, V	, "PT7 Gun Chm2 Cryo Conv"	, 0, 10, 4, "I/O Intr"}
+ {Depo, "{PT:8}E-I"	, depo_plc_11401_In_Word, 016, 12, V	, "PT8 Loadlock Cryo Conv"	, 0, 10, 4, "I/O Intr"}
+
+ {Depo, "{PS_DC:1}I:Out-I"	, depo_plc_11401_In_Word, 021, 16, A	, "MDX Supply1 Current"	, 0, 2, 5, "I/O Intr"}
+ {Depo, "{PS_DC:1}Pwr:Out-I"	, depo_plc_11401_In_Word, 022, 16, kW	, "MDX Supply1 Power"	, 0, 2, 5, "I/O Intr"}
+ {Depo, "{PS_DC:1}E:Out-I"	, depo_plc_11401_In_Word, 023, 16, kV	, "MDX Supply1 Voltage"	, 0, 2, 5, "I/O Intr"}
+ {Depo, "{PS_DC:1}Ramp:Out-I"	, depo_plc_11401_In_Word, 024, 16, sec	, "MDX Supply1 Ramp Out"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{PS_DC:1}L:Out-I"	, depo_plc_11401_In_Word, 025, 16, ""	, "MDX Supply1 Level Out"	, 0, 2000, 5, "I/O Intr"}
+ {Depo, "{PS_DC:2}I:Out-I"	, depo_plc_11401_In_Word, 031, 16, A	, "MDX Supply2 Current"	, 0, 2, 5, "I/O Intr"}
+ {Depo, "{PS_DC:2}Pwr:Out-I"	, depo_plc_11401_In_Word, 032, 16, kW	, "MDX Supply2 Power"	, 0, 2, 5, "I/O Intr"}
+ {Depo, "{PS_DC:2}E:Out-I"	, depo_plc_11401_In_Word, 033, 16, kV	, "MDX Supply2 Voltage"	, 0, 2, 5, "I/O Intr"}
+ {Depo, "{PS_DC:2}Ramp:Out-I"	, depo_plc_11401_In_Word, 034, 16, sec	, "MDX Supply2 Ramp Out"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{PS_DC:2}L:Out-I"	, depo_plc_11401_In_Word, 035, 16, ""	, "MDX Supply2 Level Out"	, 0, 2000, 5, "I/O Intr"}
+
+ {Depo, "{CP:1}T-I"	, depo_plc_11401_In_Word, 040, 16, K	, "Temp Diode1"		, 0, 350, 3, "I/O Intr"}
+ {Depo, "{CP:2}T-I"	, depo_plc_11401_In_Word, 041, 16, K	, "Temp Diode2"		, 0, 350, 3, "I/O Intr"}
+ {Depo, "{CP:3}T-I"	, depo_plc_11401_In_Word, 042, 16, K	, "Temp Diode3"		, 0, 350, 3, "I/O Intr"}
+ {Depo, "{CP:4}T-I"	, depo_plc_11401_In_Word, 043, 16, K	, "Temp Diode4"		, 0, 350, 3, "I/O Intr"}
+# {Depo, "{PT:1}P-I"	, depo_plc_11401_In_Word, 044, 16, Torr	, "PT1 Center Chm"	, 0, 0.05, 4, "I/O Intr"}
+ {Depo, "{PT:2}P-I"	, depo_plc_11401_In_Word, 045, 16, Torr	, "PT2 Loadlock"	, 0, 10, 4, "I/O Intr"}
+ {Depo, "{CCG:1}E-I"	, depo_plc_11401_In_Word, 046, 12, V	, "Landing Chm CCG"	, 0, 10, 4, "I/O Intr"}
+ {Depo, "{CCG:2}E-I"	, depo_plc_11401_In_Word, 047, 12, V	, "Loadlock CCG"	, 0, 10, 4, "I/O Intr"}
+}
+
+
+file "$(MODBUS)/db/mbboDirect.template" { pattern
+{P, R, PORT,OFFSET, MASK}
+## Y0 - Y137
+ {Depo, "{PLC:1}Out:DO60_Raw-SP", depo_plc_11601_Out_Word, 060, 0xFFFF}
+ {Depo, "{PLC:1}Out:DO61_Raw-SP", depo_plc_11601_Out_Word, 061, 0xFFFF}
+ {Depo, "{PLC:1}Out:DO62_Raw-SP", depo_plc_11601_Out_Word, 062, 0xFFFF}
+ {Depo, "{PLC:1}Out:DO63_Raw-SP", depo_plc_11601_Out_Word, 063, 0xFFFF}
+ {Depo, "{PLC:1}Out:DO64_Raw-SP", depo_plc_11601_Out_Word, 064, 0xFFFF}
+ {Depo, "{PLC:1}Out:DO65_Raw-SP", depo_plc_11601_Out_Word, 065, 0xFFFF}
+# {Depo, "{PLC:1}Out:DO72_Raw-SP", depo_plc_11601_Out_Word, 072, 0xFFFF}
+# {Depo, "{PLC:1}Out:DO73_Raw-SP", depo_plc_11601_Out_Word, 073, 0xFFFF}
+ {Depo, "{PLC:1}Out:DO75_Raw-SP", depo_plc_11601_Out_Word, 075, 0xFFFF}
+# {Depo, "{PLC:1}Out:DO76_Raw-SP", depo_plc_11601_Out_Word, 076, 0xFFFF}
+}
+
+file "$(MODBUS)/db/mbbiDirect.template" { pattern
+{P, R, PORT,OFFSET, MASK, SCAN}
+## Y0 - Y177
+ {Depo, "{PLC:1}Out:DO60_Raw-RB", depo_plc_11601_Out_Word_RBV, 060, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}Out:DO61_Raw-RB", depo_plc_11601_Out_Word_RBV, 061, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}Out:DO62_Raw-RB", depo_plc_11601_Out_Word_RBV, 062, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}Out:DO63_Raw-RB", depo_plc_11601_Out_Word_RBV, 063, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}Out:DO64_Raw-RB", depo_plc_11601_Out_Word_RBV, 064, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}Out:DO65_Raw-RB", depo_plc_11601_Out_Word_RBV, 065, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}Out:DO72_Raw-RB", depo_plc_11601_Out_Word_RBV, 072, 0xFFFF, "I/O Intr"}
+# {Depo, "{PLC:1}Out:DO73_Raw-RB", depo_plc_11601_Out_Word_RBV, 073, 0xFFFF, "I/O Intr"}
+ {Depo, "{PLC:1}Out:DO75_Raw-RB", depo_plc_11601_Out_Word_RBV, 075, 0xFFFF, "I/O Intr"}
+# {Depo, "{PLC:1}Out:DO76_Raw-RB", depo_plc_11601_Out_Word_RBV, 076, 0xFFFF, "I/O Intr"}
+}
+
+file "modbus-ao.template" { pattern
+{P, R, PORT,OFFSET, BITS, EGU, DESC, EGUL, EGUF, LOPR, HOPR, PREC}
+## V4000 - V4060
+ {Depo, "{MFC:1}F-SP"	, depo_plc_11601_Out_Word, 000, 16, SCCM	, "Argon MFC1 Flow"	, 0, 20, 0, 10, 5}
+ {Depo, "{MFC:2}F-SP"	, depo_plc_11601_Out_Word, 002, 16, SCCM	, "Argon MFC2 Flow"	, 0, 20, 0, 10, 5}
+ {Depo, "{MFC:3}F-SP"	, depo_plc_11601_Out_Word, 004, 16, SCCM	, "Argon MFC3 Flow"	, 0, 20, 0, 10, 5}
+ {Depo, "{MFC:4}F-SP"	, depo_plc_11601_Out_Word, 006, 16, SCCM	, "Argon MFC4 Flow"	, 0, 20, 0, 10, 5}
+ {Depo, "{MFC:5}F-SP"	, depo_plc_11601_Out_Word, 010, 16, SCCM	, "Argon MFC5 Flow"	, 0, 20, 0, 10, 5}
+ {Depo, "{MFC:6}F-SP"	, depo_plc_11601_Out_Word, 012, 16, SCCM	, "Argon MFC6 Flow"	, 0, 20, 0, 10, 5}
+ {Depo, "{MFC:7}F-SP"	, depo_plc_11601_Out_Word, 014, 16, SCCM	, "Argon MFC7 Flow"	, 0, 20, 0, 10, 5}
+ {Depo, "{MFC:8}F-SP"	, depo_plc_11601_Out_Word, 016, 16, SCCM	, "Argon MFC8 Flow"	, 0, 20, 0, 10, 5}
+ {Depo, "{MFC:9}F-SP"	, depo_plc_11601_Out_Word, 020, 16, SCCM	, "Argon MFC9 Flow"	, 0, 20, 0, 10, 5}
+ {Depo, "{VP:1}S-SP"	, depo_plc_11601_Out_Word, 022, 16, Hz		, "VP1 Speed", 0, 120, 0, 60, 0}
+
+# {Depo, "{PS_DC:1}Ramp:Out-SP"	, depo_plc_11601_Out_Word, 030, 16, sec	, "MDX1 Remote Ramp Adjust", 0, 20, 5}
+# {Depo, "{PS_DC:1}L:Out-SP"	, depo_plc_11601_Out_Word, 032, 16, V	, "MDX1 Remote Level Ajust", 0, 2000, 5}
+# {Depo, "{PS_DC:2}Ramp:Out-SP"	, depo_plc_11601_Out_Word, 034, 16, sec	, "MDX2 Remote Ramp Adjust", 0, 20, 5}
+# {Depo, "{PS_DC:2}L:Out-SP"	, depo_plc_11601_Out_Word, 036, 16, V	, "MDX2 Remote Level Ajust", 0, 2000, 5}
+}
+
+file "modbus-ai.template" { pattern
+{P, R, PORT,OFFSET, BITS, EGU, DESC, EGUL, EGUF, PREC, SCAN}
+## V4000 - V4060
+ {Depo, "{MFC:1}F-RB"	, depo_plc_11601_Out_Word_RBV, 000, 16, SCCM	, "Argon MFC1 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{MFC:2}F-RB"	, depo_plc_11601_Out_Word_RBV, 002, 16, SCCM	, "Argon MFC2 Flow"	, 0, 20, 5, "I/O Intr" }
+ {Depo, "{MFC:3}F-RB"	, depo_plc_11601_Out_Word_RBV, 004, 16, SCCM	, "Argon MFC3 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{MFC:4}F-RB"	, depo_plc_11601_Out_Word_RBV, 006, 16, SCCM	, "Argon MFC4 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{MFC:5}F-RB"	, depo_plc_11601_Out_Word_RBV, 010, 16, SCCM	, "Argon MFC5 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{MFC:6}F-RB"	, depo_plc_11601_Out_Word_RBV, 012, 16, SCCM	, "Argon MFC6 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{MFC:7}F-RB"	, depo_plc_11601_Out_Word_RBV, 014, 16, SCCM	, "Argon MFC7 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{MFC:8}F-RB"	, depo_plc_11601_Out_Word_RBV, 016, 16, SCCM	, "Argon MFC8 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{MFC:9}F-RB"	, depo_plc_11601_Out_Word_RBV, 020, 16, SCCM	, "Argon MFC9 Flow"	, 0, 20, 5, "I/O Intr"}
+ {Depo, "{VP:1}S-RB"	, depo_plc_11601_Out_Word_RBV, 022, 16, Hz	, "VP1 Speed", 0, 120, 0, "I/O Intr"}
+# {Depo, "{PS_DC:1}Ramp:Out-RB", depo_plc_11601_Out_Word_RBV, 030, 16, sec, "MDX1 Remote Ramp Adjust", 0, 20, 5, "I/O Intr"}
+# {Depo, "{PS_DC:1}L:Out-RB", depo_plc_11601_Out_Word_RBV, 032,16, V, "MDX1 Remote Level Ajust", 0, 2000, 5, "I/O Intr"}
+# {Depo, "{PS_DC:2}Ramp:Out-RB", depo_plc_11601_Out_Word_RBV, 034, 16, sec, "MDX2 Remote Ramp Adjust", 0, 20, 5, "I/O Intr"}
+# {Depo, "{PS_DC:2}L:Out-RB", depo_plc_11601_Out_Word_RBV, 036,16, V, "MDX2 Remote Level Ajust", 0, 2000, 5, "I/O Intr"}
+}

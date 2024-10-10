@@ -1,0 +1,106 @@
+# VAT Adaptive Pressure Controller PM-5
+# 
+# Huijuan 14-MAR-2019 
+
+Terminator = CR LF;
+extraInput=ignore;
+
+## Control commands
+# Set operation mode
+set_opr_mode {
+	out "U:%{01|02}";
+	in  "U:";
+}
+
+# Set valve position
+set_vlv_pos {
+	out "R:%06d";
+	in  "R:";
+}
+
+# Zero adjust
+zero_adjust {
+	out "Z:";
+	in  "Z:";
+}
+
+# Learn
+learn {
+	out "L:00%04d";
+	in  "L:";
+}
+
+# Reduce position speed
+set_speed {
+	out "V:%06d";
+	in  "V:";
+}
+
+# Enable/Disable power failure option
+set_PFO {
+	out "U:%{14|15}";
+	in  "U:";
+}
+
+# Interlock front panel keys
+set_intlk {
+        out "U:%{03|04}";
+	in  "U:";
+}
+
+# Enable/Disable logic input 
+enbl_logic_in {
+	out "U:%{16|17}";
+	in  "U:";
+}
+
+
+## Inquiry commands
+# Actual valve position
+get_vlv_pos {
+	out "A:";
+	in  "A:%d";
+}
+
+# Operating mode
+get_opr_mode {
+	out "I:";
+	in  "I:%{LOCAL|REMOTE|LOCKED}";
+}
+
+# Control mode
+get_ctrl_mode {
+	out "M:";
+	in  "M:%{   POS| PRESS}";
+}
+
+# Self test
+get_self_test {
+	out "T:";
+	in  "T:%{    OK|PAR-ER|ROM-ER}";
+}
+
+# Valve cycle counter
+get_vlv_cnt {
+	out "c:";
+	in  "c:%d";
+}
+
+# Set counter to zero
+set_cnt_zero {
+	out "n:";
+	in  "n:";
+}
+
+# Software version
+get_soft_version {
+	out "i:01";
+	in  "i:01%s";
+}
+
+# Position error status
+get_pos_err_sts {
+	out "p:";
+	in  "p:%{    OK|POS-ER}";
+}
+

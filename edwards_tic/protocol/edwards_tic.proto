@@ -1,0 +1,101 @@
+# Stream Device Protocol for the Edwards TIC Turbo Instrument Controller
+# Pete Owens 30/1/2017
+# Serial Line Setup:
+# 9600 baud, 1 stop bit, 8 data bits, No parity, Xon/Xoff
+# Huijuan 24/6/2019 Modified
+
+replytimeout = 1000;
+readtimeout  = 500;
+terminator   = CR;
+
+get_node {
+	out "?S901";
+	in "=S901 %d"; 
+}
+
+get_tic_sta {
+	out "?S902";
+	in "=S902 %s";
+}
+
+# Turbo pump commands
+get_turbo_sts {
+	out "?V904";
+	in "=V904 %d;%(\$1Sts:Alert-I.VAL)d;%{OK|warning|alarm}(\$1Sts:Pri-Sts.VAL)d";
+}
+
+start_turbo {
+	out "!C904 %{0|1}";
+	in "*C904 0";
+}
+
+get_turbo_speed {
+	out "?V905";
+	in "=V905 %g;%*d;%*d";
+}
+
+get_turbo_sft {
+	out "?S905";
+	in "=S905 %d;%(\$1Time:DroopFail-RB.VAL)d";
+}
+
+get_turbo_power {
+	out "?V906";
+	in "=V906 %g;%*d;%*d";
+}
+
+get_turbo_norm {
+	out "?V907";
+	in "=V907 %d;%*d;%*d";
+}
+
+get_turbo_stby {
+	out "?V908";
+	in "=V908 %d;%*d;%*d";
+}
+
+set_turbo_stby {
+	out "!C908 %d";
+	in "*C908 0";
+}
+
+get_turbo_cycle {
+	out "?V909";
+	in "=V909 %d;%*d;%*d;%*d";
+}
+
+get_back_sts {
+	out "?V910";
+	in "=V910 %d;%(\$1Sts:Alert-I.VAL)d;%(\$1Sts:Pri-Sts.VAL)d";
+}
+
+start_back {
+	out "!C910 %d";
+	in "*C910 0";
+}
+
+get_back_speed {
+	out "?V911";
+	in "=V911 %g;%*d;%*d";
+}
+
+get_back_power {
+	out "?V912";
+	in "=V912 %g;%*d;%*d";
+}
+
+get_gauge1_p {
+	out "?V913";
+	in "=V913 %g;%(\$1EU-Sts.RVAL)d;%(\$1Sts.VAL)d;%(\$1Sts:Alert-I.VAL)d;%(\$1Sts:Pri-Sts.VAL)d";
+}
+
+get_gauge2_p {
+	out "?V914";
+	in "=V914 %g;%(\$1EU-Sts.RVAL)d;%(\$1Sts.VAL)d;%(\$1Sts:Alert-I.VAL)d;%(\$1Sts:Pri-Sts.VAL)d";
+}
+
+get_gauge3_p {
+	out "?V915";
+	in "=V915 %g;%(\$1EU-Sts.RVAL)d;%(\$1Sts.VAL)d;%(\$1Sts:Alert-I.VAL)d;%(\$1Sts:Pri-Sts.VAL)d";
+}
+

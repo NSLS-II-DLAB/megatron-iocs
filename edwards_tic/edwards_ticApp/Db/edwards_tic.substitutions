@@ -1,0 +1,20 @@
+#file edwards_tic-back.template { pattern
+#{ Sys	, Dev			,PORT		}
+#{ Depo	, "{Pmp:Back-TIC:1}"	, Depo_TIC1	}
+#}
+
+file edwards_tic-turbo.template { pattern
+{ Sys   , Dev           	, PORT           }
+{ Depo  , "{Pmp:Turbo-TIC:1}"	, Depo_TIC1      }
+}
+
+#file edwards_tic-gauge.template { pattern
+#{ Sys   , Dev			, PORT		, Num	}
+#{ Depo  , "{Gauge:1-TIC:1}"	, Depo_TIC1	, 1	}
+#{ Depo  , "{Gauge:2-TIC:1}"	, Depo_TIC1	, 2	}
+#{ Depo  , "{Gauge:3-TIC:1}"	, Depo_TIC1	, 3	}
+#}
+
+
+
+

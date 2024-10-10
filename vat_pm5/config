@@ -1,0 +1,5 @@
+NAME=vat_pm5
+USER=softioc
+PORT=4005
+HOST=depo-ioc1
+

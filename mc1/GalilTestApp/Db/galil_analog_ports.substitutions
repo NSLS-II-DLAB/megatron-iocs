@@ -1,0 +1,39 @@
+# Description:
+# adc/dac substitution file. 
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# Licence as published by the Free Software Foundation; either
+# version 2.1 of the Licence, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# Lesser General Public Licence for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# Licence along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
+#
+# Contact details:
+# Mark Clift
+# email: padmoz@tpg.com.au
+
+# P    - PV prefix
+# R    - Record Name
+# PORT - Asyn port name
+# ADDR - Hardware port to read
+# PREC - Precision
+
+file "$(GALIL)/GalilSup/Db/galil_analog_in.template"
+{ 
+   pattern { P,           R,           PORT,    ADDR,  SCAN,       PREC }
+
+#DMC Ports numbered 0 to 7 at database layer for GUI.
+#DMC Ports numbered 1 to 8 on controller hardware
+	   { "Depo{MC:1}",    "AI0",  "Galil", "1",   "I/O Intr", "3"  }
+	   { "Depo{MC:1}",    "AI1",  "Galil", "2",   "I/O Intr", "3"  }
+}
+
+# end
+

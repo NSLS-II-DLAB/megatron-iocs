@@ -1,0 +1,5 @@
+NAME=kri_rf
+USER=softioc
+PORT=4003
+HOST=depo-ioc1
+

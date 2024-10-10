@@ -1,0 +1,54 @@
+file "LabJack_bi.template" { pattern
+{P	, R	,  DESC		, PORT	, OFFSET	, MASK	, ZNAM	, ONAM		, ZSV	, OSV	}
+{Depo, "{IG:1}Cmd:Fila-Sts"	, "Hornet Filament Status"	, LJT7_2_DIO_In	, 0	, 0x1	, "Off"	, "On"	, "NO_ALARM"	, "NO_ALARM"	}
+{Depo, "{IG:1}Cmd:Degas-Sts"	, "Hornet Degas Status"		, LJT7_2_DIO_In	, 0	, 0x2	, "Off"	, "On"	, "NO_ALARM"	, "NO_ALARM"	}
+{Depo, "{IG:1}Cmd:EmisI-Sts"	, "Hornet Emis Current Status"	, LJT7_2_DIO_In	, 0	, 0x4	, "100uA"	, "4mA", "NO_ALARM"	, "NO_ALARM"	}
+{Depo, "{IG:1}Sts:Gauge-Sts"	, "Hornet Gauge Satus"		, LJT7_2_DIO_In	, 0	, 0x8	,"On"	, "Off"	, "NO_ALARM"	, "NO_ALARM"	}
+{Depo, "{IG:1}Sts:Degas-Sts"	, "Hornet Degas Status"		, LJT7_2_DIO_In	, 0	, 0x10	, "On"	, "Off"	, "NO_ALARM"	, "NO_ALARM"	}
+}
+
+file "LabJack_bo.template" { pattern
+{P	, R	,  DESC		, PORT	, OFFSET	, ZNAM	, ONAM	}
+{Depo, "{IG:1}Cmd:Fila-Cmd"	, "Hornet Filament Cmd"	, LJT7_2_DIO_Out	, 0	, "Off"	, "On"	}
+{Depo, "{IG:1}Cmd:Degas-Cmd"	, "Hornet Degas Cmd"	, LJT7_2_DIO_Out	, 1	, "Off"	, "On"	}
+{Depo, "{IG:1}Cmd:EmisI-Cmd"	, "Hornet Emis I Cmd"	, LJT7_2_DIO_Out	, 2	, "100uA", "4mA"	}
+}
+
+# Set S.E. / Diff for each even number channel individually
+# Single-Ended (199, default) or Differential (1)
+file "LabJack_aiDiff.template" { pattern
+{P	, R			, PORT		, ONVL	, OFFSET}
+{Depo	, "{LJ:2}seDiff_Ch0"	, LJT7_2_AIDiff	, 1	, 0	}
+{Depo	, "{LJ:2}seDiff_Ch2"	, LJT7_2_AIDiff	, 3	, 2	}
+{Depo	, "{LJ:2}seDiff_Ch4"	, LJT7_2_AIDiff	, 5	, 4	}
+{Depo	, "{LJ:2}seDiff_Ch6"	, LJT7_2_AIDiff	, 7	, 6	}
+{Depo	, "{LJ:2}seDiff_Ch8"	, LJT7_2_AIDiff	, 9	, 8	}
+{Depo	, "{LJ:2}seDiff_Ch10"	, LJT7_2_AIDiff	, 11	, 10	}
+{Depo	, "{LJ:2}seDiff_Ch12"	, LJT7_2_AIDiff	, 13	, 12	}
+}
+
+# Analog inputs, thermocouple readings
+file "LabJack_ai.template" { pattern
+{P, R, PORT,OFFSET,  DESC, PREC, SCAN}
+# Thermocouple, differential
+{Depo, "{SCR:1-TC}T-I"	, LJT7_2_AIN0_EF_READ_A	, 0	, "LJ SCR1 TC"	, 4, "I/O Intr"}
+{Depo, "{SCR:2-TC}T-I"	, LJT7_2_AIN2_EF_READ_A	, 0	, "LJ SCR2 TC"	, 4, "I/O Intr"}
+{Depo, "{SCR:3-TC}T-I"	, LJT7_2_AIN4_EF_READ_A	, 0	, "LJ SCR3 TC"	, 4, "I/O Intr"}
+{Depo, "{SCR:4-TC}T-I"	, LJT7_2_AIN6_EF_READ_A	, 0	, "LJ SCR4 TC"	, 4, "I/O Intr"}
+{Depo, "{SCR:5-TC}T-I"	, LJT7_2_AIN8_EF_READ_A	, 0	, "LJ SCR5 TC"	, 4, "I/O Intr"}
+{Depo, "{Mtr:Step-TC}T-I"	, LJT7_2_AIN10_EF_READ_A, 0	, "LJ Step Mtr TC"	, 4, "I/O Intr"}
+{Depo, "{Chm-TC}T-I"	, LJT7_2_AIN12_EF_READ_A, 0	, "LJ 50mTorr TC"	, 4, "I/O Intr"}
+}
+
+file "LabJack_ao.template" { pattern
+{P	, R	, PORT	, OFFSET	, DESC	, HOPR	, LOPR	, DRVH	, DRVL	, PREC	}
+# DAC 0 - 1
+{Depo, "{SCR:1}Intst-SP_"	, LJT7_2_AO, 0	, "LJ SCR1 Intensity SP"	, 5	, 0	, 5	, 0	, 4	}
+{Depo, "{SCR:2}Intst-SP_"	, LJT7_2_AO, 2	, "LJ SCR2 Intensity SP"	, 5	, 0	, 5	, 0	, 4	}
+}
+
+file "depo-lj-ao-calc.template" { pattern
+{P, R	, Sig	, PREC	, EGU	, DESC		, CALC		, DRVH	, DRVL	}
+{Depo, "{SCR:1}"	, Intst-SP	, 0	, "%"	, "LJ SCR1 Intensity SP"	, "A/20"	, 100	, 0	}
+{Depo, "{SCR:2}"	, Intst-SP	, 0	, "%"	, "LJ SCR2 Intensity SP"	, "A/20"	, 100	, 0	}
+}

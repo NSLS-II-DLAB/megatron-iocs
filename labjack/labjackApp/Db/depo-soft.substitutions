@@ -1,0 +1,47 @@
+file "depo-ao-soft.template" { pattern
+{P	, R				, PREC	, DRVH	, DRVL	, EGU	, DESC				}
+{Depo	, "{LJ-CM:1}Val:Offset-SP"	, 4	, 10	, 1	, ""	, "50mT CM1 Offset"		}
+{Depo	, "{LJ-CM:1}Val:ScF-SP"		, 4	, 1	, 0	, ""	, "50mT CM1 Scaling Factor"	}
+{Depo	, "{LJ-CM:1}P-SP"		, 4	, 50	, 0	, "mTorr"	, "LJ CM1 50mTorr"		}
+{Depo	, "{LJ-CM:2}Val:Offset-SP"	, 4	, 10	, 1	, ""	, "50mT CM2 Offset"		}
+{Depo	, "{LJ-CM:2}Val:ScF-SP"		, 4	, 1	, 0	, ""	, "50mT CM2 Scaling Factor"	}
+{Depo	, "{LJ-CM:2}P-SP"		, 4	, 50	, 0	, "mTorr"	, "LJ CM2 50mTorr"		}
+
+{Depo	, "{LJ-Mill}Ratio:Ar-SP"	, 0	, 100	, 0	, "%"	, "Mill Argon Mix Ratio"	}
+{Depo	, "{LJ-Mill}Ratio:N2-SP"	, 0	, 100	, 0	, "%"	, "Mill Nitrogen Mix Ratio"	}
+{Depo	, "{LJ-Mill}Ratio:O2-SP"	, 0	, 100	, 0	, "%"	, "Mill Oxygen Mix Ratio"	}
+{Depo	, "{LJ-Mill}Ratio:Misc-SP"	, 0	, 100	, 0	, "%"	, "Mill Misc Mix Ratio"	}
+{Depo	, "{LJ}Ratio:N2Ar-SP"		, 0	, 100	, 0	, "%"	, "LJ Nitrogen/Argon Mix Ratio"	}
+
+{Depo	, "{LJ-MFC}F:CathGas-SP"	, 4	, 10	, 0	, "SCCM", "LJ Cathode Gas Total Setponit Set"	}
+{Depo	, "{LJ-MFC}F:ProcGas-SP"	, 4	, 100	, 0	, "SCCM", "LJ Process Gas Total Setponit Set"	}
+{Depo	, "{LJ-MFC}F:GasMix-SP"		, 4	, 15	, 0	, "SCCM", "LJ Mill Gas Mixer Total Setponit Set"	}
+
+# For test
+{Depo	, "{Mill-MFC:Ar}F-SP"	, 4	, 15	, 0	, "SCCM", "Mill Argon Mix Ratio"	}
+{Depo	, "{Mill-MFC:N2}F-SP"	, 4	, 15	, 0	, "SCCM", "Mill Nitrogen Mix Ratio"	}
+{Depo	, "{Mill-MFC:O2}F-SP"	, 4	, 15	, 0	, "SCCM", "Mill Oxygen Mix Ratio"	}
+{Depo	, "{Mill-MFC:Misc}F-SP"	, 4	, 15	, 0	, "SCCM", "Mill Ar/N2 Mix Ratio"	}
+
+#{Depo	, "{Guns-MFC:Ar}F-SP"	, 4	, 15	, 0	, "SCCM", "Mill Argon Mix Ratio"	}
+#{Depo	, "{Guns-MFC:N2}F-SP"	, 4	, 15	, 0	, "SCCM", "Mill Nitrogen Mix Ratio"	}
+
+}
+
+file "depo-calc-soft.template" { pattern
+{P	, R				, INPA					, INPB			, INPC			, OUT				, CALC		}
+#{Depo	, "{LJ-CM:1}P:SP-Calc_"		, "2"	, "Depo{LJ-CM:1}Val:ScF-SP CPP"	, "Depo{LJ-CM:1}Val:Offset-SP CPP"	, "{LJ-CM:1}P-SP"	,"A*B+C"	}
+#{Depo	, "{LJ-CM:2}P:SP-Calc_"		, "3"	, "Depo{LJ-CM:2}Val:ScF-SP CPP"	, "Depo{LJ-CM:2}Val:Offset-SP CPP"	, "{LJ-CM:2}P-SP"	, "A*B+C"	}
+{Depo	, "{LJ-CM:1}P:SP-Calc_"		, "Depo{Chm-CM:1}P:Raw-I CPP"	, "Depo{LJ-CM:1}Val:ScF-SP CPP"	, "Depo{LJ-CM:1}Val:Offset-SP CPP"	, "{LJ-CM:1}P-SP"	,"A*B+C"	}
+{Depo	, "{LJ-CM:2}P:SP-Calc_"		, "Depo{LL-CM:2}P:Raw-I CPP"	, "Depo{LJ-CM:2}Val:ScF-SP CPP"	, "Depo{LJ-CM:2}Val:Offset-SP CPP"	, "{LJ-CM:2}P-SP"	, "A*B+C"	}
+{Depo	, "{LJ-Mill}Ratio:ArSP-Calc_"	, "Depo{LJ-Mill}Ratio:N2-SP CPP"	, "Depo{LJ-Mill}Ratio:O2-SP CPP"	, "Depo{LJ-Mill}Ratio:Misc-SP CPP"	, "{LJ-Mill}Ratio:Ar-SP"	, "(100-(A+B+C))"	}
+
+{Depo	, "{LJ:Guns-MFC:Ar}F:SP-Calc_"	, "Depo{LJ-MFC}F:ProcGas-SP CPP"	, "Depo{LJ}Ratio:N2Ar-SP CPP"	, ""		, "{Guns-MFC:Ar}F-SP"	, "A*(100-B)/100"	}
+{Depo	, "{LJ:Guns-MFC:N2}F:SP-Calc_"	, "Depo{LJ-MFC}F:ProcGas-SP CPP"	, "Depo{LJ}Ratio:N2Ar-SP CPP"	, ""		, "{Guns-MFC:N2}F-SP"	, "A*B/100"	}
+
+{Depo	, "{LJ:Mill-MFC:Ar}F:SP-Calc_"	, "Depo{LJ-MFC}F:GasMix-SP CPP"	, "Depo{LJ-Mill}Ratio:Ar-SP CPP"	, ""		, "{Mill-MFC:Ar}F-SP"	, "A*B/100"	}
+{Depo	, "{LJ:Mill-MFC:N2}F:SP-Calc_"	, "Depo{LJ-MFC}F:GasMix-SP CPP"	, "Depo{LJ-Mill}Ratio:N2-SP CPP"	, ""		, "{Mill-MFC:N2}F-SP"	, "A*B/100"	}
+{Depo	, "{LJ:Mill-MFC:O2}F:SP-Calc_"	, "Depo{LJ-MFC}F:GasMix-SP CPP"	, "Depo{LJ-Mill}Ratio:O2-SP CPP"	, ""		, "{Mill-MFC:O2}F-SP"	, "A*B/100"	}
+{Depo	, "{LJ:Mill-MFC:Misc}F:SP-Calc_", "Depo{LJ-MFC}F:GasMix-SP CPP"	, "Depo{LJ-Mill}Ratio:Misc-SP CPP"	, ""	, "{Mill-MFC:Misc}F-SP"	, "A*B/100"	}
+
+}

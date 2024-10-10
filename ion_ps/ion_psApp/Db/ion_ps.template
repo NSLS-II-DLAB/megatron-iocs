@@ -1,0 +1,355 @@
+# Materials Science, Inc. ION Power Supply Controller
+#
+# kag 25-NOV-2013  Initial version
+# Huijuan 2-JULY-2019 Modified version
+
+record(bi, "$(Sys)$(Dev)Flt:Intlk-Sts") {
+	field(DESC, "Interlock Sts")
+	field(DTYP, "stream")
+	field(INP, "@ION_ps.proto read_faults($(Sys)$(Dev)) $(PORT)")
+	field(ZNAM, "Interlock OK")
+	field(ONAM, "Interlock Fault")
+	field(SCAN, "2 second")
+}
+
+record(bi, "$(Sys)$(Dev)Flt:Bus-Sts") {
+	field(DESC, "Bus Fault")
+	field(ZNAM, "Bus OK")
+	field(ONAM, "Bus Fault")
+}
+
+record(bi, "$(Sys)$(Dev)Flt:Line-Sts") {
+	field(DESC, "AC Line Current Fault")
+	field(ZNAM, "Line OK")
+	field(ONAM, "Line Fault")
+}
+
+record(bi, "$(Sys)$(Dev)Flt:Therm-Sts") {
+	field(DESC, "Thermal Sensor Fault")
+	field(ZNAM, "Thermal OK")
+	field(ONAM, "Thermal Fault")
+}
+
+record(bi, "$(Sys)$(Dev)Flt:OverT-Sts") {
+	field(DESC, "Overtemp Fault")
+	field(ZNAM, "Temp OK")
+	field(ONAM, "Overtemp Fault")
+}
+
+record(bi, "$(Sys)$(Dev)Flt:Hb-Sts") {
+	field(DESC, "Heartbeat Fault")
+	field(ZNAM, "Hb OK")
+	field(ONAM, "Hb Timeout Fault")
+}
+
+# Read status bits
+record(bi, "$(Sys)$(Dev)Enbl:Out-Sts") {
+	field(DESC, "Output Enabled Bit")
+	field(DTYP, "stream")
+	field(INP, "@ION_ps.proto read_status($(Sys)$(Dev)) $(PORT)")
+	field(ZNAM, "Inactive")
+	field(ONAM, "Active")
+}
+
+record(bi, "$(Sys)$(Dev)Mode:Cntl-Sts") {
+	field(DESC, "RS232 Control Bit")
+	field(ZNAM, "Inactive")
+	field(ONAM, "Active")
+}
+
+# Read active target number
+record(longin, "$(Sys)$(Dev)Num:Target-RB") {
+	field(DESC, "Active Target Num")
+	field(DTYP, "stream")
+	field(INP, "@ION_ps.proto read_target_no $(PORT)")
+}
+
+# Read actual power
+record(ai, "$(Sys)$(Dev)Pwr-I") {
+	field(DESC, "Actual Power")
+	field(DTYP, "stream")
+	field(INP, "@ION_ps.proto read_power $(PORT)")
+	field(PREC, "3")
+	field(SCAN, ".2 second")
+	field(FLNK, "$(Sys)$(Dev)I-I")
+}
+
+# Read actual current
+record(ai, "$(Sys)$(Dev)I-I") {
+	field(DESC, "Actual Current")
+	field(DTYP, "stream")
+	field(INP, "@ION_ps.proto read_current $(PORT)")
+	field(PREC, "3")
+	field(FLNK, "$(Sys)$(Dev)E-I")
+}
+
+# Read actual voltage
+record(ai, "$(Sys)$(Dev)E-I") {
+	field(DESC, "Actual Voltage")
+	field(DTYP, "stream")
+	field(INP, "@ION_ps.proto read_voltage $(PORT)")
+	field(PREC, "3")
+	field(FLNK, "$(Sys)$(Dev)Rate:Arc-I")
+}
+
+# Read arc rate
+record(ai, "$(Sys)$(Dev)Rate:Arc-I") {
+	field(DESC, "Arc Rate")
+	field(DTYP, "stream")
+	field(INP, "@ION_ps.proto read_arc_rate $(PORT)")
+	field(EGU, "Arcs/second")
+	field(PREC, "3")
+}
+
+# Read heartbeat timeout time
+record(ai, "$(Sys)$(Dev)Time:HbTimeout-RB") {
+	field(DESC, "HB Timeout Time")
+	field(DTYP, "stream")
+	field(INP, "@ION_ps.proto read_hb_timeout $(PORT)")
+	field(EGU, "s")
+	field(PREC, "3")
+}
+
+# Read active target power setpoint
+record(ai, "$(Sys)$(Dev)Pwr:Target-RB") {
+	field(DESC, "Target Power SP")
+	field(DTYP, "stream")
+	field(INP, "@ION_ps.proto read_target_power_sp $(PORT)")
+	field(EGU,  "W")
+	field(PREC, "3")
+	field(FLNK, "$(Sys)$(Dev)I:Target-RB")
+}
+
+# Read active target current setpoint
+record(ai, "$(Sys)$(Dev)I:Target-RB") {
+	field(DESC, "Target Current SP")
+	field(DTYP, "stream")
+	field(INP, "@ION_ps.proto read_target_current_sp $(PORT)")
+	field(EGU, "A")
+	field(PREC, "3")
+	field(FLNK, "$(Sys)$(Dev)E:Target-RB")
+}
+
+# Read active target voltage setpoint
+record(ai, "$(Sys)$(Dev)E:Target-RB") {
+	field(DESC, "Target Voltage SP")
+	field(DTYP, "stream")
+	field(INP, "@ION_ps.proto read_target_voltage_sp $(PORT)")
+	field(EGU, "V")
+	field(PREC, "3")
+	field(FLNK, "$(Sys)$(Dev)Time:TargetArcDly-RB")
+}
+
+# Read active target arc detect delay time
+record(ai, "$(Sys)$(Dev)Time:TargetArcDly-RB") {
+	field(DESC, "Target Arc Detect Delay Time")
+	field(DTYP, "stream")
+	field(INP, "@ION_ps.proto read_arc_dly_time $(PORT)")
+	field(EGU, "usec")
+	field(FLNK, "$(Sys)$(Dev)Time:TargetArcOff-RB")
+}
+
+# Read active target arc off time
+record(longin, "$(Sys)$(Dev)Time:TargetArcOff-RB") {
+	field(DESC, "Target Arc Off Time")
+	field(DTYP, "stream")
+	field(INP, "@ION_ps.proto read_arc_off_time $(PORT)")
+	field(EGU, "usec")
+	field(FLNK, "$(Sys)$(Dev)Lim:TargetKwHr-RB")
+}
+
+# Read active target kilowatt hour limit
+record(ai, "$(Sys)$(Dev)Lim:TargetKwHr-RB") {
+	field(DESC, "Target Kilowatt Hour Limit")
+	field(DTYP, "stream")
+	field(INP, "@ION_ps.proto read_target_kwh_limit $(PORT)")
+	field(EGU, "kWHr")
+	field(PREC, "3")
+	field(FLNK, "$(Sys)$(Dev)Cnt:TargetKwHr-RB")
+}
+
+# Read active target kilowatt hour count
+record(ai, "$(Sys)$(Dev)Cnt:TargetKwHr-RB") {
+	field(DESC, "Target Kilowatt Hour Cnt")
+	field(DTYP, "stream")
+	field(INP, "@ION_ps.proto read_target_kwh_cnt $(PORT)")
+	field(EGU, "kWHr")
+	field(PREC, "3")
+	field(FLNK, "$(Sys)$(Dev)Time:TargetRamp-RB")
+}
+
+# Read active target ramp time
+record(ai, "$(Sys)$(Dev)Time:TargetRamp-RB") {
+	field(DESC, "Target Ramp Time")
+	field(DTYP, "stream")
+	field(INP, "@ION_ps.proto read_target_ramp_time $(PORT)")
+	field(EGU, "s")
+	field(PREC, "3")
+	field(FLNK, "$(Sys)$(Dev)Time:TargetRun-RB")
+}
+
+# Read active target run time
+record(ai, "$(Sys)$(Dev)Time:TargetRun-RB") {
+	field(DESC, "Target Run Time")
+	field(DTYP, "stream")
+	field(INP, "@ION_ps.proto read_target_run_time $(PORT)")
+	field(EGU, "s")
+	field(PREC, "3")
+}
+
+# Set control mode
+record(bo, "$(Sys)$(Dev)Mode:Cntl-Sel") {
+	field(DESC, "Set Control Mode")
+	field(DTYP, "stream")
+	field(OUT, "@ION_ps.proto set_ctrl_mode $(PORT)")
+	field(ZNAM, "Analog")
+	field(ONAM, "RS232")
+}
+
+# Enable/disable output
+record(bo, "$(Sys)$(Dev)Enbl:Out-Cmd") {
+	field(DESC, "Enable/Disable Output")
+	field(DTYP, "stream")
+	field(OUT, "@ION_ps.proto set_enable $(PORT)")
+	field(ZNAM, "Enable")
+	field(ONAM, "Disable")
+	field(SDIS, "$(Sys)$(Dev)Mode:Cntl-Sts")
+	field(DISV, "0")
+}
+
+# Set active target number
+record(longout, "$(Sys)$(Dev)Num:Target-SP") {
+	field(DESC, "Set Active Target Num")
+	field(DTYP, "stream")
+	field(OUT, "@ION_ps.proto set_target_number $(PORT)")
+}
+
+# Set heartbeat timeout time
+record(ao, "$(Sys)$(Dev)Time:HbTimeout-SP") {
+	field(DESC, "Hb Timeout SP")
+	field(DTYP, "stream")
+	field(OUT, "@ION_ps.proto set_heartbeat_timeout $(PORT)")
+	field(DRVL, "0.0")
+	field(DRVH, "65.535")
+	field(EGU, "s")
+	field(PREC, "3")
+}
+
+# Set active target power setpoint
+record(ao, "$(Sys)$(Dev)Pwr:Target-SP") {
+	field(DESC, "Target Power SP")
+	field(DTYP, "stream")
+	field(OUT, "@ION_ps.proto set_power $(PORT)")
+	field(EGU, "W")
+	field(PREC, "1")
+}
+
+# Set active target current setpoint
+record(ao, "$(Sys)$(Dev)I:Target-SP") {
+	field(DESC, "Target Current SP")
+	field(DTYP, "stream")
+	field(OUT, "@ION_ps.proto set_current $(PORT)")
+	field(EGU, "A")
+	field(PREC, "3")
+}
+
+# Set active target voltage setpoint 
+record(ao, "$(Sys)$(Dev)E:Target-SP") {
+	field(DESC, "Target Voltage SP")
+	field(DTYP, "stream")
+	field(OUT, "@ION_ps.proto set_voltage $(PORT)")
+	field(EGU, "V")
+	field(PREC, "3")
+}
+
+# Set active target arc detect delay time
+record(ao, "$(Sys)$(Dev)Time:TargetArcDly-SP") {
+	field(DESC, "Target Arc Detect Delay SP")
+	field(DTYP, "stream")
+	field(OUT, "@ION_ps.proto set_target_arc_dly $(PORT)")
+	field(EGU, "usec")
+	field(DRVL, "0.0")
+	field(DRVH, "6553.5")
+}
+
+# Set active target arc off time 
+record(longout, "$(Sys)$(Dev)Time:TargetArcOff-SP") {
+	field(DESC, "Target Arc Off Time SP")
+	field(DTYP, "stream")
+	field(OUT, "@ION_ps.proto set_arc_off_time $(PORT)")
+	field(EGU, "usec")
+	field(DRVL, "0")
+	field(DRVH, "65536")
+}
+
+# Set active target kilowatt hour limit
+record(ao, "$(Sys)$(Dev)Lim:TargetKwHr-SP") {
+	field(DESC, "Target KilowattHour Limit SP")
+	field(DTYP, "stream")
+	field(OUT, "@ION_ps.proto set_target_kwh_limit $(PORT)")
+	field(EGU, "kWHr")
+	field(DRVL, "0")
+	field(DRVH, "655.36")
+	field(PREC, "2")
+}
+
+# Clear active target kilowatt hour count
+record(bo, "$(Sys)$(Dev)Rst:TargetKwHrCnt-Cmd") {
+	field(DESC, "Reset Target kWHr Count")
+	field(DTYP, "stream")
+	field(OUT, "@ION_ps.proto reset_target_kwh_count $(PORT)")
+}
+
+# Set active target ramp time
+record(ao, "$(Sys)$(Dev)Time:TargetRamp-SP") {
+	field(DESC, "Target Ramp Time SP")
+	field(DTYP, "stream")
+	field(OUT, "@ION_ps.proto set_target_ramp_time $(PORT)")
+	field(EGU, "s")
+	field(DRVL, "0")
+	field(DRVH, "65.535")
+	field(PREC, "3")
+}
+
+# Set active target run time
+record(ao, "$(Sys)$(Dev)Time:TargetRun-SP") {
+	field(DESC, "Target Run Time SP")
+	field(DTYP, "stream")
+	field(OUT, "@ION_ps.proto set_target_run_time $(PORT)")
+	field(EGU, "s")
+	field(DRVL, "0")
+	field(DRVH, "6553.5")
+	field(PREC, "1")
+}
+
+record(fanout, "$(Sys)$(Dev)FOut")
+{
+	field(SELM, "All")
+	field(LNK1, "$(Sys)$(Dev)Num:Target-RB")
+	field(LNK2, "$(Sys)$(Dev)Pwr:Target-RB")
+	field(LNK3, "$(Sys)$(Dev)I:Target-RB")
+	field(LNK4, "$(Sys)$(Dev)E:Target-RB")
+	field(LNK5, "$(Sys)$(Dev)Mode:Cntl-Sts")
+	field(LNK6, "$(Sys)$(Dev)FOut1_")
+	field(SCAN, "2 second")
+}
+
+record(fanout, "$(Sys)$(Dev)FOut1_")
+{
+	field(SELM, "All")
+	field(LNK1, "$(Sys)$(Dev)Time:TargetArcDly-RB")
+	field(LNK2, "$(Sys)$(Dev)Time:TargetArcOff-RB")
+	field(LNK3, "$(Sys)$(Dev)Lim:TargetKwHr-RB")
+	field(LNK4, "$(Sys)$(Dev)Cnt:TargetKwHr-RB")
+	field(LNK5, "$(Sys)$(Dev)Enbl:Out-Sts")
+	field(LNK6, "$(Sys)$(Dev)FOut2_")
+}
+
+record(fanout, "$(Sys)$(Dev)FOut2_")
+{
+	field(SELM, "All")
+	field(LNK1, "$(Sys)$(Dev)Time:TargetRamp-RB")
+	field(LNK2, "$(Sys)$(Dev)Time:TargetRun-RB")
+	field(LNK3, "$(Sys)$(Dev)Time:HbTimeout-RB")
+}
+

@@ -1,0 +1,4 @@
+epicsEnvSet("IOC","iocdl205")
+epicsEnvSet("TOP","/epics/iocs/dl205")
+epicsEnvSet("MODBUS","/usr/lib/epics")
+epicsEnvSet("EPICS_BASE","/usr/lib/epics")

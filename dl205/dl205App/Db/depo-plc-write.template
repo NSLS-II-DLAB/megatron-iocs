@@ -1,0 +1,8 @@
+# Enable write bit in PLC
+record(dfanout, "$(P)$(R)-DFOut_")
+{
+	field(DESC, "Write Fanout")
+	field(OMSL, "closed_loop")
+	field(DOL,  "0")
+	field(OUTA, "$(P)$(R)-Cmd PP")
+}

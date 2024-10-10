@@ -1,0 +1,5 @@
+file kri_rf.template { pattern
+{ Sys	, Dev		, PORT		}
+{ Depo	, "{RF:1}"	, Depo_RF1	}
+}
+

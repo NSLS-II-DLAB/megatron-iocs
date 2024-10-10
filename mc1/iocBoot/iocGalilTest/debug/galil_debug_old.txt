@@ -1,0 +1,330 @@
+2022-03-14 16:02:18 (87344) sync_writeReadController: controller="192.168.100.2" command="WH", response="IHA", status=OK
+2022-03-14 16:02:18 (87344) sync_writeReadController: controller="192.168.100.2" command="QZ", response=" 2, 52, 26, 36", status=OK
+2022-03-14 16:02:18 (87344) sync_writeReadController: controller="192.168.100.2" command="DR 0", response="", status=OK
+2022-03-14 16:02:18 (87344) sync_writeReadController: controller="192.168.100.2" command="IHT=>-3", response="", status=OK
+2022-03-14 16:02:18 (87344) sync_writeReadController: controller="192.168.100.2" command="", response="DMC4010 Rev 1.0c", status=OK
+2022-03-14 16:02:18 (87344) sync_writeReadController: controller="192.168.100.2" command="TH", response="CONTROLLER IP ADDRESS 192,168,100,2 ETHERNET ADDRESS 00-50-4C-20-7B-D6
+IHA TCP PORT 23 TO IP ADDRESS 192,168,100,11 PORT 49935
+IHB UDP PORT 60007 TO IP ADDRESS 192,168,100,11 PORT 64688
+IHC AVAILABLE 
+IHD AVAILABLE 
+IHE AVAILABLE 
+IHF AVAILABLE 
+IHG AVAILABLE 
+IHH AVAILABLE", status=OK
+2022-03-14 16:02:18 (87344) sync_writeReadController: controller="192.168.100.2" command="MG _BN", response=" 31702.0000", status=OK
+2022-03-14 16:02:18 (87344) sync_writeReadController: controller="192.168.100.2" command="HX0", response="", status=OK
+2022-03-14 16:02:18 (87344) sync_writeReadController: controller="192.168.100.2" command="HX1", response="", status=OK
+2022-03-14 16:02:18 (87344) sync_writeReadController: controller="192.168.100.2" command="HX2", response="", status=OK
+2022-03-14 16:02:18 (87344) sync_writeReadController: controller="192.168.100.2" command="HX3", response="", status=OK
+2022-03-14 16:02:18 (87344) sync_writeReadController: controller="192.168.100.2" command="HX4", response="", status=OK
+2022-03-14 16:02:18 (87344) sync_writeReadController: controller="192.168.100.2" command="HX5", response="", status=OK
+2022-03-14 16:02:18 (87344) sync_writeReadController: controller="192.168.100.2" command="HX6", response="", status=OK
+2022-03-14 16:02:18 (87344) sync_writeReadController: controller="192.168.100.2" command="HX7", response="", status=OK
+2022-03-14 16:02:18 (87344) sync_writeReadController: controller="192.168.100.2" command="MG _BGA", response=" 0.0000", status=OK
+2022-03-14 16:02:18 (87344) sync_writeReadController: controller="192.168.100.2" command="QZ", response=" 2, 52, 26, 36", status=OK
+2022-03-14 16:02:18 (87344) sync_writeReadController: controller="192.168.100.2" command="MG_CO", response=" 0.0000", status=OK
+2022-03-14 16:02:18 (87344) sync_writeReadController: controller="192.168.100.2" command="MG{Z10.0}_AQ1", response=" 2", status=OK
+2022-03-14 16:02:18 (87344) sync_writeReadController: controller="192.168.100.2" command="DR 10, 1", response="", status=OK
+2022-03-14 16:02:18 (87344) sync_writeReadController: controller="192.168.100.2" command="CF B", response="", status=OK
+2022-03-14 16:02:18 (87344) sync_writeReadController: controller="192.168.100.2" command="CW 1", response="", status=OK
+2022-03-14 16:02:19 (87344) sync_writeReadController: controller="192.168.100.2" command="tcperr=0", response="", status=OK
+2022-03-14 16:02:19 (87344) sync_writeReadController: controller="192.168.100.2" command="cmderr=0", response="", status=OK
+2022-03-14 16:02:19 (87344) sync_writeReadController: controller="192.168.100.2" command="dpon=0;dvalues=0;mlock=0", response="", status=OK
+2022-03-14 16:02:19 (87344) sync_writeReadController: controller="192.168.100.2" command="MG homedA", response=" 0.0000", status=OK
+2022-03-14 16:02:19 (87344) sync_writeReadController: controller="192.168.100.2" command="homedA=0", response="", status=OK
+2022-03-14 16:02:19 (87344) sync_writeReadController: controller="192.168.100.2" command="MG cinitA", response=" 0.0000", status=OK
+2022-03-14 16:02:19 (87344) sync_writeReadController: controller="192.168.100.2" command="cinitA=0", response="", status=OK
+2022-03-14 16:02:19 (87344) sync_writeReadController: controller="192.168.100.2" command="limdcA=1073740800", response="", status=OK
+2022-03-14 16:02:19 (87344) sync_writeReadController: controller="192.168.100.2" command="homeA=0", response="", status=OK
+2022-03-14 16:02:19 (87344) sync_writeReadController: controller="192.168.100.2" command="hswactA=0", response="", status=OK
+2022-03-14 16:02:19 (87344) sync_writeReadController: controller="192.168.100.2" command="hswiactA=1", response="", status=OK
+2022-03-14 16:02:19 (87344) sync_writeReadController: controller="192.168.100.2" command="hjsA=2048", response="", status=OK
+2022-03-14 16:02:19 (87344) sync_writeReadController: controller="192.168.100.2" command="hjogA=0", response="", status=OK
+2022-03-14 16:02:19 (87344) sync_writeReadController: controller="192.168.100.2" command="ueipA=0", response="", status=OK
+2022-03-14 16:02:19 (87344) sync_writeReadController: controller="192.168.100.2" command="uiA=0", response="", status=OK
+2022-03-14 16:02:19 (87344) sync_writeReadController: controller="192.168.100.2" command="homedA=0", response="", status=OK
+2022-03-14 16:02:19 (87344) sync_writeReadController: controller="192.168.100.2" command="cinitA=0", response="", status=OK
+2022-03-14 16:02:19 (87344) sync_writeReadController: controller="192.168.100.2" command="XQ 0,0", response="?", status=ERROR
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="MG _XQ0", response=" -1.0000", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="MG _TM", response=" 1000.0000", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="DR 10, 1", response="", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="FLA=2147483647.000000;BLA=-2147483648.000000", response="", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="FLA=2147483647.000000;BLA=-2147483648.000000", response="", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="MG _ERA", response=" 16384.0000", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="MTA=?", response=" 1.0", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="OCA=0,0", response="", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="MTA=?", response=" 1.0", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="OCA=0,0", response="", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="KSA=1.313000", response="", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="LCA=0", response="", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="ERA=16384.000000", response="", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="MG _CN0", response=" -1.0000", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="MG _CN1", response=" -1.0000", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="MG _CA", response=" 0.0000", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="MG _MOA", response=" 1.0000", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="AGA=0", response="", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="AUA=0.0", response="", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="OEA=0", response="", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="MTA=?", response=" 1.0", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="MTA=1.0", response="", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="CEA=2", response="", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="LDA=0", response="", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="MOA", response="", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="MG _OEA", response=" 0.0000", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="MG _MTA", response=" 1.0000", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="CEA=?", response=" 2", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="CEA=?", response=" 2", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="CN -1,-1,-1,0,1", response="", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="KPA=0.000000", response="", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="KIA=0.000000", response="", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="KDA=0.000000", response="", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="MG _KSA", response=" 1.3125", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="MG _LCA", response=" 0.0000", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="MG _ERA", response=" 16384.0000", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="MG _AGA", response=" 0.0000", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="MG _AUA", response=" 0.0000", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="MG _LDA", response=" 0.0000", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="MG _CN0", response=" -1.0000", status=OK
+2022-03-14 16:02:20 (87344) sync_writeReadController: controller="192.168.100.2" command="MG _CN1", response=" -1.0000", status=OK
+2022-03-14 16:02:41 (87344) sync_writeReadController: controller="192.168.100.2" command="DR 0", response="", status=OK
+2022-03-14 16:02:42 (87344) sync_writeReadController: controller="192.168.100.2" command="BN", response="", status=OK
+2022-03-14 16:02:42 (87344) sync_writeReadController: controller="192.168.100.2" command="CF S", response="", status=OK
+2022-03-14 16:02:42 (87344) sync_writeReadController: controller="192.168.100.2" command="CW 2", response="", status=OK
+2022-03-14 16:02:42 (87344) sync_writeReadController: controller="192.168.100.2" command="IHT=>-1", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="WH", response="IHA", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="QZ", response=" 2, 52, 26, 36", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="DR 0", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="IHT=>-3", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="", response="DMC4010 Rev 1.0c", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="TH", response="CONTROLLER IP ADDRESS 192,168,100,2 ETHERNET ADDRESS 00-50-4C-20-7B-D6
+IHA TCP PORT 23 TO IP ADDRESS 192,168,100,11 PORT 50108
+IHB UDP PORT 60007 TO IP ADDRESS 192,168,100,11 PORT 49199
+IHC AVAILABLE 
+IHD AVAILABLE 
+IHE AVAILABLE 
+IHF AVAILABLE 
+IHG AVAILABLE 
+IHH AVAILABLE", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="MG _BN", response=" 31702.0000", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="HX0", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="HX1", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="HX2", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="HX3", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="HX4", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="HX5", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="HX6", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="HX7", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="MG _BGA", response=" 0.0000", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="QZ", response=" 2, 52, 26, 36", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="MG_CO", response=" 0.0000", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="MG{Z10.0}_AQ1", response=" 2", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="DR 10, 1", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="CF B", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="CW 1", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="tcperr=0", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="cmderr=0", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="dpon=0;dvalues=0;mlock=0", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="MG homedA", response=" 0.0000", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="homedA=0", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="MG cinitA", response=" 0.0000", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="cinitA=0", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="limdcA=1073740800", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="homeA=0", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="hswactA=0", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="hswiactA=1", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="hjsA=2048", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="hjogA=0", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="ueipA=0", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="uiA=0", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="homedA=0", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="cinitA=0", response="", status=OK
+2022-03-14 16:05:50 (87802) sync_writeReadController: controller="192.168.100.2" command="XQ 0,0", response="?", status=ERROR
+2022-03-14 16:05:51 (87802) sync_writeReadController: controller="192.168.100.2" command="MG _XQ0", response=" -1.0000", status=OK
+2022-03-14 16:05:51 (87802) sync_writeReadController: controller="192.168.100.2" command="MG _TM", response=" 1000.0000", status=OK
+2022-03-14 16:05:51 (87802) sync_writeReadController: controller="192.168.100.2" command="DR 10, 1", response="", status=OK
+2022-03-14 16:05:51 (87802) sync_writeReadController: controller="192.168.100.2" command="FLA=2147483647.000000;BLA=-2147483648.000000", response="", status=OK
+2022-03-14 16:05:51 (87802) sync_writeReadController: controller="192.168.100.2" command="FLA=2147483647.000000;BLA=-2147483648.000000", response="", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="MG _ERA", response=" 16384.0000", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="MTA=?", response=" 1.0", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="OCA=0,0", response="", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="MTA=?", response=" 1.0", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="OCA=0,0", response="", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="KSA=1.313000", response="", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="LCA=0", response="", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="ERA=16384.000000", response="", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="MG _CN0", response=" -1.0000", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="MG _CN1", response=" -1.0000", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="MG _CA", response=" 0.0000", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="MG _MOA", response=" 1.0000", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="AGA=0", response="", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="AUA=0.0", response="", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="OEA=0", response="", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="MTA=?", response=" 1.0", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="MTA=1.0", response="", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="CEA=2", response="", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="LDA=0", response="", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="MOA", response="", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="MG _OEA", response=" 0.0000", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="MG _MTA", response=" 1.0000", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="CEA=?", response=" 2", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="CEA=?", response=" 2", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="CN -1,-1,-1,0,1", response="", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="KPA=0.000000", response="", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="KIA=0.000000", response="", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="KDA=0.000000", response="", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="MG _KSA", response=" 1.3125", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="MG _LCA", response=" 0.0000", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="MG _ERA", response=" 16384.0000", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="MG _AGA", response=" 0.0000", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="MG _AUA", response=" 0.0000", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="MG _LDA", response=" 0.0000", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="MG _CN0", response=" -1.0000", status=OK
+2022-03-14 16:05:52 (87802) sync_writeReadController: controller="192.168.100.2" command="MG _CN1", response=" -1.0000", status=OK
+2022-03-14 16:07:29 (87802) sync_writeReadController: controller="192.168.100.2" command="DR 0", response="", status=OK
+2022-03-14 16:07:30 (87802) sync_writeReadController: controller="192.168.100.2" command="BN", response="", status=OK
+2022-03-14 16:07:30 (87802) sync_writeReadController: controller="192.168.100.2" command="CF S", response="", status=OK
+2022-03-14 16:07:30 (87802) sync_writeReadController: controller="192.168.100.2" command="CW 2", response="", status=OK
+2022-03-14 16:07:30 (87802) sync_writeReadController: controller="192.168.100.2" command="IHT=>-1", response="", status=OK
+2022-03-14 16:14:15 (88272) sync_writeReadController: controller="192.168.100.2" command="WH", response="IHA", status=OK
+2022-03-14 16:14:15 (88272) sync_writeReadController: controller="192.168.100.2" command="QZ", response=" 2, 52, 26, 36", status=OK
+2022-03-14 16:14:15 (88272) sync_writeReadController: controller="192.168.100.2" command="DR 0", response="", status=OK
+2022-03-14 16:14:15 (88272) sync_writeReadController: controller="192.168.100.2" command="IHT=>-3", response="", status=OK
+2022-03-14 16:14:15 (88272) sync_writeReadController: controller="192.168.100.2" command="", response="DMC4010 Rev 1.0c", status=OK
+2022-03-14 16:14:15 (88272) sync_writeReadController: controller="192.168.100.2" command="TH", response="CONTROLLER IP ADDRESS 192,168,100,2 ETHERNET ADDRESS 00-50-4C-20-7B-D6
+IHA TCP PORT 23 TO IP ADDRESS 192,168,100,11 PORT 50045
+IHB UDP PORT 60007 TO IP ADDRESS 192,168,100,11 PORT 58382
+IHC AVAILABLE 
+IHD AVAILABLE 
+IHE AVAILABLE 
+IHF AVAILABLE 
+IHG AVAILABLE 
+IHH AVAILABLE", status=OK
+2022-03-14 16:14:15 (88272) sync_writeReadController: controller="192.168.100.2" command="MG _BN", response=" 31702.0000", status=OK
+2022-03-14 16:14:15 (88272) sync_writeReadController: controller="192.168.100.2" command="HX0", response="", status=OK
+2022-03-14 16:14:15 (88272) sync_writeReadController: controller="192.168.100.2" command="HX1", response="", status=OK
+2022-03-14 16:14:15 (88272) sync_writeReadController: controller="192.168.100.2" command="HX2", response="", status=OK
+2022-03-14 16:14:15 (88272) sync_writeReadController: controller="192.168.100.2" command="HX3", response="", status=OK
+2022-03-14 16:14:15 (88272) sync_writeReadController: controller="192.168.100.2" command="HX4", response="", status=OK
+2022-03-14 16:14:15 (88272) sync_writeReadController: controller="192.168.100.2" command="HX5", response="", status=OK
+2022-03-14 16:14:15 (88272) sync_writeReadController: controller="192.168.100.2" command="HX6", response="", status=OK
+2022-03-14 16:14:15 (88272) sync_writeReadController: controller="192.168.100.2" command="HX7", response="", status=OK
+2022-03-14 16:14:15 (88272) sync_writeReadController: controller="192.168.100.2" command="MG _BGA", response=" 0.0000", status=OK
+2022-03-14 16:14:15 (88272) sync_writeReadController: controller="192.168.100.2" command="QZ", response=" 2, 52, 26, 36", status=OK
+2022-03-14 16:14:15 (88272) sync_writeReadController: controller="192.168.100.2" command="MG_CO", response=" 0.0000", status=OK
+2022-03-14 16:14:15 (88272) sync_writeReadController: controller="192.168.100.2" command="MG{Z10.0}_AQ1", response=" 2", status=OK
+2022-03-14 16:14:15 (88272) sync_writeReadController: controller="192.168.100.2" command="DR 10, 1", response="", status=OK
+2022-03-14 16:14:15 (88272) sync_writeReadController: controller="192.168.100.2" command="CF B", response="", status=OK
+2022-03-14 16:14:15 (88272) sync_writeReadController: controller="192.168.100.2" command="CW 1", response="", status=OK
+2022-03-14 16:14:16 (88272) sync_writeReadController: controller="192.168.100.2" command="tcperr=0", response="", status=OK
+2022-03-14 16:14:16 (88272) sync_writeReadController: controller="192.168.100.2" command="cmderr=0", response="", status=OK
+2022-03-14 16:14:16 (88272) sync_writeReadController: controller="192.168.100.2" command="dpon=0;dvalues=0;mlock=0", response="", status=OK
+2022-03-14 16:14:16 (88272) sync_writeReadController: controller="192.168.100.2" command="MG homedA", response=" 0.0000", status=OK
+2022-03-14 16:14:16 (88272) sync_writeReadController: controller="192.168.100.2" command="homedA=0", response="", status=OK
+2022-03-14 16:14:16 (88272) sync_writeReadController: controller="192.168.100.2" command="MG cinitA", response=" 0.0000", status=OK
+2022-03-14 16:14:16 (88272) sync_writeReadController: controller="192.168.100.2" command="cinitA=0", response="", status=OK
+2022-03-14 16:14:16 (88272) sync_writeReadController: controller="192.168.100.2" command="limdcA=1073740800", response="", status=OK
+2022-03-14 16:14:16 (88272) sync_writeReadController: controller="192.168.100.2" command="homeA=0", response="", status=OK
+2022-03-14 16:14:16 (88272) sync_writeReadController: controller="192.168.100.2" command="hswactA=0", response="", status=OK
+2022-03-14 16:14:16 (88272) sync_writeReadController: controller="192.168.100.2" command="hswiactA=1", response="", status=OK
+2022-03-14 16:14:16 (88272) sync_writeReadController: controller="192.168.100.2" command="hjsA=2048", response="", status=OK
+2022-03-14 16:14:16 (88272) sync_writeReadController: controller="192.168.100.2" command="hjogA=0", response="", status=OK
+2022-03-14 16:14:16 (88272) sync_writeReadController: controller="192.168.100.2" command="ueipA=0", response="", status=OK
+2022-03-14 16:14:16 (88272) sync_writeReadController: controller="192.168.100.2" command="uiA=0", response="", status=OK
+2022-03-14 16:14:16 (88272) sync_writeReadController: controller="192.168.100.2" command="homedA=0", response="", status=OK
+2022-03-14 16:14:16 (88272) sync_writeReadController: controller="192.168.100.2" command="cinitA=0", response="", status=OK
+2022-03-14 16:14:16 (88272) sync_writeReadController: controller="192.168.100.2" command="XQ 0,0", response="?", status=ERROR
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="MG _XQ0", response=" -1.0000", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="MG _TM", response=" 1000.0000", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="DR 10, 1", response="", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="FLA=2147483647.000000;BLA=-2147483648.000000", response="", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="FLA=2147483647.000000;BLA=-2147483648.000000", response="", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="MG _ERA", response=" 16384.0000", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="MTA=?", response=" 1.0", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="OCA=0,0", response="", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="MTA=?", response=" 1.0", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="OCA=0,0", response="", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="KSA=1.313000", response="", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="LCA=0", response="", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="ERA=16384.000000", response="", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="MG _CN0", response=" -1.0000", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="MG _CN1", response=" -1.0000", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="MG _CA", response=" 0.0000", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="MG _MOA", response=" 0.0000", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="MOA", response="", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="AGA=0", response="", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="SHA", response="", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="AUA=0.0", response="", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="OEA=0", response="", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="MTA=?", response=" 1.0", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="MTA=1.0", response="", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="CEA=2", response="", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="LDA=0", response="", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="MOA", response="", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="MG _OEA", response=" 0.0000", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="MG _MTA", response=" 1.0000", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="CEA=?", response=" 2", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="CEA=?", response=" 2", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="CN -1,-1,-1,0,1", response="", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="KPA=0.000000", response="", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="KIA=0.000000", response="", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="KDA=0.000000", response="", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="MG _KSA", response=" 1.3125", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="MG _LCA", response=" 0.0000", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="MG _ERA", response=" 16384.0000", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="MG _AGA", response=" 0.0000", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="MG _AUA", response=" 0.0000", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="MG _LDA", response=" 0.0000", status=OK
+2022-03-14 16:14:17 (88272) sync_writeReadController: controller="192.168.100.2" command="MG _CN0", response=" -1.0000", status=OK
+2022-03-14 16:14:18 (88272) sync_writeReadController: controller="192.168.100.2" command="MG _CN1", response=" -1.0000", status=OK
+2022-03-14 16:16:34 (88272) sync_writeReadController: controller="192.168.100.2" command="SHA", response="", status=OK
+2022-03-14 16:16:54 (88272) sync_writeReadController: controller="192.168.100.2" command="PAA=20000", response="", status=OK
+2022-03-14 16:16:54 (88272) sync_writeReadController: controller="192.168.100.2" command="ACA=199680;DCA=199680;SPA=200000;limdcA=999999488", response="", status=OK
+2022-03-14 16:16:54 (88272) sync_writeReadController: controller="192.168.100.2" command="BGA", response="", status=OK
+2022-03-14 16:17:06 (88272) sync_writeReadController: controller="192.168.100.2" command="MOA", response="", status=OK
+2022-03-14 16:18:04 (88272) sync_writeReadController: controller="192.168.100.2" command="MT?", response=" 1.0", status=OK
+2022-03-14 16:18:09 (88272) sync_writeReadController: controller="192.168.100.2" command="CE?", response=" 2", status=OK
+2022-03-14 16:48:30 (88272) sync_writeReadController: controller="192.168.100.2" command="KP:", response="?", status=ERROR
+2022-03-14 16:48:35 (88272) sync_writeReadController: controller="192.168.100.2" command="KP?", response=" 0.00", status=OK
+2022-03-14 16:48:41 (88272) sync_writeReadController: controller="192.168.100.2" command="KI?", response=" 0.0000", status=OK
+2022-03-14 16:48:44 (88272) sync_writeReadController: controller="192.168.100.2" command="KD?", response=" 0.00", status=OK
+2022-03-14 17:10:40 (88272) sync_writeReadController: controller="192.168.100.2" command="KPA=1.003397", response="", status=OK
+2022-03-14 17:10:40 (88272) sync_writeReadController: controller="192.168.100.2" command="KPA=1.003397", response="", status=OK
+2022-03-14 17:10:54 (88272) sync_writeReadController: controller="192.168.100.2" command="KP?", response=" 1.00", status=OK
+2022-03-14 17:11:43 (88272) sync_writeReadController: controller="192.168.100.2" command="KDA=4.996967", response="", status=OK
+2022-03-14 17:11:43 (88272) sync_writeReadController: controller="192.168.100.2" command="KDA=4.996967", response="", status=OK
+2022-03-14 17:11:49 (88272) sync_writeReadController: controller="192.168.100.2" command="KD?", response=" 5.00", status=OK
+2022-03-14 17:13:40 (88272) sync_writeReadController: controller="192.168.100.2" command="KIA=0.099840", response="", status=OK
+2022-03-14 17:13:40 (88272) sync_writeReadController: controller="192.168.100.2" command="KIA=0.099840", response="", status=OK
+2022-03-14 17:13:46 (88272) sync_writeReadController: controller="192.168.100.2" command="KI?", response=" 0.0996", status=OK
+2022-03-14 17:15:29 (88272) sync_writeReadController: controller="192.168.100.2" command="SHA", response="", status=OK
+2022-03-14 17:15:42 (88272) sync_writeReadController: controller="192.168.100.2" command="TT", response=" 9.9982", status=OK
+2022-03-14 17:15:47 (88272) sync_writeReadController: controller="192.168.100.2" command="MO", response="", status=OK
+2022-03-14 17:16:00 (88272) sync_writeReadController: controller="192.168.100.2" command="SH", response="", status=OK
+2022-03-14 17:16:03 (88272) sync_writeReadController: controller="192.168.100.2" command="TT", response=" -0.1020", status=OK
+2022-03-14 17:16:13 (88272) sync_writeReadController: controller="192.168.100.2" command="PAA=40000", response="", status=OK
+2022-03-14 17:16:13 (88272) sync_writeReadController: controller="192.168.100.2" command="ACA=199680;DCA=199680;SPA=200000;limdcA=999999488", response="", status=OK
+2022-03-14 17:16:13 (88272) sync_writeReadController: controller="192.168.100.2" command="BGA", response="", status=OK
+2022-03-14 17:16:26 (88272) sync_writeReadController: controller="192.168.100.2" command="PAA=20000", response="", status=OK
+2022-03-14 17:16:26 (88272) sync_writeReadController: controller="192.168.100.2" command="ACA=199680;DCA=199680;SPA=200000;limdcA=999999488", response="", status=OK
+2022-03-14 17:16:26 (88272) sync_writeReadController: controller="192.168.100.2" command="BGA", response="", status=OK
+2022-03-14 17:16:35 (88272) sync_writeReadController: controller="192.168.100.2" command="TT", response=" 9.9982", status=OK
+2022-03-14 17:16:38 (88272) sync_writeReadController: controller="192.168.100.2" command="MO", response="", status=OK
+2022-03-14 17:16:51 (88272) sync_writeReadController: controller="192.168.100.2" command="KP?", response=" 1.00", status=OK
+2022-03-14 17:16:55 (88272) sync_writeReadController: controller="192.168.100.2" command="KI?", response=" 0.0996", status=OK
+2022-03-14 17:16:59 (88272) sync_writeReadController: controller="192.168.100.2" command="KD?", response=" 5.00", status=OK
+2022-03-14 17:17:47 (88272) sync_writeReadController: controller="192.168.100.2" command="MT?", response=" 1.0", status=OK
+2022-03-14 17:17:51 (88272) sync_writeReadController: controller="192.168.100.2" command="CE?", response=" 2", status=OK
+2022-03-14 17:18:05 (88272) sync_writeReadController: controller="192.168.100.2" command="SH", response="", status=OK
+2022-03-14 17:18:07 (88272) sync_writeReadController: controller="192.168.100.2" command="TT", response=" -0.0571", status=OK
+2022-03-14 17:18:09 (88272) sync_writeReadController: controller="192.168.100.2" command="TT", response=" -0.0550", status=OK
+2022-03-14 17:18:19 (88272) sync_writeReadController: controller="192.168.100.2" command="PAA=40000", response="", status=OK
+2022-03-14 17:18:19 (88272) sync_writeReadController: controller="192.168.100.2" command="ACA=199680;DCA=199680;SPA=200000;limdcA=999999488", response="", status=OK
+2022-03-14 17:18:19 (88272) sync_writeReadController: controller="192.168.100.2" command="BGA", response="", status=OK
+2022-03-14 17:18:27 (88272) sync_writeReadController: controller="192.168.100.2" command="TT", response=" 9.9982", status=OK
+2022-03-14 17:18:30 (88272) sync_writeReadController: controller="192.168.100.2" command="MO", response="", status=OK
+2022-03-14 17:19:12 (88272) sync_writeReadController: controller="192.168.100.2" command="DR 0", response="", status=OK
+2022-03-14 17:19:12 (88272) sync_writeReadController: controller="192.168.100.2" command="BN", response="", status=OK
+2022-03-14 17:19:12 (88272) sync_writeReadController: controller="192.168.100.2" command="CF S", response="", status=OK
+2022-03-14 17:19:12 (88272) sync_writeReadController: controller="192.168.100.2" command="CW 2", response="", status=OK
+2022-03-14 17:19:12 (88272) sync_writeReadController: controller="192.168.100.2" command="IHT=>-1", response="", status=OK

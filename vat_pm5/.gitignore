@@ -1,0 +1,12 @@
+*~
+O.*
+*.swp
+bin/
+db/
+dbd/
+include/
+lib/
+envPaths
+auto_settings.sav*
+auto_positions.sav*
+*.local

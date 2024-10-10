@@ -1,0 +1,7 @@
+record(calcout, "$(P)$(R)") {
+	field(INPA, "$(INPA)")
+	field(INPB, "$(INPB)")
+	field(INPC, "$(INPC)")
+	field(CALC, "$(CALC)")
+	field(OUT, "$(P)$(OUT) PP")
+}

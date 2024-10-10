@@ -1,0 +1,86 @@
+# Digital inputs
+file "$(MODBUS)/db/mbbiDirect.template" { pattern
+{ P			, R		, PORT		, OFFSET	, MASK		, SCAN		}
+{ "$(Sys)$(Dev)"	, FIO:Raw-RB	, $(PORT)	, 00		, 0xFFFF	, "I/O Intr"	}
+}
+
+# Digital outputs
+file "$(MODBUS)/db/mbboDirect.template" { pattern
+{ P			, R		, PORT		, OFFSET	, MASK	}
+{ "$(Sys)$(Dev)"	, FIO:Raw-SP	, $(PORT)	, 00		, 0xFFFF	}
+}
+
+# Analog inputs
+file "lj_t7_ai.template" { pattern
+{ P	, R			, PORT		, OFFSET	, DATA_TYPE	, SCAN		, PREC	, EGU	, DESC			}
+{ Depo	, "{CM:1-LJ}Offst-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ 50mT CM1 Offset"	}
+{ Depo	, "{CM:1-LJ}Fac:Scale-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ 50mT CM1 Scaling Factor"	}
+{ Depo	, "{CM:2-LJ}Offst-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ 50mT CM2 Offset"	}
+{ Depo	, "{CM:2-LJ}Fac:Scale-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ 50mT CM2 Scaling Factor"	}
+{ Depo	, "{CM:1-LJ}P-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "mTorr"	, "LJ CM1 50mTorr"	}
+{ Depo	, "{CM:2-LJ}P-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "mTorr"	, "LJ CM2 50mTorr"	}
+
+{ Depo	, "{LJ}P:Ar-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "PSIG"	, "LJ Argon Pressure"	}
+{ Depo	, "{LJ}P:N2-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "PSIG"	, "LJ N2 Pressure"	}
+{ Depo	, "{LJ}F:Ar-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "SCCM"	, "LJ Argon Flow Signal(MFC)"	}
+{ Depo	, "{LJ}P:CM-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "Torr"	, "LJ CM(1000 Torr)"	}
+{ Depo	, "{LJ}F:Ne-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "SCCM"	, "LJ Neon Flow Signal(MFC)"	}
+{ Depo	, "{LJ}F:Ar-RB"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "SCCM"	, "LJ Argon Setpoint(MFC)"	}
+{ Depo	, "{LJ}F:Ne-RB"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "SCCM"	, "LJ Neon Setpoint(MFC)"	}
+{ Depo	, "{CM:1-LJ}P:Raw-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "mTorr"	, "LJ CM1 Raw(50mTorr)"	}
+{ Depo	, "{CM:2-LJ}P:Raw-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "mTorr"	, "LJ CM2 Raw(50mTorr)"	}
+
+{ Depo	, "{TC:Car-LJ}Offst-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ Car RTD Offset"	}
+{ Depo	, "{TC:Car-LJ}Fac:Scal-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ Car RTD Scaling Factor"	}
+{ Depo	, "{TC:Car-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "LJ Car RTD"	}
+{ Depo	, "{TC:FP-LJ}Offst-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ FacePlate RTD Offset"	}
+{ Depo	, "{TC:FP-LJ}Fac:Scal-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, ""	, "LJ FacePlate RTD Scaling Factor"	}
+{ Depo	, "{Ion-LJ}E-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "V"	, "LJ Ion Voltage"	}
+{ Depo	, "{TC:FP-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "C"	, "LJ FacePlate RTD"	}
+
+{ Depo	, "{SCR:1-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, C	, "LJ SCR1 Thermocouple"	}
+{ Depo	, "{SCR:2-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, C	, "LJ SCR2 Thermocouple"	}
+{ Depo	, "{SCR:3-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, C	, "LJ SCR3 Thermocouple"	}
+{ Depo	, "{SCR:4-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, C	, "LJ SCR4 Thermocouple"	}
+{ Depo	, "{SCR:5-LJ}T-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, C	, "LJ SCR5 Thermocouple"	}
+{ Depo	, "{CM-LJ}T-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, C	, "LJ 50mTorr Thermocouple"	}
+{ Depo	, "{Stepper-LJ}T-I"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, C	, "LJ Stepper Motor Thermocouple"	}
+
+{ Depo	, "{SCR:Smpl-LJ}Int-RB"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, %	, "LJ SCR Sample Heat Intensity"	}
+{ Depo	, "{SCR:1-LJ}Int-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, /1.0	, "SCR1 Intensity"	}
+{ Depo	, "{SCR:2-LJ}Int-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, /1.0	, "SCR2 Intensity"	}
+{ Depo	, "{SCR:3-LJ}Int-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, /1.0	, "SCR3 Intensity"	}
+{ Depo	, "{SCR:4-LJ}Int-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, /1.0	, "SCR4 Intensity"	}
+{ Depo	, "{SCR:5-LJ}Int-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, /1.0	, "SCR5 Intensity"	}
+
+{ Depo	, "{LJ}Ratio:NeAr-RB"		, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "%", "LJ Neon?Argon Mix Ratio"	}
+{ Depo	, "{MFC-LJ}F:CathGas-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Cathode Gas Total Setpoint (MFC)"	}
+{ Depo	, "{MFC-LJ}F:ProcGas-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Process Gas Total Setpoint (MFC)"	}
+
+{ Depo	, "{MFC-LJ}F:MixAr-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Ion Mill MFC Mixer Ar Flow SP(EIO0)"	}
+{ Depo	, "{MFC-LJ}F:MixN2-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Ion Mill MFC Mixer N2 Flow SP(EIO1)"	}
+{ Depo	, "{MFC-LJ}F:MixO2-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Ion Mill MFC Mixer O2 Flow  SP(EIO2)"	}
+{ Depo	, "{MFC-LJ}F:ArH2-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Ion Mill MFC Mixer Ar/H2 Flow  SP(EIO3)"	}
+{ Depo	, "{MFC-LJ}F:LFN-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Ion Mill MFC 4cm RFICP Gas Flow SP(CIO0)"	}
+{ Depo	, "{MFC-LJ}F:4cmRFICP-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Ion Mill MFC 1cm DC Gas Flow SP(CIO1)"	}
+{ Depo	, "{MFC-LJ}F:1cmDC-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Ion Mill MFC Spare Flow SP(CIO2)"	}
+{ Depo	, "{MFC-LJ}F:Spare-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Ion MFC Mixer Ar Flow  SP(CIO3)"	}
+
+{ Depo	, "{CM-LJ}P-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, Torr	, "LJ Ion Mill CM(1000Torr)"	}
+
+{ Depo	, "{MFC-LJ}F:1cmDC-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Ion Mill MFC Spare Flow"	}
+{ Depo	, "{MFC-LJ}F:4cmRFICP-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Ion Mill MFC 1cm DC Gas Flow"	}
+{ Depo	, "{MFC-LJ}F:LFN-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Ion Mill MFC 4cm RFICP Gas Flow"	}
+{ Depo	, "{MFC-LJ}F:ArH2-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Ion Mill MFC Mixer Ar/H2 Flow"	}
+{ Depo	, "{MFC-LJ}F:MixO2-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Ion Mill MFC Mixer O2 Flow"	}
+{ Depo	, "{MFC-LJ}F:MixN2-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Ion Mill MFC Mixer N2 Flow"	}
+{ Depo	, "{MFC-LJ}F:MixAr-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, SCCM	, "LJ Ion Mill MFC LFN Flow"	}
+
+{ Depo	, "{Mill-LJ}Ratio:ArMix-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "%"	, "LJ Mill Argon Mix Ratio SP"	}
+{ Depo	, "{Mill-LJ}Ratio:N2Mix-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "%"	, "LJ Mill N2 Mix Ratio SP"	}
+{ Depo	, "{Mill-LJ}Ratio:O2Mix-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "%"	, "LJ Mill O2 Mix Ratio SP"	}
+{ Depo	, "{Mill-LJ}Ratio:ArH2-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "%"	, "LJ Mill Ar/H2 Mix Ratio SP"	}
+{ Depo	, "{Mill-LJ}F:GasMix-RB"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, "%"	, "LJ Ion Mill Gas mixer Total SP	}
+
+{ Depo	, "{IG-LJ}P-I"	, LJT7_1_AI_IN	, 		, FLOAT32_BE	,".1 second"	, 6	, Torr	, "LJ Hornet Ion Gauge Pressure"	}
+}

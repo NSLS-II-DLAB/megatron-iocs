@@ -1,0 +1,103 @@
+file "db/depo-plc-do.template" { pattern
+{P, R	, Out,	Bit	, DESC	, ZNAM	, ONAM	}
+# Y0 - Y17
+ {Depo, "{AV:01}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO60_Raw-SP"	, 0	, "MFC1 to Landing Chamber(AV1)"	, "Close"			, "Open"		}
+ {Depo, "{AV:02}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO60_Raw-SP"	, 1	, "MFC2 to Gun Chamber1(AV2)"		, "Close"			, "Open"		}
+ {Depo, "{AV:03}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO60_Raw-SP"	, 2	, "MFC3 to Gun Chamber1(AV3)"		, "Close"			, "Open"		}
+ {Depo, "{AV:04}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO60_Raw-SP"	, 3	, "MFC4 to Gun Chamber1(AV4)"		, "Close"			, "Open"		}
+ {Depo, "{AV:05}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO60_Raw-SP"	, 4	, "MFC5 to Gun Chamber1(AV5)"		, "Close"			, "Open"		}
+ {Depo, "{AV:06}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO60_Raw-SP"	, 5	, "MFC6 to Gun Chamber2(AV6)"		, "Close"			, "Open"		}
+ {Depo, "{AV:07}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO60_Raw-SP"	, 6	, "MFC7 to Gun Chamber2(AV7)"		, "Close"		, "Open"	}
+ {Depo, "{AV:08}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO60_Raw-SP"	, B	, "MFC8 to Gun Chamber2(AV8)"		, "Close"			, "Open"			}
+ {Depo, "{AV:09}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO60_Raw-SP"	, C	, "MFC9 to Gun Chamber2(AV9)"		, "Close"			, "Open"			}
+ {Depo, "{AV:10}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO60_Raw-SP"	, D	, "Ar Backfill to Loadlock(AV10)"	, "Close"			, "Open"			}
+ {Depo, "{AV:11}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO60_Raw-SP"	, E	, "Ar Backfill to Cntr Chm(AV11)"	, "Close"			, "Open"			}
+ {Depo, "{AV:12}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO60_Raw-SP"	, F	, "N2 Purge to CP1(AV12)"			, "Close"			, "Open"			}
+
+## Y20 - Y37
+ {Depo, "{AV:13}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO1_Raw-SP"	, 0	, "N2 Purge to CP2 (AV13)"			, "Close"			, "Open"			}
+ {Depo, "{AV:14}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO1_Raw-SP"	, 1	, "N2 Purge to CP3 (AV14)"			, "Close"			, "Open"		}
+ {Depo, "{AV:15}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO1_Raw-SP"	, 2	, "N2 Purge to CP4 (AV15)"			, "Close"			, "Open"		}
+ {Depo, "{AV:16}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO61_Raw-SP"	, 3	, "PT1 On to Cntr Chamber(AV16)"	, "Close"			, "Open"		}
+ {Depo, "{AV:18}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO1_Raw-SP"	, 5	, "CP1 Exhaust to VP1(AV18)"		, "Close"			, "Open"		}
+ {Depo, "{AV:19}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO1_Raw-SP"	, 6	, "CP2 Exhaust to VP1(AV19)"		, "Close"			, "Open"		}
+ {Depo, "{AV:20}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO1_Raw-SP"	, 7	, "CP3 Exhaust to VP1(AV20)"		, "Close"			, "Open"		}
+ {Depo, "{AV:21}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO1_Raw-SP"	, 8	, "CP4 Exhaust to VP1(AV21)"		, "Close"			, "Open"		}
+ {Depo, "{AV:22}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO1_Raw-SP"	, 9	, "Cntr Chm OverPr Exhaust(AV22)"	, "Close"			, "Open"		}
+ {Depo, "{AV:23}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO1_Raw-SP"	, A	, "L/L OverPr Exhaust(AV23)"		, "Close"			, "Open"		}
+ {Depo, "{AV:24}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO61_Raw-SP"	, B	, "Cntr Chm Rough Vacuum(AV24)"	, "Close"			, "Open"		}
+ {Depo, "{AV:25}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO61_Raw-SP"	, C	, "L/L Rough Vacuum(AV25)"		, "Close"			, "Open"		}
+ {Depo, "{Sparc:1}Enbl-Cmd"		, "{PLC:1}Out:DO61_Raw-SP"	, D	, "Sparcle1 EN"					, "Disable"		, "Enable"		}
+ {Depo, "{Sparc:2}Enbl-Cmd"		, "{PLC:1}Out:DO61_Raw-SP"	, E	, "Sparcle2 EN"						, "Disable"		, "Enable"		}
+ {Depo, "{PS_DC:1}Cmd:On-Cmd"		, "{PLC:1}Out:DO61_Raw-SP"	, F	, "MDX1 Supply"					, "Off"			, "On"			}
+
+# Y40 - Y57 
+ {Depo, "{VP:1}Cmd:On-Cmd"		, "{PLC:1}Out:DO62_Raw-SP"	, 0	, "VP1"			, "Off"		, "On"		}
+ {Depo, "{EOV:4}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO62_Raw-SP"	, 1	, "L/L Door Seal(EOV4)"				, "Close"		, "Open"		}
+ {Depo, "{EOV:2}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO62_Raw-SP"	, 2	, "L/L Ar Hig Flow(EOV2)"			, "Close"		, "Open"		}
+ {Depo, "{EOV:3}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO62_Raw-SP"	, 3	, "Process Ar High Flow(EOV3)"		, "Close"		, "Open"		}
+ {Depo, "{GV:1}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO62_Raw-SP"	, 4	, "Open/Close Cryo GV1"				, "Close"		, "Open"		}
+ {Depo, "{GV:1}Cmd:Stroke-Cmd"		, "{PLC:1}Out:DO62_Raw-SP"	, 5	, "Full/Mid Cryo GV1 Stroke"		, "Mid"			, "Full"		}
+ {Depo, "{PS_DC:2}Cmd:On-Cmd"		, "{PLC:1}Out:DO62_Raw-SP"	, 7	, "MDX2 Supply"					, "Off"			, "On"			}
+ {Depo, "{PS_DC:1}Enbl:Rly-Cmd"		, "{PLC:1}Out:DO62_Raw-SP"	, 8	, "MDX1 Power Relay Enable"			, "Disable"		, "Enable"		}
+ {Depo, "{MAG:Ion}Enbl:Rly1-Cmd"	, "{PLC:1}Out:DO62_Raw-SP"	, 9	, "MAG Ion 1500 Relay1"			, "Disable"		, "Enable"		}
+ {Depo, "{MAG:1}Enbl:PS-Cmd"		, "{PLC:1}Out:DO62_Raw-SP"	, A	, "MAG1 Power Enable"				, "Disable"		, "Enable"		}
+ {Depo, "{MAG:2}Enbl:PS-Cmd"		, "{PLC:1}Out:DO62_Raw-SP"	, B	, "MAG2 Power Enable"				, "Disable"		, "Enable"		}
+ {Depo, "{MAG:3}Enbl:PS-Cmd"		, "{PLC:1}Out:DO62_Raw-SP"	, C	, "MAG3 Power Enable"				, "Disable"		, "Enable"		}
+ {Depo, "{MAG:4}Enbl:PS-Cmd"		, "{PLC:1}Out:DO62_Raw-SP"	, D	, "MAG4 Power Enable"				, "Disable"		, "Enable"		}
+ {Depo, "{PS_Spare}Enbl:RlyA-Cmd"	, "{PLC:1}Out:DO62_Raw-SP"	, E	, "MAG Spare Power Relay A"	, "Disable"		, "Enable"		}
+ {Depo, "{PS_Spare}Enbl:RlyB-Cmd"	, "{PLC:1}Out:DO62_Raw-SP"	, F	, "MAG Spare Power Relay B"	, "Disable"		, "Enable"		}
+ 
+# Y60 - Y77
+ {Depo, "{PS_DC:2}Enbl:Rly-Cmd"		, "{PLC:1}Out:DO63_Raw-SP"	, 0	, "MDX2 Power Relay Enable"			, "Disable"		, "Enable"		}
+ {Depo, "{MAG:RF}Enbl:Rly2-Cmd"		, "{PLC:1}Out:DO63_Raw-SP"	, 1	, "MAG RF Relay2"		, "Disable"		, "Enable"		}
+ {Depo, "{MAG:5}Enbl:PS-Cmd"		, "{PLC:1}Out:DO63_Raw-SP"	, 2	, "MAG5 Power Enable"				, "Disable"		, "Enable"		}
+ {Depo, "{MAG:6}Enbl:PS-Cmd"		, "{PLC:1}Out:DO63_Raw-SP"	, 3	, "MAG6 Power Enable"				, "Disable"		, "Enable"		}
+ {Depo, "{MAG:7}Enbl:PS-Cmd"		, "{PLC:1}Out:DO63_Raw-SP"	, 4	, "MAG7 Power Enable"				, "Disable"		, "Enable"		}
+ {Depo, "{MAG:8}Enbl:PS-Cmd"		, "{PLC:1}Out:DO63_Raw-SP"	, 5	, "MAG8 Power Enable"				, "Disable"		, "Enable"		} 
+ {Depo, "{MAG:9}Enbl:PS-Cmd"		, "{PLC:1}Out:DO63_Raw-SP"	, 6	, "MAG9 Power Enable"				, "Disable"		, "Enable"		} 
+ {Depo, "{PS_Spare}Enbl:RlyC-Cmd"	, "{PLC:1}Out:DO63_Raw-SP"	, 7	, "MAG Spare Power Relay C"	, "Disable"		, "Enable"		}
+ {Depo, "{GD-Mtr}Enbl-Cmd"		, "{PLC:1}Out:DO63_Raw-SP"	, 8	, "Mag Door Motor Enable"			, "Disable"		, "Enable"		}
+ {Depo, "{GD:1-Mtr}Enbl-Cmd"		, "{PLC:1}Out:DO63_Raw-SP"	, A	, "Gun Door1 Mtr Enable"		, "Off"		, "On"		}
+ {Depo, "{GD:2-Mtr}Enbl-Cmd"		, "{PLC:1}Out:DO63_Raw-SP"	, B	, "Gun Door2 Mtr Enable"		, "Off"		, "On"		}
+ {Depo, "{LL-Mtr:1}Dir-Cmd"		, "{PLC:1}Out:DO63_Raw-SP"	, D	, "L/L Mtr1 Direction"		, "Mv Into Chm"		, "Mv Out Of Chm"	}
+ {Depo, "{LP-Mtr:2}Dir-Cmd"		, "{PLC:1}Out:DO63_Raw-SP"	, F	, "Loadplate Mtr2 Direction"	, "Mv Into Chm"		, "Mv Out Of Chm"		} 
+
+# Y100 - Y117 
+ {Depo, "{CP:1}Cmd:Off-Cmd"		, "{PLC:1}Out:DO4_Raw-SP"	, 0	, "CP1 Off"							, "On"			, "Off"			}
+ {Depo, "{CP:2}Cmd:Off-Cmd"		, "{PLC:1}Out:DO4_Raw-SP"	, 1	, "CP2 Off"							, "On"			, "Off"			}
+ {Depo, "{CP:3}Cmd:Off-Cmd"		, "{PLC:1}Out:DO4_Raw-SP"	, 2	, "CP3 Off"							, "On"			, "Off"			}
+ {Depo, "{CP:4}Cmd:Off-Cmd"		, "{PLC:1}Out:DO4_Raw-SP"	, 3	, "CP4 Off"							, "On"			, "Off"			}
+ {Depo, "{GV:2}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO64_Raw-SP"	, 4	, "Open Cryo GV2"					, "Throttle Enbl"	, "Open"		}
+ {Depo, "{GV:2}Cmd:Ctrl-Cmd"		, "{PLC:1}Out:DO64_Raw-SP"	, 5	, "CTRL Cryo GV2"					, "Fully Close"	, "Throttle"		}
+ {Depo, "{GV:3}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO64_Raw-SP"	, 6	, "Open Cryo GV3"					, "Throttle Enbl"	, "Open"		}
+ {Depo, "{GV:3}Cmd:Ctrl-Cmd"		, "{PLC:1}Out:DO64_Raw-SP"	, 7	, "CTRL Cryo GV3"					, "Fully Close"	, "Throttle"		}
+ {Depo, "{Pmp:Seal}Cmd:On-Cmd"		, "{PLC:1}Out:DO64_Raw-SP"	, 8	, "Seals Pump"		, "Off"			, "On"			}
+ {Depo, "{GV:5}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO64_Raw-SP"	, 9	, "Open Loadlock GV5"				, "Not Open"	, "Open"		}
+ {Depo, "{GV:5}Cmd:Cls-Cmd"		, "{PLC:1}Out:DO64_Raw-SP"	, A	, "Close Loadlock GV5"				, "Not Close"	, "Close"		}
+ {Depo, "{GV:4}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO64_Raw-SP"	, B	, "Cryo GV4 Open/Close"				, "Close"		, "Throttle Enbl"		}
+ {Depo, "{GV:4}Cmd:Stroke-Cmd"		, "{PLC:1}Out:DO64_Raw-SP"	, C	, "Cryo GV4 Partial/Open"			, "Mid"			, "Full"		}
+ {Depo, "{CCG:1}Enbl-Cmd"		, "{PLC:1}Out:DO64_Raw-SP"	, D	, "CCG1 Enable"						, "Disable"		, "Enable"		}
+ {Depo, "{CCG:2}Enbl-Cmd"		, "{PLC:1}Out:DO64_Raw-SP"	, E	, "CCG2 Enable"						, "Disable"		, "Enable"		}
+ {Depo, "{AV:26}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO4_Raw-SP"	, F	, "Open Crystal Monitor1 Shutter"	, "Not Open"	, "Open"		}
+ 
+# Y120 - Y137
+ {Depo, "{AV:27}Cmd:Opn-Cmd"		, "{PLC:1}Out:DO5_Raw-SP"	, 0	, "Open Crystal Monitor2 Shutter"	, "Not Open"	, "Open"		}
+ {Depo, "{LL-Clutch}Cmd"		, "{PLC:1}Out:DO65_Raw-SP"	, 1	, "L/L Clutch"				, "Disengage"		, "Engage"		}
+ {Depo, "{GV:5}Cmd:ClsRear-Cmd"		, "{PLC:1}Out:DO5_Raw-SP"	, 3	, "GV5 Close Rear Limit"			, ""	, ""	}
+ {Depo, "{LP-Ind}Home-Cmd"		, "{PLC:1}Out:DO5_Raw-SP"	, 4	, "Loadplate in Home Position"		, "Not Home"	, "Home"		}
+ {Depo, "{Conn-Ax:X}Cmd:Conn-Cmd"	, "{PLC:1}Out:DO65_Raw-SP"	, 5	, "Stepper Connect"					, "Disable"	, "Enable Fwd"		}
+ {Depo, "{Conn-Ax:X}Cmd:AftConn-Cmd"	, "{PLC:1}Out:DO65_Raw-SP"	, 6	, "Stepper After Connect"			, "Disable"	, "Enable Fine Fwd"		}
+ {Depo, "{Conn-Ax:X}Cmd:Disconn-Cmd"	, "{PLC:1}Out:DO65_Raw-SP"	, 7	, "Stepper Disconnect"				, "Disable"			, "Enable Bkwd"	}
+ {Depo, "{Ax}Cmd:Home-Cmd"		, "{PLC:1}Out:DO5_Raw-SP"	, 8	, "Move Linear Motor Home"			, "Not home"	, "Home"		}
+ {Depo, "{Ax}Cmd:Disconn-Cmd"		, "{PLC:1}Out:DO5_Raw-SP"	, 9	, "Linear Disconnect"				, "N/A"			, "Disconnect"	}
+ {Depo, "{Ax}Cmd:Run-Cmd"		, "{PLC:1}Out:DO5_Raw-SP"	, A	, "Run Linear Motor"				, "N/A"			, "Run"			}
+ {Depo, "{PLC:1}Enbl:CVD_Ver-Cmd"	, "{PLC:1}Out:DO5_Raw-SP"	, C	, "CVD Version Enable"				, "Disable"		, "Enable"		}
+ {Depo, "{LP-Clutch}Cmd"		, "{PLC:1}Out:DO65_Raw-SP"	, D	, "Loadplate Clutch"				, "Disengage"		, "Engage"		}
+ {Depo, "{LL-Mtr:1}Enbl-Cmd"		, "{PLC:1}Out:DO65_Raw-SP"	, E	, "L/L Mtr1 On/Off"	, "Off"		, "On"		}
+ {Depo, "{LP-Mtr:2}Enbl-Cmd"		, "{PLC:1}Out:DO65_Raw-SP"	, F	, "Loadplate Mtr2 On/Off"		, "Off"		, "On"		}
+
+# Comms Enable bit in PLC code, normaly is se to 1
+# {Depo, "{PLC:1}Enbl:Ctrl-Cmd"		, "{PLC:1}Out:DO72_Raw-SP"	, 0	, "Control Enable Out"	, "Disable"	, "Enable"		}
+ {Depo, "{PLC:1}Enbl:Write-Cmd"	, "{PLC:1}Out:DO75_Raw-SP"	, 0	, "Write Enable"		, "Enable"		, "Disable"		}
+}

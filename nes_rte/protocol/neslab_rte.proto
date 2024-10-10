@@ -1,0 +1,95 @@
+# NESLAB RTE-111 Refrigerated Bath/Circulators Digital Controller
+# 
+# Huijuan 21-MAR-2019 
+
+LockTimeout = 1000;
+ReplyTimeout = 200;
+ReadTimeout =  50;
+WriteTimeout = 50;
+extraInput = Ignore;
+
+# Need to test the response qualifier byte
+## Read internal temperature
+read_internal_T {
+	out "\xCA\x00\x01\x20\x00%1<~sum>";
+	in  "\xCA\x00\x01\x20\x03\x11%02r%1<~sum>";
+}
+
+# Read external sensor
+read_external_T {
+	out "\xCA\x00\x01\x21\x00%1<~sum>";
+	in  "\xCA\x00\x01\x21\x03\x11%02r%1<~sum>";
+}
+
+# Read control setpoint
+read_ctrl_SP {
+	out "\xCA\x00\x01\x70\x00%1<~sum>";
+	in  "\xCA\x00\x01\x70\x03\x11%02r%1<~sum>";
+}
+
+# Read low temperature limit
+read_T_low {
+	out "\xCA\x00\x01\x40\x00%1<~sum>";
+	in  "\xCA\x00\x01\x40\x03\x11%02r%1<~sum>";
+}
+
+# Read high temperature limit
+read_T_high {
+	out "\xCA\x00\x01\x60\x00%1<~sum>";
+	in  "\xCA\x00\x01\x60\x03\x11%02r%1<~sum>";
+}
+
+# Read proportional band
+read_PID_P {
+	out "\xCA\x00\x01\x71\x00%1<~sum>";
+	in  "\xCA\x00\x01\x71\x03\x10%02r%1<~sum>";
+}
+
+# Read integral
+read_PID_I {
+	out "\xCA\x00\x01\x72\x00%1<~sum>";
+	in  "\xCA\x00\x01\x20\x03\x20%02r%1<~sum>";
+}
+
+# Read derivative
+read_PID_D {
+	out "\xCA\x00\x01\x73\x00%1<~sum>";
+	in  "\xCA\x00\x01\x73\x03\x10%02r%1<~sum>";
+}
+
+## Set
+# Set setpoint
+set_ctrl_SP {
+	out "\xCA\x00\x01\xF0\x02%.2r%1<~sum>";
+	in  "\xCA\x00\x01\xF0\x03\x11%.2r%1<~sum>";
+}
+
+# Set low temperature limit
+set_T_low {
+	out "\xCA\x00\x01\xC0\x02%.2r%1<~sum>";
+	in  "\xCA\x00\x01\xC0\x03\x11%.2r%1<~sum>";
+}
+
+# Set high temperature limit
+set_T_high {
+	out "\xCA\x00\x01\xE0\x02%.2r%1<~sum>";
+	in  "\xCA\x00\x01\xE0\x03\x11%.2r%1<~sum>";
+}
+
+# Set proportional band
+set_PID_P {
+	out "\xCA\x00\x01\xF1\x02%.2r%1<~sum>";
+	in  "\xCA\x00\x01\xF1\x03\x10%.2r%1<~sum>";
+}
+
+# Set integral
+set_PID_I {
+	out "\xCA\x00\x01\xF2\x02%.2r%1<~sum>";
+	in  "\xCA\x00\x01\xF2\x03\x20%.2r%1<~sum>";
+}
+
+# Set derivative
+set_PID_D {
+	out "\xCA\x00\x01\xF3\x02%.2r%1<~sum>";
+	in  "\xCA\x00\x01\xF3\x03\x10%.2r%1<~sum>";
+}
